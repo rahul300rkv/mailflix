@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>WhatsApp Business Message Generator India — Dhanda Suite | MailFix</title>
+<meta name="description" content="Generate professional WhatsApp messages for your business in Hinglish. Payment reminders, quotes, order confirmations — free tool for Indian small business owners."/>
+<meta name="keywords" content="whatsapp business message generator india, payment reminder whatsapp hindi, professional whatsapp message small business india, dhanda whatsapp template, vyapar whatsapp message generator"/>
+<meta name="robots" content="index, follow"/>
+<link rel="canonical" href="https://mailflix.netlify.app/whatsapp-dhanda.html"/>
+<meta property="og:title" content="WhatsApp Dhanda Suite — Professional Business Messages in Hinglish"/>
+<meta property="og:description" content="Generate polite, professional WhatsApp messages for your business. Payment reminders, quotes, follow-ups — free for Indian small businesses."/>
+<meta property="og:url" content="https://mailflix.netlify.app/whatsapp-dhanda.html"/>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "WhatsApp Dhanda Suite",
+  "url": "https://mailflix.netlify.app/whatsapp-dhanda.html",
+  "description": "Free WhatsApp business message generator for Indian small business owners. Generate professional Hinglish payment reminders, quotes, and follow-ups.",
+  "applicationCategory": "BusinessApplication",
+  "offers": { "@type": "Offer", "price": "0", "priceCurrency": "INR" }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    { "@type": "Question", "name": "How to send professional payment reminder on WhatsApp in Hindi?", "acceptedAnswer": { "@type": "Answer", "text": "Use MailFix WhatsApp Dhanda tool. Enter the customer name, amount and reason, select Payment Reminder type, and click Generate. You get a polite Hinglish message that maintains the relationship while asking for payment." } },
+    { "@type": "Question", "name": "How to write professional WhatsApp message for small business in India?", "acceptedAnswer": { "@type": "Answer", "text": "MailFix Dhanda Suite generates professional WhatsApp messages for payment reminders, order confirmations, quotes, and follow-ups in Hinglish — perfect for Indian small businesses in Tier 2 and Tier 3 cities." } }
+  ]
+}
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet"/>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3532554351654388" crossorigin="anonymous"></script>
+<style>
+  :root {
+    --ink: #0f0e0c;
+    --paper: #f5f2ec;
+    --card: #ffffff;
+    --accent: #d44f1e;
+    --wa: #25d366;
+    --wa-dark: #128c7e;
+    --wa-bg: #dcf8c6;
+    --muted: #7a7570;
+    --border: #e2ddd5;
+    --radius: 12px;
+    --font-head: 'Syne', sans-serif;
+    --font-body: 'DM Sans', sans-serif;
+  }
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  body { background: var(--paper); color: var(--ink); font-family: var(--font-body); font-size: 16px; line-height: 1.6; min-height: 100vh; }
+
+  nav { display: flex; justify-content: space-between; align-items: center; padding: 18px 5%; border-bottom: 1px solid var(--border); background: var(--paper); position: sticky; top: 0; z-index: 100; }
+  .logo { font-family: var(--font-head); font-size: 22px; font-weight: 800; letter-spacing: -0.5px; color: var(--ink); text-decoration: none; }
+  .logo span { color: var(--accent); }
+  .nav-links { display: flex; gap: 16px; align-items: center; }
+  .nav-links a { font-size: 14px; color: var(--muted); text-decoration: none; }
+  .nav-links a:hover { color: var(--accent); }
+  .nav-badge { background: var(--wa); color: #fff; font-size: 12px; font-weight: 500; padding: 4px 12px; border-radius: 99px; }
+
+  .hero { max-width: 760px; margin: 0 auto; padding: 56px 5% 32px; text-align: center; }
+  .hero-tag { display: inline-flex; align-items: center; gap: 6px; background: #fff; border: 1px solid var(--border); border-radius: 99px; padding: 6px 16px; font-size: 13px; color: var(--muted); margin-bottom: 20px; }
+  .hero-tag .dot { width: 7px; height: 7px; background: var(--wa); border-radius: 50%; animation: pulse 2s infinite; }
+  @keyframes pulse { 0%,100%{opacity:1;transform:scale(1)} 50%{opacity:.6;transform:scale(1.3)} }
+  h1 { font-family: var(--font-head); font-size: clamp(32px, 5vw, 52px); font-weight: 800; line-height: 1.08; letter-spacing: -1.5px; margin-bottom: 14px; }
+  h1 em { color: var(--wa-dark); font-style: normal; }
+  .hero-sub { font-size: 17px; color: var(--muted); font-weight: 300; max-width: 520px; margin: 0 auto; }
+
+  /* MESSAGE TYPE SELECTOR */
+  .type-wrap { max-width: 900px; margin: 24px auto 0; padding: 0 5%; }
+  .type-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 10px; }
+  .type-card { background: var(--card); border: 2px solid var(--border); border-radius: var(--radius); padding: 14px 12px; text-align: center; cursor: pointer; transition: all 0.15s; }
+  .type-card:hover { border-color: var(--wa); }
+  .type-card.active { border-color: var(--wa); background: #f0fdf4; }
+  .type-card .type-icon { font-size: 24px; display: block; margin-bottom: 6px; }
+  .type-card .type-name { font-family: var(--font-head); font-size: 13px; font-weight: 700; color: var(--ink); }
+  .type-card .type-sub { font-size: 11px; color: var(--muted); margin-top: 2px; }
+
+  /* TOOL */
+  .tool-wrap { max-width: 900px; margin: 24px auto; padding: 0 5%; display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+  @media(max-width: 640px) { .tool-wrap { grid-template-columns: 1fr; } }
+
+  .tool-card { background: var(--card); border: 1px solid var(--border); border-radius: 18px; overflow: hidden; box-shadow: 0 2px 20px rgba(0,0,0,0.05); }
+  .card-header { padding: 16px 20px; border-bottom: 1px solid var(--border); background: #fafaf8; }
+  .card-header h3 { font-family: var(--font-head); font-size: 15px; font-weight: 700; }
+  .card-header p { font-size: 12px; color: var(--muted); margin-top: 2px; }
+  .card-body { padding: 20px; }
+
+  .form-group { margin-bottom: 16px; }
+  .form-group label { display: block; font-size: 12px; font-weight: 500; color: var(--muted); margin-bottom: 5px; font-family: var(--font-head); text-transform: uppercase; letter-spacing: 0.06em; }
+  input[type="text"], textarea, select { width: 100%; padding: 10px 14px; border: 1px solid var(--border); border-radius: 8px; font-family: var(--font-body); font-size: 14px; color: var(--ink); background: var(--paper); outline: none; transition: border-color 0.15s; }
+  input[type="text"]:focus, textarea:focus, select:focus { border-color: var(--wa); background: #fff; }
+  textarea { resize: none; height: 80px; }
+
+  .generate-btn { width: 100%; padding: 12px; background: var(--wa); color: #fff; border: none; border-radius: 10px; font-family: var(--font-head); font-size: 15px; font-weight: 700; cursor: pointer; transition: all 0.15s; display: flex; align-items: center; justify-content: center; gap: 8px; margin-top: 4px; }
+  .generate-btn:hover { background: var(--wa-dark); transform: translateY(-1px); }
+  .generate-btn:disabled { background: #ccc; cursor: not-allowed; transform: none; }
+
+  /* OUTPUT — WhatsApp bubble style */
+  .wa-preview { background: #e5ddd5; border-radius: 0 0 18px 18px; padding: 20px; min-height: 200px; position: relative; }
+  .wa-preview::before { content: ''; position: absolute; inset: 0; background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23c5b9a8' fill-opacity='0.15'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E"); border-radius: 0 0 18px 18px; }
+  .wa-bubble-wrap { position: relative; z-index: 1; display: flex; flex-direction: column; align-items: flex-end; }
+  .wa-bubble { background: var(--wa-bg); border-radius: 8px 0 8px 8px; padding: 10px 14px; max-width: 85%; position: relative; box-shadow: 0 1px 2px rgba(0,0,0,0.15); }
+  .wa-bubble::after { content: ''; position: absolute; top: 0; right: -8px; border-left: 8px solid var(--wa-bg); border-top: 8px solid transparent; }
+  .wa-text { font-size: 14px; line-height: 1.6; color: #111; white-space: pre-wrap; font-family: var(--font-body); }
+  .wa-time { font-size: 11px; color: #667781; text-align: right; margin-top: 4px; }
+  .wa-placeholder { color: #aaa; font-size: 13px; font-style: italic; text-align: center; padding: 40px 20px; }
+
+  .loading-dots { display: none; gap: 5px; align-items: center; justify-content: center; padding: 40px; }
+  .loading-dots.show { display: flex; }
+  .loading-dots span { width: 8px; height: 8px; background: var(--wa); border-radius: 50%; animation: bounce 1s infinite; }
+  .loading-dots span:nth-child(2) { animation-delay: 0.15s; }
+  .loading-dots span:nth-child(3) { animation-delay: 0.3s; }
+  @keyframes bounce { 0%,60%,100%{transform:translateY(0)} 30%{transform:translateY(-8px)} }
+
+  .error-msg { display: none; background: #fef2f2; color: #b91c1c; border: 1px solid #fecaca; border-radius: 8px; padding: 10px 14px; font-size: 13px; margin: 10px 20px 0; }
+  .error-msg.show { display: block; }
+
+  /* ACTION BUTTONS */
+  .output-actions { padding: 12px 20px; border-top: 1px solid var(--border); display: flex; gap: 10px; }
+  .action-btn { flex: 1; padding: 9px 12px; border-radius: 8px; border: 1px solid var(--border); background: var(--card); font-size: 13px; font-family: var(--font-body); color: var(--muted); cursor: pointer; transition: all 0.15s; display: flex; align-items: center; justify-content: center; gap: 6px; text-decoration: none; }
+  .action-btn:hover { border-color: var(--ink); color: var(--ink); }
+  .action-btn.wa-btn { background: var(--wa); border-color: var(--wa); color: #fff; font-weight: 500; }
+  .action-btn.wa-btn:hover { background: var(--wa-dark); border-color: var(--wa-dark); color: #fff; }
+  .action-btn.copied { background: #dcfce7; color: #166534; border-color: #bbf7d0; }
+
+  /* PERSISTENCE MODE */
+  .persistence-bar { max-width: 900px; margin: 0 auto 8px; padding: 0 5%; }
+  .persistence-card { background: #fffbeb; border: 1px solid #fde68a; border-radius: var(--radius); padding: 16px 20px; display: flex; align-items: center; gap: 14px; }
+  .persistence-icon { font-size: 24px; flex-shrink: 0; }
+  .persistence-text h4 { font-family: var(--font-head); font-size: 14px; font-weight: 700; color: #92400e; }
+  .persistence-text p { font-size: 13px; color: #a16207; margin-top: 2px; }
+  .persistence-btn { margin-left: auto; padding: 7px 16px; background: #f59e0b; color: #fff; border: none; border-radius: 8px; font-family: var(--font-head); font-size: 13px; font-weight: 700; cursor: pointer; white-space: nowrap; flex-shrink: 0; }
+  .persistence-btn:hover { background: #d97706; }
+
+  /* TEMPLATES */
+  .templates-section { max-width: 900px; margin: 32px auto; padding: 0 5%; }
+  .templates-section h2 { font-family: var(--font-head); font-size: 22px; font-weight: 800; letter-spacing: -0.5px; margin-bottom: 16px; }
+  .template-chips { display: flex; flex-wrap: wrap; gap: 8px; }
+  .template-chip { background: var(--card); border: 1px solid var(--border); border-radius: 8px; padding: 8px 14px; font-size: 13px; cursor: pointer; transition: all 0.15s; font-family: var(--font-body); color: var(--muted); }
+  .template-chip:hover { border-color: var(--wa); color: var(--wa-dark); background: #f0fdf4; }
+
+  .ad-banner { max-width: 900px; margin: 0 auto 32px; padding: 0 5%; }
+
+  /* USE CASES */
+  .use-section { background: var(--ink); padding: 56px 5%; }
+  .use-inner { max-width: 900px; margin: 0 auto; }
+  .use-inner h2 { font-family: var(--font-head); font-size: clamp(24px, 3vw, 36px); font-weight: 800; letter-spacing: -0.5px; color: #f5f2ec; margin-bottom: 32px; }
+  .use-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 16px; }
+  .use-card { background: #1a1917; border: 1px solid #2a2927; border-radius: var(--radius); padding: 18px; }
+  .use-card h4 { font-family: var(--font-head); font-size: 14px; font-weight: 700; color: #f5f2ec; margin-bottom: 6px; }
+  .use-card p { font-size: 13px; color: #7a7570; line-height: 1.6; }
+  .use-card .city-tag { display: inline-block; font-size: 11px; padding: 2px 8px; border-radius: 4px; background: #2a2927; color: #9a9490; margin-bottom: 8px; font-family: var(--font-head); }
+
+  footer { border-top: 1px solid var(--border); padding: 28px 5%; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px; font-size: 13px; color: var(--muted); }
+  footer a { color: var(--muted); text-decoration: none; }
+  footer a:hover { color: var(--accent); }
+</style>
+</head>
+<body>
+
+<nav>
+  <a class="logo" href="index.html">Mail<span>Fix</span></a>
+  <div class="nav-links">
+    <a href="index.html">Email</a>
+    <a href="ctc-calculator.html">Salary</a>
+    <a href="sarkari-letter.html">Sarkari Letter</a>
+    <span class="nav-badge">WhatsApp Tool</span>
+  </div>
+</nav>
+
+<section class="hero">
+  <div class="hero-tag"><span class="dot"></span> Free for Indian small businesses</div>
+  <h1>Dhanda ke liye<br/><em>professional</em> WhatsApp</h1>
+  <p class="hero-sub">Payment reminder bhejo bina relationship kharaab kiye. Quotes, orders, follow-ups — sab Hinglish mein, ek click mein.</p>
+</section>
+
+<!-- MESSAGE TYPE -->
+<div class="type-wrap">
+  <div class="type-grid">
+    <div class="type-card active" data-type="payment" onclick="selectType(this)">
+      <span class="type-icon">💰</span>
+      <div class="type-name">Payment Reminder</div>
+      <div class="type-sub">Politely ask for dues</div>
+    </div>
+    <div class="type-card" data-type="quote" onclick="selectType(this)">
+      <span class="type-icon">📋</span>
+      <div class="type-name">Quote / Estimate</div>
+      <div class="type-sub">Send price professionally</div>
+    </div>
+    <div class="type-card" data-type="order" onclick="selectType(this)">
+      <span class="type-icon">📦</span>
+      <div class="type-name">Order Confirm</div>
+      <div class="type-sub">Confirm order received</div>
+    </div>
+    <div class="type-card" data-type="followup" onclick="selectType(this)">
+      <span class="type-icon">🔔</span>
+      <div class="type-name">Follow-Up</div>
+      <div class="type-sub">Check in after no reply</div>
+    </div>
+    <div class="type-card" data-type="delay" onclick="selectType(this)">
+      <span class="type-icon">⏳</span>
+      <div class="type-name">Delay Notice</div>
+      <div class="type-sub">Inform about delay politely</div>
+    </div>
+    <div class="type-card" data-type="thankyou" onclick="selectType(this)">
+      <span class="type-icon">🙏</span>
+      <div class="type-name">Thank You</div>
+      <div class="type-sub">After payment/order done</div>
+    </div>
+  </div>
+</div>
+
+<div class="tool-wrap">
+  <!-- INPUT -->
+  <div class="tool-card">
+    <div class="card-header">
+      <h3 id="formTitle">Payment Reminder</h3>
+      <p id="formSub">Fill in details — message tayaar ho jayega</p>
+    </div>
+    <div class="card-body" id="formBody">
+      <div class="form-group">
+        <label>Customer / Party name</label>
+        <input type="text" id="partyName" placeholder="e.g. Gupta ji, Sharma bhai, Priya"/>
+      </div>
+      <div class="form-group" id="amountGroup">
+        <label>Amount (₹)</label>
+        <input type="text" id="amount" placeholder="e.g. 5000"/>
+      </div>
+      <div class="form-group" id="reasonGroup">
+        <label id="reasonLabel">For (what payment)</label>
+        <input type="text" id="reason" placeholder="e.g. last week's delivery, October order"/>
+      </div>
+      <div class="form-group" id="extraGroup">
+        <label id="extraLabel">Extra detail (optional)</label>
+        <input type="text" id="extra" placeholder="e.g. already reminded once, urgent hai"/>
+      </div>
+      <div class="form-group">
+        <label>Tone</label>
+        <select id="tone">
+          <option value="polite">Polite & Respectful (default)</option>
+          <option value="firm">Firm but Friendly</option>
+          <option value="urgent">Urgent</option>
+          <option value="casual">Casual (close party)</option>
+        </select>
+      </div>
+      <button class="generate-btn" id="generateBtn" onclick="generateMessage()">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M5.077 18.869A13.94 13.94 0 0 1 1.043 12C1.043 5.373 6.373.043 13 .043S24.957 5.373 24.957 12 19.627 23.957 13 23.957a13.94 13.94 0 0 1-6.869-1.797L1 23.957l1.869-5.088z"/></svg>
+        Generate Message
+      </button>
+    </div>
+    <div class="error-msg" id="errorMsg"></div>
+  </div>
+
+  <!-- OUTPUT -->
+  <div class="tool-card">
+    <div class="card-header">
+      <h3>WhatsApp Preview</h3>
+      <p>Message exactly as it will appear</p>
+    </div>
+    <div class="wa-preview">
+      <div class="loading-dots" id="loadingDots"><span></span><span></span><span></span></div>
+      <div class="wa-bubble-wrap" id="waBubbleWrap">
+        <div class="wa-placeholder">Message yahan dikhega...</div>
+      </div>
+    </div>
+    <div class="output-actions" id="outputActions" style="display:none">
+      <button class="action-btn" id="copyBtn" onclick="copyMessage()">
+        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+        Copy
+      </button>
+      <a class="action-btn wa-btn" id="waBtn" href="#" target="_blank">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M5.077 18.869A13.94 13.94 0 0 1 1.043 12C1.043 5.373 6.373.043 13 .043S24.957 5.373 24.957 12 19.627 23.957 13 23.957a13.94 13.94 0 0 1-6.869-1.797L1 23.957l1.869-5.088z"/></svg>
+        Send on WhatsApp
+      </a>
+    </div>
+  </div>
+</div>
+
+<!-- PERSISTENCE MODE -->
+<div class="persistence-bar" id="persistenceBar" style="display:none">
+  <div class="persistence-card">
+    <span class="persistence-icon">⚡</span>
+    <div class="persistence-text">
+      <h4>Persistence Mode — No reply mila?</h4>
+      <p>Ek aur follow-up message generate karo — thoda firm, phir bhi respectful.</p>
+    </div>
+    <button class="persistence-btn" onclick="generateFollowup()">Follow-Up Bhejo</button>
+  </div>
+</div>
+
+<!-- QUICK TEMPLATES -->
+<div class="templates-section">
+  <h2>Quick templates</h2>
+  <div class="template-chips">
+    <span class="template-chip" onclick="loadTemplate('payment1')">💰 ₹5000 payment Gupta ji se</span>
+    <span class="template-chip" onclick="loadTemplate('payment2')">💰 Purana outstanding clear karo</span>
+    <span class="template-chip" onclick="loadTemplate('quote1')">📋 Painting ka quote bhejo</span>
+    <span class="template-chip" onclick="loadTemplate('order1')">📦 Order confirm karo</span>
+    <span class="template-chip" onclick="loadTemplate('delay1')">⏳ Delivery delay ho gayi</span>
+    <span class="template-chip" onclick="loadTemplate('thankyou1')">🙏 Payment received, thanks</span>
+  </div>
+</div>
+
+<div class="ad-banner">
+  <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-3532554351654388" data-ad-slot="3962323207" data-ad-format="auto" data-full-width-responsive="true"></ins>
+  <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+</div>
+
+<section class="use-section">
+  <div class="use-inner">
+    <h2>Kaun use karta hai</h2>
+    <div class="use-grid">
+      <div class="use-card"><div class="city-tag">Jaipur · Indore · Patna</div><h4>Kirana & General Store</h4><p>Weekly payment reminders to regular customers without damaging the daily relationship.</p></div>
+      <div class="use-card"><div class="city-tag">Surat · Ludhiana · Tirupur</div><h4>Textile & Garment Traders</h4><p>Bulk order confirmations, advance payment requests, and dispatch notifications.</p></div>
+      <div class="use-card"><div class="city-tag">Pune · Coimbatore · Nagpur</div><h4>Contractors & Services</h4><p>Plumbers, painters, electricians — send professional quotes and payment follow-ups.</p></div>
+      <div class="use-card"><div class="city-tag">All India</div><h4>Freelancers & Tutors</h4><p>Tuition fee reminders, project payment follow-ups — sab politely aur professionally.</p></div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <span>© 2025 MailFix — Free Tools for Indian Professionals</span>
+  <div style="display:flex;gap:20px;flex-wrap:wrap">
+    <a href="index.html">Email Tools</a>
+    <a href="ctc-calculator.html">Salary Calculator</a>
+    <a href="sarkari-letter.html">Sarkari Letter</a>
+    <a href="privacy.html">Privacy Policy</a>
+  </div>
+</footer>
+
+<script>
+  let selectedType = 'payment';
+  let lastMessage = '';
+
+const GROQ_KEY = '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';
+
+  const TYPE_CONFIG = {
+    payment:  { title: 'Payment Reminder',  sub: 'Politely ask for pending payment',       amountLabel: 'Amount (₹)', reasonLabel: 'For (what payment)',    extraLabel: 'Extra detail (optional)' },
+    quote:    { title: 'Quote / Estimate',   sub: 'Send price estimate professionally',     amountLabel: 'Quote amount (₹)', reasonLabel: 'Work / product name', extraLabel: 'Extra detail (optional)' },
+    order:    { title: 'Order Confirmation', sub: 'Confirm order received',                 amountLabel: 'Order value (₹)', reasonLabel: 'Product / service',   extraLabel: 'Delivery date (optional)' },
+    followup: { title: 'Follow-Up',          sub: 'Check in after no response',             amountLabel: 'Amount / deal value (₹)', reasonLabel: 'What you sent earlier', extraLabel: 'Days since last message' },
+    delay:    { title: 'Delay Notice',       sub: 'Inform about delay respectfully',        amountLabel: 'Order value (₹)', reasonLabel: 'What is delayed',     extraLabel: 'New expected date' },
+    thankyou: { title: 'Thank You Message',  sub: 'Thank customer after payment / order',   amountLabel: 'Amount received (₹)', reasonLabel: 'For what payment', extraLabel: 'Extra (optional)' }
+  };
+
+  const QUICK_TEMPLATES = {
+    payment1:  { type: 'payment',  party: 'Gupta ji',     amount: '5000', reason: 'last week ki delivery',      extra: '',            tone: 'polite' },
+    payment2:  { type: 'payment',  party: 'Sharma bhai',  amount: '12000', reason: 'October month ka outstanding', extra: 'teen baar remind kar chuka hun', tone: 'firm' },
+    quote1:    { type: 'quote',    party: 'Verma ji',     amount: '8500', reason: '2 BHK painting',              extra: '2 din mein kaam ho jayega',       tone: 'polite' },
+    order1:    { type: 'order',    party: 'Meena ji',     amount: '3200', reason: 'saree ka order',              extra: 'delivery Friday tak',             tone: 'polite' },
+    delay1:    { type: 'delay',    party: 'Rakesh bhai',  amount: '7000', reason: 'furniture ka order',          extra: 'ab Monday tak pakka',             tone: 'polite' },
+    thankyou1: { type: 'thankyou', party: 'Patel sahab',  amount: '15000', reason: 'November ka payment',        extra: '',                                tone: 'polite' }
+  };
+
+  function selectType(el) {
+    document.querySelectorAll('.type-card').forEach(c => c.classList.remove('active'));
+    el.classList.add('active');
+    selectedType = el.dataset.type;
+    const cfg = TYPE_CONFIG[selectedType];
+    document.getElementById('formTitle').textContent = cfg.title;
+    document.getElementById('formSub').textContent = cfg.sub;
+    document.getElementById('reasonLabel').textContent = cfg.reasonLabel;
+    document.getElementById('extraLabel').textContent = cfg.extraLabel;
+    document.querySelector('label[for="amount"], #amountGroup label').textContent = cfg.amountLabel;
+  }
+
+  function loadTemplate(key) {
+    const t = QUICK_TEMPLATES[key];
+    // Activate type card
+    document.querySelectorAll('.type-card').forEach(c => {
+      if (c.dataset.type === t.type) c.click();
+    });
+    document.getElementById('partyName').value = t.party;
+    document.getElementById('amount').value = t.amount;
+    document.getElementById('reason').value = t.reason;
+    document.getElementById('extra').value = t.extra;
+    document.getElementById('tone').value = t.tone;
+    generateMessage();
+  }
+
+  function showError(msg) {
+    const el = document.getElementById('errorMsg');
+    el.textContent = msg;
+    el.classList.add('show');
+  }
+
+  function hideError() {
+    document.getElementById('errorMsg').classList.remove('show');
+  }
+
+  async function generateMessage(isFollowup = false) {
+    const party = document.getElementById('partyName').value.trim();
+    const amount = document.getElementById('amount').value.trim();
+    const reason = document.getElementById('reason').value.trim();
+    const extra = document.getElementById('extra').value.trim();
+    const tone = document.getElementById('tone').value;
+
+    if (!party) { showError('Party ka naam toh daalo!'); return; }
+    if (!reason) { showError('Kya ke baare mein message hai? Ye bhi batao.'); return; }
+
+    hideError();
+
+    const btn = document.getElementById('generateBtn');
+    const loading = document.getElementById('loadingDots');
+    const bubbleWrap = document.getElementById('waBubbleWrap');
+    const actions = document.getElementById('outputActions');
+    const persistenceBar = document.getElementById('persistenceBar');
+
+    btn.disabled = true;
+    loading.classList.add('show');
+    bubbleWrap.innerHTML = '';
+    actions.style.display = 'none';
+    persistenceBar.style.display = 'none';
+
+    const toneDesc = { polite: 'very polite and respectful', firm: 'firm but friendly', urgent: 'urgent and direct', casual: 'casual and friendly like talking to a close friend' }[tone];
+
+    const prompts = {
+      payment:  `Write a ${toneDesc} WhatsApp payment reminder message in Hinglish (mix of Hindi and English) for an Indian small business owner. Customer name: ${party}. Amount pending: ₹${amount || 'some amount'}. For: ${reason}. ${extra ? `Extra context: ${extra}.` : ''} The message should be short (3-5 lines), maintain the business relationship, and end with a clear but polite ask. Output only the message text, nothing else.`,
+      quote:    `Write a ${toneDesc} WhatsApp quote/estimate message in Hinglish for an Indian small business. Customer: ${party}. Quote amount: ₹${amount || 'the discussed amount'}. For: ${reason}. ${extra ? `Note: ${extra}.` : ''} Keep it professional, mention the amount clearly, and invite them to confirm. 3-5 lines only. Output only the message.`,
+      order:    `Write a ${toneDesc} WhatsApp order confirmation message in Hinglish for an Indian business. Customer: ${party}. Order value: ₹${amount || 'the order amount'}. Product/service: ${reason}. ${extra ? `Delivery: ${extra}.` : ''} Confirm the order warmly and give next steps. 3-5 lines. Output only the message.`,
+      followup: `Write a ${toneDesc} WhatsApp follow-up message in Hinglish. The person ${party} has not replied to a previous message about ${reason}${amount ? ` worth ₹${amount}` : ''}. ${extra ? `It has been ${extra} days.` : ''} Politely check in without being pushy. 2-4 lines. Output only the message.`,
+      delay:    `Write a ${toneDesc} WhatsApp delay notice in Hinglish to customer ${party} about ${reason}${amount ? ` (order value ₹${amount})` : ''}. ${extra ? `New expected date: ${extra}.` : ''} Apologise sincerely, give reason briefly, and reassure. 3-5 lines. Output only the message.`,
+      thankyou: `Write a ${toneDesc} WhatsApp thank you message in Hinglish to ${party} for ${reason}${amount ? ` of ₹${amount}` : ''}. ${extra ? extra : ''} Warm, genuine, and invite future business. 2-4 lines. Output only the message.`
+    };
+
+    const followupPrompt = `Write a slightly firmer but still respectful WhatsApp follow-up message in Hinglish to ${party} about pending payment of ₹${amount || 'the amount'} for ${reason}. This is a second reminder. Mention that the previous message was sent and no reply came. Still maintain the relationship. 3-4 lines. Output only the message.`;
+
+    const prompt = isFollowup ? followupPrompt : prompts[selectedType];
+
+    try {
+      const response = await fetch('https://api.groq.com/openai/v1/chat/completions', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json', 'Authorization': 'Bearer ' + GROQ_KEY },
+        body: JSON.stringify({
+          model: 'llama-3.1-8b-instant',
+          messages: [{ role: 'user', content: prompt }],
+          max_tokens: 200,
+          temperature: 0.7
+        })
+      });
+
+      if (response.status === 401) throw new Error('Groq API key invalid. console.groq.com se naya key lo.');
+      if (!response.ok) {
+        const err = await response.json().catch(() => ({}));
+        throw new Error(err.error?.message || 'Kuch gadbad. Retry karo.');
+      }
+
+      const data = await response.json();
+      let result = data.choices?.[0]?.message?.content?.trim();
+      if (!result) throw new Error('Empty response. Dobara try karo.');
+      result = result.replace(/^["']|["']$/g, '').trim();
+
+      lastMessage = result;
+
+      const now = new Date();
+      const timeStr = now.getHours().toString().padStart(2,'0') + ':' + now.getMinutes().toString().padStart(2,'0');
+
+      loading.classList.remove('show');
+      bubbleWrap.innerHTML = `<div class="wa-bubble"><div class="wa-text">${result}</div><div class="wa-time">${timeStr} ✓✓</div></div>`;
+      actions.style.display = 'flex';
+
+      // Show persistence mode for payment/followup types
+      if (selectedType === 'payment' || selectedType === 'followup') {
+        persistenceBar.style.display = 'block';
+      }
+
+      // Set WhatsApp link
+      const waLink = 'https://wa.me/?text=' + encodeURIComponent(result);
+      document.getElementById('waBtn').href = waLink;
+
+    } catch (err) {
+      loading.classList.remove('show');
+      showError(err.message || 'Network error. Internet check karo.');
+      bubbleWrap.innerHTML = '<div class="wa-placeholder">Message yahan dikhega...</div>';
+    } finally {
+      btn.disabled = false;
+    }
+  }
+
+  function generateFollowup() {
+    generateMessage(true);
+  }
+
+  function copyMessage() {
+    if (!lastMessage) return;
+    navigator.clipboard.writeText(lastMessage).then(() => {
+      const btn = document.getElementById('copyBtn');
+      btn.classList.add('copied');
+      btn.innerHTML = `<svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> Copied!`;
+      setTimeout(() => {
+        btn.classList.remove('copied');
+        btn.innerHTML = `<svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg> Copy`;
+      }, 2000);
+    });
+  }
+</script>
+</body>
+</html>

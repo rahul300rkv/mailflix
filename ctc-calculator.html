@@ -1,0 +1,549 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>CTC to In-Hand Salary Calculator India 2025 | MailFix</title>
+<meta name="description" content="Calculate your exact in-hand salary from CTC instantly. Includes PF, professional tax, HRA, standard deduction, and income tax. Free salary calculator for Indian employees 2025."/>
+<meta name="keywords" content="ctc to in hand salary calculator india, salary calculator india 2025, inhand salary from ctc, pf deduction calculator, take home salary calculator india, salary breakdown india"/>
+<meta name="robots" content="index, follow"/>
+<link rel="canonical" href="https://mailflix.netlify.app/ctc-calculator.html"/>
+<meta property="og:title" content="CTC to In-Hand Salary Calculator India 2025"/>
+<meta property="og:description" content="Find out your exact take-home salary from your CTC. Includes all Indian tax and deduction calculations."/>
+<meta property="og:url" content="https://mailflix.netlify.app/ctc-calculator.html"/>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "CTC to In-Hand Salary Calculator India",
+  "url": "https://mailflix.netlify.app/ctc-calculator.html",
+  "description": "Free salary calculator that converts CTC to in-hand take-home salary for Indian employees with full tax breakdown.",
+  "applicationCategory": "FinanceApplication",
+  "offers": { "@type": "Offer", "price": "0", "priceCurrency": "INR" }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How is in-hand salary calculated from CTC in India?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "In-hand salary = CTC minus employer PF contribution minus employee PF contribution minus professional tax minus income tax. This calculator does all that math instantly with the correct 2025 tax slabs."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the difference between CTC and in-hand salary?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "CTC (Cost to Company) is the total amount a company spends on an employee including PF, gratuity, and benefits. In-hand salary is what you actually receive after all deductions like PF, professional tax, and income tax."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the PF deduction from salary in India?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "PF deduction is 12% of basic salary (capped at Rs 1800/month if basic exceeds Rs 15000). Both employee and employer contribute 12% each. The employee's share is deducted from your in-hand salary."
+      }
+    }
+  ]
+}
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet"/>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3532554351654388" crossorigin="anonymous"></script>
+<style>
+  :root {
+    --ink: #0f0e0c;
+    --paper: #f5f2ec;
+    --card: #ffffff;
+    --accent: #d44f1e;
+    --accent2: #2563eb;
+    --green: #16a34a;
+    --green-bg: #f0fdf4;
+    --muted: #7a7570;
+    --border: #e2ddd5;
+    --radius: 12px;
+    --font-head: 'Syne', sans-serif;
+    --font-body: 'DM Sans', sans-serif;
+  }
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  body { background: var(--paper); color: var(--ink); font-family: var(--font-body); font-size: 16px; line-height: 1.6; min-height: 100vh; }
+
+  nav { display: flex; justify-content: space-between; align-items: center; padding: 18px 5%; border-bottom: 1px solid var(--border); background: var(--paper); position: sticky; top: 0; z-index: 100; }
+  .logo { font-family: var(--font-head); font-size: 22px; font-weight: 800; letter-spacing: -0.5px; color: var(--ink); text-decoration: none; }
+  .logo span { color: var(--accent); }
+  .nav-links { display: flex; gap: 20px; align-items: center; }
+  .nav-links a { font-size: 14px; color: var(--muted); text-decoration: none; }
+  .nav-links a:hover { color: var(--accent); }
+  .nav-badge { background: var(--accent); color: #fff; font-size: 12px; font-weight: 500; padding: 4px 12px; border-radius: 99px; }
+
+  .hero { max-width: 760px; margin: 0 auto; padding: 56px 5% 32px; text-align: center; }
+  .hero-tag { display: inline-flex; align-items: center; gap: 6px; background: #fff; border: 1px solid var(--border); border-radius: 99px; padding: 6px 16px; font-size: 13px; color: var(--muted); margin-bottom: 20px; }
+  .hero-tag .dot { width: 7px; height: 7px; background: #22c55e; border-radius: 50%; animation: pulse 2s infinite; }
+  @keyframes pulse { 0%,100%{opacity:1;transform:scale(1)} 50%{opacity:.6;transform:scale(1.3)} }
+  h1 { font-family: var(--font-head); font-size: clamp(32px, 5vw, 52px); font-weight: 800; line-height: 1.08; letter-spacing: -1.5px; margin-bottom: 14px; }
+  h1 em { color: var(--accent); font-style: normal; }
+  .hero-sub { font-size: 17px; color: var(--muted); font-weight: 300; max-width: 500px; margin: 0 auto; }
+
+  /* MAIN LAYOUT */
+  .calc-wrap { max-width: 1000px; margin: 32px auto; padding: 0 5%; display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
+  @media(max-width: 700px) { .calc-wrap { grid-template-columns: 1fr; } }
+
+  .card { background: var(--card); border: 1px solid var(--border); border-radius: 18px; overflow: hidden; box-shadow: 0 2px 20px rgba(0,0,0,0.05); }
+  .card-header { padding: 18px 24px; border-bottom: 1px solid var(--border); background: #fafaf8; }
+  .card-header h2 { font-family: var(--font-head); font-size: 16px; font-weight: 700; }
+  .card-header p { font-size: 13px; color: var(--muted); margin-top: 2px; }
+  .card-body { padding: 20px 24px; }
+
+  /* INPUTS */
+  .input-group { margin-bottom: 18px; }
+  .input-group label { display: block; font-size: 13px; font-weight: 500; color: var(--muted); margin-bottom: 6px; font-family: var(--font-head); text-transform: uppercase; letter-spacing: 0.06em; }
+  .input-row { display: flex; align-items: center; border: 1px solid var(--border); border-radius: 8px; background: var(--paper); overflow: hidden; transition: border-color 0.15s; }
+  .input-row:focus-within { border-color: var(--accent); background: #fff; }
+  .input-prefix { padding: 10px 12px; font-size: 14px; color: var(--muted); border-right: 1px solid var(--border); background: #f5f2ec; font-weight: 500; }
+  .input-row input { flex: 1; border: none; outline: none; padding: 10px 14px; font-family: var(--font-body); font-size: 15px; color: var(--ink); background: transparent; }
+  .input-row input::placeholder { color: #c8c3ba; }
+
+  select { width: 100%; padding: 10px 14px; border: 1px solid var(--border); border-radius: 8px; font-family: var(--font-body); font-size: 14px; color: var(--ink); background: var(--paper); outline: none; cursor: pointer; transition: border-color 0.15s; }
+  select:focus { border-color: var(--accent); background: #fff; }
+
+  .toggle-row { display: flex; justify-content: space-between; align-items: center; padding: 10px 0; border-bottom: 1px solid var(--border); }
+  .toggle-row:last-child { border-bottom: none; }
+  .toggle-label { font-size: 14px; color: var(--ink); }
+  .toggle-sub { font-size: 12px; color: var(--muted); }
+  .toggle { position: relative; width: 36px; height: 20px; flex-shrink: 0; }
+  .toggle input { opacity: 0; width: 0; height: 0; }
+  .toggle-slider { position: absolute; inset: 0; background: var(--border); border-radius: 20px; cursor: pointer; transition: 0.2s; }
+  .toggle-slider::before { content: ''; position: absolute; width: 14px; height: 14px; left: 3px; bottom: 3px; background: #fff; border-radius: 50%; transition: 0.2s; }
+  .toggle input:checked + .toggle-slider { background: var(--accent); }
+  .toggle input:checked + .toggle-slider::before { transform: translateX(16px); }
+
+  .calc-btn { width: 100%; padding: 13px; background: var(--accent); color: #fff; border: none; border-radius: 10px; font-family: var(--font-head); font-size: 16px; font-weight: 700; cursor: pointer; margin-top: 20px; transition: all 0.15s; }
+  .calc-btn:hover { background: #b83e12; transform: translateY(-1px); }
+
+  /* RESULTS */
+  .inhand-hero { background: linear-gradient(135deg, #0f0e0c 0%, #1a1917 100%); padding: 24px; text-align: center; }
+  .inhand-label { font-size: 12px; color: #7a7570; text-transform: uppercase; letter-spacing: 0.1em; font-family: var(--font-head); margin-bottom: 8px; }
+  .inhand-amount { font-family: var(--font-head); font-size: clamp(32px, 5vw, 44px); font-weight: 800; color: #22c55e; letter-spacing: -1px; }
+  .inhand-sub { font-size: 13px; color: #7a7570; margin-top: 6px; }
+
+  .breakdown { padding: 0; }
+  .breakdown-row { display: flex; justify-content: space-between; align-items: center; padding: 12px 24px; border-bottom: 1px solid var(--border); }
+  .breakdown-row:last-child { border-bottom: none; }
+  .breakdown-row.total { background: var(--green-bg); }
+  .breakdown-row.deduction .amount { color: #dc2626; }
+  .breakdown-row.earning .amount { color: var(--green); }
+  .row-label { font-size: 14px; color: var(--ink); }
+  .row-sub { font-size: 12px; color: var(--muted); }
+  .amount { font-size: 14px; font-weight: 500; font-family: var(--font-head); }
+  .amount.positive { color: var(--green); }
+  .amount.negative { color: #dc2626; }
+
+  .section-divider { padding: 8px 24px; background: #fafaf8; border-bottom: 1px solid var(--border); font-size: 11px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.1em; color: var(--muted); font-family: var(--font-head); }
+
+  .empty-state { padding: 48px 24px; text-align: center; color: var(--muted); font-size: 14px; }
+  .empty-icon { font-size: 40px; margin-bottom: 12px; display: block; opacity: 0.4; }
+
+  /* TAX REGIME PILLS */
+  .regime-pills { display: flex; gap: 8px; margin-bottom: 18px; }
+  .regime-pill { flex: 1; padding: 8px; border: 1px solid var(--border); border-radius: 8px; text-align: center; cursor: pointer; font-size: 13px; font-family: var(--font-body); background: var(--card); color: var(--muted); transition: all 0.15s; }
+  .regime-pill.active { background: var(--accent2); border-color: var(--accent2); color: #fff; font-weight: 500; }
+
+  /* INFO BOX */
+  .info-box { background: #eff6ff; border: 1px solid #bfdbfe; border-radius: 8px; padding: 12px 16px; font-size: 13px; color: #1d4ed8; margin-bottom: 16px; line-height: 1.6; }
+
+  /* AD */
+  .ad-banner { max-width: 1000px; margin: 0 auto 32px; padding: 0 5%; }
+
+  /* EXPLAINER */
+  .explainer { max-width: 1000px; margin: 0 auto; padding: 48px 5%; }
+  .explainer h2 { font-family: var(--font-head); font-size: clamp(24px, 3vw, 34px); font-weight: 800; letter-spacing: -0.5px; margin-bottom: 32px; }
+  .explainer-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 16px; }
+  .explainer-card { background: var(--card); border: 1px solid var(--border); border-radius: var(--radius); padding: 20px; }
+  .explainer-card h4 { font-family: var(--font-head); font-size: 14px; font-weight: 700; margin-bottom: 8px; color: var(--ink); }
+  .explainer-card p { font-size: 13px; color: var(--muted); line-height: 1.65; }
+  .explainer-card .tag { display: inline-block; font-size: 11px; padding: 2px 8px; border-radius: 4px; font-weight: 500; margin-bottom: 8px; }
+  .tag.deduction { background: #fef2f2; color: #b91c1c; }
+  .tag.earning { background: var(--green-bg); color: #15803d; }
+
+  /* FAQ */
+  .faq-section { max-width: 1000px; margin: 0 auto; padding: 0 5% 72px; }
+  .faq-section h2 { font-family: var(--font-head); font-size: clamp(24px, 3vw, 34px); font-weight: 800; letter-spacing: -0.5px; margin-bottom: 24px; }
+  details { background: var(--card); border: 1px solid var(--border); border-radius: var(--radius); padding: 18px 20px; margin-bottom: 10px; }
+  summary { font-family: var(--font-head); font-size: 15px; font-weight: 700; cursor: pointer; list-style: none; display: flex; justify-content: space-between; align-items: center; }
+  summary .plus { color: var(--accent); font-size: 20px; }
+  details p { margin-top: 12px; font-size: 14px; color: var(--muted); line-height: 1.7; }
+
+  footer { border-top: 1px solid var(--border); padding: 28px 5%; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px; font-size: 13px; color: var(--muted); }
+  footer a { color: var(--muted); text-decoration: none; }
+  footer a:hover { color: var(--accent); }
+</style>
+</head>
+<body>
+
+<nav>
+  <a class="logo" href="index.html">Mail<span>Fix</span></a>
+  <div class="nav-links">
+    <a href="index.html">Email</a>
+    <a href="job-application.html">Job Email</a>
+    <a href="whatsapp-dhanda.html">WhatsApp</a>
+    <a href="sarkari-letter.html">Sarkari</a>
+    <a href="resignation.html">Resign</a>
+    <a href="city-compare.html">City Compare</a>
+    <span class="nav-badge">Free</span>
+  </div>
+</nav>
+
+<section class="hero">
+  <div class="hero-tag"><span class="dot"></span> Updated for FY 2025-26</div>
+  <h1>CTC se <em>in-hand</em> salary<br/>calculate karo</h1>
+  <p class="hero-sub">Enter your CTC — get your exact take-home salary with full breakdown of PF, tax, HRA and all deductions.</p>
+</section>
+
+<div class="calc-wrap">
+
+  <!-- INPUT CARD -->
+  <div class="card">
+    <div class="card-header">
+      <h2>Enter your details</h2>
+      <p>All fields in Indian Rupees (₹)</p>
+    </div>
+    <div class="card-body">
+
+      <div class="input-group">
+        <label>Annual CTC</label>
+        <div class="input-row">
+          <span class="input-prefix">₹</span>
+          <input type="number" id="ctc" placeholder="e.g. 800000" oninput="calculate()"/>
+        </div>
+      </div>
+
+      <div class="input-group">
+        <label>Basic Salary % of CTC</label>
+        <div class="input-row">
+          <input type="number" id="basicPct" value="40" min="20" max="60" oninput="calculate()"/>
+          <span class="input-prefix">%</span>
+        </div>
+      </div>
+
+      <div class="input-group">
+        <label>HRA % of Basic</label>
+        <div class="input-row">
+          <input type="number" id="hraPct" value="50" min="0" max="100" oninput="calculate()"/>
+          <span class="input-prefix">%</span>
+        </div>
+      </div>
+
+      <div class="input-group">
+        <label>City type</label>
+        <select id="city" onchange="calculate()">
+          <option value="metro">Metro city (Mumbai, Delhi, Kolkata, Chennai)</option>
+          <option value="nonmetro">Non-metro city</option>
+        </select>
+      </div>
+
+      <div class="input-group">
+        <label>Tax regime</label>
+        <div class="regime-pills">
+          <div class="regime-pill active" id="pill-new" onclick="setRegime('new')">New regime<br/><span style="font-size:11px;opacity:0.8">Default 2025</span></div>
+          <div class="regime-pill" id="pill-old" onclick="setRegime('old')">Old regime<br/><span style="font-size:11px;opacity:0.8">With deductions</span></div>
+        </div>
+      </div>
+
+      <div id="old-regime-options" style="display:none">
+        <div class="info-box">Old regime mein 80C, HRA, standard deduction available hai. Niche toggle karo.</div>
+        <div class="toggle-row">
+          <div><div class="toggle-label">80C Deduction</div><div class="toggle-sub">PF + PPF + ELSS etc. (max ₹1.5L)</div></div>
+          <label class="toggle"><input type="checkbox" id="toggle80c" checked onchange="calculate()"/><span class="toggle-slider"></span></label>
+        </div>
+        <div class="toggle-row">
+          <div><div class="toggle-label">HRA Exemption</div><div class="toggle-sub">If you pay rent</div></div>
+          <label class="toggle"><input type="checkbox" id="toggleHRA" checked onchange="calculate()"/><span class="toggle-slider"></span></label>
+        </div>
+        <div class="toggle-row">
+          <div><div class="toggle-label">80D Health Insurance</div><div class="toggle-sub">Max ₹25,000</div></div>
+          <label class="toggle"><input type="checkbox" id="toggle80d" onchange="calculate()"/><span class="toggle-slider"></span></label>
+        </div>
+      </div>
+
+      <div class="toggle-row" style="margin-top:8px">
+        <div><div class="toggle-label">PF applicable?</div><div class="toggle-sub">Disable for CTC above ₹25L (some cos.)</div></div>
+        <label class="toggle"><input type="checkbox" id="togglePF" checked onchange="calculate()"/><span class="toggle-slider"></span></label>
+      </div>
+
+      <button class="calc-btn" onclick="calculate()">Calculate My In-Hand Salary</button>
+    </div>
+  </div>
+
+  <!-- RESULTS CARD -->
+  <div class="card">
+    <div id="empty-state" class="empty-state">
+      <span class="empty-icon">💰</span>
+      Enter your CTC on the left to see your in-hand salary breakdown
+    </div>
+
+    <div id="results" style="display:none">
+      <div class="inhand-hero">
+        <div class="inhand-label">Monthly in-hand salary</div>
+        <div class="inhand-amount" id="inhandMonthly">₹0</div>
+        <div class="inhand-sub" id="inhandAnnual">Annual: ₹0</div>
+      </div>
+
+      <div class="breakdown" id="breakdownRows"></div>
+    </div>
+  </div>
+
+</div>
+
+<div class="ad-banner">
+  <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-3532554351654388" data-ad-slot="1120537447" data-ad-format="auto" data-full-width-responsive="true"></ins>
+  <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+</div>
+
+<!-- EXPLAINER -->
+<section class="explainer">
+  <h2>Salary mein kya kya kata hai?</h2>
+  <div class="explainer-grid">
+    <div class="explainer-card">
+      <span class="tag deduction">Deduction</span>
+      <h4>Employee PF (12%)</h4>
+      <p>12% of basic salary deducted from your in-hand. Goes into your PF account — you get it back when you leave or retire.</p>
+    </div>
+    <div class="explainer-card">
+      <span class="tag deduction">Deduction</span>
+      <h4>Professional Tax</h4>
+      <p>State government tax. ₹200/month in most states (₹2,400/year). Maharashtra, Karnataka, West Bengal etc. have it.</p>
+    </div>
+    <div class="explainer-card">
+      <span class="tag deduction">Deduction</span>
+      <h4>Income Tax (TDS)</h4>
+      <p>Depends on your tax slab. New regime has lower rates but no deductions. Old regime has higher rates but many exemptions.</p>
+    </div>
+    <div class="explainer-card">
+      <span class="tag earning">Earning</span>
+      <h4>HRA</h4>
+      <p>House Rent Allowance — part of your salary for paying rent. In old regime, part of it is tax-free if you actually pay rent.</p>
+    </div>
+    <div class="explainer-card">
+      <span class="tag earning">Earning</span>
+      <h4>Standard Deduction</h4>
+      <p>₹75,000/year flat deduction in new regime (2025). No proof needed. Automatically reduces your taxable income.</p>
+    </div>
+    <div class="explainer-card">
+      <span class="tag deduction">Deduction</span>
+      <h4>Employer PF (12%)</h4>
+      <p>Company also contributes 12% of your basic to PF. This is PART of your CTC but does NOT come in your hand salary.</p>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="faq-section">
+  <h2>Common questions</h2>
+  <details>
+    <summary>Mera CTC 6 LPA hai toh in-hand kitna hoga? <span class="plus">+</span></summary>
+    <p>6 LPA CTC ke saath approx ₹42,000–45,000 per month in-hand milta hai new tax regime mein. Exact amount basic salary percentage aur PF par depend karta hai. Calculator mein 6,00,000 enter karo for exact figure.</p>
+  </details>
+  <details>
+    <summary>New regime better hai ya old regime? <span class="plus">+</span></summary>
+    <p>New regime better hai agar aapke paas 80C, HRA jaise deductions kam hain. Old regime better hai agar aap 80C mein full ₹1.5L invest karte hain aur rent dete hain. Generally 7 LPA se upar ke liye old regime zyada benefit deta hai — but calculate karke dekho.</p>
+  </details>
+  <details>
+    <summary>PF mein employer contribution CTC mein count hota hai kya? <span class="plus">+</span></summary>
+    <p>Haan, employer PF contribution usually CTC ka part hota hai. Iska matlab agar CTC ₹6L hai aur employer PF ₹21,600/year hai, toh aapki actual gross salary ₹5,78,400 hai. Isliye CTC aur in-hand mein itna difference aata hai.</p>
+  </details>
+  <details>
+    <summary>Professional tax kya hota hai aur kitna kata hai? <span class="plus">+</span></summary>
+    <p>Professional tax state government ka ek chhota tax hai. Maharashtra, Karnataka, West Bengal jaisi states mein ₹200/month maximum kata hai. Kuch states mein nahi hota. Annual maximum ₹2,500 hai aur ye income tax mein deduction ke roop mein claim ho sakta hai.</p>
+  </details>
+  <details>
+    <summary>Gratuity CTC mein count hoti hai? <span class="plus">+</span></summary>
+    <p>Haan, kaafi companies gratuity ko CTC mein include karti hain (4.81% of basic). Par ye sirf 5 saal ki service ke baad milti hai. Isliye hum isse in-hand calculation mein include nahi karte.</p>
+  </details>
+</section>
+
+<div class="ad-banner">
+  <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-3532554351654388" data-ad-slot="3962323207" data-ad-format="auto" data-full-width-responsive="true"></ins>
+  <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+</div>
+
+<footer>
+  <span>© 2025 MailFix — Free Tools for Indian Professionals</span>
+  <div style="display:flex;gap:16px;flex-wrap:wrap">
+    <a href="index.html">Email Tools</a>
+    <a href="job-application.html">Job Email</a>
+    <a href="whatsapp-dhanda.html">WhatsApp Dhanda</a>
+    <a href="sarkari-letter.html">Sarkari Letter</a>
+    <a href="privacy.html">Privacy Policy</a>
+  </div>
+</footer>
+
+<script>
+  let taxRegime = 'new';
+
+  function setRegime(r) {
+    taxRegime = r;
+    document.getElementById('pill-new').classList.toggle('active', r === 'new');
+    document.getElementById('pill-old').classList.toggle('active', r === 'old');
+    document.getElementById('old-regime-options').style.display = r === 'old' ? 'block' : 'none';
+    calculate();
+  }
+
+  function fmt(n) {
+    return '₹' + Math.round(n).toLocaleString('en-IN');
+  }
+
+  function calcIncomeTax(taxableIncome, regime) {
+    if (regime === 'new') {
+      // New regime slabs FY 2025-26
+      // 0-4L: 0%, 4-8L: 5%, 8-12L: 10%, 12-16L: 15%, 16-20L: 20%, 20-24L: 25%, 24L+: 30%
+      // Rebate u/s 87A: tax = 0 if income <= 12L (new regime)
+      let tax = 0;
+      const slabs = [
+        [400000, 0],
+        [800000, 0.05],
+        [1200000, 0.10],
+        [1600000, 0.15],
+        [2000000, 0.20],
+        [2400000, 0.25],
+        [Infinity, 0.30]
+      ];
+      let prev = 0;
+      for (const [limit, rate] of slabs) {
+        if (taxableIncome <= prev) break;
+        const taxable = Math.min(taxableIncome, limit) - prev;
+        tax += taxable * rate;
+        prev = limit;
+      }
+      // Rebate 87A — if income <= 12L, tax = 0
+      if (taxableIncome <= 1200000) tax = 0;
+      // 4% health & education cess
+      tax = tax * 1.04;
+      return tax;
+    } else {
+      // Old regime slabs
+      // 0-2.5L: 0%, 2.5-5L: 5%, 5-10L: 20%, 10L+: 30%
+      let tax = 0;
+      if (taxableIncome <= 250000) tax = 0;
+      else if (taxableIncome <= 500000) tax = (taxableIncome - 250000) * 0.05;
+      else if (taxableIncome <= 1000000) tax = 12500 + (taxableIncome - 500000) * 0.20;
+      else tax = 112500 + (taxableIncome - 1000000) * 0.30;
+      // Rebate 87A — if income <= 5L, tax = 0
+      if (taxableIncome <= 500000) tax = 0;
+      tax = tax * 1.04;
+      return tax;
+    }
+  }
+
+  function calculate() {
+    const ctc = parseFloat(document.getElementById('ctc').value) || 0;
+    if (ctc <= 0) {
+      document.getElementById('empty-state').style.display = 'block';
+      document.getElementById('results').style.display = 'none';
+      return;
+    }
+
+    const basicPct = parseFloat(document.getElementById('basicPct').value) / 100 || 0.4;
+    const hraPct = parseFloat(document.getElementById('hraPct').value) / 100 || 0.5;
+    const isMetro = document.getElementById('city').value === 'metro';
+    const pfApplicable = document.getElementById('togglePF').checked;
+
+    // Basic calculations
+    const basic = ctc * basicPct;
+    const hra = basic * hraPct;
+
+    // PF
+    const pfBasic = pfApplicable ? Math.min(basic, 180000) : 0; // capped at 15000/month = 180000/year
+    const employeePF = pfApplicable ? pfBasic * 0.12 : 0;
+    const employerPF = pfApplicable ? pfBasic * 0.12 : 0;
+
+    // Gross salary (CTC - employer PF - gratuity approx)
+    const gratuity = basic * 0.0481;
+    const gross = ctc - employerPF - gratuity;
+
+    // Special allowance = gross - basic - hra
+    const specialAllowance = Math.max(0, gross - basic - hra);
+
+    // Professional tax (approx ₹2400/year)
+    const profTax = Math.min(2400, gross * 0.002);
+
+    // Standard deduction
+    const stdDeduction = taxRegime === 'new' ? 75000 : 50000;
+
+    // Taxable income calculation
+    let taxableIncome;
+    if (taxRegime === 'new') {
+      taxableIncome = Math.max(0, gross - employeePF - stdDeduction);
+    } else {
+      // Old regime
+      let deductions = stdDeduction + employeePF;
+      // 80C
+      if (document.getElementById('toggle80c').checked) deductions += Math.min(150000, employeePF + 50000);
+      // HRA exemption
+      if (document.getElementById('toggleHRA').checked) {
+        const hraExempt = Math.min(hra, isMetro ? basic * 0.5 : basic * 0.4);
+        deductions += hraExempt;
+      }
+      // 80D
+      if (document.getElementById('toggle80d').checked) deductions += 25000;
+      taxableIncome = Math.max(0, gross - deductions - profTax);
+    }
+
+    const incomeTax = calcIncomeTax(taxableIncome, taxRegime);
+    const monthlyTax = incomeTax / 12;
+
+    // Final in-hand
+    const annualInhand = gross - employeePF - profTax - incomeTax;
+    const monthlyInhand = annualInhand / 12;
+
+    // Update UI
+    document.getElementById('empty-state').style.display = 'none';
+    document.getElementById('results').style.display = 'block';
+    document.getElementById('inhandMonthly').textContent = fmt(monthlyInhand);
+    document.getElementById('inhandAnnual').textContent = 'Annual: ' + fmt(annualInhand);
+
+    // Build breakdown rows
+    const rows = [
+      { section: 'Earnings', items: [
+        { label: 'Annual CTC', sub: 'Your total cost to company', amount: ctc, type: 'neutral' },
+        { label: 'Basic Salary', sub: basicPct * 100 + '% of CTC', amount: basic, type: 'positive' },
+        { label: 'HRA', sub: hraPct * 100 + '% of basic', amount: hra, type: 'positive' },
+        { label: 'Special Allowance', sub: 'Balance of gross salary', amount: specialAllowance, type: 'positive' },
+      ]},
+      { section: 'Deductions', items: [
+        ...(pfApplicable ? [{ label: 'Employer PF', sub: '12% of basic (part of CTC, not in-hand)', amount: -employerPF, type: 'negative' }] : []),
+        ...(pfApplicable ? [{ label: 'Employee PF', sub: '12% of basic (your contribution)', amount: -employeePF, type: 'negative' }] : []),
+        { label: 'Gratuity (est.)', sub: '4.81% of basic — part of CTC', amount: -gratuity, type: 'negative' },
+        { label: 'Professional Tax', sub: 'State govt. tax', amount: -profTax, type: 'negative' },
+        { label: 'Income Tax (TDS)', sub: taxRegime === 'new' ? 'New regime FY 2025-26' : 'Old regime FY 2025-26', amount: -incomeTax, type: 'negative' },
+      ]},
+      { section: 'Summary', items: [
+        { label: 'Annual In-Hand', sub: 'After all deductions', amount: annualInhand, type: 'total' },
+        { label: 'Monthly In-Hand', sub: 'Take-home per month', amount: monthlyInhand, type: 'total' },
+      ]}
+    ];
+
+    let html = '';
+    for (const group of rows) {
+      html += `<div class="section-divider">${group.section}</div>`;
+      for (const row of group.items) {
+        const amtClass = row.type === 'positive' || row.type === 'total' ? 'positive' : row.type === 'negative' ? 'negative' : '';
+        const prefix = row.type === 'negative' ? '−' : '';
+        const displayAmt = Math.abs(row.amount);
+        html += `<div class="breakdown-row">
+          <div><div class="row-label">${row.label}</div><div class="row-sub">${row.sub}</div></div>
+          <div class="amount ${amtClass}">${prefix}${fmt(displayAmt)}</div>
+        </div>`;
+      }
+    }
+    document.getElementById('breakdownRows').innerHTML = html;
+  }
+</script>
+</body>
+</html>
