@@ -418,7 +418,7 @@ Regards,
     const isBoss=selectedTone==='Boss';
     const prompt=isBoss?`You are a witty, confident Indian professional. Convert this Hinglish message into a sharp, confident, bold email reply that sounds like a smart Indian boss wrote it. Use clear English but keep the desi confidence — phrases like "Please note", "Kindly be informed", "I trust this is clear" work well. Make it assertive but still professional. Include a Subject line. Output only the email, nothing else.\n\nHinglish message: "${input}"\n\nBoss-level email:`:`You are a professional email writing assistant for Indian users. Convert the following Hinglish message (mix of Hindi and English) into a clean, polished, ${selectedTone.toLowerCase()} professional English email. Include a Subject line at the top. Output ONLY the email, nothing else.\n\nHinglish message: "${input}"\n\nProfessional email:`;
     try{
-      const response=await fetch('/.netlify/functions/groq',{method:'POST',headers:{'Content-Type':'application/json','Authorization':'Bearer '+GROQ_KEY},body:JSON.stringify({model:'llama-3.1-8b-instant',messages:[{role:'user',content:prompt}],max_tokens:400,temperature:0.6})});
+      const response=await fetch('/.netlify/functions/groq',{method:'POST',headers:{'Content-Type':'application/json',body:JSON.stringify({model:'llama-3.1-8b-instant',messages:[{role:'user',content:prompt}],max_tokens:400,temperature:0.6})});
       if(response.status===401)throw new Error('Groq API key galat hai. console.groq.com se naya key lo.');
       if(!response.ok){const err=await response.json().catch(()=>({}));throw new Error(err.error?.message||'Kuch gadbad ho gayi, retry karo.')}
       const data=await response.json();
