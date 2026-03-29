@@ -337,7 +337,7 @@
   let lastLetter = '';
   let isPersistence = false;
 
-  // Groq key removed — calls proxied via /api/groq Netlify function
+  // Groq key removed — calls proxied via /.netlify/functions/groq Netlify function
 
   const CAT_CONFIG = {
     bank:         { title: 'Bank Application',             sub: 'SBI, PNB, BOI, private banks sab ke liye',  refLabel: 'Account / Customer ID',          purposeLabel: 'Purpose (Hindi/English mein)', recipientDefault: 'The Branch Manager' },
@@ -454,7 +454,7 @@ Format requirements:
 Output ONLY the letter text, nothing else.`;
 
     try {
-      const response = await fetch('/api/groq', {
+      const response = await fetch('/.netlify/functions/groq', {
         method: 'POST',
         body: JSON.stringify({
           model: 'llama-3.1-8b-instant',

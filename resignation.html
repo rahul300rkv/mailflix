@@ -331,7 +331,7 @@
   let selectedMode = 'polite';
   let lastLetter = '';
 
- // Groq key removed — calls proxied via /api/groq Netlify function
+ // Groq key removed — calls proxied via /.netlify/functions/groq Netlify function
 
   const MODE_CONFIG = {
     polite: { title: 'Polite Resignation', sub: 'Graceful exit with relationships intact', btnClass: '', reasonLabel: 'Reason (optional — vague is fine)', extraLabel: 'Anything to mention (handover, thanks etc.)' },
@@ -416,7 +416,7 @@ Tone: Polite but firm. Mention documents are needed urgently for new job joining
     }
 
     try {
-      const response = await fetch('/api/groq', {
+      const response = await fetch('/.netlify/functions/groq', {
         method: 'POST',
         body: JSON.stringify({ model: 'llama-3.1-8b-instant', messages: [{ role: 'user', content: prompt }], max_tokens: 600, temperature: 0.4 })
       });

@@ -336,7 +336,7 @@
   let selectedType = 'payment';
   let lastMessage = '';
 
-// Groq key removed — calls proxied via /api/groq Netlify function
+// Groq key removed — calls proxied via /.netlify/functions/groq Netlify function
 
   const TYPE_CONFIG = {
     payment:  { title: 'Payment Reminder',  sub: 'Politely ask for pending payment',       amountLabel: 'Amount (₹)', reasonLabel: 'For (what payment)',    extraLabel: 'Extra detail (optional)' },
@@ -432,7 +432,7 @@
     const prompt = isFollowup ? followupPrompt : prompts[selectedType];
 
     try {
-      const response = await fetch('/api/groq', {
+      const response = await fetch('/.netlify/functions/groq', {
         method: 'POST',
         body: JSON.stringify({
           model: 'llama-3.1-8b-instant',
