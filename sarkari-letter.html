@@ -337,7 +337,7 @@
   let lastLetter = '';
   let isPersistence = false;
 
-  const GROQ_KEY = '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';
+  // Groq key removed — calls proxied via /api/groq Netlify function
 
   const CAT_CONFIG = {
     bank:         { title: 'Bank Application',             sub: 'SBI, PNB, BOI, private banks sab ke liye',  refLabel: 'Account / Customer ID',          purposeLabel: 'Purpose (Hindi/English mein)', recipientDefault: 'The Branch Manager' },
@@ -454,9 +454,8 @@ Format requirements:
 Output ONLY the letter text, nothing else.`;
 
     try {
-      const response = await fetch('https://api.groq.com/openai/v1/chat/completions', {
+      const response = await fetch('/api/groq', {
         method: 'POST',
-        headers: { 'Content-Type': 'application/json', 'Authorization': 'Bearer ' + GROQ_KEY },
         body: JSON.stringify({
           model: 'llama-3.1-8b-instant',
           messages: [{ role: 'user', content: prompt }],

@@ -331,7 +331,7 @@
   let selectedMode = 'polite';
   let lastLetter = '';
 
- const GROQ_KEY = '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';
+ // Groq key removed — calls proxied via /api/groq Netlify function
 
   const MODE_CONFIG = {
     polite: { title: 'Polite Resignation', sub: 'Graceful exit with relationships intact', btnClass: '', reasonLabel: 'Reason (optional — vague is fine)', extraLabel: 'Anything to mention (handover, thanks etc.)' },
@@ -416,9 +416,8 @@ Tone: Polite but firm. Mention documents are needed urgently for new job joining
     }
 
     try {
-      const response = await fetch('https://api.groq.com/openai/v1/chat/completions', {
+      const response = await fetch('/api/groq', {
         method: 'POST',
-        headers: { 'Content-Type': 'application/json', 'Authorization': 'Bearer ' + GROQ_KEY },
         body: JSON.stringify({ model: 'llama-3.1-8b-instant', messages: [{ role: 'user', content: prompt }], max_tokens: 600, temperature: 0.4 })
       });
       if (response.status === 401) throw new Error('Groq API key invalid. console.groq.com se naya key lo.');
