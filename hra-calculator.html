@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>HRA Exemption Calculator India 2025 | MailFix</title>
+<meta name="description" content="Calculate your exact tax-free HRA exemption using Income Tax Department rules. Enter basic salary, HRA received and rent paid — get instant breakdown of all three exemption conditions. Free, no signup."/>
+<meta name="keywords" content="hra exemption calculator india, house rent allowance calculator, hra tax exemption 2025, hra calculation rules, metro non metro hra, salary tax saving hra"/>
+<meta name="robots" content="index, follow"/>
+<link rel="canonical" href="https://mailflix.netlify.app/hra-calculator.html"/>
+<meta property="og:title" content="HRA Exemption Calculator India 2025"/>
+<meta property="og:description" content="Find your exact tax-free HRA exemption with full breakdown of all three Income Tax Department rules."/>
+<meta property="og:url" content="https://mailflix.netlify.app/hra-calculator.html"/>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "HRA Exemption Calculator India",
+  "url": "https://mailflix.netlify.app/hra-calculator.html",
+  "description": "Free calculator that finds your exact tax-free House Rent Allowance exemption for Indian employees with full rule-by-rule breakdown.",
+  "applicationCategory": "FinanceApplication",
+  "offers": { "@type": "Offer", "price": "0", "priceCurrency": "INR" }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    { "@type": "Question", "name": "How is HRA exemption calculated in India?", "acceptedAnswer": { "@type": "Answer", "text": "HRA exemption is the minimum of three values: actual HRA received, rent paid minus 10% of basic salary, and 50% of basic for metro cities or 40% for non-metro cities. Whichever of the three is smallest is your tax-free amount." } },
+    { "@type": "Question", "name": "Which cities count as metro for HRA exemption?", "acceptedAnswer": { "@type": "Answer", "text": "For HRA purposes, only Delhi, Mumbai, Kolkata and Chennai are treated as metro cities, qualifying for the 50% of basic salary rule. All other cities, including Bangalore, Pune, Hyderabad and Gurgaon, use the 40% non-metro rate." } },
+    { "@type": "Question", "name": "Can I claim HRA exemption under the new tax regime?", "acceptedAnswer": { "@type": "Answer", "text": "No. HRA exemption is only available under the old tax regime. If you have opted for the new tax regime, HRA is fully taxable regardless of rent paid." } },
+    { "@type": "Question", "name": "Do I need rent receipts to claim HRA exemption?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. Most employers require rent receipts to process HRA exemption in your payroll, and if annual rent exceeds Rs 1,00,000 you also need your landlord's PAN." } }
+  ]
+}
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet"/>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3532554351654388" crossorigin="anonymous"></script>
+<style>
+  :root {
+    --ink: #0f0e0c;
+    --paper: #f5f2ec;
+    --card: #ffffff;
+    --accent: #d44f1e;
+    --accent2: #2563eb;
+    --green: #16a34a;
+    --green-bg: #f0fdf4;
+    --muted: #7a7570;
+    --border: #e2ddd5;
+    --radius: 12px;
+    --font-head: 'Syne', sans-serif;
+    --font-body: 'DM Sans', sans-serif;
+  }
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  body { background: var(--paper); color: var(--ink); font-family: var(--font-body); font-size: 16px; line-height: 1.6; min-height: 100vh; }
+
+  nav { display: flex; justify-content: space-between; align-items: center; padding: 18px 5%; border-bottom: 1px solid var(--border); background: var(--paper); position: sticky; top: 0; z-index: 100; }
+  .logo { font-family: var(--font-head); font-size: 22px; font-weight: 800; letter-spacing: -0.5px; color: var(--ink); text-decoration: none; }
+  .logo span { color: var(--accent); }
+  .nav-links { display: flex; gap: 16px; align-items: center; flex-wrap: wrap; }
+  .nav-links a { font-size: 13px; color: var(--muted); text-decoration: none; }
+  .nav-links a:hover { color: var(--accent); }
+  .nav-badge { background: var(--accent); color: #fff; font-size: 12px; font-weight: 500; padding: 4px 12px; border-radius: 99px; }
+
+  .hero { max-width: 760px; margin: 0 auto; padding: 56px 5% 32px; text-align: center; }
+  .hero-tag { display: inline-flex; align-items: center; gap: 6px; background: #fff; border: 1px solid var(--border); border-radius: 99px; padding: 6px 16px; font-size: 13px; color: var(--muted); margin-bottom: 20px; }
+  .hero-tag .dot { width: 7px; height: 7px; background: #22c55e; border-radius: 50%; animation: pulse 2s infinite; }
+  @keyframes pulse { 0%,100%{opacity:1;transform:scale(1)} 50%{opacity:.6;transform:scale(1.3)} }
+  h1 { font-family: var(--font-head); font-size: clamp(32px, 5vw, 52px); font-weight: 800; line-height: 1.08; letter-spacing: -1.5px; margin-bottom: 14px; }
+  h1 em { color: var(--accent); font-style: normal; }
+  .hero-sub { font-size: 17px; color: var(--muted); font-weight: 300; max-width: 500px; margin: 0 auto; }
+
+  .calc-wrap { max-width: 1000px; margin: 32px auto; padding: 0 5%; display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
+  @media(max-width: 700px) { .calc-wrap { grid-template-columns: 1fr; } }
+
+  .card { background: var(--card); border: 1px solid var(--border); border-radius: 18px; overflow: hidden; box-shadow: 0 2px 20px rgba(0,0,0,0.05); }
+  .card-header { padding: 18px 24px; border-bottom: 1px solid var(--border); background: #fafaf8; }
+  .card-header h2 { font-family: var(--font-head); font-size: 16px; font-weight: 700; }
+  .card-header p { font-size: 13px; color: var(--muted); margin-top: 2px; }
+  .card-body { padding: 20px 24px; }
+
+  .freq-pills { display: flex; gap: 8px; margin-bottom: 18px; }
+  .freq-pill { flex: 1; padding: 8px; border: 1px solid var(--border); border-radius: 8px; text-align: center; cursor: pointer; font-size: 13px; background: var(--card); color: var(--muted); transition: all 0.15s; }
+  .freq-pill.active { background: var(--accent2); border-color: var(--accent2); color: #fff; font-weight: 500; }
+
+  .input-group { margin-bottom: 18px; }
+  .input-group label { display: block; font-size: 13px; font-weight: 500; color: var(--muted); margin-bottom: 6px; font-family: var(--font-head); text-transform: uppercase; letter-spacing: 0.06em; }
+  .input-row { display: flex; align-items: center; border: 1px solid var(--border); border-radius: 8px; background: var(--paper); overflow: hidden; transition: border-color 0.15s; }
+  .input-row:focus-within { border-color: var(--accent); background: #fff; }
+  .input-prefix { padding: 10px 12px; font-size: 14px; color: var(--muted); border-right: 1px solid var(--border); background: #f5f2ec; font-weight: 500; }
+  .input-row input { flex: 1; border: none; outline: none; padding: 10px 14px; font-family: var(--font-body); font-size: 15px; color: var(--ink); background: transparent; min-width: 0; }
+  .input-row input::placeholder { color: #c8c3ba; }
+
+  .city-pills { display: flex; gap: 8px; }
+  .city-pill { flex: 1; padding: 10px 8px; border: 1px solid var(--border); border-radius: 8px; text-align: center; cursor: pointer; font-size: 12.5px; line-height: 1.4; background: var(--card); color: var(--muted); transition: all 0.15s; }
+  .city-pill span { display: block; font-size: 10.5px; opacity: .8; margin-top: 2px; }
+  .city-pill.active { background: var(--accent2); border-color: var(--accent2); color: #fff; font-weight: 500; }
+
+  .calc-btn { width: 100%; padding: 13px; background: var(--accent); color: #fff; border: none; border-radius: 10px; font-family: var(--font-head); font-size: 16px; font-weight: 700; cursor: pointer; margin-top: 6px; transition: all 0.15s; }
+  .calc-btn:hover { background: #b83e12; transform: translateY(-1px); }
+
+  .exempt-hero { background: linear-gradient(135deg, #0f0e0c 0%, #1a1917 100%); padding: 24px; text-align: center; }
+  .exempt-label { font-size: 12px; color: #7a7570; text-transform: uppercase; letter-spacing: 0.1em; font-family: var(--font-head); margin-bottom: 8px; }
+  .exempt-amount { font-family: var(--font-head); font-size: clamp(32px, 5vw, 44px); font-weight: 800; color: #22c55e; letter-spacing: -1px; }
+  .exempt-sub { font-size: 13px; color: #7a7570; margin-top: 6px; }
+
+  .breakdown-row { display: flex; justify-content: space-between; align-items: center; padding: 12px 24px; border-bottom: 1px solid var(--border); }
+  .breakdown-row:last-child { border-bottom: none; }
+  .breakdown-row.total { background: var(--green-bg); }
+  .row-label { font-size: 14px; color: var(--ink); }
+  .row-sub { font-size: 12px; color: var(--muted); }
+  .amount { font-size: 14px; font-weight: 500; font-family: var(--font-head); }
+  .amount.positive { color: var(--green); }
+  .amount.negative { color: #dc2626; }
+  .amount.winner { color: var(--green); position: relative; }
+
+  .section-divider { padding: 8px 24px; background: #fafaf8; border-bottom: 1px solid var(--border); font-size: 11px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.1em; color: var(--muted); font-family: var(--font-head); }
+
+  .empty-state { padding: 48px 24px; text-align: center; color: var(--muted); font-size: 14px; }
+  .empty-icon { font-size: 40px; margin-bottom: 12px; display: block; opacity: 0.4; }
+
+  .ad-banner { max-width: 1000px; margin: 0 auto 32px; padding: 0 5%; }
+
+  .explainer { max-width: 1000px; margin: 0 auto; padding: 48px 5%; }
+  .explainer h2 { font-family: var(--font-head); font-size: clamp(24px, 3vw, 34px); font-weight: 800; letter-spacing: -0.5px; margin-bottom: 32px; }
+  .explainer-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 16px; }
+  .explainer-card { background: var(--card); border: 1px solid var(--border); border-radius: var(--radius); padding: 20px; }
+  .explainer-card h4 { font-family: var(--font-head); font-size: 14px; font-weight: 700; margin-bottom: 8px; color: var(--ink); }
+  .explainer-card p { font-size: 13px; color: var(--muted); line-height: 1.65; }
+  .explainer-card .tag { display: inline-block; font-size: 11px; padding: 2px 8px; border-radius: 4px; font-weight: 500; margin-bottom: 8px; background: var(--green-bg); color: #15803d; }
+
+  .faq-section { max-width: 1000px; margin: 0 auto; padding: 0 5% 72px; }
+  .faq-section h2 { font-family: var(--font-head); font-size: clamp(24px, 3vw, 34px); font-weight: 800; letter-spacing: -0.5px; margin-bottom: 24px; }
+  details { background: var(--card); border: 1px solid var(--border); border-radius: var(--radius); padding: 18px 20px; margin-bottom: 10px; }
+  summary { font-family: var(--font-head); font-size: 15px; font-weight: 700; cursor: pointer; list-style: none; display: flex; justify-content: space-between; align-items: center; }
+  summary .plus { color: var(--accent); font-size: 20px; }
+  details p { margin-top: 12px; font-size: 14px; color: var(--muted); line-height: 1.7; }
+
+  footer { border-top: 1px solid var(--border); padding: 28px 5%; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px; font-size: 13px; color: var(--muted); }
+  footer a { color: var(--muted); text-decoration: none; }
+  footer a:hover { color: var(--accent); }
+</style>
+</head>
+<body>
+
+<nav>
+  <a class="logo" href="index.html">Mail<span>Fix</span></a>
+  <div class="nav-links">
+    <a href="index.html">Email</a>
+    <a href="job-application.html">Job Email</a>
+    <a href="ctc-calculator.html">Salary</a>
+    <a href="hra-calculator.html">HRA</a>
+    <a href="whatsapp-dhanda.html">WhatsApp</a>
+    <a href="sarkari-letter.html">Sarkari</a>
+    <a href="resignation.html">Resign</a>
+    <a href="city-compare.html">City Compare</a>
+    <span class="nav-badge">Free</span>
+  </div>
+</nav>
+
+<section class="hero">
+  <div class="hero-tag"><span class="dot"></span> Income Tax Dept. rules, FY 2025-26</div>
+  <h1>HRA exemption,<br/><em>tax-free</em> nikaalo</h1>
+  <p class="hero-sub">Enter your basic salary, HRA received and rent paid — get your exact tax-free HRA with full rule-by-rule breakdown.</p>
+</section>
+
+<div class="calc-wrap">
+
+  <!-- INPUT CARD -->
+  <div class="card">
+    <div class="card-header">
+      <h2>Enter your details</h2>
+      <p>All fields in Indian Rupees (₹)</p>
+    </div>
+    <div class="card-body">
+
+      <div class="freq-pills">
+        <div class="freq-pill active" id="pill-monthly" onclick="setFrequency('monthly')">Monthly figures</div>
+        <div class="freq-pill" id="pill-annual" onclick="setFrequency('annual')">Annual figures</div>
+      </div>
+
+      <div class="input-group">
+        <label>Basic Salary + DA</label>
+        <div class="input-row">
+          <span class="input-prefix">₹</span>
+          <input type="number" id="basicSalary" placeholder="e.g. 40000" oninput="calculate()" min="0"/>
+        </div>
+      </div>
+
+      <div class="input-group">
+        <label>HRA Received</label>
+        <div class="input-row">
+          <span class="input-prefix">₹</span>
+          <input type="number" id="hraReceived" placeholder="e.g. 16000" oninput="calculate()" min="0"/>
+        </div>
+      </div>
+
+      <div class="input-group">
+        <label>Actual Rent Paid</label>
+        <div class="input-row">
+          <span class="input-prefix">₹</span>
+          <input type="number" id="rentPaid" placeholder="e.g. 15000" oninput="calculate()" min="0"/>
+        </div>
+      </div>
+
+      <div class="input-group">
+        <label>City of Residence</label>
+        <div class="city-pills">
+          <div class="city-pill active" id="pill-metro" onclick="setCity('metro')">Metro<span>Delhi, Mumbai, Kolkata, Chennai</span></div>
+          <div class="city-pill" id="pill-nonmetro" onclick="setCity('nonmetro')">Non-Metro<span>Bangalore, Pune, others</span></div>
+        </div>
+      </div>
+
+      <button class="calc-btn" onclick="calculate()">Calculate Exemption</button>
+    </div>
+  </div>
+
+  <!-- RESULTS CARD -->
+  <div class="card">
+    <div id="empty-state" class="empty-state">
+      <span class="empty-icon">🏠</span>
+      Enter your details to see your<br/>tax-free HRA exemption
+    </div>
+
+    <div id="results" style="display:none">
+      <div class="exempt-hero">
+        <div class="exempt-label">Tax-Free HRA Exemption</div>
+        <div class="exempt-amount" id="exemptedHra">₹0</div>
+        <div class="exempt-sub" id="exemptedHraSub">Annual amount</div>
+      </div>
+
+      <div class="section-divider">Minimum of these 3 rules wins</div>
+      <div class="breakdown-row">
+        <div><div class="row-label">1. Actual HRA Received</div><div class="row-sub" id="rule1Sub">—</div></div>
+        <div class="amount" id="rule1">₹0</div>
+      </div>
+      <div class="breakdown-row">
+        <div><div class="row-label">2. Rent − 10% of Basic</div><div class="row-sub" id="rule2Sub">—</div></div>
+        <div class="amount" id="rule2">₹0</div>
+      </div>
+      <div class="breakdown-row">
+        <div><div class="row-label">3. % of Basic Salary</div><div class="row-sub" id="rule3Sub">—</div></div>
+        <div class="amount" id="rule3">₹0</div>
+      </div>
+
+      <div class="section-divider">Result</div>
+      <div class="breakdown-row total">
+        <div><div class="row-label">Exempted (tax-free)</div><div class="row-sub">Lowest of the 3 rules above</div></div>
+        <div class="amount positive" id="exemptedAnnual">₹0</div>
+      </div>
+      <div class="breakdown-row">
+        <div><div class="row-label">Taxable HRA</div><div class="row-sub">Added to your taxable income</div></div>
+        <div class="amount negative" id="taxableHra">₹0</div>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<div class="ad-banner">
+  <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-3532554351654388" data-ad-slot="3962323207" data-ad-format="auto" data-full-width-responsive="true"></ins>
+  <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+</div>
+
+<section class="explainer">
+  <h2>How HRA exemption works</h2>
+  <div class="explainer-grid">
+    <div class="explainer-card">
+      <span class="tag">Rule 1</span>
+      <h4>Actual HRA received</h4>
+      <p>The HRA your employer actually pays you, as shown on your payslip — straightforward, no calculation needed.</p>
+    </div>
+    <div class="explainer-card">
+      <span class="tag">Rule 2</span>
+      <h4>Rent minus 10% of basic</h4>
+      <p>Whatever rent you pay above 10% of your basic salary. If your rent is low relative to basic, this number can be small or zero.</p>
+    </div>
+    <div class="explainer-card">
+      <span class="tag">Rule 3</span>
+      <h4>50% or 40% of basic</h4>
+      <p>Metro cities (Delhi, Mumbai, Kolkata, Chennai) get 50% of basic. Every other city gets 40% — this caps the maximum possible exemption.</p>
+    </div>
+    <div class="explainer-card">
+      <span class="tag">Important</span>
+      <h4>Only under old tax regime</h4>
+      <p>HRA exemption is only available if you've opted for the old tax regime. Under the new regime, your full HRA is taxable.</p>
+    </div>
+  </div>
+</section>
+
+<section class="faq-section">
+  <h2>Commonly asked questions</h2>
+  <details>
+    <summary>How is HRA exemption calculated in India? <span class="plus">+</span></summary>
+    <p>HRA exemption is the minimum of three values — actual HRA received, rent paid minus 10% of basic salary, and 50% (metro) or 40% (non-metro) of basic salary. Whichever of the three is lowest becomes your tax-free amount, and the rest of your HRA is taxed as income.</p>
+  </details>
+  <details>
+    <summary>Which cities count as metro for HRA exemption? <span class="plus">+</span></summary>
+    <p>Only Delhi, Mumbai, Kolkata and Chennai are treated as metro cities for HRA purposes, qualifying for the higher 50% of basic salary rule. All other cities — including Bangalore, Pune, Hyderabad and Gurgaon — use the 40% non-metro rate.</p>
+  </details>
+  <details>
+    <summary>Can I claim HRA exemption under the new tax regime? <span class="plus">+</span></summary>
+    <p>No. HRA exemption is only available under the old tax regime. If you've opted for the new tax regime, your HRA is fully taxable no matter how much rent you pay.</p>
+  </details>
+  <details>
+    <summary>Do I need rent receipts to claim HRA exemption? <span class="plus">+</span></summary>
+    <p>Yes. Most employers ask for rent receipts to process the exemption in payroll, and if your annual rent crosses ₹1,00,000 you'll also need your landlord's PAN.</p>
+  </details>
+</section>
+
+<footer>
+  <span>© 2025 MailFix — Free Tools for Indian Professionals</span>
+  <div style="display:flex;gap:16px;flex-wrap:wrap">
+    <a href="job-application.html">Job Email</a>
+    <a href="ctc-calculator.html">Salary Calculator</a>
+    <a href="hra-calculator.html">HRA Calculator</a>
+    <a href="whatsapp-dhanda.html">WhatsApp Dhanda</a>
+    <a href="sarkari-letter.html">Sarkari Letter</a>
+    <a href="resignation.html">Resignation Kit</a>
+    <a href="city-compare.html">City Compare</a>
+    <a href="privacy.html">Privacy Policy</a>
+  </div>
+</footer>
+
+<script>
+  let frequency = 'monthly';
+  let cityType = 'metro';
+
+  function setFrequency(f) {
+    frequency = f;
+    document.getElementById('pill-monthly').classList.toggle('active', f === 'monthly');
+    document.getElementById('pill-annual').classList.toggle('active', f === 'annual');
+    calculate();
+  }
+
+  function setCity(c) {
+    cityType = c;
+    document.getElementById('pill-metro').classList.toggle('active', c === 'metro');
+    document.getElementById('pill-nonmetro').classList.toggle('active', c === 'nonmetro');
+    calculate();
+  }
+
+  function fmt(num) {
+    if (num < 0) num = 0;
+    return '₹' + Math.round(num).toLocaleString('en-IN');
+  }
+
+  function calculate() {
+    const basicRaw = parseFloat(document.getElementById('basicSalary').value) || 0;
+    const hraRaw = parseFloat(document.getElementById('hraReceived').value) || 0;
+    const rentRaw = parseFloat(document.getElementById('rentPaid').value) || 0;
+
+    if (basicRaw === 0 && hraRaw === 0 && rentRaw === 0) {
+      document.getElementById('empty-state').style.display = 'block';
+      document.getElementById('results').style.display = 'none';
+      return;
+    }
+
+    // Annualize if monthly figures were entered
+    const mult = frequency === 'monthly' ? 12 : 1;
+    const basic = basicRaw * mult;
+    const hraReceived = hraRaw * mult;
+    const rentPaid = rentRaw * mult;
+    const isMetro = cityType === 'metro';
+
+    // Rule 1: Actual HRA received
+    const rule1 = hraReceived;
+    // Rule 2: Rent paid minus 10% of basic
+    const rule2 = Math.max(0, rentPaid - (0.10 * basic));
+    // Rule 3: 50% (metro) or 40% (non-metro) of basic
+    const basicPct = isMetro ? 0.50 : 0.40;
+    const rule3 = basic * basicPct;
+
+    const exempted = Math.min(rule1, rule2, rule3);
+    const taxable = Math.max(0, hraReceived - exempted);
+    const exemptedMonthly = exempted / 12;
+
+    document.getElementById('empty-state').style.display = 'none';
+    document.getElementById('results').style.display = 'block';
+
+    document.getElementById('exemptedHra').textContent = fmt(exemptedMonthly);
+    document.getElementById('exemptedHraSub').textContent = 'Per month  ·  Annual: ' + fmt(exempted);
+
+    document.getElementById('rule1').textContent = fmt(rule1);
+    document.getElementById('rule1Sub').textContent = 'Annual HRA from employer';
+    document.getElementById('rule2').textContent = fmt(rule2);
+    document.getElementById('rule2Sub').textContent = fmt(rentPaid) + ' rent − 10% of ' + fmt(basic) + ' basic';
+    document.getElementById('rule3').textContent = fmt(rule3);
+    document.getElementById('rule3Sub').textContent = (basicPct * 100) + '% of basic (' + (isMetro ? 'metro' : 'non-metro') + ')';
+
+    // Highlight whichever rule is the winner (the minimum)
+    ['rule1', 'rule2', 'rule3'].forEach(id => document.getElementById(id).classList.remove('winner', 'positive'));
+    const vals = { rule1, rule2, rule3 };
+    const winnerId = Object.keys(vals).reduce((a, b) => vals[a] <= vals[b] ? a : b);
+    document.getElementById(winnerId).classList.add('positive');
+
+    document.getElementById('exemptedAnnual').textContent = fmt(exempted);
+    document.getElementById('taxableHra').textContent = fmt(taxable);
+  }
+</script>
+</body>
+</html>
