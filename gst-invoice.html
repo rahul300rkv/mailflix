@@ -116,15 +116,6 @@
 
   .privacy-note { margin-top: 18px; font-size: 12px; color: var(--muted); text-align: center; font-style: italic; }
 
-  @media print {
-    body * { display: none !important; }
-    #printableInvoiceArea, #printableInvoiceArea * { display: block !important; }
-    #printableInvoiceArea table { display: table !important; }
-    #printableInvoiceArea th, #printableInvoiceArea td { display: table-cell !important; }
-    #printableInvoiceArea { border: none; padding: 0; margin: 0; display: block !important; }
-    .invoice-header, .invoice-parties, .summary-row { display: flex !important; }
-  }
-
   .ad-banner { max-width: 800px; margin: 0 auto 32px; padding: 0 5%; }
 
   .explainer { max-width: 1000px; margin: 0 auto; padding: 48px 5%; }
@@ -274,7 +265,7 @@
         <div class="invoice-note">This is a computer-generated document. No physical signature is required.</div>
       </div>
 
-      <button id="invoicePrintBtn" class="print-btn" onclick="window.print()">Print / Download Invoice PDF</button>
+      <button id="invoicePrintBtn" class="print-btn" onclick="printInvoice()">Print / Download Invoice PDF</button>
       <div class="privacy-note">🔒 Privacy Check: All calculations happen in your browser. Business and customer data is never tracked or saved.</div>
     </div>
   </div>
@@ -351,6 +342,45 @@
 <script>
   function formatCurrency(val) {
     return '₹' + Math.round(val).toLocaleString('en-IN') + '.00';
+  }
+
+  function printInvoice() {
+    const invoiceHtml = document.getElementById('printableInvoiceArea').innerHTML;
+    const printWin = window.open('', '_blank', 'width=800,height=900');
+    printWin.document.write(`
+      <!DOCTYPE html>
+      <html>
+      <head>
+        <title>Invoice</title>
+        <style>
+          * { box-sizing: border-box; margin: 0; padding: 0; }
+          body { font-family: -apple-system, Arial, sans-serif; color: #0f0e0c; padding: 30px; }
+          .invoice-header { display: flex; justify-content: space-between; border-bottom: 2px solid #0f0e0c; padding-bottom: 14px; margin-bottom: 20px; }
+          .invoice-header h1 { margin: 0; font-size: 20px; font-weight: 800; }
+          .invoice-header .tag { margin: 4px 0 0 0; font-size: 11px; color: #7a7570; letter-spacing: 0.08em; text-transform: uppercase; }
+          .invoice-header .meta { text-align: right; font-size: 13px; color: #7a7570; }
+          .invoice-header .meta b { color: #0f0e0c; }
+          .invoice-parties { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-bottom: 24px; font-size: 14px; line-height: 1.5; }
+          .invoice-parties b { text-transform: uppercase; font-size: 11px; color: #7a7570; letter-spacing: 0.06em; display: block; margin-bottom: 4px; }
+          .invoice-parties span { font-weight: 600; color: #0f0e0c; }
+          table { width: 100%; border-collapse: collapse; margin-bottom: 24px; font-size: 14px; }
+          th, td { border: 1px solid #e2ddd5; padding: 10px 12px; text-align: left; }
+          th { background: #fafaf8; font-size: 12px; text-transform: uppercase; letter-spacing: 0.04em; color: #7a7570; }
+          td.num, th.num { text-align: right; }
+          .invoice-summary { margin-left: auto; width: 260px; font-size: 14px; line-height: 1.9; }
+          .summary-row { display: flex; justify-content: space-between; color: #7a7570; }
+          .summary-row.total { font-weight: 700; border-top: 1px solid #0f0e0c; padding-top: 8px; margin-top: 4px; font-size: 16px; color: #0f0e0c; }
+          .invoice-note { margin-top: 36px; font-size: 11px; color: #7a7570; border-top: 1px dashed #e2ddd5; padding-top: 12px; text-align: center; }
+        </style>
+      </head>
+      <body>${invoiceHtml}</body>
+      </html>
+    `);
+    printWin.document.close();
+    printWin.onload = function () {
+      printWin.focus();
+      printWin.print();
+    };
   }
 
   function generateInvoice(event) {
