@@ -61,6 +61,13 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://mailflix.netlify.app/gst-invoice.html
+</loc>
+    <lastmod>2025-01-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://mailflix.netlify.app/privacy.html</loc>
     <lastmod>2025-01-01</lastmod>
     <changefreq>yearly</changefreq>
