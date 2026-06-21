@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Free GST Invoice & Cash Bill Generator India | MailFix</title>
+<meta name="description" content="Generate a client-ready GST invoice or cash bill instantly with exact CGST/SGST/IGST split. Choose intrastate or interstate, pick your GST slab — print or save as PDF. Free, no signup."/>
+<meta name="keywords" content="gst invoice generator india, cash bill generator, cgst sgst igst calculator, gst bill format free, free invoice maker india, tax invoice generator online"/>
+<meta name="robots" content="index, follow"/>
+<link rel="canonical" href="https://mailflix.netlify.app/gst-invoice.html"/>
+<meta property="og:title" content="Free GST Invoice & Cash Bill Generator India"/>
+<meta property="og:description" content="Generate a client-ready GST invoice with exact CGST/SGST/IGST split — free, instant, print-ready."/>
+<meta property="og:url" content="https://mailflix.netlify.app/gst-invoice.html"/>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "Free GST Invoice & Cash Bill Generator",
+  "url": "https://mailflix.netlify.app/gst-invoice.html",
+  "description": "Free tool that generates GST-compliant invoices and cash bills for Indian businesses, with automatic CGST/SGST/IGST tax split.",
+  "applicationCategory": "FinanceApplication",
+  "offers": { "@type": "Offer", "price": "0", "priceCurrency": "INR" }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    { "@type": "Question", "name": "What is the difference between CGST, SGST and IGST?", "acceptedAnswer": { "@type": "Answer", "text": "CGST and SGST apply together on intrastate sales, where the buyer and seller are in the same state, each taking half the total GST rate. IGST applies on interstate sales, where the buyer and seller are in different states, and takes the full GST rate." } },
+    { "@type": "Question", "name": "How is GST calculated on an invoice?", "acceptedAnswer": { "@type": "Answer", "text": "GST is calculated by multiplying the taxable value by the applicable GST rate. For intrastate sales this tax is split equally between CGST and SGST; for interstate sales the full rate is charged as IGST." } },
+    { "@type": "Question", "name": "Can I use a cash bill instead of a GST invoice?", "acceptedAnswer": { "@type": "Answer", "text": "A simple cash bill works for small, informal transactions, but a proper GST invoice with CGST/SGST or IGST breakup is required if you are a GST-registered business making a taxable supply." } },
+    { "@type": "Question", "name": "Is this invoice generator free to use?", "acceptedAnswer": { "@type": "Answer", "text": "Yes, this tool is completely free with no signup required. All calculations happen in your browser and your business or customer data is never saved on any server." } }
+  ]
+}
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet"/>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3532554351654388" crossorigin="anonymous"></script>
+<style>
+  :root {
+    --ink: #0f0e0c;
+    --paper: #f5f2ec;
+    --card: #ffffff;
+    --accent: #d44f1e;
+    --accent2: #2563eb;
+    --green: #16a34a;
+    --green-bg: #f0fdf4;
+    --muted: #7a7570;
+    --border: #e2ddd5;
+    --radius: 12px;
+    --font-head: 'Syne', sans-serif;
+    --font-body: 'DM Sans', sans-serif;
+  }
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  body { background: var(--paper); color: var(--ink); font-family: var(--font-body); font-size: 16px; line-height: 1.6; min-height: 100vh; }
+
+  nav { display: flex; justify-content: space-between; align-items: center; padding: 18px 5%; border-bottom: 1px solid var(--border); background: var(--paper); position: sticky; top: 0; z-index: 100; }
+  .logo { font-family: var(--font-head); font-size: 22px; font-weight: 800; letter-spacing: -0.5px; color: var(--ink); text-decoration: none; }
+  .logo span { color: var(--accent); }
+  .nav-links { display: flex; gap: 14px; align-items: center; flex-wrap: wrap; }
+  .nav-links a { font-size: 13px; color: var(--muted); text-decoration: none; }
+  .nav-links a:hover { color: var(--accent); }
+  .nav-badge { background: var(--accent); color: #fff; font-size: 12px; font-weight: 500; padding: 4px 12px; border-radius: 99px; }
+
+  .hero { max-width: 760px; margin: 0 auto; padding: 56px 5% 32px; text-align: center; }
+  .hero-tag { display: inline-flex; align-items: center; gap: 6px; background: #fff; border: 1px solid var(--border); border-radius: 99px; padding: 6px 16px; font-size: 13px; color: var(--muted); margin-bottom: 20px; }
+  .hero-tag .dot { width: 7px; height: 7px; background: #22c55e; border-radius: 50%; animation: pulse 2s infinite; }
+  @keyframes pulse { 0%,100%{opacity:1;transform:scale(1)} 50%{opacity:.6;transform:scale(1.3)} }
+  h1 { font-family: var(--font-head); font-size: clamp(32px, 5vw, 52px); font-weight: 800; line-height: 1.08; letter-spacing: -1.5px; margin-bottom: 14px; }
+  h1 em { color: var(--accent); font-style: normal; }
+  .hero-sub { font-size: 17px; color: var(--muted); font-weight: 300; max-width: 520px; margin: 0 auto; }
+
+  .tool-wrap { max-width: 800px; margin: 32px auto; padding: 0 5%; }
+
+  .card { background: var(--card); border: 1px solid var(--border); border-radius: 18px; overflow: hidden; box-shadow: 0 2px 20px rgba(0,0,0,0.05); }
+  .card-header { padding: 18px 24px; border-bottom: 1px solid var(--border); background: #fafaf8; }
+  .card-header h2 { font-family: var(--font-head); font-size: 16px; font-weight: 700; }
+  .card-header p { font-size: 13px; color: var(--muted); margin-top: 2px; }
+  .card-body { padding: 24px; }
+
+  .bg-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+  @media (max-width: 520px) { .bg-grid { grid-template-columns: 1fr; } }
+  .bg-form-group { display: flex; flex-direction: column; margin-bottom: 16px; }
+  .bg-label { font-size: 13px; font-weight: 500; color: var(--muted); margin-bottom: 6px; font-family: var(--font-head); text-transform: uppercase; letter-spacing: 0.06em; }
+  .bg-input, .bg-select { width: 100%; padding: 10px 14px; border: 1px solid var(--border); border-radius: 8px; font-size: 15px; font-family: var(--font-body); color: var(--ink); background: var(--paper); transition: border-color 0.15s; outline: none; }
+  .bg-input:focus, .bg-select:focus { border-color: var(--accent); background: #fff; }
+  .bg-input::placeholder { color: #c8c3ba; }
+
+  .calc-btn { width: 100%; padding: 13px; background: var(--accent); color: #fff; border: none; border-radius: 10px; font-family: var(--font-head); font-size: 16px; font-weight: 700; cursor: pointer; margin-top: 8px; transition: all 0.15s; }
+  .calc-btn:hover { background: #b83e12; transform: translateY(-1px); }
+  .print-btn { width: 100%; padding: 13px; background: var(--green); color: #fff; border: none; border-radius: 10px; font-family: var(--font-head); font-size: 16px; font-weight: 700; cursor: pointer; margin-top: 16px; transition: all 0.15s; display: none; }
+  .print-btn:hover { background: #15803d; transform: translateY(-1px); }
+
+  /* PRINTABLE INVOICE */
+  #printableInvoiceArea { display: none; margin-top: 24px; padding: 28px; border: 1px solid var(--border); border-radius: var(--radius); background: #fff; }
+  .invoice-header { display: flex; justify-content: space-between; border-bottom: 2px solid var(--ink); padding-bottom: 14px; margin-bottom: 20px; }
+  .invoice-header h1 { margin: 0; font-size: 20px; font-family: var(--font-head); font-weight: 800; }
+  .invoice-header .tag { margin: 4px 0 0 0; font-size: 11px; color: var(--muted); letter-spacing: 0.08em; text-transform: uppercase; font-family: var(--font-head); }
+  .invoice-header .meta { text-align: right; font-size: 13px; color: var(--muted); }
+  .invoice-header .meta b { color: var(--ink); }
+
+  .invoice-parties { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-bottom: 24px; font-size: 14px; line-height: 1.5; }
+  .invoice-parties b { text-transform: uppercase; font-size: 11px; color: var(--muted); letter-spacing: 0.06em; font-family: var(--font-head); display: block; margin-bottom: 4px; }
+  .invoice-parties span { font-weight: 600; color: var(--ink); }
+
+  .invoice-table { width: 100%; border-collapse: collapse; margin-bottom: 24px; font-size: 14px; }
+  .invoice-table th, .invoice-table td { border: 1px solid var(--border); padding: 10px 12px; text-align: left; }
+  .invoice-table th { background: #fafaf8; font-family: var(--font-head); font-size: 12px; text-transform: uppercase; letter-spacing: 0.04em; color: var(--muted); }
+  .invoice-table td.num, .invoice-table th.num { text-align: right; }
+
+  .invoice-summary { margin-left: auto; width: 260px; font-size: 14px; line-height: 1.9; }
+  .summary-row { display: flex; justify-content: space-between; color: var(--muted); }
+  .summary-row.total { font-weight: 700; border-top: 1px solid var(--ink); padding-top: 8px; margin-top: 4px; font-size: 16px; color: var(--ink); font-family: var(--font-head); }
+  .invoice-note { margin-top: 36px; font-size: 11px; color: var(--muted); border-top: 1px dashed var(--border); padding-top: 12px; text-align: center; }
+
+  .privacy-note { margin-top: 18px; font-size: 12px; color: var(--muted); text-align: center; font-style: italic; }
+
+  @media print {
+    body * { display: none !important; }
+    #printableInvoiceArea, #printableInvoiceArea * { display: block !important; }
+    #printableInvoiceArea table { display: table !important; }
+    #printableInvoiceArea th, #printableInvoiceArea td { display: table-cell !important; }
+    #printableInvoiceArea { border: none; padding: 0; margin: 0; display: block !important; }
+    .invoice-header, .invoice-parties, .summary-row { display: flex !important; }
+  }
+
+  .ad-banner { max-width: 800px; margin: 0 auto 32px; padding: 0 5%; }
+
+  .explainer { max-width: 1000px; margin: 0 auto; padding: 48px 5%; }
+  .explainer h2 { font-family: var(--font-head); font-size: clamp(24px, 3vw, 34px); font-weight: 800; letter-spacing: -0.5px; margin-bottom: 32px; }
+  .explainer-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 16px; }
+  .explainer-card { background: var(--card); border: 1px solid var(--border); border-radius: var(--radius); padding: 20px; }
+  .explainer-card h4 { font-family: var(--font-head); font-size: 14px; font-weight: 700; margin-bottom: 8px; color: var(--ink); }
+  .explainer-card p { font-size: 13px; color: var(--muted); line-height: 1.65; }
+  .explainer-card .tag2 { display: inline-block; font-size: 11px; padding: 2px 8px; border-radius: 4px; font-weight: 500; margin-bottom: 8px; background: var(--green-bg); color: #15803d; }
+
+  .faq-section { max-width: 1000px; margin: 0 auto; padding: 0 5% 72px; }
+  .faq-section h2 { font-family: var(--font-head); font-size: clamp(24px, 3vw, 34px); font-weight: 800; letter-spacing: -0.5px; margin-bottom: 24px; }
+  details { background: var(--card); border: 1px solid var(--border); border-radius: var(--radius); padding: 18px 20px; margin-bottom: 10px; }
+  summary { font-family: var(--font-head); font-size: 15px; font-weight: 700; cursor: pointer; list-style: none; display: flex; justify-content: space-between; align-items: center; }
+  summary .plus { color: var(--accent); font-size: 20px; }
+  details p { margin-top: 12px; font-size: 14px; color: var(--muted); line-height: 1.7; }
+
+  footer { border-top: 1px solid var(--border); padding: 28px 5%; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px; font-size: 13px; color: var(--muted); }
+  footer a { color: var(--muted); text-decoration: none; }
+  footer a:hover { color: var(--accent); }
+</style>
+</head>
+<body>
+
+<nav>
+  <a class="logo" href="index.html">Mail<span>Fix</span></a>
+  <div class="nav-links">
+    <a href="index.html">Email</a>
+    <a href="job-application.html">Job Email</a>
+    <a href="ctc-calculator.html">Salary</a>
+    <a href="hra-calculator.html">HRA</a>
+    <a href="photo-resizer.html">Photo Resizer</a>
+    <a href="rent-receipt.html">Rent Receipt</a>
+    <a href="gst-invoice.html">GST Invoice</a>
+    <a href="whatsapp-dhanda.html">WhatsApp</a>
+    <a href="sarkari-letter.html">Sarkari</a>
+    <a href="resignation.html">Resign</a>
+    <a href="city-compare.html">City Compare</a>
+    <span class="nav-badge">Free</span>
+  </div>
+</nav>
+
+<section class="hero">
+  <div class="hero-tag"><span class="dot"></span> CGST, SGST & IGST auto-split</div>
+  <h1>GST invoice,<br/><em>client-ready</em> banao</h1>
+  <p class="hero-sub">Enter seller, buyer, item and amount — get a clean tax invoice with exact GST breakup. Print it or save as PDF instantly.</p>
+</section>
+
+<div class="tool-wrap">
+  <div class="card">
+    <div class="card-header">
+      <h2>Invoice details</h2>
+      <p>Everything stays in your browser — nothing is saved on any server</p>
+    </div>
+    <div class="card-body">
+
+      <form id="invoiceForm" onsubmit="generateInvoice(event)">
+        <div class="bg-grid">
+          <div class="bg-form-group">
+            <label class="bg-label">Your Business Name (Seller)</label>
+            <input type="text" id="sellerName" class="bg-input" placeholder="e.g. Verma Electronics" required/>
+          </div>
+          <div class="bg-form-group">
+            <label class="bg-label">Customer Name (Buyer)</label>
+            <input type="text" id="buyerName" class="bg-input" placeholder="e.g. Amit Patel" required/>
+          </div>
+          <div class="bg-form-group">
+            <label class="bg-label">Item / Product Description</label>
+            <input type="text" id="itemDesc" class="bg-input" placeholder="e.g. Wireless Mouse" required/>
+          </div>
+          <div class="bg-form-group">
+            <label class="bg-label">Base Amount, before GST (₹)</label>
+            <input type="number" id="baseAmount" class="bg-input" placeholder="e.g. 1000" required min="0"/>
+          </div>
+          <div class="bg-form-group">
+            <label class="bg-label">GST Tax Slab</label>
+            <select id="gstRate" class="bg-select">
+              <option value="5">5% GST</option>
+              <option value="12">12% GST</option>
+              <option value="18" selected>18% GST</option>
+              <option value="28">28% GST</option>
+            </select>
+          </div>
+          <div class="bg-form-group">
+            <label class="bg-label">Transaction Type</label>
+            <select id="invoiceTaxType" class="bg-select">
+              <option value="intra">Intrastate (CGST + SGST)</option>
+              <option value="inter">Interstate (IGST)</option>
+            </select>
+          </div>
+        </div>
+
+        <button type="submit" class="calc-btn">Generate Invoice</button>
+      </form>
+
+      <!-- Printable invoice -->
+      <div id="printableInvoiceArea">
+        <div class="invoice-header">
+          <div>
+            <h1 id="outSeller"></h1>
+            <p class="tag">Tax Invoice / Cash Memo</p>
+          </div>
+          <div class="meta">
+            <b>Invoice No:</b> <span id="outInvNo"></span><br/>
+            <b>Date:</b> <span id="outDate"></span>
+          </div>
+        </div>
+
+        <div class="invoice-parties">
+          <div>
+            <b>Billed From (Seller)</b>
+            <span id="partySeller"></span>
+          </div>
+          <div>
+            <b>Billed To (Buyer)</b>
+            <span id="partyBuyer"></span>
+          </div>
+        </div>
+
+        <table class="invoice-table">
+          <thead>
+            <tr>
+              <th>Description</th>
+              <th class="num">Taxable Value</th>
+              <th class="num" id="thTaxSplit">Tax Split</th>
+              <th class="num">Total Amount</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td id="tdDesc"></td>
+              <td class="num" id="tdBase">₹0.00</td>
+              <td class="num" id="tdTaxDetails">₹0.00</td>
+              <td class="num" id="tdTotal">₹0.00</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <div class="invoice-summary">
+          <div class="summary-row"><span>Subtotal:</span><span id="sumSubtotal">₹0.00</span></div>
+          <div id="cgstRow" class="summary-row" style="display:none"><span>CGST:</span><span id="sumCgst">₹0.00</span></div>
+          <div id="sgstRow" class="summary-row" style="display:none"><span>SGST:</span><span id="sumSgst">₹0.00</span></div>
+          <div id="igstRow" class="summary-row" style="display:none"><span>IGST:</span><span id="sumIgst">₹0.00</span></div>
+          <div class="summary-row total"><span>Grand Total:</span><span id="sumGrandTotal">₹0.00</span></div>
+        </div>
+
+        <div class="invoice-note">This is a computer-generated document. No physical signature is required.</div>
+      </div>
+
+      <button id="invoicePrintBtn" class="print-btn" onclick="window.print()">Print / Download Invoice PDF</button>
+      <div class="privacy-note">🔒 Privacy Check: All calculations happen in your browser. Business and customer data is never tracked or saved.</div>
+    </div>
+  </div>
+</div>
+
+<div class="ad-banner">
+  <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-3532554351654388" data-ad-slot="3962323207" data-ad-format="auto" data-full-width-responsive="true"></ins>
+  <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+</div>
+
+<section class="explainer">
+  <h2>GST split, explained simply</h2>
+  <div class="explainer-grid">
+    <div class="explainer-card">
+      <span class="tag2">Same state</span>
+      <h4>CGST + SGST (Intrastate)</h4>
+      <p>When buyer and seller are in the same state, the GST rate is split equally — half goes to CGST (central) and half to SGST (state).</p>
+    </div>
+    <div class="explainer-card">
+      <span class="tag2">Different state</span>
+      <h4>IGST (Interstate)</h4>
+      <p>When buyer and seller are in different states, the full GST rate is charged as a single IGST instead of splitting it into two.</p>
+    </div>
+    <div class="explainer-card">
+      <span class="tag2">Slabs</span>
+      <h4>5%, 12%, 18%, 28%</h4>
+      <p>Most goods and services fall under one of these four GST slabs depending on the category — pick the one that applies to your item.</p>
+    </div>
+    <div class="explainer-card">
+      <span class="tag2">Privacy</span>
+      <h4>Nothing leaves your browser</h4>
+      <p>All amounts and party details are calculated locally on your device — no business data is ever sent to a server.</p>
+    </div>
+  </div>
+</section>
+
+<section class="faq-section">
+  <h2>Commonly asked questions</h2>
+  <details>
+    <summary>What is the difference between CGST, SGST and IGST? <span class="plus">+</span></summary>
+    <p>CGST and SGST apply together on intrastate sales, where the buyer and seller are in the same state, each taking half the total GST rate. IGST applies on interstate sales, where the buyer and seller are in different states, and takes the full GST rate.</p>
+  </details>
+  <details>
+    <summary>How is GST calculated on an invoice? <span class="plus">+</span></summary>
+    <p>GST is calculated by multiplying the taxable value by the applicable GST rate. For intrastate sales this tax is split equally between CGST and SGST; for interstate sales the full rate is charged as IGST.</p>
+  </details>
+  <details>
+    <summary>Can I use a cash bill instead of a GST invoice? <span class="plus">+</span></summary>
+    <p>A simple cash bill works for small, informal transactions, but a proper GST invoice with CGST/SGST or IGST breakup is required if you are a GST-registered business making a taxable supply.</p>
+  </details>
+  <details>
+    <summary>Is this invoice generator free to use? <span class="plus">+</span></summary>
+    <p>Yes, this tool is completely free with no signup required. All calculations happen in your browser and your business or customer data is never saved on any server.</p>
+  </details>
+</section>
+
+<footer>
+  <span>© 2025 MailFix — Free Tools for Indian Professionals</span>
+  <div style="display:flex;gap:16px;flex-wrap:wrap">
+    <a href="job-application.html">Job Email</a>
+    <a href="ctc-calculator.html">Salary Calculator</a>
+    <a href="hra-calculator.html">HRA Calculator</a>
+    <a href="photo-resizer.html">Photo Resizer</a>
+    <a href="rent-receipt.html">Rent Receipt</a>
+    <a href="gst-invoice.html">GST Invoice</a>
+    <a href="whatsapp-dhanda.html">WhatsApp Dhanda</a>
+    <a href="sarkari-letter.html">Sarkari Letter</a>
+    <a href="resignation.html">Resignation Kit</a>
+    <a href="city-compare.html">City Compare</a>
+    <a href="privacy.html">Privacy Policy</a>
+  </div>
+</footer>
+
+<script>
+  function formatCurrency(val) {
+    return '₹' + Math.round(val).toLocaleString('en-IN') + '.00';
+  }
+
+  function generateInvoice(event) {
+    event.preventDefault();
+
+    const seller = document.getElementById('sellerName').value;
+    const buyer = document.getElementById('buyerName').value;
+    const desc = document.getElementById('itemDesc').value;
+    const base = parseFloat(document.getElementById('baseAmount').value) || 0;
+    const rate = parseFloat(document.getElementById('gstRate').value) || 0;
+    const type = document.getElementById('invoiceTaxType').value;
+
+    const totalTax = base * (rate / 100);
+    const grandTotal = base + totalTax;
+
+    document.getElementById('outSeller').innerText = seller;
+    document.getElementById('partySeller').innerText = seller;
+    document.getElementById('partyBuyer').innerText = buyer;
+    document.getElementById('tdDesc').innerText = desc;
+
+    document.getElementById('outInvNo').innerText = 'INV-' + Math.floor(10000 + Math.random() * 90000);
+    document.getElementById('outDate').innerText = new Date().toLocaleDateString('en-IN', { day: 'numeric', month: 'short', year: 'numeric' });
+
+    document.getElementById('tdBase').innerText = formatCurrency(base);
+    document.getElementById('tdTotal').innerText = formatCurrency(grandTotal);
+    document.getElementById('sumSubtotal').innerText = formatCurrency(base);
+    document.getElementById('sumGrandTotal').innerText = formatCurrency(grandTotal);
+
+    const cRow = document.getElementById('cgstRow');
+    const sRow = document.getElementById('sgstRow');
+    const iRow = document.getElementById('igstRow');
+
+    if (type === 'intra') {
+      const halfTax = totalTax / 2;
+      document.getElementById('thTaxSplit').innerText = `GST (${rate}%)`;
+      document.getElementById('tdTaxDetails').innerHTML = `CGST (${rate / 2}%): ${formatCurrency(halfTax)}<br>SGST (${rate / 2}%): ${formatCurrency(halfTax)}`;
+
+      document.getElementById('sumCgst').innerText = formatCurrency(halfTax);
+      document.getElementById('sumSgst').innerText = formatCurrency(halfTax);
+      cRow.style.display = 'flex';
+      sRow.style.display = 'flex';
+      iRow.style.display = 'none';
+    } else {
+      document.getElementById('thTaxSplit').innerText = `IGST (${rate}%)`;
+      document.getElementById('tdTaxDetails').innerText = `${formatCurrency(totalTax)}`;
+
+      document.getElementById('sumIgst').innerText = formatCurrency(totalTax);
+      cRow.style.display = 'none';
+      sRow.style.display = 'none';
+      iRow.style.display = 'flex';
+    }
+
+    document.getElementById('printableInvoiceArea').style.display = 'block';
+    document.getElementById('invoicePrintBtn').style.display = 'block';
+    document.getElementById('printableInvoiceArea').scrollIntoView({ behavior: 'smooth' });
+  }
+</script>
+</body>
+</html>
