@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Govt Photo & Signature Resizer India — EPFO, PSC, Passport Seva | MailFix</title>
+<meta name="description" content="Resize and compress your photo or signature to exact Indian government portal specs — Passport Seva, EPFO, PAN, PSC exams. Instant, free, and everything happens in your browser — nothing uploaded."/>
+<meta name="keywords" content="passport photo resizer india, signature resizer kb, epfo photo size, psc exam photo upload size, pan card photo size, govt portal photo compressor, image resize kb online"/>
+<meta name="robots" content="index, follow"/>
+<link rel="canonical" href="https://mailflix.netlify.app/photo-resizer.html"/>
+<meta property="og:title" content="Govt Photo & Signature Resizer India"/>
+<meta property="og:description" content="Resize and compress your photo or signature to exact government portal specs — free, instant, fully in-browser."/>
+<meta property="og:url" content="https://mailflix.netlify.app/photo-resizer.html"/>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "Govt Photo & Signature Resizer India",
+  "url": "https://mailflix.netlify.app/photo-resizer.html",
+  "description": "Free tool that resizes and compresses photos and signatures to exact Indian government portal specifications for Passport Seva, EPFO, PAN and PSC exam uploads.",
+  "applicationCategory": "UtilitiesApplication",
+  "offers": { "@type": "Offer", "price": "0", "priceCurrency": "INR" }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    { "@type": "Question", "name": "What is the photo size limit for Passport Seva?", "acceptedAnswer": { "@type": "Answer", "text": "Passport Seva requires a photo of 3.5 x 4.5 cm, usually between 20KB and 50KB in JPEG format. This tool resizes and compresses to fit that exact range automatically." } },
+    { "@type": "Question", "name": "What is the signature size limit for govt portals?", "acceptedAnswer": { "@type": "Answer", "text": "Most Indian government portals, including EPFO and PSC exam forms, require a signature image around 3.5 x 1.5 cm and under 10KB to 20KB. This tool compresses your signature to meet that limit." } },
+    { "@type": "Question", "name": "Is it safe to upload my photo or signature here?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. All resizing and compression happens entirely inside your browser using canvas processing. Your image is never uploaded to any server, so your identity documents stay private." } },
+    { "@type": "Question", "name": "Why does my portal reject my photo even after resizing?", "acceptedAnswer": { "@type": "Answer", "text": "Most rejections happen because the file size, not just dimensions, is outside the allowed KB range. This tool automatically reduces JPEG quality step by step until the file fits the target size." } }
+  ]
+}
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet"/>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3532554351654388" crossorigin="anonymous"></script>
+<style>
+  :root {
+    --ink: #0f0e0c;
+    --paper: #f5f2ec;
+    --card: #ffffff;
+    --accent: #d44f1e;
+    --accent2: #2563eb;
+    --green: #16a34a;
+    --green-bg: #f0fdf4;
+    --muted: #7a7570;
+    --border: #e2ddd5;
+    --radius: 12px;
+    --font-head: 'Syne', sans-serif;
+    --font-body: 'DM Sans', sans-serif;
+  }
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  body { background: var(--paper); color: var(--ink); font-family: var(--font-body); font-size: 16px; line-height: 1.6; min-height: 100vh; }
+
+  nav { display: flex; justify-content: space-between; align-items: center; padding: 18px 5%; border-bottom: 1px solid var(--border); background: var(--paper); position: sticky; top: 0; z-index: 100; }
+  .logo { font-family: var(--font-head); font-size: 22px; font-weight: 800; letter-spacing: -0.5px; color: var(--ink); text-decoration: none; }
+  .logo span { color: var(--accent); }
+  .nav-links { display: flex; gap: 16px; align-items: center; flex-wrap: wrap; }
+  .nav-links a { font-size: 13px; color: var(--muted); text-decoration: none; }
+  .nav-links a:hover { color: var(--accent); }
+  .nav-badge { background: var(--accent); color: #fff; font-size: 12px; font-weight: 500; padding: 4px 12px; border-radius: 99px; }
+
+  .hero { max-width: 760px; margin: 0 auto; padding: 56px 5% 32px; text-align: center; }
+  .hero-tag { display: inline-flex; align-items: center; gap: 6px; background: #fff; border: 1px solid var(--border); border-radius: 99px; padding: 6px 16px; font-size: 13px; color: var(--muted); margin-bottom: 20px; }
+  .hero-tag .dot { width: 7px; height: 7px; background: #22c55e; border-radius: 50%; animation: pulse 2s infinite; }
+  @keyframes pulse { 0%,100%{opacity:1;transform:scale(1)} 50%{opacity:.6;transform:scale(1.3)} }
+  h1 { font-family: var(--font-head); font-size: clamp(32px, 5vw, 52px); font-weight: 800; line-height: 1.08; letter-spacing: -1.5px; margin-bottom: 14px; }
+  h1 em { color: var(--accent); font-style: normal; }
+  .hero-sub { font-size: 17px; color: var(--muted); font-weight: 300; max-width: 520px; margin: 0 auto; }
+
+  .calc-wrap { max-width: 1000px; margin: 32px auto; padding: 0 5%; display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
+  @media(max-width: 700px) { .calc-wrap { grid-template-columns: 1fr; } }
+
+  .card { background: var(--card); border: 1px solid var(--border); border-radius: 18px; overflow: hidden; box-shadow: 0 2px 20px rgba(0,0,0,0.05); }
+  .card-header { padding: 18px 24px; border-bottom: 1px solid var(--border); background: #fafaf8; }
+  .card-header h2 { font-family: var(--font-head); font-size: 16px; font-weight: 700; }
+  .card-header p { font-size: 13px; color: var(--muted); margin-top: 2px; }
+  .card-body { padding: 20px 24px; }
+
+  .input-group { margin-bottom: 18px; }
+  .input-group label { display: block; font-size: 13px; font-weight: 500; color: var(--muted); margin-bottom: 6px; font-family: var(--font-head); text-transform: uppercase; letter-spacing: 0.06em; }
+
+  .preset-pills { display: flex; flex-direction: column; gap: 8px; }
+  .preset-pill { padding: 12px 14px; border: 1px solid var(--border); border-radius: 8px; cursor: pointer; background: var(--card); transition: all 0.15s; }
+  .preset-pill:hover { border-color: var(--accent2); }
+  .preset-pill.active { background: #eff6ff; border-color: var(--accent2); }
+  .preset-pill .p-name { font-size: 14px; font-weight: 600; color: var(--ink); }
+  .preset-pill .p-spec { font-size: 12px; color: var(--muted); margin-top: 2px; }
+
+  .file-drop { border: 2px dashed var(--border); border-radius: 10px; padding: 20px; text-align: center; background: var(--paper); cursor: pointer; transition: border-color 0.15s; }
+  .file-drop:hover { border-color: var(--accent); }
+  .file-drop input { display: none; }
+  .file-drop-label { font-size: 13px; color: var(--muted); }
+  .file-drop-label strong { color: var(--accent); }
+  .file-name { font-size: 12px; color: var(--ink); margin-top: 8px; font-weight: 500; }
+
+  .calc-btn { width: 100%; padding: 13px; background: var(--accent); color: #fff; border: none; border-radius: 10px; font-family: var(--font-head); font-size: 16px; font-weight: 700; cursor: pointer; margin-top: 6px; transition: all 0.15s; }
+  .calc-btn:hover { background: #b83e12; transform: translateY(-1px); }
+  .calc-btn:disabled { background: #ccc; cursor: not-allowed; transform: none; }
+
+  .empty-state { padding: 48px 24px; text-align: center; color: var(--muted); font-size: 14px; }
+  .empty-icon { font-size: 40px; margin-bottom: 12px; display: block; opacity: 0.4; }
+
+  .result-hero { background: linear-gradient(135deg, #0f0e0c 0%, #1a1917 100%); padding: 24px; text-align: center; }
+  .preview-box { max-width: 160px; max-height: 200px; border: 1px solid #2c2a26; border-radius: 6px; padding: 4px; background: #fff; margin: 0 auto 14px; display: block; }
+  .size-badge { display: inline-block; background: rgba(34, 197, 94, 0.12); color: #22c55e; padding: 5px 14px; border-radius: 99px; font-size: 13px; font-weight: 600; font-family: var(--font-head); }
+  .size-target { font-size: 12px; color: #7a7570; margin-top: 8px; }
+
+  .result-body { padding: 20px 24px; text-align: center; }
+  .download-btn { display: inline-block; background: var(--green); color: #fff; text-decoration: none; padding: 11px 28px; font-size: 14px; font-weight: 700; font-family: var(--font-head); border-radius: 8px; transition: background 0.15s; }
+  .download-btn:hover { background: #15803d; }
+  .privacy-note { margin-top: 16px; font-size: 12px; color: var(--muted); font-style: italic; }
+
+  .ad-banner { max-width: 1000px; margin: 0 auto 32px; padding: 0 5%; }
+
+  .explainer { max-width: 1000px; margin: 0 auto; padding: 48px 5%; }
+  .explainer h2 { font-family: var(--font-head); font-size: clamp(24px, 3vw, 34px); font-weight: 800; letter-spacing: -0.5px; margin-bottom: 32px; }
+  .explainer-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 16px; }
+  .explainer-card { background: var(--card); border: 1px solid var(--border); border-radius: var(--radius); padding: 20px; }
+  .explainer-card h4 { font-family: var(--font-head); font-size: 14px; font-weight: 700; margin-bottom: 8px; color: var(--ink); }
+  .explainer-card p { font-size: 13px; color: var(--muted); line-height: 1.65; }
+  .explainer-card .tag { display: inline-block; font-size: 11px; padding: 2px 8px; border-radius: 4px; font-weight: 500; margin-bottom: 8px; background: var(--green-bg); color: #15803d; }
+
+  .faq-section { max-width: 1000px; margin: 0 auto; padding: 0 5% 72px; }
+  .faq-section h2 { font-family: var(--font-head); font-size: clamp(24px, 3vw, 34px); font-weight: 800; letter-spacing: -0.5px; margin-bottom: 24px; }
+  details { background: var(--card); border: 1px solid var(--border); border-radius: var(--radius); padding: 18px 20px; margin-bottom: 10px; }
+  summary { font-family: var(--font-head); font-size: 15px; font-weight: 700; cursor: pointer; list-style: none; display: flex; justify-content: space-between; align-items: center; }
+  summary .plus { color: var(--accent); font-size: 20px; }
+  details p { margin-top: 12px; font-size: 14px; color: var(--muted); line-height: 1.7; }
+
+  footer { border-top: 1px solid var(--border); padding: 28px 5%; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px; font-size: 13px; color: var(--muted); }
+  footer a { color: var(--muted); text-decoration: none; }
+  footer a:hover { color: var(--accent); }
+</style>
+</head>
+<body>
+
+<nav>
+  <a class="logo" href="index.html">Mail<span>Fix</span></a>
+  <div class="nav-links">
+    <a href="index.html">Email</a>
+    <a href="job-application.html">Job Email</a>
+    <a href="ctc-calculator.html">Salary</a>
+    <a href="hra-calculator.html">HRA</a>
+    <a href="photo-resizer.html">Photo Resizer</a>
+    <a href="whatsapp-dhanda.html">WhatsApp</a>
+    <a href="sarkari-letter.html">Sarkari</a>
+    <a href="resignation.html">Resign</a>
+    <a href="city-compare.html">City Compare</a>
+    <span class="nav-badge">Free</span>
+  </div>
+</nav>
+
+<section class="hero">
+  <div class="hero-tag"><span class="dot"></span> Works for Passport Seva, EPFO, PAN, PSC exams</div>
+  <h1>Photo & signature,<br/><em>exact KB</em> mein resize karo</h1>
+  <p class="hero-sub">Upload your photo or signature, pick the portal you're applying to — get a perfectly sized file ready to upload, in seconds.</p>
+</section>
+
+<div class="calc-wrap">
+
+  <!-- INPUT CARD -->
+  <div class="card">
+    <div class="card-header">
+      <h2>Upload & select spec</h2>
+      <p>JPEG or PNG, any size — we'll resize it for you</p>
+    </div>
+    <div class="card-body">
+
+      <div class="input-group">
+        <label>Target Specification</label>
+        <div class="preset-pills">
+          <div class="preset-pill active" id="preset-passport" onclick="setPreset('passport')">
+            <div class="p-name">Passport Photo</div>
+            <div class="p-spec">3.5 × 4.5 cm  ·  20KB – 50KB  ·  Passport Seva</div>
+          </div>
+          <div class="preset-pill" id="preset-signature" onclick="setPreset('signature')">
+            <div class="p-name">Signature</div>
+            <div class="p-spec">3.5 × 1.5 cm  ·  10KB – 20KB  ·  EPFO, PSC forms</div>
+          </div>
+          <div class="preset-pill" id="preset-pan" onclick="setPreset('pan')">
+            <div class="p-name">PAN Card Document</div>
+            <div class="p-spec">2 × 2 inches  ·  Under 100KB</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="input-group">
+        <label>Your Image</label>
+        <div class="file-drop" onclick="document.getElementById('imageInput').click()">
+          <input type="file" id="imageInput" accept="image/jpeg, image/png" onchange="handleFileSelect()"/>
+          <div class="file-drop-label">📁 <strong>Click to choose</strong> a photo or signature image</div>
+          <div class="file-name" id="fileName"></div>
+        </div>
+      </div>
+
+      <button class="calc-btn" id="processBtn" onclick="processImage()" disabled>Resize & Compress</button>
+    </div>
+  </div>
+
+  <!-- RESULTS CARD -->
+  <div class="card">
+    <div id="empty-state" class="empty-state">
+      <span class="empty-icon">🖼️</span>
+      Upload an image and pick a spec<br/>to get your resized file
+    </div>
+
+    <div id="results" style="display:none">
+      <div class="result-hero">
+        <img id="previewImage" class="preview-box" src="" alt="Resized preview"/>
+        <div class="size-badge" id="sizeBadge">0 KB</div>
+        <div class="size-target" id="sizeTarget">Target: —</div>
+      </div>
+      <div class="result-body">
+        <a id="downloadLink" class="download-btn" download="govt_portal_ready.jpg">Download Optimized Image</a>
+        <div class="privacy-note">🔒 Processed entirely in your browser. Nothing is uploaded to any server.</div>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<div class="ad-banner">
+  <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-3532554351654388" data-ad-slot="3962323207" data-ad-format="auto" data-full-width-responsive="true"></ins>
+  <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+</div>
+
+<section class="explainer">
+  <h2>Why portals reject your upload</h2>
+  <div class="explainer-grid">
+    <div class="explainer-card">
+      <span class="tag">File size</span>
+      <h4>Wrong KB, not wrong photo</h4>
+      <p>Most "invalid image" errors are about file size, not quality. A great photo at 200KB still gets rejected if the portal wants under 50KB.</p>
+    </div>
+    <div class="explainer-card">
+      <span class="tag">Dimensions</span>
+      <h4>Exact aspect ratio matters</h4>
+      <p>Passport photos need 3.5:4.5 cm proportions specifically. A square or wrongly-cropped photo gets auto-rejected even if the size is fine.</p>
+    </div>
+    <div class="explainer-card">
+      <span class="tag">Format</span>
+      <h4>JPEG over PNG</h4>
+      <p>Government portals almost always expect JPEG. PNGs are often larger for the same visual quality and can fail upload validation.</p>
+    </div>
+    <div class="explainer-card">
+      <span class="tag">Privacy</span>
+      <h4>Nothing leaves your browser</h4>
+      <p>This tool uses HTML canvas to resize and compress locally. Your photo, signature or ID document is never sent to any server.</p>
+    </div>
+  </div>
+</section>
+
+<section class="faq-section">
+  <h2>Commonly asked questions</h2>
+  <details>
+    <summary>What is the photo size limit for Passport Seva? <span class="plus">+</span></summary>
+    <p>Passport Seva requires a photo of 3.5 × 4.5 cm, usually between 20KB and 50KB in JPEG format. This tool resizes and compresses your photo to fit that exact range automatically.</p>
+  </details>
+  <details>
+    <summary>What is the signature size limit for govt portals? <span class="plus">+</span></summary>
+    <p>Most Indian government portals, including EPFO and PSC exam forms, require a signature image around 3.5 × 1.5 cm and under 10KB to 20KB. This tool compresses your signature to meet that limit.</p>
+  </details>
+  <details>
+    <summary>Is it safe to upload my photo or signature here? <span class="plus">+</span></summary>
+    <p>Yes. All resizing and compression happens entirely inside your browser using canvas processing. Your image is never uploaded to any server, so your identity documents stay private.</p>
+  </details>
+  <details>
+    <summary>Why does my portal reject my photo even after resizing? <span class="plus">+</span></summary>
+    <p>Most rejections happen because the file size, not just the dimensions, is outside the allowed KB range. This tool automatically reduces JPEG quality step by step until the file fits the target size.</p>
+  </details>
+</section>
+
+<footer>
+  <span>© 2025 MailFix — Free Tools for Indian Professionals</span>
+  <div style="display:flex;gap:16px;flex-wrap:wrap">
+    <a href="job-application.html">Job Email</a>
+    <a href="ctc-calculator.html">Salary Calculator</a>
+    <a href="hra-calculator.html">HRA Calculator</a>
+    <a href="photo-resizer.html">Photo Resizer</a>
+    <a href="whatsapp-dhanda.html">WhatsApp Dhanda</a>
+    <a href="sarkari-letter.html">Sarkari Letter</a>
+    <a href="resignation.html">Resignation Kit</a>
+    <a href="city-compare.html">City Compare</a>
+    <a href="privacy.html">Privacy Policy</a>
+  </div>
+</footer>
+
+<script>
+  let selectedPreset = 'passport';
+  let selectedFile = null;
+
+  const SPECS = {
+    passport: { width: 350, height: 450, maxKb: 45, label: '3.5 × 4.5 cm  ·  20KB – 50KB' },
+    signature: { width: 350, height: 150, maxKb: 18, label: '3.5 × 1.5 cm  ·  10KB – 20KB' },
+    pan: { width: 400, height: 400, maxKb: 95, label: '2 × 2 inches  ·  Under 100KB' }
+  };
+
+  function setPreset(p) {
+    selectedPreset = p;
+    document.querySelectorAll('.preset-pill').forEach(el => el.classList.remove('active'));
+    document.getElementById('preset-' + p).classList.add('active');
+  }
+
+  function handleFileSelect() {
+    const fileInput = document.getElementById('imageInput');
+    selectedFile = fileInput.files && fileInput.files[0] ? fileInput.files[0] : null;
+    document.getElementById('fileName').textContent = selectedFile ? '✓ ' + selectedFile.name : '';
+    document.getElementById('processBtn').disabled = !selectedFile;
+  }
+
+  function processImage() {
+    if (!selectedFile) return;
+
+    const btn = document.getElementById('processBtn');
+    btn.disabled = true;
+    btn.textContent = 'Processing...';
+
+    const spec = SPECS[selectedPreset];
+    const reader = new FileReader();
+
+    reader.onload = function (event) {
+      const img = new Image();
+      img.onload = function () {
+        const canvas = document.createElement('canvas');
+        canvas.width = spec.width;
+        canvas.height = spec.height;
+        const ctx = canvas.getContext('2d');
+        ctx.drawImage(img, 0, 0, spec.width, spec.height);
+
+        let quality = 0.9;
+        let dataUrl = canvas.toDataURL('image/jpeg', quality);
+        let sizeInKb = (dataUrl.length * 3 / 4) / 1024;
+
+        while (sizeInKb > spec.maxKb && quality > 0.1) {
+          quality -= 0.05;
+          dataUrl = canvas.toDataURL('image/jpeg', quality);
+          sizeInKb = (dataUrl.length * 3 / 4) / 1024;
+        }
+
+        document.getElementById('empty-state').style.display = 'none';
+        document.getElementById('results').style.display = 'block';
+
+        const previewImg = document.getElementById('previewImage');
+        previewImg.src = dataUrl;
+        if (selectedPreset === 'signature') {
+          previewImg.style.width = '170px';
+          previewImg.style.height = '73px';
+        } else if (selectedPreset === 'pan') {
+          previewImg.style.width = '150px';
+          previewImg.style.height = '150px';
+        } else {
+          previewImg.style.width = '135px';
+          previewImg.style.height = '174px';
+        }
+
+        document.getElementById('sizeBadge').textContent = sizeInKb.toFixed(1) + ' KB';
+        document.getElementById('sizeTarget').textContent = 'Target: ' + spec.label;
+        document.getElementById('downloadLink').href = dataUrl;
+
+        btn.disabled = false;
+        btn.textContent = 'Resize & Compress';
+      };
+      img.src = event.target.result;
+    };
+    reader.readAsDataURL(selectedFile);
+  }
+</script>
+</body>
+</html>
