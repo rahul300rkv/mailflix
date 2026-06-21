@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Rent Receipt Generator India — HRA Compliant | MailFix</title>
+<meta name="description" content="Generate a clean, HRA-compliant house rent receipt instantly. Enter tenant, landlord, rent and address details — get a print-ready receipt with amount in words, free and no signup."/>
+<meta name="keywords" content="rent receipt generator india, house rent receipt format, hra rent receipt online, rent receipt for income tax, landlord pan rent receipt, rent receipt pdf download"/>
+<meta name="robots" content="index, follow"/>
+<link rel="canonical" href="https://mailflix.netlify.app/rent-receipt.html"/>
+<meta property="og:title" content="Rent Receipt Generator India"/>
+<meta property="og:description" content="Generate a clean, HRA-compliant rent receipt instantly — print-ready, free, no signup."/>
+<meta property="og:url" content="https://mailflix.netlify.app/rent-receipt.html"/>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "Rent Receipt Generator India",
+  "url": "https://mailflix.netlify.app/rent-receipt.html",
+  "description": "Free tool that generates HRA-compliant house rent receipts for Indian tenants, with amount in words and print-ready formatting.",
+  "applicationCategory": "FinanceApplication",
+  "offers": { "@type": "Offer", "price": "0", "priceCurrency": "INR" }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    { "@type": "Question", "name": "Is a rent receipt enough to claim HRA exemption?", "acceptedAnswer": { "@type": "Answer", "text": "Yes, monthly rent receipts are the standard proof employers ask for to process HRA exemption in payroll. If annual rent exceeds Rs 1,00,000, you also need the landlord's PAN on the receipt." } },
+    { "@type": "Question", "name": "Do I need a revenue stamp on a rent receipt?", "acceptedAnswer": { "@type": "Answer", "text": "A Re. 1 revenue stamp is required on rent receipts when cash payment for a single receipt exceeds Rs 5,000. It is generally not required for bank transfers, though some employers still ask for it as a formality." } },
+    { "@type": "Question", "name": "What details must a rent receipt have?", "acceptedAnswer": { "@type": "Answer", "text": "A valid rent receipt should include tenant name, landlord name, rent amount in figures and words, property address, rent period, date, and landlord's signature. PAN is needed if annual rent crosses Rs 1,00,000." } },
+    { "@type": "Question", "name": "Can I generate 12 months of rent receipts at once?", "acceptedAnswer": { "@type": "Answer", "text": "This tool generates one receipt at a time so each month's date and receipt number stay accurate. Simply change the month and date fields and generate again for each month you need." } }
+  ]
+}
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet"/>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3532554351654388" crossorigin="anonymous"></script>
+<style>
+  :root {
+    --ink: #0f0e0c;
+    --paper: #f5f2ec;
+    --card: #ffffff;
+    --accent: #d44f1e;
+    --accent2: #2563eb;
+    --green: #16a34a;
+    --green-bg: #f0fdf4;
+    --muted: #7a7570;
+    --border: #e2ddd5;
+    --radius: 12px;
+    --font-head: 'Syne', sans-serif;
+    --font-body: 'DM Sans', sans-serif;
+  }
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  body { background: var(--paper); color: var(--ink); font-family: var(--font-body); font-size: 16px; line-height: 1.6; min-height: 100vh; }
+
+  nav { display: flex; justify-content: space-between; align-items: center; padding: 18px 5%; border-bottom: 1px solid var(--border); background: var(--paper); position: sticky; top: 0; z-index: 100; }
+  .logo { font-family: var(--font-head); font-size: 22px; font-weight: 800; letter-spacing: -0.5px; color: var(--ink); text-decoration: none; }
+  .logo span { color: var(--accent); }
+  .nav-links { display: flex; gap: 16px; align-items: center; flex-wrap: wrap; }
+  .nav-links a { font-size: 13px; color: var(--muted); text-decoration: none; }
+  .nav-links a:hover { color: var(--accent); }
+  .nav-badge { background: var(--accent); color: #fff; font-size: 12px; font-weight: 500; padding: 4px 12px; border-radius: 99px; }
+
+  .hero { max-width: 760px; margin: 0 auto; padding: 56px 5% 32px; text-align: center; }
+  .hero-tag { display: inline-flex; align-items: center; gap: 6px; background: #fff; border: 1px solid var(--border); border-radius: 99px; padding: 6px 16px; font-size: 13px; color: var(--muted); margin-bottom: 20px; }
+  .hero-tag .dot { width: 7px; height: 7px; background: #22c55e; border-radius: 50%; animation: pulse 2s infinite; }
+  @keyframes pulse { 0%,100%{opacity:1;transform:scale(1)} 50%{opacity:.6;transform:scale(1.3)} }
+  h1 { font-family: var(--font-head); font-size: clamp(32px, 5vw, 52px); font-weight: 800; line-height: 1.08; letter-spacing: -1.5px; margin-bottom: 14px; }
+  h1 em { color: var(--accent); font-style: normal; }
+  .hero-sub { font-size: 17px; color: var(--muted); font-weight: 300; max-width: 520px; margin: 0 auto; }
+
+  .tool-wrap { max-width: 760px; margin: 32px auto; padding: 0 5%; }
+
+  .card { background: var(--card); border: 1px solid var(--border); border-radius: 18px; overflow: hidden; box-shadow: 0 2px 20px rgba(0,0,0,0.05); }
+  .card-header { padding: 18px 24px; border-bottom: 1px solid var(--border); background: #fafaf8; }
+  .card-header h2 { font-family: var(--font-head); font-size: 16px; font-weight: 700; }
+  .card-header p { font-size: 13px; color: var(--muted); margin-top: 2px; }
+  .card-body { padding: 24px; }
+
+  .rg-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-bottom: 4px; }
+  @media(max-width: 480px) { .rg-grid { grid-template-columns: 1fr; } }
+  .rg-form-group { display: flex; flex-direction: column; margin-bottom: 16px; }
+  .rg-form-group.full-width { grid-column: 1 / -1; }
+  .rg-label { font-size: 13px; font-weight: 500; color: var(--muted); margin-bottom: 6px; font-family: var(--font-head); text-transform: uppercase; letter-spacing: 0.06em; }
+  .rg-input { width: 100%; padding: 10px 14px; border: 1px solid var(--border); border-radius: 8px; font-size: 15px; font-family: var(--font-body); color: var(--ink); background: var(--paper); transition: border-color 0.15s; outline: none; }
+  .rg-input:focus { border-color: var(--accent); background: #fff; }
+  .rg-input::placeholder { color: #c8c3ba; }
+
+  .calc-btn { width: 100%; padding: 13px; background: var(--accent); color: #fff; border: none; border-radius: 10px; font-family: var(--font-head); font-size: 16px; font-weight: 700; cursor: pointer; margin-top: 8px; transition: all 0.15s; }
+  .calc-btn:hover { background: #b83e12; transform: translateY(-1px); }
+  .print-btn { width: 100%; padding: 13px; background: var(--accent2); color: #fff; border: none; border-radius: 10px; font-family: var(--font-head); font-size: 16px; font-weight: 700; cursor: pointer; margin-top: 16px; transition: all 0.15s; display: none; }
+  .print-btn:hover { background: #1d4ed8; transform: translateY(-1px); }
+
+  /* PRINTABLE RECEIPT */
+  #printableReceiptArea { display: none; margin-top: 24px; padding: 28px; border: 1px solid var(--border); border-radius: var(--radius); background: #fff; }
+  .receipt-header { text-align: center; text-transform: uppercase; letter-spacing: 1.5px; border-bottom: 2px solid var(--ink); padding-bottom: 12px; margin-bottom: 20px; font-family: var(--font-head); font-weight: 800; font-size: 18px; }
+  .receipt-meta-row { display: flex; justify-content: space-between; margin-bottom: 20px; font-weight: 600; font-size: 13px; color: var(--muted); font-family: var(--font-head); }
+  .receipt-body { font-size: 15px; line-height: 1.85; text-align: justify; margin-bottom: 36px; color: var(--ink); }
+  .receipt-body span { border-bottom: 1px dashed var(--ink); padding: 0 6px; font-weight: 600; }
+  .pan-row { margin-bottom: 24px; font-size: 14px; display: none; }
+  .receipt-footer { display: flex; justify-content: space-between; align-items: flex-end; margin-top: 44px; }
+  .stamp-box { width: 80px; height: 90px; border: 1px dashed var(--muted); text-align: center; font-size: 10px; color: var(--muted); display: flex; align-items: center; justify-content: center; padding: 4px; background: var(--paper); border-radius: 4px; }
+  .signature-line { border-top: 1px solid var(--ink); width: 180px; text-align: center; padding-top: 6px; font-size: 14px; font-weight: 600; }
+  .signature-line small { font-size: 11px; color: var(--muted); font-weight: 400; display: block; }
+
+  .privacy-note { margin-top: 18px; font-size: 12px; color: var(--muted); text-align: center; font-style: italic; }
+
+  @media print {
+    body * { display: none !important; }
+    #printableReceiptArea, #printableReceiptArea * { display: block !important; }
+    #printableReceiptArea { border: none; padding: 0; margin: 0; display: block !important; }
+    .receipt-meta-row, .receipt-footer { display: flex !important; }
+  }
+
+  .ad-banner { max-width: 760px; margin: 0 auto 32px; padding: 0 5%; }
+
+  .explainer { max-width: 1000px; margin: 0 auto; padding: 48px 5%; }
+  .explainer h2 { font-family: var(--font-head); font-size: clamp(24px, 3vw, 34px); font-weight: 800; letter-spacing: -0.5px; margin-bottom: 32px; }
+  .explainer-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 16px; }
+  .explainer-card { background: var(--card); border: 1px solid var(--border); border-radius: var(--radius); padding: 20px; }
+  .explainer-card h4 { font-family: var(--font-head); font-size: 14px; font-weight: 700; margin-bottom: 8px; color: var(--ink); }
+  .explainer-card p { font-size: 13px; color: var(--muted); line-height: 1.65; }
+  .explainer-card .tag { display: inline-block; font-size: 11px; padding: 2px 8px; border-radius: 4px; font-weight: 500; margin-bottom: 8px; background: var(--green-bg); color: #15803d; }
+
+  .faq-section { max-width: 1000px; margin: 0 auto; padding: 0 5% 72px; }
+  .faq-section h2 { font-family: var(--font-head); font-size: clamp(24px, 3vw, 34px); font-weight: 800; letter-spacing: -0.5px; margin-bottom: 24px; }
+  details { background: var(--card); border: 1px solid var(--border); border-radius: var(--radius); padding: 18px 20px; margin-bottom: 10px; }
+  summary { font-family: var(--font-head); font-size: 15px; font-weight: 700; cursor: pointer; list-style: none; display: flex; justify-content: space-between; align-items: center; }
+  summary .plus { color: var(--accent); font-size: 20px; }
+  details p { margin-top: 12px; font-size: 14px; color: var(--muted); line-height: 1.7; }
+
+  footer { border-top: 1px solid var(--border); padding: 28px 5%; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px; font-size: 13px; color: var(--muted); }
+  footer a { color: var(--muted); text-decoration: none; }
+  footer a:hover { color: var(--accent); }
+</style>
+</head>
+<body>
+
+<nav>
+  <a class="logo" href="index.html">Mail<span>Fix</span></a>
+  <div class="nav-links">
+    <a href="index.html">Email</a>
+    <a href="job-application.html">Job Email</a>
+    <a href="ctc-calculator.html">Salary</a>
+    <a href="hra-calculator.html">HRA</a>
+    <a href="photo-resizer.html">Photo Resizer</a>
+    <a href="rent-receipt.html">Rent Receipt</a>
+    <a href="whatsapp-dhanda.html">WhatsApp</a>
+    <a href="sarkari-letter.html">Sarkari</a>
+    <a href="resignation.html">Resign</a>
+    <a href="city-compare.html">City Compare</a>
+    <span class="nav-badge">Free</span>
+  </div>
+</nav>
+
+<section class="hero">
+  <div class="hero-tag"><span class="dot"></span> HRA-compliant format, print-ready</div>
+  <h1>Rent receipt,<br/><em>ek click</em> mein ready</h1>
+  <p class="hero-sub">Fill tenant, landlord and rent details — get a clean, signed-ready receipt with amount in words. Print it or save as PDF instantly.</p>
+</section>
+
+<div class="tool-wrap">
+  <div class="card">
+    <div class="card-header">
+      <h2>Receipt details</h2>
+      <p>All details stay in your browser — nothing is saved on any server</p>
+    </div>
+    <div class="card-body">
+
+      <form id="receiptForm" onsubmit="generateReceipt(event)">
+        <div class="rg-grid">
+          <div class="rg-form-group">
+            <label class="rg-label">Tenant Name (You)</label>
+            <input type="text" id="tenantName" class="rg-input" placeholder="e.g. Rajesh Kumar" required/>
+          </div>
+          <div class="rg-form-group">
+            <label class="rg-label">Landlord Name</label>
+            <input type="text" id="landlordName" class="rg-input" placeholder="e.g. Suresh Sharma" required/>
+          </div>
+          <div class="rg-form-group">
+            <label class="rg-label">Monthly Rent Amount (₹)</label>
+            <input type="number" id="rentAmount" class="rg-input" placeholder="e.g. 15000" required min="0"/>
+          </div>
+          <div class="rg-form-group">
+            <label class="rg-label">Landlord PAN (if rent &gt; ₹1L/year)</label>
+            <input type="text" id="landlordPan" class="rg-input" placeholder="e.g. ABCDE1234F"/>
+          </div>
+          <div class="rg-form-group full-width">
+            <label class="rg-label">Rented Property Address</label>
+            <input type="text" id="propertyAddress" class="rg-input" placeholder="e.g. Flat 402, Height Apartments, Sector 21" required/>
+          </div>
+          <div class="rg-form-group">
+            <label class="rg-label">Receipt Date</label>
+            <input type="date" id="receiptDate" class="rg-input" required onchange="autofillMonth()"/>
+          </div>
+          <div class="rg-form-group">
+            <label class="rg-label">For the Month/Period of</label>
+            <input type="text" id="rentPeriod" class="rg-input" placeholder="e.g. June 2026" required/>
+          </div>
+        </div>
+
+        <button type="submit" class="calc-btn">Generate Receipt</button>
+      </form>
+
+      <!-- Printable receipt -->
+      <div id="printableReceiptArea">
+        <div class="receipt-header">Rent Receipt</div>
+
+        <div class="receipt-meta-row">
+          <div>Receipt No: <span id="rcptNo">101</span></div>
+          <div>Date: <span id="rcptDateOut"></span></div>
+        </div>
+
+        <div class="receipt-body">
+          Received a sum of <b>₹ <span id="rcptAmtOut"></span></b>
+          (Rupees <span id="rcptWordsOut"></span>) from
+          <span id="rcptTenantOut"></span> toward the rent of residential property situated at
+          <span id="rcptAddrOut"></span> for the period of
+          <span id="rcptPeriodOut"></span>.
+        </div>
+
+        <div id="panDisplayRow" class="pan-row">
+          <b>Landlord PAN:</b> <span id="rcptPanOut"></span>
+        </div>
+
+        <div class="receipt-footer">
+          <div class="stamp-box">Affix Re. 1<br/>Revenue<br/>Stamp</div>
+          <div class="signature-line">
+            <span id="rcptLandlordOut"></span>
+            <small>(Signature of Landlord)</small>
+          </div>
+        </div>
+      </div>
+
+      <button id="printBtn" class="print-btn" onclick="window.print()">Print / Save as PDF</button>
+      <div class="privacy-note">🔒 Privacy Check: Receipt is generated entirely in your browser. Names and financial details are never sent to any server.</div>
+    </div>
+  </div>
+</div>
+
+<div class="ad-banner">
+  <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-3532554351654388" data-ad-slot="3962323207" data-ad-format="auto" data-full-width-responsive="true"></ins>
+  <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+</div>
+
+<section class="explainer">
+  <h2>What makes a rent receipt valid</h2>
+  <div class="explainer-grid">
+    <div class="explainer-card">
+      <span class="tag">For HRA claim</span>
+      <h4>Required for tax exemption</h4>
+      <p>Employers ask for monthly rent receipts to process your HRA exemption in payroll — without them, your full HRA gets taxed.</p>
+    </div>
+    <div class="explainer-card">
+      <span class="tag">Above ₹1L/year</span>
+      <h4>Landlord's PAN needed</h4>
+      <p>If your annual rent crosses ₹1,00,000, your employer will require the landlord's PAN on the receipt — this tool includes it automatically when entered.</p>
+    </div>
+    <div class="explainer-card">
+      <span class="tag">Cash payments</span>
+      <h4>Revenue stamp on cash > ₹5,000</h4>
+      <p>A Re. 1 revenue stamp is technically required when a single cash receipt exceeds ₹5,000. It's marked on the receipt as a reminder.</p>
+    </div>
+    <div class="explainer-card">
+      <span class="tag">Privacy</span>
+      <h4>Nothing leaves your browser</h4>
+      <p>All fields, names, and amounts are processed locally on your device and never transmitted to any server.</p>
+    </div>
+  </div>
+</section>
+
+<section class="faq-section">
+  <h2>Commonly asked questions</h2>
+  <details>
+    <summary>Is a rent receipt enough to claim HRA exemption? <span class="plus">+</span></summary>
+    <p>Yes, monthly rent receipts are the standard proof employers ask for to process HRA exemption in payroll. If your annual rent exceeds ₹1,00,000, you also need the landlord's PAN on the receipt.</p>
+  </details>
+  <details>
+    <summary>Do I need a revenue stamp on a rent receipt? <span class="plus">+</span></summary>
+    <p>A Re. 1 revenue stamp is required on rent receipts when cash payment for a single receipt exceeds ₹5,000. It is generally not required for bank transfers, though some employers still ask for it as a formality.</p>
+  </details>
+  <details>
+    <summary>What details must a rent receipt have? <span class="plus">+</span></summary>
+    <p>A valid rent receipt should include tenant name, landlord name, rent amount in figures and words, property address, rent period, date, and the landlord's signature. PAN is needed if annual rent crosses ₹1,00,000.</p>
+  </details>
+  <details>
+    <summary>Can I generate 12 months of rent receipts at once? <span class="plus">+</span></summary>
+    <p>This tool generates one receipt at a time so each month's date and receipt number stay accurate. Simply change the month and date fields and generate again for each month you need.</p>
+  </details>
+</section>
+
+<footer>
+  <span>© 2025 MailFix — Free Tools for Indian Professionals</span>
+  <div style="display:flex;gap:16px;flex-wrap:wrap">
+    <a href="job-application.html">Job Email</a>
+    <a href="ctc-calculator.html">Salary Calculator</a>
+    <a href="hra-calculator.html">HRA Calculator</a>
+    <a href="photo-resizer.html">Photo Resizer</a>
+    <a href="rent-receipt.html">Rent Receipt</a>
+    <a href="whatsapp-dhanda.html">WhatsApp Dhanda</a>
+    <a href="sarkari-letter.html">Sarkari Letter</a>
+    <a href="resignation.html">Resignation Kit</a>
+    <a href="city-compare.html">City Compare</a>
+    <a href="privacy.html">Privacy Policy</a>
+  </div>
+</footer>
+
+<script>
+  function numberToIndianWords(num) {
+    const a = ['', 'One ', 'Two ', 'Three ', 'Four ', 'Five ', 'Six ', 'Seven ', 'Eight ', 'Nine ', 'Ten ', 'Eleven ', 'Twelve ', 'Thirteen ', 'Fourteen ', 'Fifteen ', 'Sixteen ', 'Seventeen ', 'Eighteen ', 'Nineteen '];
+    const b = ['', '', 'Twenty', 'Thirty', 'Forty', 'Fifty', 'Sixty', 'Seventy', 'Eighty', 'Ninety'];
+
+    if ((num = num.toString()).length > 9) return 'overflow';
+    let n = ('000000000' + num).substr(-9).match(/^(\d{2})(\d{2})(\d{2})(\d{1})(\d{2})$/);
+    if (!n) return '';
+    let str = '';
+    str += (n[1] != 0) ? (a[Number(n[1])] || b[n[1][0]] + ' ' + a[n[1][1]]) + 'Crore ' : '';
+    str += (n[2] != 0) ? (a[Number(n[2])] || b[n[2][0]] + ' ' + a[n[2][1]]) + 'Lakh ' : '';
+    str += (n[3] != 0) ? (a[Number(n[3])] || b[n[3][0]] + ' ' + a[n[3][1]]) + 'Thousand ' : '';
+    str += (n[4] != 0) ? (a[Number(n[4])] || b[n[4][0]] + ' ' + a[n[4][1]]) + 'Hundred ' : '';
+    str += (n[5] != 0) ? ((str != '') ? 'and ' : '') + (a[Number(n[5])] || b[n[5][0]] + ' ' + a[n[5][1]]) + 'Only' : 'Only';
+    return str.trim();
+  }
+
+  function autofillMonth() {
+    const dateInput = document.getElementById('receiptDate').value;
+    if (!dateInput) return;
+    const d = new Date(dateInput);
+    const monthYear = d.toLocaleDateString('en-IN', { month: 'long', year: 'numeric' });
+    document.getElementById('rentPeriod').value = monthYear;
+  }
+
+  function generateReceipt(event) {
+    event.preventDefault();
+
+    const amt = parseFloat(document.getElementById('rentAmount').value) || 0;
+    const pan = document.getElementById('landlordPan').value.trim();
+
+    document.getElementById('rcptAmtOut').innerText = amt.toLocaleString('en-IN');
+    document.getElementById('rcptWordsOut').innerText = numberToIndianWords(amt);
+    document.getElementById('rcptTenantOut').innerText = document.getElementById('tenantName').value;
+    document.getElementById('rcptLandlordOut').innerText = document.getElementById('landlordName').value;
+    document.getElementById('rcptAddrOut').innerText = document.getElementById('propertyAddress').value;
+    document.getElementById('rcptPeriodOut').innerText = document.getElementById('rentPeriod').value;
+
+    const dateVal = new Date(document.getElementById('receiptDate').value);
+    document.getElementById('rcptDateOut').innerText = dateVal.toLocaleDateString('en-IN', { day: 'numeric', month: 'short', year: 'numeric' });
+
+    const panRow = document.getElementById('panDisplayRow');
+    if (pan) {
+      document.getElementById('rcptPanOut').innerText = pan.toUpperCase();
+      panRow.style.display = 'block';
+    } else {
+      panRow.style.display = 'none';
+    }
+
+    document.getElementById('rcptNo').innerText = Math.floor(1000 + Math.random() * 9000);
+
+    document.getElementById('printableReceiptArea').style.display = 'block';
+    document.getElementById('printBtn').style.display = 'block';
+
+    document.getElementById('printableReceiptArea').scrollIntoView({ behavior: 'smooth' });
+  }
+</script>
+</body>
+</html>
