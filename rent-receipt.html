@@ -127,26 +127,113 @@
   footer { border-top: 1px solid var(--border); padding: 28px 5%; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px; font-size: 13px; color: var(--muted); }
   footer a { color: var(--muted); text-decoration: none; }
   footer a:hover { color: var(--accent); }
+
+  /* === Grouped nav dropdowns + mobile menu (site-wide) === */
+  .nav-links{display:flex;gap:6px;align-items:center}
+  .nav-badge{background:var(--accent);color:#fff;font-size:12px;font-weight:500;padding:4px 12px;border-radius:99px;font-family:var(--font-body);margin-left:6px}
+  .nav-right{display:flex;align-items:center;gap:6px}
+  .nav-item{position:relative}
+  .nav-trigger{font-size:13px;color:var(--muted);background:none;border:none;cursor:pointer;font-family:var(--font-body);display:flex;align-items:center;gap:5px;padding:8px 10px;border-radius:8px;transition:color .15s}
+  .nav-trigger:hover,.nav-trigger.open{color:var(--accent)}
+  .nav-trigger .caret{font-size:9px;transition:transform .15s;opacity:.7}
+  .nav-trigger.open .caret{transform:rotate(180deg)}
+  .dropdown-panel{position:absolute;top:calc(100% + 8px);left:50%;transform:translateX(-50%);background:#fff;border:1px solid var(--border);border-radius:12px;box-shadow:0 12px 32px rgba(15,14,12,.1);padding:8px;min-width:230px;display:none;z-index:200}
+  .dropdown-panel.open{display:block}
+  .dropdown-panel a{display:flex;align-items:center;gap:10px;padding:9px 12px;border-radius:8px;font-size:13.5px;color:var(--ink);text-decoration:none;white-space:nowrap;font-family:var(--font-body)}
+  .dropdown-panel a:hover{background:var(--paper);color:var(--accent)}
+  .dropdown-panel a .emoji{font-size:15px;width:18px;text-align:center}
+  .mobile-toggle{display:none;background:none;border:none;cursor:pointer;font-size:22px;color:var(--ink);padding:4px 6px;line-height:1}
+  @media(max-width:880px){
+    .nav-links{display:none}
+    .mobile-toggle{display:block}
+  }
+  .mobile-panel{display:none;position:fixed;inset:0;background:var(--paper);z-index:300;padding:20px 6%;overflow-y:auto}
+  .mobile-panel.open{display:block}
+  .mobile-panel-header{display:flex;justify-content:space-between;align-items:center;margin-bottom:28px}
+  .mobile-close{background:none;border:none;font-size:26px;color:var(--ink);cursor:pointer;line-height:1}
+  .mobile-group{margin-bottom:28px}
+  .mobile-group h4{font-family:var(--font-head);font-size:11px;text-transform:uppercase;letter-spacing:.1em;color:var(--accent);margin-bottom:10px}
+  .mobile-group a{display:flex;align-items:center;gap:12px;padding:13px 2px;border-bottom:1px solid var(--border);font-size:16px;color:var(--ink);text-decoration:none;font-family:var(--font-body)}
+  .mobile-group a .emoji{width:22px;text-align:center}
 </style>
 </head>
 <body>
 
 <nav>
   <a class="logo" href="index.html">Mail<span>Fix</span></a>
-  <div class="nav-links">
-    <a href="index.html">Email</a>
-    <a href="job-application.html">Job Email</a>
-    <a href="ctc-calculator.html">Salary</a>
-    <a href="hra-calculator.html">HRA</a>
-    <a href="photo-resizer.html">Photo Resizer</a>
-    <a href="rent-receipt.html">Rent Receipt</a>
-    <a href="whatsapp-dhanda.html">WhatsApp</a>
-    <a href="sarkari-letter.html">Sarkari</a>
-    <a href="resignation.html">Resign</a>
-    <a href="city-compare.html">City Compare</a>
+
+  <div class="nav-links" id="navLinks">
+    <div class="nav-item">
+      <button class="nav-trigger" onclick="toggleDropdown('calcDropdown', this)">🧮 Calculators <span class="caret">▾</span></button>
+      <div class="dropdown-panel" id="calcDropdown">
+        <a href="ctc-calculator.html"><span class="emoji">💰</span> CTC to In-Hand Salary</a>
+        <a href="hra-calculator.html"><span class="emoji">🏠</span> HRA Exemption</a>
+        <a href="itr-calculator.html"><span class="emoji">📊</span> ITR / Income Tax</a>
+        <a href="leave-encashment.html"><span class="emoji">🏖️</span> Leave Encashment</a>
+        <a href="retirement-calculator.html"><span class="emoji">🎯</span> Retirement Package</a>
+      </div>
+    </div>
+
+    <div class="nav-item">
+      <button class="nav-trigger" onclick="toggleDropdown('lettersDropdown', this)">✉️ Letters & Docs <span class="caret">▾</span></button>
+      <div class="dropdown-panel" id="lettersDropdown">
+        <a href="index.html"><span class="emoji">💬</span> Hinglish Email Fixer</a>
+        <a href="job-application.html"><span class="emoji">🎓</span> Job Application Email</a>
+        <a href="sarkari-letter.html"><span class="emoji">🏛️</span> Sarkari Letter</a>
+        <a href="resignation.html"><span class="emoji">🚪</span> Resignation Kit</a>
+        <a href="rent-receipt.html"><span class="emoji">🧾</span> Rent Receipt</a>
+        <a href="gst-invoice.html"><span class="emoji">📄</span> GST Invoice</a>
+      </div>
+    </div>
+
+    <div class="nav-item">
+      <button class="nav-trigger" onclick="toggleDropdown('utilsDropdown', this)">🛠️ Utilities <span class="caret">▾</span></button>
+      <div class="dropdown-panel" id="utilsDropdown">
+        <a href="whatsapp-dhanda.html"><span class="emoji">📱</span> WhatsApp Dhanda</a>
+        <a href="photo-resizer.html"><span class="emoji">🖼️</span> Photo Resizer</a>
+        <a href="city-compare.html"><span class="emoji">🏙️</span> City Compare</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="nav-right">
     <span class="nav-badge">Free</span>
+    <button class="mobile-toggle" onclick="toggleMobilePanel(true)" aria-label="Open menu">☰</button>
   </div>
 </nav>
+
+<div class="mobile-panel" id="mobilePanel">
+  <div class="mobile-panel-header">
+    <a class="logo" href="index.html">Mail<span>Fix</span></a>
+    <button class="mobile-close" onclick="toggleMobilePanel(false)" aria-label="Close menu">×</button>
+  </div>
+
+  <div class="mobile-group">
+    <h4>Calculators</h4>
+    <a href="ctc-calculator.html"><span class="emoji">💰</span> CTC to In-Hand Salary</a>
+    <a href="hra-calculator.html"><span class="emoji">🏠</span> HRA Exemption</a>
+    <a href="itr-calculator.html"><span class="emoji">📊</span> ITR / Income Tax</a>
+    <a href="leave-encashment.html"><span class="emoji">🏖️</span> Leave Encashment</a>
+    <a href="retirement-calculator.html"><span class="emoji">🎯</span> Retirement Package</a>
+  </div>
+
+  <div class="mobile-group">
+    <h4>Letters & Docs</h4>
+    <a href="index.html"><span class="emoji">💬</span> Hinglish Email Fixer</a>
+    <a href="job-application.html"><span class="emoji">🎓</span> Job Application Email</a>
+    <a href="sarkari-letter.html"><span class="emoji">🏛️</span> Sarkari Letter</a>
+    <a href="resignation.html"><span class="emoji">🚪</span> Resignation Kit</a>
+    <a href="rent-receipt.html"><span class="emoji">🧾</span> Rent Receipt</a>
+    <a href="gst-invoice.html"><span class="emoji">📄</span> GST Invoice</a>
+  </div>
+
+  <div class="mobile-group">
+    <h4>Utilities</h4>
+    <a href="whatsapp-dhanda.html"><span class="emoji">📱</span> WhatsApp Dhanda</a>
+    <a href="photo-resizer.html"><span class="emoji">🖼️</span> Photo Resizer</a>
+    <a href="city-compare.html"><span class="emoji">🏙️</span> City Compare</a>
+  </div>
+</div>
 
 <section class="hero">
   <div class="hero-tag"><span class="dot"></span> HRA-compliant format, print-ready</div>
@@ -287,11 +374,16 @@
 <footer>
   <span>© 2025 MailFix — Free Tools for Indian Professionals</span>
   <div style="display:flex;gap:16px;flex-wrap:wrap">
+    <a href="index.html">Hinglish Email</a>
     <a href="job-application.html">Job Email</a>
     <a href="ctc-calculator.html">Salary Calculator</a>
     <a href="hra-calculator.html">HRA Calculator</a>
+    <a href="itr-calculator.html">ITR / Tax Calculator</a>
+    <a href="leave-encashment.html">Leave Encashment</a>
+    <a href="retirement-calculator.html">Retirement Calculator</a>
     <a href="photo-resizer.html">Photo Resizer</a>
     <a href="rent-receipt.html">Rent Receipt</a>
+    <a href="gst-invoice.html">GST Invoice</a>
     <a href="whatsapp-dhanda.html">WhatsApp Dhanda</a>
     <a href="sarkari-letter.html">Sarkari Letter</a>
     <a href="resignation.html">Resignation Kit</a>
@@ -387,6 +479,35 @@
     document.getElementById('printBtn').style.display = 'block';
 
     document.getElementById('printableReceiptArea').scrollIntoView({ behavior: 'smooth' });
+  }
+
+  // === Nav dropdowns + mobile menu (site-wide) ===
+  function toggleDropdown(id, triggerEl) {
+    const panel = document.getElementById(id);
+    const isOpen = panel.classList.contains('open');
+    document.querySelectorAll('.dropdown-panel').forEach(p => p.classList.remove('open'));
+    document.querySelectorAll('.nav-trigger').forEach(t => t.classList.remove('open'));
+    if (!isOpen) {
+      panel.classList.add('open');
+      triggerEl.classList.add('open');
+    }
+  }
+  document.addEventListener('click', function (e) {
+    if (!e.target.closest('.nav-item')) {
+      document.querySelectorAll('.dropdown-panel').forEach(p => p.classList.remove('open'));
+      document.querySelectorAll('.nav-trigger').forEach(t => t.classList.remove('open'));
+    }
+  });
+  document.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape') {
+      document.querySelectorAll('.dropdown-panel').forEach(p => p.classList.remove('open'));
+      document.querySelectorAll('.nav-trigger').forEach(t => t.classList.remove('open'));
+      toggleMobilePanel(false);
+    }
+  });
+  function toggleMobilePanel(open) {
+    document.getElementById('mobilePanel').classList.toggle('open', open);
+    document.body.style.overflow = open ? 'hidden' : '';
   }
 </script>
 </body>

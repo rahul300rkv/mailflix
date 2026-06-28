@@ -1,0 +1,600 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Retirement Benefits Calculator for Govt Employees | MailFix</title>
+<meta name="description" content="Calculate your complete retirement package — NPS corpus, gratuity, leave encashment, and commuted pension. Enter your pay level, age and service years for a projection built entirely from your numbers."/>
+<meta name="keywords" content="retirement calculator govt employee india, nps corpus calculator, gratuity calculator govt, commuted pension calculator, central government pension calculator 2026"/>
+<meta name="robots" content="index, follow"/>
+<link rel="canonical" href="https://mailflix.netlify.app/retirement-calculator.html"/>
+<meta property="og:title" content="Retirement Benefits Calculator for Govt Employees"/>
+<meta property="og:description" content="Project your NPS corpus, gratuity, leave encashment and commuted pension — all from your own numbers."/>
+<meta property="og:url" content="https://mailflix.netlify.app/retirement-calculator.html"/>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "Retirement Benefits Calculator for Govt Employees",
+  "url": "https://mailflix.netlify.app/retirement-calculator.html",
+  "description": "Free calculator that projects NPS corpus, gratuity, leave encashment and commuted pension for Indian government employees, based on pay level, age and service years.",
+  "applicationCategory": "FinanceApplication",
+  "offers": { "@type": "Offer", "price": "0", "priceCurrency": "INR" }
+}
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet"/>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3532554351654388" crossorigin="anonymous"></script>
+<style>
+  :root {
+    --ink: #0f0e0c;
+    --paper: #f5f2ec;
+    --card: #ffffff;
+    --accent: #d44f1e;
+    --indigo: #4f46e5;
+    --blue: #1e40af;
+    --blue2: #2563eb;
+    --green: #16a34a;
+    --green-bg: #f0fdf4;
+    --muted: #7a7570;
+    --border: #e2ddd5;
+    --radius: 12px;
+    --font-head: 'Syne', sans-serif;
+    --font-body: 'DM Sans', sans-serif;
+  }
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  body { background: var(--paper); color: var(--ink); font-family: var(--font-body); font-size: 16px; line-height: 1.6; min-height: 100vh; }
+
+  nav { display: flex; justify-content: space-between; align-items: center; padding: 18px 5%; border-bottom: 1px solid var(--border); background: var(--paper); position: sticky; top: 0; z-index: 100; }
+  .logo { font-family: var(--font-head); font-size: 22px; font-weight: 800; letter-spacing: -0.5px; color: var(--ink); text-decoration: none; }
+  .logo span { color: var(--accent); }
+  .nav-links { display: flex; gap: 12px; align-items: center; flex-wrap: wrap; }
+  .nav-links a { font-size: 13px; color: var(--muted); text-decoration: none; }
+  .nav-links a:hover { color: var(--accent); }
+  .nav-badge { background: var(--accent); color: #fff; font-size: 12px; font-weight: 500; padding: 4px 12px; border-radius: 99px; }
+
+  .hero { max-width: 780px; margin: 0 auto; padding: 56px 5% 32px; text-align: center; }
+  .hero-tag { display: inline-flex; align-items: center; gap: 6px; background: #fff; border: 1px solid var(--border); border-radius: 99px; padding: 6px 16px; font-size: 13px; color: var(--muted); margin-bottom: 16px; }
+  .hero-tag .dot { width: 7px; height: 7px; background: #22c55e; border-radius: 50%; animation: pulse 2s infinite; }
+  @keyframes pulse { 0%,100%{opacity:1;transform:scale(1)} 50%{opacity:.6;transform:scale(1.3)} }
+  h1 { font-family: var(--font-head); font-size: clamp(30px, 5vw, 48px); font-weight: 800; line-height: 1.1; letter-spacing: -1.5px; margin-bottom: 14px; }
+  h1 em { color: var(--accent); font-style: normal; }
+  .hero-sub { font-size: 16px; color: var(--muted); font-weight: 300; max-width: 540px; margin: 0 auto 16px; }
+  .hero-chips { display: flex; flex-wrap: wrap; gap: 8px; justify-content: center; }
+  .hero-chip { background: #fff; border: 1px solid var(--border); border-radius: 8px; padding: 5px 12px; font-size: 12px; color: var(--muted); }
+
+  .tool-wrap { max-width: 950px; margin: 32px auto; padding: 0 5%; }
+
+  .card { background: var(--card); border: 1px solid var(--border); border-radius: 18px; overflow: hidden; box-shadow: 0 2px 20px rgba(0,0,0,0.05); }
+  .card-header { padding: 18px 24px; border-bottom: 1px solid var(--border); background: #fafaf8; }
+  .card-header h2 { font-family: var(--font-head); font-size: 16px; font-weight: 700; }
+  .card-header p { font-size: 13px; color: var(--muted); margin-top: 2px; }
+  .card-body { padding: 24px; }
+
+  .ret-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+  @media (max-width: 560px) { .ret-grid { grid-template-columns: 1fr; } }
+  .ret-form-group { display: flex; flex-direction: column; margin-bottom: 16px; }
+  .ret-form-group.full-width { grid-column: 1 / -1; }
+  .ret-label { font-size: 11.5px; font-weight: 700; color: var(--muted); margin-bottom: 6px; text-transform: uppercase; letter-spacing: 0.05em; font-family: var(--font-head); }
+  .ret-label small { display: block; font-weight: 400; text-transform: none; letter-spacing: 0; color: #a39c92; font-size: 11px; margin-top: 2px; }
+  .ret-input, .ret-select { width: 100%; padding: 10px 14px; border: 1px solid var(--border); border-radius: 8px; font-size: 14.5px; font-family: var(--font-body); color: var(--ink); background: var(--paper); transition: border-color 0.15s; outline: none; }
+  .ret-input:focus, .ret-select:focus { border-color: var(--accent); background: #fff; }
+
+  .calc-btn { width: 100%; padding: 14px; background: var(--indigo); color: #fff; border: none; border-radius: 10px; font-family: var(--font-head); font-size: 16px; font-weight: 700; cursor: pointer; margin-top: 8px; transition: all 0.15s; }
+  .calc-btn:hover { background: #4338ca; transform: translateY(-1px); }
+
+  .dashboard { display: none; margin-top: 28px; }
+
+  .cards-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; margin-bottom: 24px; }
+  @media (max-width: 640px) { .cards-grid { grid-template-columns: 1fr 1fr; } }
+  @media (max-width: 420px) { .cards-grid { grid-template-columns: 1fr; } }
+  .metric-card { background: var(--card); border: 1px solid var(--border); border-radius: var(--radius); padding: 16px; text-align: center; }
+  .card-icon { font-size: 22px; margin-bottom: 8px; }
+  .card-label { font-size: 11px; font-weight: 700; color: var(--muted); text-transform: uppercase; letter-spacing: 0.04em; margin-bottom: 6px; font-family: var(--font-head); }
+  .card-value { font-size: 18px; font-weight: 800; color: var(--blue2); margin-bottom: 4px; font-family: var(--font-head); }
+  .card-sub { font-size: 11px; color: #a39c92; }
+
+  .master-banner { background: linear-gradient(135deg, var(--blue) 0%, var(--blue2) 100%); color: #fff; padding: 26px 20px; border-radius: var(--radius); text-align: center; margin-bottom: 24px; }
+  .master-banner-title { font-size: 12px; opacity: 0.85; text-transform: uppercase; letter-spacing: 0.06em; margin-bottom: 8px; font-family: var(--font-head); }
+  .master-banner-value { font-size: clamp(28px, 5vw, 38px); font-weight: 800; margin-bottom: 12px; font-family: var(--font-head); }
+  .master-banner-meta { font-size: 12px; opacity: 0.85; margin-bottom: 6px; }
+  .master-banner-subtext { font-size: 13px; font-weight: 500; opacity: 0.95; }
+
+  .breakdown-section { background: var(--card); border: 1px solid var(--border); border-radius: var(--radius); overflow: hidden; }
+  .breakdown-header { background: #fafaf8; padding: 12px 18px; font-size: 11.5px; font-weight: 700; color: var(--muted); text-transform: uppercase; letter-spacing: 0.06em; border-bottom: 1px solid var(--border); font-family: var(--font-head); }
+  .table-row { display: flex; justify-content: space-between; align-items: center; padding: 12px 18px; border-bottom: 1px solid var(--border); font-size: 13.5px; gap: 12px; }
+  .table-row:last-child { border-bottom: none; }
+  .table-row-label { color: var(--ink); }
+  .table-row-val { font-weight: 700; color: var(--ink); white-space: nowrap; font-family: var(--font-head); }
+  .table-row.bold-highlight { background: #fafaf8; font-weight: 600; }
+  .table-row.bold-highlight .table-row-val { color: var(--blue2); }
+
+  .action-row { display: flex; gap: 10px; margin-top: 16px; }
+  .action-btn { flex: 1; padding: 12px; border-radius: 10px; font-family: var(--font-head); font-size: 14px; font-weight: 700; cursor: pointer; text-align: center; text-decoration: none; transition: all 0.15s; }
+  .action-btn.whatsapp { background: #16a34a; color: #fff; border: none; }
+  .action-btn.whatsapp:hover { background: #15803d; }
+  .action-btn.copy { background: var(--card); color: var(--ink); border: 1px solid var(--border); }
+  .action-btn.copy:hover { border-color: var(--ink); }
+  .action-btn.copy.copied { background: var(--green-bg); color: #166534; border-color: #bbf7d0; }
+
+  .privacy-note { margin-top: 18px; font-size: 12px; color: var(--muted); text-align: center; font-style: italic; }
+
+  .ad-banner { max-width: 950px; margin: 0 auto 32px; padding: 0 5%; }
+
+  .explainer { max-width: 1000px; margin: 0 auto; padding: 48px 5%; }
+  .explainer h2 { font-family: var(--font-head); font-size: clamp(24px, 3vw, 34px); font-weight: 800; letter-spacing: -0.5px; margin-bottom: 32px; }
+  .explainer-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 16px; }
+  .explainer-card { background: var(--card); border: 1px solid var(--border); border-radius: var(--radius); padding: 20px; }
+  .explainer-card h4 { font-family: var(--font-head); font-size: 14px; font-weight: 700; margin-bottom: 8px; color: var(--ink); }
+  .explainer-card p { font-size: 13px; color: var(--muted); line-height: 1.65; }
+  .explainer-card .tag { display: inline-block; font-size: 11px; padding: 2px 8px; border-radius: 4px; font-weight: 500; margin-bottom: 8px; background: var(--green-bg); color: #15803d; }
+
+  .faq-section { max-width: 1000px; margin: 0 auto; padding: 0 5% 72px; }
+  .faq-section h2 { font-family: var(--font-head); font-size: clamp(24px, 3vw, 34px); font-weight: 800; letter-spacing: -0.5px; margin-bottom: 24px; }
+  details { background: var(--card); border: 1px solid var(--border); border-radius: var(--radius); padding: 18px 20px; margin-bottom: 10px; }
+  summary { font-family: var(--font-head); font-size: 15px; font-weight: 700; cursor: pointer; list-style: none; display: flex; justify-content: space-between; align-items: center; }
+  summary .plus { color: var(--accent); font-size: 20px; }
+  details p { margin-top: 12px; font-size: 14px; color: var(--muted); line-height: 1.7; }
+
+  footer { border-top: 1px solid var(--border); padding: 28px 5%; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px; font-size: 13px; color: var(--muted); }
+  footer a { color: var(--muted); text-decoration: none; }
+  footer a:hover { color: var(--accent); }
+
+  /* === Grouped nav dropdowns + mobile menu (site-wide) === */
+  .nav-links{display:flex;gap:6px;align-items:center}
+  .nav-badge{background:var(--accent);color:#fff;font-size:12px;font-weight:500;padding:4px 12px;border-radius:99px;font-family:var(--font-body);margin-left:6px}
+  .nav-right{display:flex;align-items:center;gap:6px}
+  .nav-item{position:relative}
+  .nav-trigger{font-size:13px;color:var(--muted);background:none;border:none;cursor:pointer;font-family:var(--font-body);display:flex;align-items:center;gap:5px;padding:8px 10px;border-radius:8px;transition:color .15s}
+  .nav-trigger:hover,.nav-trigger.open{color:var(--accent)}
+  .nav-trigger .caret{font-size:9px;transition:transform .15s;opacity:.7}
+  .nav-trigger.open .caret{transform:rotate(180deg)}
+  .dropdown-panel{position:absolute;top:calc(100% + 8px);left:50%;transform:translateX(-50%);background:#fff;border:1px solid var(--border);border-radius:12px;box-shadow:0 12px 32px rgba(15,14,12,.1);padding:8px;min-width:230px;display:none;z-index:200}
+  .dropdown-panel.open{display:block}
+  .dropdown-panel a{display:flex;align-items:center;gap:10px;padding:9px 12px;border-radius:8px;font-size:13.5px;color:var(--ink);text-decoration:none;white-space:nowrap;font-family:var(--font-body)}
+  .dropdown-panel a:hover{background:var(--paper);color:var(--accent)}
+  .dropdown-panel a .emoji{font-size:15px;width:18px;text-align:center}
+  .mobile-toggle{display:none;background:none;border:none;cursor:pointer;font-size:22px;color:var(--ink);padding:4px 6px;line-height:1}
+  @media(max-width:880px){
+    .nav-links{display:none}
+    .mobile-toggle{display:block}
+  }
+  .mobile-panel{display:none;position:fixed;inset:0;background:var(--paper);z-index:300;padding:20px 6%;overflow-y:auto}
+  .mobile-panel.open{display:block}
+  .mobile-panel-header{display:flex;justify-content:space-between;align-items:center;margin-bottom:28px}
+  .mobile-close{background:none;border:none;font-size:26px;color:var(--ink);cursor:pointer;line-height:1}
+  .mobile-group{margin-bottom:28px}
+  .mobile-group h4{font-family:var(--font-head);font-size:11px;text-transform:uppercase;letter-spacing:.1em;color:var(--accent);margin-bottom:10px}
+  .mobile-group a{display:flex;align-items:center;gap:12px;padding:13px 2px;border-bottom:1px solid var(--border);font-size:16px;color:var(--ink);text-decoration:none;font-family:var(--font-body)}
+  .mobile-group a .emoji{width:22px;text-align:center}
+</style>
+</head>
+<body>
+
+<nav>
+  <a class="logo" href="index.html">Mail<span>Fix</span></a>
+
+  <div class="nav-links" id="navLinks">
+    <div class="nav-item">
+      <button class="nav-trigger" onclick="toggleDropdown('calcDropdown', this)">🧮 Calculators <span class="caret">▾</span></button>
+      <div class="dropdown-panel" id="calcDropdown">
+        <a href="ctc-calculator.html"><span class="emoji">💰</span> CTC to In-Hand Salary</a>
+        <a href="hra-calculator.html"><span class="emoji">🏠</span> HRA Exemption</a>
+        <a href="itr-calculator.html"><span class="emoji">📊</span> ITR / Income Tax</a>
+        <a href="leave-encashment.html"><span class="emoji">🏖️</span> Leave Encashment</a>
+        <a href="retirement-calculator.html"><span class="emoji">🎯</span> Retirement Package</a>
+      </div>
+    </div>
+
+    <div class="nav-item">
+      <button class="nav-trigger" onclick="toggleDropdown('lettersDropdown', this)">✉️ Letters & Docs <span class="caret">▾</span></button>
+      <div class="dropdown-panel" id="lettersDropdown">
+        <a href="index.html"><span class="emoji">💬</span> Hinglish Email Fixer</a>
+        <a href="job-application.html"><span class="emoji">🎓</span> Job Application Email</a>
+        <a href="sarkari-letter.html"><span class="emoji">🏛️</span> Sarkari Letter</a>
+        <a href="resignation.html"><span class="emoji">🚪</span> Resignation Kit</a>
+        <a href="rent-receipt.html"><span class="emoji">🧾</span> Rent Receipt</a>
+        <a href="gst-invoice.html"><span class="emoji">📄</span> GST Invoice</a>
+      </div>
+    </div>
+
+    <div class="nav-item">
+      <button class="nav-trigger" onclick="toggleDropdown('utilsDropdown', this)">🛠️ Utilities <span class="caret">▾</span></button>
+      <div class="dropdown-panel" id="utilsDropdown">
+        <a href="whatsapp-dhanda.html"><span class="emoji">📱</span> WhatsApp Dhanda</a>
+        <a href="photo-resizer.html"><span class="emoji">🖼️</span> Photo Resizer</a>
+        <a href="city-compare.html"><span class="emoji">🏙️</span> City Compare</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="nav-right">
+    <span class="nav-badge">Free</span>
+    <button class="mobile-toggle" onclick="toggleMobilePanel(true)" aria-label="Open menu">☰</button>
+  </div>
+</nav>
+
+<div class="mobile-panel" id="mobilePanel">
+  <div class="mobile-panel-header">
+    <a class="logo" href="index.html">Mail<span>Fix</span></a>
+    <button class="mobile-close" onclick="toggleMobilePanel(false)" aria-label="Close menu">×</button>
+  </div>
+
+  <div class="mobile-group">
+    <h4>Calculators</h4>
+    <a href="ctc-calculator.html"><span class="emoji">💰</span> CTC to In-Hand Salary</a>
+    <a href="hra-calculator.html"><span class="emoji">🏠</span> HRA Exemption</a>
+    <a href="itr-calculator.html"><span class="emoji">📊</span> ITR / Income Tax</a>
+    <a href="leave-encashment.html"><span class="emoji">🏖️</span> Leave Encashment</a>
+    <a href="retirement-calculator.html"><span class="emoji">🎯</span> Retirement Package</a>
+  </div>
+
+  <div class="mobile-group">
+    <h4>Letters & Docs</h4>
+    <a href="index.html"><span class="emoji">💬</span> Hinglish Email Fixer</a>
+    <a href="job-application.html"><span class="emoji">🎓</span> Job Application Email</a>
+    <a href="sarkari-letter.html"><span class="emoji">🏛️</span> Sarkari Letter</a>
+    <a href="resignation.html"><span class="emoji">🚪</span> Resignation Kit</a>
+    <a href="rent-receipt.html"><span class="emoji">🧾</span> Rent Receipt</a>
+    <a href="gst-invoice.html"><span class="emoji">📄</span> GST Invoice</a>
+  </div>
+
+  <div class="mobile-group">
+    <h4>Utilities</h4>
+    <a href="whatsapp-dhanda.html"><span class="emoji">📱</span> WhatsApp Dhanda</a>
+    <a href="photo-resizer.html"><span class="emoji">🖼️</span> Photo Resizer</a>
+    <a href="city-compare.html"><span class="emoji">🏙️</span> City Compare</a>
+  </div>
+</div>
+
+<section class="hero">
+  <div class="hero-tag"><span class="dot"></span> Retirement Dashboard 2026</div>
+  <h1>Retirement package,<br/><em>poora hisaab</em> ek jagah</h1>
+  <p class="hero-sub">NPS corpus, gratuity, leave encashment and commuted pension — projected entirely from your own pay, age and service numbers, not a demo template.</p>
+  <div class="hero-chips">
+    <span class="hero-chip">🏢 NPS Corpus</span>
+    <span class="hero-chip">🎁 Gratuity</span>
+    <span class="hero-chip">🌴 Leave Encashment</span>
+    <span class="hero-chip">✂️ Commuted Pension</span>
+  </div>
+</section>
+
+<div class="tool-wrap">
+  <div class="card">
+    <div class="card-header">
+      <h2>Your details</h2>
+      <p>Everything stays in your browser — nothing is saved on any server</p>
+    </div>
+    <div class="card-body">
+
+      <form id="retirementForm" onsubmit="calculateRetirement(event)">
+        <div class="ret-grid">
+          <div class="ret-form-group">
+            <label class="ret-label">Pay Level (7th CPC)</label>
+            <select id="payLevel" class="ret-select">
+              <option value="56100">Level 11 (Base Entry: ₹56,100)</option>
+              <option value="67700">Level 12 (Base Entry: ₹67,700)</option>
+              <option value="78800">Level 13 (Base Entry: ₹78,800)</option>
+            </select>
+          </div>
+          <div class="ret-form-group">
+            <label class="ret-label">Current Age (Years)</label>
+            <input type="number" id="currentAge" class="ret-input" value="35" required min="18" max="60"/>
+          </div>
+          <div class="ret-form-group">
+            <label class="ret-label">Years of Service Completed</label>
+            <input type="number" id="serviceDone" class="ret-input" value="11" required min="0" max="40"/>
+          </div>
+          <div class="ret-form-group">
+            <label class="ret-label">Current NPS Corpus (₹)<small>Check your latest CRA/NPS statement</small></label>
+            <input type="number" id="currentNpsCorpus" class="ret-input" value="1200000" required min="0"/>
+          </div>
+          <div class="ret-form-group">
+            <label class="ret-label">City Class (for HRA context)</label>
+            <select id="cityClass" class="ret-select">
+              <option value="X">X Class (Metro Cities)</option>
+              <option value="Y" selected>Y Class (Tier-2/Capitals)</option>
+            </select>
+          </div>
+          <div class="ret-form-group">
+            <label class="ret-label">Expected NPS Return (%/yr)</label>
+            <input type="number" id="npsReturn" class="ret-input" value="9" required step="0.1"/>
+          </div>
+          <div class="ret-form-group">
+            <label class="ret-label">Annuity Rate (%)</label>
+            <input type="number" id="annuityRate" class="ret-input" value="6" required step="0.1"/>
+          </div>
+          <div class="ret-form-group">
+            <label class="ret-label">Expected DA throughout service (%)<small>Used for both NPS contributions and gratuity</small></label>
+            <input type="number" id="daRetirement" class="ret-input" value="50" required/>
+          </div>
+        </div>
+        <button type="submit" class="calc-btn">🎯 Calculate My Retirement Package</button>
+      </form>
+
+      <div class="dashboard" id="dashboardBlock">
+
+        <div class="cards-grid">
+          <div class="metric-card">
+            <div class="card-icon">🏢</div>
+            <div class="card-label">NPS Corpus</div>
+            <div class="card-value" id="cardNpsTotal">₹0.00 L</div>
+            <div class="card-sub">total at retirement</div>
+          </div>
+          <div class="metric-card">
+            <div class="card-icon">💰</div>
+            <div class="card-label">NPS Lump Sum</div>
+            <div class="card-value" id="cardNpsLump">₹0.00 L</div>
+            <div class="card-sub">60% — tax-free</div>
+          </div>
+          <div class="metric-card">
+            <div class="card-icon">📅</div>
+            <div class="card-label">Monthly Pension</div>
+            <div class="card-value" id="cardPension" style="color:#2563eb">₹0</div>
+            <div class="card-sub">for life from NPS annuity</div>
+          </div>
+          <div class="metric-card">
+            <div class="card-icon">🎁</div>
+            <div class="card-label">Gratuity</div>
+            <div class="card-value" id="cardGratuity">₹0.00 L</div>
+            <div class="card-sub">tax-free, capped ₹25L</div>
+          </div>
+          <div class="metric-card">
+            <div class="card-icon">🌴</div>
+            <div class="card-label">Leave Encashment</div>
+            <div class="card-value" id="cardLeave">₹0.00 L</div>
+            <div class="card-sub" id="cardLeaveSub">300 days, tax-free</div>
+          </div>
+          <div class="metric-card">
+            <div class="card-icon">✂️</div>
+            <div class="card-label">Commuted Pension</div>
+            <div class="card-value" id="cardCommuted">₹0.00 L</div>
+            <div class="card-sub">40% of annuity, upfront</div>
+          </div>
+        </div>
+
+        <div class="master-banner">
+          <div class="master-banner-title">Total Retirement Package (All Lump Sums Combined)</div>
+          <div class="master-banner-value" id="bannerTotalPackage">₹0.00 Cr</div>
+          <div class="master-banner-meta" id="bannerMetaDetails">—</div>
+          <div class="master-banner-subtext" id="bannerSubtextDetails">—</div>
+        </div>
+
+        <div class="breakdown-section">
+          <div class="breakdown-header">Detailed Breakdown</div>
+          <div class="table-row"><div class="table-row-label">🏢 NPS Lump Sum (60% of corpus, tax-free)</div><div class="table-row-val" id="rowNpsLump">₹0.00 L</div></div>
+          <div class="table-row"><div class="table-row-label">🏛️ NPS Annuity Corpus (40%)</div><div class="table-row-val" id="rowNpsAnnuity">₹0.00 L</div></div>
+          <div class="table-row" style="background:#fafaf8"><div class="table-row-label">💼 NPS Total Corpus at Retirement</div><div class="table-row-val" id="rowNpsTotal">₹0.00 L</div></div>
+          <div class="table-row"><div class="table-row-label">🎁 Gratuity ((Basic+DA)÷2 × years, approx., max ₹25L)</div><div class="table-row-val" id="rowGratuity">₹0.00 L</div></div>
+          <div class="table-row"><div class="table-row-label">🌴 Leave Encashment</div><div class="table-row-val" id="rowLeave">₹0.00 L</div></div>
+          <div class="table-row"><div class="table-row-label">✂️ Commuted Pension Lump Sum (40% of annuity, commutation factor 8.194)</div><div class="table-row-val" id="rowCommuted">₹0.00 L</div></div>
+          <div class="table-row bold-highlight"><div class="table-row-label">🎯 Total Lump Sum at Retirement</div><div class="table-row-val" id="rowTotalLump">₹0.00 Cr</div></div>
+          <div class="table-row"><div class="table-row-label">📅 Monthly NPS Annuity Pension (for life)</div><div class="table-row-val" id="rowPension">₹0/month</div></div>
+          <div class="table-row bold-highlight" style="background:#eff6ff"><div class="table-row-label">📆 Reduced Pension (after 40% commuted)</div><div class="table-row-val" id="rowReducedPension">₹0/month</div></div>
+        </div>
+
+        <div class="action-row">
+          <a href="#" id="whatsappShareBtn" class="action-btn whatsapp" target="_blank" rel="noopener">📱 Share on WhatsApp</a>
+          <button class="action-btn copy" id="copyResultBtn" onclick="copyResultSummary()">📋 Copy</button>
+        </div>
+      </div>
+
+      <div class="privacy-note">🔒 Privacy Check: All calculations happen in your browser. Your salary and service details are never sent to any server.</div>
+    </div>
+  </div>
+</div>
+
+<div class="ad-banner">
+  <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-3532554351654388" data-ad-slot="3962323207" data-ad-format="auto" data-full-width-responsive="true"></ins>
+  <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+</div>
+
+<section class="explainer">
+  <h2>What goes into your retirement package</h2>
+  <div class="explainer-grid">
+    <div class="explainer-card">
+      <span class="tag">NPS Corpus</span>
+      <h4>Your contribution + employer's, compounded</h4>
+      <p>10% of Basic+DA from you, 14% from the government, growing monthly at your expected return rate from your current NPS balance to retirement.</p>
+    </div>
+    <div class="explainer-card">
+      <span class="tag">60/40 split</span>
+      <h4>Lump sum vs lifetime annuity</h4>
+      <p>At exit, 60% of your NPS corpus comes to you tax-free as a lump sum; the remaining 40% buys an annuity that pays you monthly for life.</p>
+    </div>
+    <div class="explainer-card">
+      <span class="tag">Gratuity</span>
+      <h4>Capped at ₹25 lakh</h4>
+      <p>A one-time tax-free payout based on your last Basic+DA and years of service, capped at ₹25,00,000 regardless of the formula result.</p>
+    </div>
+    <div class="explainer-card">
+      <span class="tag">Commutation</span>
+      <h4>Trading future pension for cash now</h4>
+      <p>You can commute up to 40% of your monthly pension for an upfront lump sum, using an age-based commutation factor — your monthly pension reduces accordingly.</p>
+    </div>
+  </div>
+</section>
+
+<section class="faq-section">
+  <h2>Commonly asked questions</h2>
+  <details>
+    <summary>How accurate is this retirement projection? <span class="plus">+</span></summary>
+    <p>This tool computes every figure from the numbers you enter — your current NPS corpus, pay level, age, and service years — rather than using fixed demo values. That said, it still simplifies real-world variables like annual increment percentage, future DA revisions, and the exact six-monthly gratuity formula. Treat the output as a directional estimate, not a guaranteed figure.</p>
+  </details>
+  <details>
+    <summary>Why do I need to enter my current NPS corpus? <span class="plus">+</span></summary>
+    <p>Your actual NPS balance depends on your full contribution history and past market returns, which this tool has no way of knowing. Entering your current balance from your CRA/NPS statement gives an accurate starting point for projecting growth to retirement.</p>
+  </details>
+  <details>
+    <summary>What is pension commutation?</summary>
+    <p>Commutation lets you convert part of your future monthly pension — up to 40% — into a lump sum paid immediately at retirement. Your monthly pension is reduced for a fixed period (commonly 15 years), after which it is typically restored to the full amount.</p>
+  </details>
+  <details>
+    <summary>Should I rely on this for my actual retirement planning? <span class="plus">+</span></summary>
+    <p>Use this as a starting point to understand the moving parts of your retirement package. For exact figures used in your final settlement, confirm with your department's PAO/DDO or a financial advisor closer to your retirement date.</p>
+  </details>
+</section>
+
+<footer>
+  <span>© 2025 MailFix — Free Tools for Indian Professionals</span>
+  <div style="display:flex;gap:16px;flex-wrap:wrap">
+    <a href="index.html">Hinglish Email</a>
+    <a href="job-application.html">Job Email</a>
+    <a href="ctc-calculator.html">Salary Calculator</a>
+    <a href="hra-calculator.html">HRA Calculator</a>
+    <a href="itr-calculator.html">ITR / Tax Calculator</a>
+    <a href="leave-encashment.html">Leave Encashment</a>
+    <a href="retirement-calculator.html">Retirement Calculator</a>
+    <a href="photo-resizer.html">Photo Resizer</a>
+    <a href="rent-receipt.html">Rent Receipt</a>
+    <a href="gst-invoice.html">GST Invoice</a>
+    <a href="whatsapp-dhanda.html">WhatsApp Dhanda</a>
+    <a href="sarkari-letter.html">Sarkari Letter</a>
+    <a href="resignation.html">Resignation Kit</a>
+    <a href="city-compare.html">City Compare</a>
+    <a href="privacy.html">Privacy Policy</a>
+  </div>
+</footer>
+
+<script>
+  function formatLakhValue(num) {
+    return '₹' + (num / 100000).toFixed(2) + ' L';
+  }
+  function formatCroreValue(num) {
+    return '₹' + (num / 10000000).toFixed(2) + ' Cr';
+  }
+  function formatRaw(num) {
+    return '₹' + Math.round(num).toLocaleString('en-IN');
+  }
+
+  // Standard CCS commutation table factor for age 60 at retirement (approx.)
+  const COMMUTATION_FACTOR_AGE_60 = 8.194;
+
+  let lastSummary = '';
+
+  function calculateRetirement(event) {
+    event.preventDefault();
+
+    const currentBasic = parseFloat(document.getElementById('payLevel').value);
+    const currentAge = parseInt(document.getElementById('currentAge').value);
+    const serviceDone = parseInt(document.getElementById('serviceDone').value);
+    const currentNpsCorpus = parseFloat(document.getElementById('currentNpsCorpus').value) || 0;
+    const npsReturnRate = parseFloat(document.getElementById('npsReturn').value) / 100;
+    const annuityRate = parseFloat(document.getElementById('annuityRate').value) / 100;
+    const daRate = parseFloat(document.getElementById('daRetirement').value) / 100;
+
+    const retirementAge = 60;
+    const remainingYears = Math.max(0, retirementAge - currentAge);
+    const totalServiceYears = serviceDone + remainingYears;
+
+    // Project basic pay forward with standard ~3%/year increment assumption
+    let projectedBasic = currentBasic;
+    for (let i = 0; i < remainingYears; i++) {
+      projectedBasic = projectedBasic * 1.03;
+    }
+    const projectedDA = projectedBasic * daRate;
+    const emolsForGratuity = projectedBasic + projectedDA;
+
+    // Gratuity — simplified (Basic+DA)/2 × years formula, capped at ₹25L
+    const rawGratuity = (emolsForGratuity / 2) * totalServiceYears;
+    const finalGratuity = Math.min(2500000, rawGratuity);
+
+    // Leave Encashment — capped at 300 days per CCS Leave Rules
+    const leaveDaysUsed = Math.min(300, totalServiceYears * 30);
+    const finalLeaveEncashment = (emolsForGratuity / 30) * leaveDaysUsed;
+
+    // NPS corpus — grown FROM THE USER'S ACTUAL CURRENT BALANCE, not a fixed seed
+    let npsCorpus = currentNpsCorpus;
+    if (remainingYears > 0) {
+      let basicForContribution = currentBasic;
+      const totalMonths = remainingYears * 12;
+      for (let m = 0; m < totalMonths; m++) {
+        if (m > 0 && m % 12 === 0) basicForContribution *= 1.03; // annual increment
+        const monthlyEmoluments = basicForContribution * (1 + daRate);
+        const monthlyContribution = monthlyEmoluments * 0.24; // 10% employee + 14% employer
+        npsCorpus = (npsCorpus + monthlyContribution) * (1 + (npsReturnRate / 12));
+      }
+    }
+
+    const npsLumpSum = npsCorpus * 0.60;
+    const npsAnnuityCorpus = npsCorpus * 0.40;
+    const monthlyPensionFromNps = (npsAnnuityCorpus * annuityRate) / 12;
+
+    // Commuted pension — derived from the ACTUAL calculated pension, not a fixed number
+    const commutedMonthlyPortion = monthlyPensionFromNps * 0.40;
+    const commutedPensionLumpSum = commutedMonthlyPortion * 12 * COMMUTATION_FACTOR_AGE_60;
+    const reducedPension = monthlyPensionFromNps - commutedMonthlyPortion;
+
+    const totalLumpSumPackage = npsLumpSum + finalGratuity + finalLeaveEncashment + commutedPensionLumpSum;
+
+    document.getElementById('cardNpsTotal').innerText = formatLakhValue(npsCorpus);
+    document.getElementById('cardNpsLump').innerText = formatLakhValue(npsLumpSum);
+    document.getElementById('cardPension').innerText = formatRaw(monthlyPensionFromNps);
+    document.getElementById('cardGratuity').innerText = formatLakhValue(finalGratuity);
+    document.getElementById('cardLeave').innerText = formatLakhValue(finalLeaveEncashment);
+    document.getElementById('cardLeaveSub').innerText = leaveDaysUsed + ' days, tax-free';
+    document.getElementById('cardCommuted').innerText = formatLakhValue(commutedPensionLumpSum);
+
+    document.getElementById('bannerTotalPackage').innerText = formatCroreValue(totalLumpSumPackage);
+    document.getElementById('bannerMetaDetails').innerText = `Service: ${totalServiceYears} years (${serviceDone} done + ${remainingYears} remaining) | Retirement at ${retirementAge}`;
+    document.getElementById('bannerSubtextDetails').innerText = `+ ${formatRaw(monthlyPensionFromNps)}/month pension for life | Reduced to ${formatRaw(reducedPension)}/mo after 40% commutation (typically restored after 15 yrs)`;
+
+    document.getElementById('rowNpsLump').innerText = formatLakhValue(npsLumpSum);
+    document.getElementById('rowNpsAnnuity').innerText = formatLakhValue(npsAnnuityCorpus);
+    document.getElementById('rowNpsTotal').innerText = formatLakhValue(npsCorpus);
+    document.getElementById('rowGratuity').innerText = formatLakhValue(finalGratuity);
+    document.getElementById('rowLeave').innerText = formatLakhValue(finalLeaveEncashment) + ' (' + leaveDaysUsed + ' days)';
+    document.getElementById('rowCommuted').innerText = formatLakhValue(commutedPensionLumpSum);
+    document.getElementById('rowTotalLump').innerText = formatCroreValue(totalLumpSumPackage);
+    document.getElementById('rowPension').innerText = formatRaw(monthlyPensionFromNps) + '/month';
+    document.getElementById('rowReducedPension').innerText = formatRaw(reducedPension) + '/month';
+
+    lastSummary = `*Retirement Package Projection*\n\nService: ${totalServiceYears} yrs | Retirement at ${retirementAge}\n\nNPS Corpus: ${formatLakhValue(npsCorpus)}\nNPS Lump Sum: ${formatLakhValue(npsLumpSum)}\nGratuity: ${formatLakhValue(finalGratuity)}\nLeave Encashment: ${formatLakhValue(finalLeaveEncashment)}\nCommuted Pension: ${formatLakhValue(commutedPensionLumpSum)}\n\n*Total Lump Sum: ${formatCroreValue(totalLumpSumPackage)}*\nMonthly Pension: ${formatRaw(monthlyPensionFromNps)} (₹${Math.round(reducedPension).toLocaleString('en-IN')} after commutation)\n\nCalculated on MailFix — mailflix.netlify.app`;
+
+    document.getElementById('whatsappShareBtn').href = 'https://wa.me/?text=' + encodeURIComponent(lastSummary);
+
+    document.getElementById('dashboardBlock').style.display = 'block';
+    document.getElementById('dashboardBlock').scrollIntoView({ behavior: 'smooth' });
+  }
+
+  function copyResultSummary() {
+    if (!lastSummary) return;
+    navigator.clipboard.writeText(lastSummary).then(() => {
+      const btn = document.getElementById('copyResultBtn');
+      btn.classList.add('copied');
+      btn.innerText = '✓ Copied!';
+      setTimeout(() => { btn.classList.remove('copied'); btn.innerText = '📋 Copy'; }, 2000);
+    });
+  }
+
+  // === Nav dropdowns + mobile menu (site-wide) ===
+  function toggleDropdown(id, triggerEl) {
+    const panel = document.getElementById(id);
+    const isOpen = panel.classList.contains('open');
+    document.querySelectorAll('.dropdown-panel').forEach(p => p.classList.remove('open'));
+    document.querySelectorAll('.nav-trigger').forEach(t => t.classList.remove('open'));
+    if (!isOpen) {
+      panel.classList.add('open');
+      triggerEl.classList.add('open');
+    }
+  }
+  document.addEventListener('click', function (e) {
+    if (!e.target.closest('.nav-item')) {
+      document.querySelectorAll('.dropdown-panel').forEach(p => p.classList.remove('open'));
+      document.querySelectorAll('.nav-trigger').forEach(t => t.classList.remove('open'));
+    }
+  });
+  document.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape') {
+      document.querySelectorAll('.dropdown-panel').forEach(p => p.classList.remove('open'));
+      document.querySelectorAll('.nav-trigger').forEach(t => t.classList.remove('open'));
+      toggleMobilePanel(false);
+    }
+  });
+  function toggleMobilePanel(open) {
+    document.getElementById('mobilePanel').classList.toggle('open', open);
+    document.body.style.overflow = open ? 'hidden' : '';
+  }
+</script>
+</body>
+</html>
