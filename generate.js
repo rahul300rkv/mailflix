@@ -24,10 +24,14 @@ exports.handler = async function(event) {
         'Authorization': 'Bearer ' + GROQ_KEY
       },
       body: JSON.stringify({
-        model: 'gpt-4o-mini',  // ← updated
+        model: 'openai/gpt-4o-mini',          // ← updated
         messages: [{ role: 'user', content: prompt }],
-        max_tokens: 500,
-        temperature: 0.6
+        max_completion_tokens: 8192,           // ← updated to match your Python
+        temperature: 1,                        // ← updated
+        top_p: 1,                              // ← added
+        reasoning_effort: 'medium',            // ← added
+        stream: false,                         // keep false for Lambda compatibility
+        stop: null
       })
     });
     const data = await response.json();
