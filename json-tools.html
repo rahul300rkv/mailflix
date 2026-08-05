@@ -1,0 +1,795 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>JSON Formatter, Validator & Text-to-JSON | MailFix</title>
+<meta name="description" content="Format, validate and minify JSON instantly — or convert plain text, CSV and key-value pairs into clean JSON. Free, browser-based, no signup."/>
+<meta name="keywords" content="json formatter online, json validator free, json prettifier, json minifier, text to json converter, csv to json, key value to json, json syntax checker"/>
+<meta name="robots" content="index, follow"/>
+<link rel="canonical" href="https://mailflix.netlify.app/json-tools.html"/>
+<meta property="og:title" content="JSON Formatter, Validator & Text-to-JSON"/>
+<meta property="og:description" content="Format, validate, minify JSON — or convert text/CSV to JSON. Free, in-browser developer tool."/>
+<meta property="og:url" content="https://mailflix.netlify.app/json-tools.html"/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet"/>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3532554351654388" crossorigin="anonymous"></script>
+<style>
+  :root {
+    --ink: #0f0e0c;
+    --paper: #f5f2ec;
+    --card: #ffffff;
+    --accent: #d44f1e;
+    --accent2: #2563eb;
+    --green: #16a34a;
+    --green-bg: #f0fdf4;
+    --red-bg: #fef2f2;
+    --red-text: #b91c1c;
+    --yellow-bg: #fefce8;
+    --yellow-text: #854d0e;
+    --muted: #7a7570;
+    --border: #e2ddd5;
+    --radius: 12px;
+    --font-head: 'Syne', sans-serif;
+    --font-body: 'DM Sans', sans-serif;
+    --font-mono: 'JetBrains Mono', 'Fira Code', 'Consolas', monospace;
+  }
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  body { background: var(--paper); color: var(--ink); font-family: var(--font-body); font-size: 16px; line-height: 1.6; min-height: 100vh; }
+
+  /* NAV */
+  nav { display: flex; justify-content: space-between; align-items: center; padding: 18px 5%; border-bottom: 1px solid var(--border); background: var(--paper); position: sticky; top: 0; z-index: 100; }
+  .logo { font-family: var(--font-head); font-size: 22px; font-weight: 800; letter-spacing: -0.5px; color: var(--ink); text-decoration: none; }
+  .logo span { color: var(--accent); }
+  .nav-badge { background: var(--accent); color: #fff; font-size: 12px; font-weight: 500; padding: 4px 12px; border-radius: 99px; font-family: var(--font-body); margin-left: 6px; }
+  .nav-right { display: flex; align-items: center; gap: 6px; }
+  .nav-links { display: flex; gap: 6px; align-items: center; }
+  .nav-item { position: relative; }
+  .nav-trigger { font-size: 13px; color: var(--muted); background: none; border: none; cursor: pointer; font-family: var(--font-body); display: flex; align-items: center; gap: 5px; padding: 8px 10px; border-radius: 8px; transition: color .15s; }
+  .nav-trigger:hover, .nav-trigger.open { color: var(--accent); }
+  .nav-trigger .caret { font-size: 9px; transition: transform .15s; opacity: .7; }
+  .nav-trigger.open .caret { transform: rotate(180deg); }
+  .dropdown-panel { position: absolute; top: calc(100% + 8px); left: 50%; transform: translateX(-50%); background: #fff; border: 1px solid var(--border); border-radius: 12px; box-shadow: 0 12px 32px rgba(15,14,12,.1); padding: 8px; min-width: 230px; display: none; z-index: 200; }
+  .dropdown-panel.open { display: block; }
+  .dropdown-panel a { display: flex; align-items: center; gap: 10px; padding: 9px 12px; border-radius: 8px; font-size: 13.5px; color: var(--ink); text-decoration: none; white-space: nowrap; font-family: var(--font-body); }
+  .dropdown-panel a:hover { background: var(--paper); color: var(--accent); }
+  .dropdown-panel a .emoji { font-size: 15px; width: 18px; text-align: center; }
+  .mobile-toggle { display: none; background: none; border: none; cursor: pointer; font-size: 22px; color: var(--ink); padding: 4px 6px; line-height: 1; }
+  @media(max-width:880px) { .nav-links { display: none; } .mobile-toggle { display: block; } }
+  .mobile-panel { display: none; position: fixed; inset: 0; background: var(--paper); z-index: 300; padding: 20px 6%; overflow-y: auto; }
+  .mobile-panel.open { display: block; }
+  .mobile-panel-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 28px; }
+  .mobile-close { background: none; border: none; font-size: 26px; color: var(--ink); cursor: pointer; line-height: 1; }
+  .mobile-group { margin-bottom: 28px; }
+  .mobile-group h4 { font-family: var(--font-head); font-size: 11px; text-transform: uppercase; letter-spacing: .1em; color: var(--accent); margin-bottom: 10px; }
+  .mobile-group a { display: flex; align-items: center; gap: 12px; padding: 13px 2px; border-bottom: 1px solid var(--border); font-size: 16px; color: var(--ink); text-decoration: none; font-family: var(--font-body); }
+  .mobile-group a .emoji { width: 22px; text-align: center; }
+
+  /* HERO */
+  .hero { max-width: 760px; margin: 0 auto; padding: 52px 5% 28px; text-align: center; }
+  .hero-tag { display: inline-flex; align-items: center; gap: 6px; background: #fff; border: 1px solid var(--border); border-radius: 99px; padding: 6px 16px; font-size: 13px; color: var(--muted); margin-bottom: 16px; }
+  .hero-tag .dot { width: 7px; height: 7px; background: #22c55e; border-radius: 50%; animation: pulse 2s infinite; }
+  @keyframes pulse { 0%,100%{opacity:1;transform:scale(1)} 50%{opacity:.6;transform:scale(1.3)} }
+  h1 { font-family: var(--font-head); font-size: clamp(28px, 4.5vw, 44px); font-weight: 800; line-height: 1.1; letter-spacing: -1.5px; margin-bottom: 14px; }
+  h1 em { color: var(--accent); font-style: normal; }
+  .hero-sub { font-size: 16px; color: var(--muted); font-weight: 300; max-width: 520px; margin: 0 auto 16px; }
+
+  /* MODE TABS */
+  .mode-tabs { max-width: 1200px; margin: 0 auto; padding: 0 5%; display: flex; gap: 10px; }
+  .mode-tab { padding: 10px 22px; border-radius: 10px; border: 1px solid var(--border); background: var(--card); font-family: var(--font-head); font-size: 14px; font-weight: 700; cursor: pointer; color: var(--muted); transition: all .15s; }
+  .mode-tab.active { background: var(--accent); color: #fff; border-color: var(--accent); }
+  .mode-tab:hover:not(.active) { border-color: var(--accent); color: var(--accent); }
+
+  /* TOOL AREA */
+  .tool-area { max-width: 1200px; margin: 16px auto 32px; padding: 0 5%; }
+  .tool-panel { display: none; }
+  .tool-panel.active { display: block; }
+
+  /* EDITOR CARD */
+  .editor-wrap { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+  @media(max-width:800px) { .editor-wrap { grid-template-columns: 1fr; } }
+
+  .editor-card { background: var(--card); border: 1px solid var(--border); border-radius: 18px; overflow: hidden; display: flex; flex-direction: column; }
+  .editor-header { display: flex; justify-content: space-between; align-items: center; padding: 12px 16px; background: #fafaf8; border-bottom: 1px solid var(--border); }
+  .editor-title { font-family: var(--font-head); font-size: 13px; font-weight: 700; color: var(--ink); }
+  .editor-actions { display: flex; gap: 6px; }
+  .icon-btn { padding: 5px 10px; border: 1px solid var(--border); border-radius: 6px; background: var(--card); font-size: 12px; cursor: pointer; color: var(--muted); font-family: var(--font-body); transition: all .15s; white-space: nowrap; }
+  .icon-btn:hover { border-color: var(--accent); color: var(--accent); }
+  .icon-btn.success { background: var(--green-bg); color: #166534; border-color: #bbf7d0; }
+
+  textarea.code-area { flex: 1; border: none; outline: none; resize: none; padding: 16px; font-family: var(--font-mono); font-size: 13px; line-height: 1.7; color: var(--ink); background: transparent; min-height: 380px; tab-size: 2; }
+
+  .output-area { flex: 1; padding: 16px; font-family: var(--font-mono); font-size: 13px; line-height: 1.7; color: var(--ink); background: transparent; min-height: 380px; overflow: auto; white-space: pre; word-break: break-all; }
+
+  /* STATUS BAR */
+  .status-bar { padding: 8px 16px; border-top: 1px solid var(--border); font-size: 12px; font-family: var(--font-mono); display: flex; align-items: center; gap: 8px; min-height: 34px; }
+  .status-ok  { color: var(--green); }
+  .status-err { color: var(--red-text); }
+  .status-idle { color: var(--muted); }
+
+  /* ACTION BAR */
+  .action-bar { display: flex; gap: 10px; margin-bottom: 14px; flex-wrap: wrap; }
+  .action-btn-main { padding: 10px 20px; border-radius: 9px; font-family: var(--font-head); font-size: 14px; font-weight: 700; cursor: pointer; border: none; transition: all .15s; }
+  .action-btn-main.primary { background: var(--accent); color: #fff; }
+  .action-btn-main.primary:hover { background: #b83e12; }
+  .action-btn-main.secondary { background: var(--card); color: var(--ink); border: 1px solid var(--border); }
+  .action-btn-main.secondary:hover { border-color: var(--ink); }
+  .action-btn-main.danger { background: var(--card); color: var(--red-text); border: 1px solid #fca5a5; }
+  .action-btn-main.danger:hover { background: var(--red-bg); }
+
+  /* TEXT-TO-JSON options */
+  .t2j-options { background: var(--card); border: 1px solid var(--border); border-radius: 14px; padding: 16px 20px; margin-bottom: 16px; display: flex; flex-wrap: wrap; gap: 20px; align-items: center; }
+  .t2j-opt-group { display: flex; flex-direction: column; gap: 5px; min-width: 150px; }
+  .t2j-opt-label { font-size: 11.5px; font-weight: 700; color: var(--muted); text-transform: uppercase; letter-spacing: .05em; font-family: var(--font-head); }
+  .t2j-select { padding: 8px 12px; border: 1px solid var(--border); border-radius: 8px; font-size: 13.5px; font-family: var(--font-body); color: var(--ink); background: var(--paper); outline: none; }
+  .t2j-select:focus { border-color: var(--accent); }
+
+  /* JSON syntax highlight colours */
+  .j-key    { color: #7c3aed; }
+  .j-str    { color: #059669; }
+  .j-num    { color: #2563eb; }
+  .j-bool   { color: #d97706; }
+  .j-null   { color: #6b7280; }
+  .j-punc   { color: var(--ink); }
+
+  /* AD + FOOTER */
+  .ad-banner { max-width: 1200px; margin: 0 auto 32px; padding: 0 5%; }
+  .explainer { max-width: 1000px; margin: 0 auto; padding: 40px 5%; }
+  .explainer h2 { font-family: var(--font-head); font-size: clamp(22px, 3vw, 32px); font-weight: 800; letter-spacing: -0.5px; margin-bottom: 28px; }
+  .explainer-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(210px, 1fr)); gap: 14px; }
+  .explainer-card { background: var(--card); border: 1px solid var(--border); border-radius: var(--radius); padding: 18px; }
+  .explainer-card h4 { font-family: var(--font-head); font-size: 14px; font-weight: 700; margin-bottom: 6px; }
+  .explainer-card p { font-size: 13px; color: var(--muted); line-height: 1.6; }
+  .explainer-card .tag { display: inline-block; font-size: 11px; padding: 2px 8px; border-radius: 4px; font-weight: 500; margin-bottom: 8px; background: var(--green-bg); color: #15803d; }
+  footer { border-top: 1px solid var(--border); padding: 28px 5%; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px; font-size: 13px; color: var(--muted); }
+  footer a { color: var(--muted); text-decoration: none; }
+  footer a:hover { color: var(--accent); }
+
+  /* === Grouped nav dropdowns + mobile menu (site-wide) === */
+  .nav-links{display:flex;gap:6px;align-items:center}
+  .nav-badge{background:var(--accent);color:#fff;font-size:12px;font-weight:500;padding:4px 12px;border-radius:99px;font-family:var(--font-body);margin-left:6px}
+  .nav-right{display:flex;align-items:center;gap:6px}
+  .nav-item{position:relative}
+  .nav-trigger{font-size:13px;color:var(--muted);background:none;border:none;cursor:pointer;font-family:var(--font-body);display:flex;align-items:center;gap:5px;padding:8px 10px;border-radius:8px;transition:color .15s}
+  .nav-trigger:hover,.nav-trigger.open{color:var(--accent)}
+  .nav-trigger .caret{font-size:9px;transition:transform .15s;opacity:.7}
+  .nav-trigger.open .caret{transform:rotate(180deg)}
+  .dropdown-panel{position:absolute;top:calc(100% + 8px);left:50%;transform:translateX(-50%);background:#fff;border:1px solid var(--border);border-radius:12px;box-shadow:0 12px 32px rgba(15,14,12,.1);padding:8px;min-width:230px;display:none;z-index:200}
+  .dropdown-panel.open{display:block}
+  .dropdown-panel a{display:flex;align-items:center;gap:10px;padding:9px 12px;border-radius:8px;font-size:13.5px;color:var(--ink);text-decoration:none;white-space:nowrap;font-family:var(--font-body)}
+  .dropdown-panel a:hover{background:var(--paper);color:var(--accent)}
+  .dropdown-panel a .emoji{font-size:15px;width:18px;text-align:center}
+  .mobile-toggle{display:none;background:none;border:none;cursor:pointer;font-size:22px;color:var(--ink);padding:4px 6px;line-height:1}
+  @media(max-width:880px){.nav-links{display:none}.mobile-toggle{display:block}}
+  .mobile-panel{display:none;position:fixed;inset:0;background:var(--paper);z-index:300;padding:20px 6%;overflow-y:auto}
+  .mobile-panel.open{display:block}
+  .mobile-panel-header{display:flex;justify-content:space-between;align-items:center;margin-bottom:28px}
+  .mobile-close{background:none;border:none;font-size:26px;color:var(--ink);cursor:pointer;line-height:1}
+  .mobile-group{margin-bottom:28px}
+  .mobile-group h4{font-family:var(--font-head);font-size:11px;text-transform:uppercase;letter-spacing:.1em;color:var(--accent);margin-bottom:10px}
+  .mobile-group a{display:flex;align-items:center;gap:12px;padding:13px 2px;border-bottom:1px solid var(--border);font-size:16px;color:var(--ink);text-decoration:none;font-family:var(--font-body)}
+  .mobile-group a .emoji{width:22px;text-align:center}
+</style>
+</head>
+<body>
+
+<nav>
+  <a class="logo" href="index.html">Mail<span>Fix</span></a>
+
+  <div class="nav-links" id="navLinks">
+    <div class="nav-item">
+      <button class="nav-trigger" onclick="toggleDropdown('calcDropdown', this)">🧮 Calculators <span class="caret">▾</span></button>
+      <div class="dropdown-panel" id="calcDropdown">
+        <a href="ctc-calculator.html"><span class="emoji">💰</span> CTC to In-Hand Salary</a>
+        <a href="hra-calculator.html"><span class="emoji">🏠</span> HRA Exemption</a>
+        <a href="itr-calculator.html"><span class="emoji">📊</span> ITR / Income Tax</a>
+        <a href="leave-encashment.html"><span class="emoji">🏖️</span> Leave Encashment</a>
+        <a href="retirement-calculator.html"><span class="emoji">🎯</span> Retirement Package</a>
+        <a href="increment-calculator.html"><span class="emoji">📈</span> Annual Increment</a>
+      </div>
+    </div>
+
+    <div class="nav-item">
+      <button class="nav-trigger" onclick="toggleDropdown('lettersDropdown', this)">✉️ Letters &amp; Docs <span class="caret">▾</span></button>
+      <div class="dropdown-panel" id="lettersDropdown">
+        <a href="index.html"><span class="emoji">💬</span> Hinglish Email Fixer</a>
+        <a href="job-application.html"><span class="emoji">🎓</span> Job Application Email</a>
+        <a href="sarkari-letter.html"><span class="emoji">🏛️</span> Sarkari Letter</a>
+        <a href="resignation.html"><span class="emoji">🚪</span> Resignation Kit</a>
+        <a href="rent-receipt.html"><span class="emoji">🧾</span> Rent Receipt</a>
+        <a href="gst-invoice.html"><span class="emoji">📄</span> GST Invoice</a>
+      </div>
+    </div>
+
+    <div class="nav-item">
+      <button class="nav-trigger" onclick="toggleDropdown('utilsDropdown', this)">🛠️ Utilities <span class="caret">▾</span></button>
+      <div class="dropdown-panel" id="utilsDropdown">
+        <a href="whatsapp-dhanda.html"><span class="emoji">📱</span> WhatsApp Dhanda</a>
+        <a href="photo-resizer.html"><span class="emoji">🖼️</span> Photo Resizer</a>
+        <a href="city-compare.html"><span class="emoji">🏙️</span> City Compare</a>
+        <a href="vehicle-scrappage.html"><span class="emoji">🚗</span> Vehicle Scrappage</a>
+        <a href="qr-generator.html"><span class="emoji">🔲</span> QR Generator</a>
+        <a href="json-tools.html"><span class="emoji">{ }</span> JSON Tools</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="nav-right">
+    <span class="nav-badge">Free</span>
+    <button class="mobile-toggle" onclick="toggleMobilePanel(true)" aria-label="Open menu">☰</button>
+  </div>
+</nav>
+
+<div class="mobile-panel" id="mobilePanel">
+  <div class="mobile-panel-header">
+    <a class="logo" href="index.html">Mail<span>Fix</span></a>
+    <button class="mobile-close" onclick="toggleMobilePanel(false)" aria-label="Close menu">×</button>
+  </div>
+
+  <div class="mobile-group">
+    <h4>Calculators</h4>
+    <a href="ctc-calculator.html"><span class="emoji">💰</span> CTC to In-Hand Salary</a>
+    <a href="hra-calculator.html"><span class="emoji">🏠</span> HRA Exemption</a>
+    <a href="itr-calculator.html"><span class="emoji">📊</span> ITR / Income Tax</a>
+    <a href="leave-encashment.html"><span class="emoji">🏖️</span> Leave Encashment</a>
+    <a href="retirement-calculator.html"><span class="emoji">🎯</span> Retirement Package</a>
+    <a href="increment-calculator.html"><span class="emoji">📈</span> Annual Increment</a>
+  </div>
+
+  <div class="mobile-group">
+    <h4>Letters &amp; Docs</h4>
+    <a href="index.html"><span class="emoji">💬</span> Hinglish Email Fixer</a>
+    <a href="job-application.html"><span class="emoji">🎓</span> Job Application Email</a>
+    <a href="sarkari-letter.html"><span class="emoji">🏛️</span> Sarkari Letter</a>
+    <a href="resignation.html"><span class="emoji">🚪</span> Resignation Kit</a>
+    <a href="rent-receipt.html"><span class="emoji">🧾</span> Rent Receipt</a>
+    <a href="gst-invoice.html"><span class="emoji">📄</span> GST Invoice</a>
+  </div>
+
+  <div class="mobile-group">
+    <h4>Utilities</h4>
+    <a href="whatsapp-dhanda.html"><span class="emoji">📱</span> WhatsApp Dhanda</a>
+    <a href="photo-resizer.html"><span class="emoji">🖼️</span> Photo Resizer</a>
+    <a href="city-compare.html"><span class="emoji">🏙️</span> City Compare</a>
+    <a href="vehicle-scrappage.html"><span class="emoji">🚗</span> Vehicle Scrappage</a>
+    <a href="qr-generator.html"><span class="emoji">🔲</span> QR Generator</a>
+    <a href="json-tools.html"><span class="emoji">{ }</span> JSON Tools</a>
+  </div>
+</div>
+
+<div class="mobile-panel" id="mobilePanel">
+  <div class="mobile-panel-header">
+    <a class="logo" href="index.html">Mail<span>Fix</span></a>
+    <button class="mobile-close" onclick="toggleMobilePanel(false)" aria-label="Close menu">×</button>
+  </div>
+  <div class="mobile-group">
+    <h4>Calculators</h4>
+    <a href="ctc-calculator.html"><span class="emoji">💰</span> CTC to In-Hand Salary</a>
+    <a href="hra-calculator.html"><span class="emoji">🏠</span> HRA Exemption</a>
+    <a href="itr-calculator.html"><span class="emoji">📊</span> ITR / Income Tax</a>
+    <a href="leave-encashment.html"><span class="emoji">🏖️</span> Leave Encashment</a>
+    <a href="retirement-calculator.html"><span class="emoji">🎯</span> Retirement Package</a>
+    <a href="increment-calculator.html"><span class="emoji">📈</span> Annual Increment</a>
+  </div>
+  <div class="mobile-group">
+    <h4>Letters & Docs</h4>
+    <a href="index.html"><span class="emoji">💬</span> Hinglish Email Fixer</a>
+    <a href="job-application.html"><span class="emoji">🎓</span> Job Application Email</a>
+    <a href="sarkari-letter.html"><span class="emoji">🏛️</span> Sarkari Letter</a>
+    <a href="resignation.html"><span class="emoji">🚪</span> Resignation Kit</a>
+    <a href="rent-receipt.html"><span class="emoji">🧾</span> Rent Receipt</a>
+    <a href="gst-invoice.html"><span class="emoji">📄</span> GST Invoice</a>
+  </div>
+  <div class="mobile-group">
+    <h4>Utilities</h4>
+    <a href="whatsapp-dhanda.html"><span class="emoji">📱</span> WhatsApp Dhanda</a>
+    <a href="photo-resizer.html"><span class="emoji">🖼️</span> Photo Resizer</a>
+    <a href="city-compare.html"><span class="emoji">🏙️</span> City Compare</a>
+    <a href="vehicle-scrappage.html"><span class="emoji">🚗</span> Vehicle Scrappage</a>
+    <a href="qr-generator.html"><span class="emoji">🔲</span> QR Generator</a>
+    <a href="json-tools.html"><span class="emoji">{ }</span> JSON Tools</a>
+  </div>
+</div>
+
+<section class="hero">
+  <div class="hero-tag"><span class="dot"></span> JSON Formatter + Text-to-JSON — in-browser</div>
+  <h1>JSON tools,<br/><em>ek jagah</em> sab kuch</h1>
+  <p class="hero-sub">Format, validate and minify JSON — or convert plain text, CSV, and key-value pairs into clean JSON. No server, no signup, nothing leaves your browser.</p>
+</section>
+
+<!-- MODE TABS -->
+<div class="mode-tabs">
+  <button class="mode-tab active" onclick="switchMode('formatter')">{ } JSON Formatter & Validator</button>
+  <button class="mode-tab" onclick="switchMode('converter')">⇄ Text / CSV → JSON</button>
+</div>
+
+<div class="tool-area">
+
+  <!-- ===== PANEL 1: JSON FORMATTER ===== -->
+  <div class="tool-panel active" id="panel-formatter">
+    <div class="action-bar">
+      <button class="action-btn-main primary" onclick="formatJSON()">✦ Format / Prettify</button>
+      <button class="action-btn-main secondary" onclick="minifyJSON()">⊡ Minify</button>
+      <button class="action-btn-main secondary" onclick="sortKeys()">↕ Sort Keys</button>
+      <button class="action-btn-main danger" onclick="clearFormatter()">✕ Clear</button>
+    </div>
+    <div class="editor-wrap">
+      <!-- Input -->
+      <div class="editor-card">
+        <div class="editor-header">
+          <span class="editor-title">Input JSON</span>
+          <div class="editor-actions">
+            <button class="icon-btn" onclick="pasteFromClipboard()">📋 Paste</button>
+            <button class="icon-btn" onclick="loadSampleJSON()">Sample</button>
+          </div>
+        </div>
+        <textarea class="code-area" id="jsonInput" placeholder='Paste your JSON here…&#10;&#10;{"name":"Rahul","age":28}' oninput="validateLive()" spellcheck="false"></textarea>
+        <div class="status-bar" id="inputStatus"><span class="status-idle">Paste JSON to begin</span></div>
+      </div>
+      <!-- Output -->
+      <div class="editor-card">
+        <div class="editor-header">
+          <span class="editor-title">Formatted Output</span>
+          <div class="editor-actions">
+            <button class="icon-btn" id="copyFmtBtn" onclick="copyFormatted()">📋 Copy</button>
+            <button class="icon-btn" onclick="downloadJSON('formatted.json')">⬇ Download</button>
+          </div>
+        </div>
+        <div class="output-area" id="jsonOutput"><span style="color:var(--muted);font-style:italic">Output will appear here…</span></div>
+        <div class="status-bar" id="outputStatus"><span class="status-idle">—</span></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== PANEL 2: TEXT → JSON ===== -->
+  <div class="tool-panel" id="panel-converter">
+    <div class="t2j-options">
+      <div class="t2j-opt-group">
+        <span class="t2j-opt-label">Input Format</span>
+        <select id="inputFormat" class="t2j-select" onchange="convertText()">
+          <option value="csv">CSV (comma-separated)</option>
+          <option value="tsv">TSV (tab-separated)</option>
+          <option value="kv">Key=Value pairs</option>
+          <option value="lines">One item per line → array</option>
+          <option value="numbered">Numbered list → array</option>
+        </select>
+      </div>
+      <div class="t2j-opt-group">
+        <span class="t2j-opt-label">CSV Header Row</span>
+        <select id="csvHasHeader" class="t2j-select" onchange="convertText()">
+          <option value="yes">First row is header</option>
+          <option value="no">No header — use col1, col2…</option>
+        </select>
+      </div>
+      <div class="t2j-opt-group">
+        <span class="t2j-opt-label">Output indent</span>
+        <select id="t2jIndent" class="t2j-select" onchange="convertText()">
+          <option value="2" selected>2 spaces</option>
+          <option value="4">4 spaces</option>
+          <option value="tab">Tab</option>
+        </select>
+      </div>
+    </div>
+
+    <div class="action-bar">
+      <button class="action-btn-main primary" onclick="convertText()">⇄ Convert to JSON</button>
+      <button class="action-btn-main danger" onclick="clearConverter()">✕ Clear</button>
+    </div>
+
+    <div class="editor-wrap">
+      <div class="editor-card">
+        <div class="editor-header">
+          <span class="editor-title">Input Text</span>
+          <div class="editor-actions">
+            <button class="icon-btn" onclick="loadSampleText()">Sample</button>
+          </div>
+        </div>
+        <textarea class="code-area" id="textInput" placeholder="Paste CSV, key=value pairs, or plain lines here…" oninput="convertText()" spellcheck="false"></textarea>
+        <div class="status-bar" id="convertInputStatus"><span class="status-idle">Paste text to begin</span></div>
+      </div>
+      <div class="editor-card">
+        <div class="editor-header">
+          <span class="editor-title">JSON Output</span>
+          <div class="editor-actions">
+            <button class="icon-btn" id="copyConvBtn" onclick="copyConverted()">📋 Copy</button>
+            <button class="icon-btn" onclick="downloadJSON('converted.json', true)">⬇ Download</button>
+          </div>
+        </div>
+        <div class="output-area" id="convertOutput"><span style="color:var(--muted);font-style:italic">JSON will appear here…</span></div>
+        <div class="status-bar" id="convertOutputStatus"><span class="status-idle">—</span></div>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<div class="ad-banner">
+  <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-3532554351654388" data-ad-slot="3962323207" data-ad-format="auto" data-full-width-responsive="true"></ins>
+  <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+</div>
+
+<section class="explainer">
+  <h2>What these tools do</h2>
+  <div class="explainer-grid">
+    <div class="explainer-card">
+      <span class="tag">Formatter</span>
+      <h4>Prettify messy JSON instantly</h4>
+      <p>Paste minified or ugly JSON and get back a clean, indented, human-readable version — with syntax highlighting and an exact error message if something's invalid.</p>
+    </div>
+    <div class="explainer-card">
+      <span class="tag">Validator</span>
+      <h4>Catch syntax errors with line numbers</h4>
+      <p>The validator parses your JSON using the browser's native engine and shows you the exact line and character where a problem was found — no guessing.</p>
+    </div>
+    <div class="explainer-card">
+      <span class="tag">Minifier</span>
+      <h4>Strip whitespace for production</h4>
+      <p>Removes all unnecessary spaces and newlines from JSON — useful when embedding JSON in API responses or config files where size matters.</p>
+    </div>
+    <div class="explainer-card">
+      <span class="tag">Text → JSON</span>
+      <h4>CSV, key=value, plain lines</h4>
+      <p>Converts CSV data into an array of objects (with header row as keys), key=value pairs into a flat object, or a plain list of lines into a JSON array.</p>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <span>© 2025 MailFix — Free Tools for Indian Professionals</span>
+  <div style="display:flex;gap:16px;flex-wrap:wrap">
+    <a href="index.html">Hinglish Email</a>
+    <a href="job-application.html">Job Email</a>
+    <a href="ctc-calculator.html">Salary Calculator</a>
+    <a href="hra-calculator.html">HRA Calculator</a>
+    <a href="itr-calculator.html">ITR / Tax Calculator</a>
+    <a href="leave-encashment.html">Leave Encashment</a>
+    <a href="retirement-calculator.html">Retirement Calculator</a>
+    <a href="increment-calculator.html">Increment Calculator</a>
+    <a href="photo-resizer.html">Photo Resizer</a>
+    <a href="rent-receipt.html">Rent Receipt</a>
+    <a href="gst-invoice.html">GST Invoice</a>
+    <a href="vehicle-scrappage.html">Vehicle Scrappage</a>
+    <a href="qr-generator.html">QR Generator</a>
+    <a href="json-tools.html">JSON Tools</a>
+    <a href="whatsapp-dhanda.html">WhatsApp Dhanda</a>
+    <a href="sarkari-letter.html">Sarkari Letter</a>
+    <a href="resignation.html">Resignation Kit</a>
+    <a href="city-compare.html">City Compare</a>
+    <a href="privacy.html">Privacy Policy</a>
+  </div>
+</footer>
+
+<script>
+  // ===========================
+  // MODE SWITCHING
+  // ===========================
+  function switchMode(mode) {
+    document.querySelectorAll('.tool-panel').forEach(p => p.classList.remove('active'));
+    document.querySelectorAll('.mode-tab').forEach(t => t.classList.remove('active'));
+    document.getElementById('panel-' + mode).classList.add('active');
+    event.target.classList.add('active');
+  }
+
+  // ===========================
+  // SYNTAX HIGHLIGHTER
+  // ===========================
+  function syntaxHighlight(json) {
+    json = json.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');
+    return json.replace(/("(\\u[a-zA-Z0-9]{4}|\\[^u]|[^\\"])*"(\s*:)?|\b(true|false|null)\b|-?\d+\.?\d*([eE][+-]?\d+)?)/g, match => {
+      if (/^"/.test(match)) {
+        if (/:$/.test(match)) return '<span class="j-key">' + match + '</span>';
+        return '<span class="j-str">' + match + '</span>';
+      }
+      if (/true|false/.test(match)) return '<span class="j-bool">' + match + '</span>';
+      if (/null/.test(match)) return '<span class="j-null">' + match + '</span>';
+      return '<span class="j-num">' + match + '</span>';
+    });
+  }
+
+  // ===========================
+  // JSON FORMATTER
+  // ===========================
+  let lastParsed = null;
+
+  function validateLive() {
+    const raw = document.getElementById('jsonInput').value.trim();
+    const statusEl = document.getElementById('inputStatus');
+    if (!raw) { statusEl.innerHTML = '<span class="status-idle">Paste JSON to begin</span>'; lastParsed = null; return; }
+    try {
+      lastParsed = JSON.parse(raw);
+      const keys = countKeys(lastParsed);
+      statusEl.innerHTML = `<span class="status-ok">✓ Valid JSON — ${keys} key${keys !== 1 ? 's' : ''}</span>`;
+    } catch (e) {
+      lastParsed = null;
+      statusEl.innerHTML = `<span class="status-err">✗ ${e.message}</span>`;
+    }
+  }
+
+  function countKeys(obj) {
+    if (typeof obj !== 'object' || obj === null) return 0;
+    if (Array.isArray(obj)) return obj.length;
+    return Object.keys(obj).length;
+  }
+
+  function formatJSON() {
+    const raw = document.getElementById('jsonInput').value.trim();
+    if (!raw) return;
+    try {
+      const parsed = JSON.parse(raw);
+      const pretty = JSON.stringify(parsed, null, 2);
+      document.getElementById('jsonOutput').innerHTML = syntaxHighlight(pretty);
+      document.getElementById('outputStatus').innerHTML = `<span class="status-ok">✓ Formatted — ${pretty.length} chars</span>`;
+      lastParsed = parsed;
+    } catch (e) {
+      document.getElementById('jsonOutput').innerHTML = `<span class="status-err">✗ ${e.message}</span>`;
+      document.getElementById('outputStatus').innerHTML = `<span class="status-err">✗ Cannot format — fix errors first</span>`;
+    }
+  }
+
+  function minifyJSON() {
+    const raw = document.getElementById('jsonInput').value.trim();
+    if (!raw) return;
+    try {
+      const parsed = JSON.parse(raw);
+      const mini = JSON.stringify(parsed);
+      document.getElementById('jsonOutput').innerHTML = syntaxHighlight(mini);
+      document.getElementById('outputStatus').innerHTML = `<span class="status-ok">✓ Minified — ${mini.length} chars</span>`;
+    } catch (e) {
+      document.getElementById('jsonOutput').innerHTML = `<span class="status-err">✗ ${e.message}</span>`;
+    }
+  }
+
+  function sortKeys() {
+    const raw = document.getElementById('jsonInput').value.trim();
+    if (!raw) return;
+    try {
+      const parsed = JSON.parse(raw);
+      const sorted = sortObjKeys(parsed);
+      const pretty = JSON.stringify(sorted, null, 2);
+      document.getElementById('jsonOutput').innerHTML = syntaxHighlight(pretty);
+      document.getElementById('outputStatus').innerHTML = `<span class="status-ok">✓ Keys sorted alphabetically</span>`;
+    } catch (e) {
+      document.getElementById('jsonOutput').innerHTML = `<span class="status-err">✗ ${e.message}</span>`;
+    }
+  }
+
+  function sortObjKeys(obj) {
+    if (Array.isArray(obj)) return obj.map(sortObjKeys);
+    if (typeof obj === 'object' && obj !== null) {
+      return Object.keys(obj).sort().reduce((acc, k) => { acc[k] = sortObjKeys(obj[k]); return acc; }, {});
+    }
+    return obj;
+  }
+
+  function clearFormatter() {
+    document.getElementById('jsonInput').value = '';
+    document.getElementById('jsonOutput').innerHTML = '<span style="color:var(--muted);font-style:italic">Output will appear here…</span>';
+    document.getElementById('inputStatus').innerHTML = '<span class="status-idle">Paste JSON to begin</span>';
+    document.getElementById('outputStatus').innerHTML = '<span class="status-idle">—</span>';
+    lastParsed = null;
+  }
+
+  async function pasteFromClipboard() {
+    try {
+      const text = await navigator.clipboard.readText();
+      document.getElementById('jsonInput').value = text;
+      validateLive();
+    } catch { alert('Clipboard access denied — please paste manually.'); }
+  }
+
+  function loadSampleJSON() {
+    document.getElementById('jsonInput').value = JSON.stringify({
+      name: "Rahul Sharma",
+      age: 29,
+      city: "Bengaluru",
+      skills: ["Python", "React", "SQL"],
+      employment: { company: "TechCorp India", since: 2021, salary_lpa: 18 },
+      active: true,
+      notes: null
+    });
+    validateLive();
+    formatJSON();
+  }
+
+  function copyFormatted() {
+    const text = document.getElementById('jsonOutput').innerText;
+    if (!text || text.includes('Output will appear')) return;
+    navigator.clipboard.writeText(text).then(() => {
+      const btn = document.getElementById('copyFmtBtn');
+      btn.textContent = '✓ Copied!';
+      btn.classList.add('success');
+      setTimeout(() => { btn.textContent = '📋 Copy'; btn.classList.remove('success'); }, 2000);
+    });
+  }
+
+  // ===========================
+  // TEXT → JSON CONVERTER
+  // ===========================
+  function convertText() {
+    const raw = document.getElementById('textInput').value.trim();
+    const fmt = document.getElementById('inputFormat').value;
+    const hasHeader = document.getElementById('csvHasHeader').value === 'yes';
+    const indentRaw = document.getElementById('t2jIndent').value;
+    const indent = indentRaw === 'tab' ? '\t' : parseInt(indentRaw);
+    const statusIn  = document.getElementById('convertInputStatus');
+    const statusOut = document.getElementById('convertOutputStatus');
+    const outEl = document.getElementById('convertOutput');
+
+    if (!raw) {
+      statusIn.innerHTML = '<span class="status-idle">Paste text to begin</span>';
+      outEl.innerHTML = '<span style="color:var(--muted);font-style:italic">JSON will appear here…</span>';
+      return;
+    }
+
+    try {
+      let result;
+      if (fmt === 'csv' || fmt === 'tsv') {
+        const sep = fmt === 'tsv' ? '\t' : ',';
+        const rows = raw.split('\n').map(r => r.trim()).filter(Boolean);
+        if (rows.length === 0) throw new Error('No rows found');
+        if (hasHeader) {
+          const headers = splitCSVRow(rows[0], sep);
+          result = rows.slice(1).map(row => {
+            const vals = splitCSVRow(row, sep);
+            const obj = {};
+            headers.forEach((h, i) => { obj[h.trim()] = autoType(vals[i]?.trim() ?? ''); });
+            return obj;
+          });
+        } else {
+          result = rows.map(row => {
+            const vals = splitCSVRow(row, sep);
+            const obj = {};
+            vals.forEach((v, i) => { obj['col' + (i + 1)] = autoType(v.trim()); });
+            return obj;
+          });
+        }
+      } else if (fmt === 'kv') {
+        result = {};
+        raw.split('\n').forEach(line => {
+          line = line.trim();
+          if (!line || line.startsWith('#')) return;
+          const eqIdx = line.indexOf('=');
+          if (eqIdx === -1) return;
+          const k = line.slice(0, eqIdx).trim();
+          const v = line.slice(eqIdx + 1).trim();
+          result[k] = autoType(v);
+        });
+      } else if (fmt === 'lines') {
+        result = raw.split('\n').map(l => l.trim()).filter(Boolean).map(autoType);
+      } else if (fmt === 'numbered') {
+        result = raw.split('\n').map(l => l.trim()).filter(Boolean).map(l => {
+          return autoType(l.replace(/^\d+[\.\)\-\s]+/, '').trim());
+        });
+      }
+
+      const json = JSON.stringify(result, null, indent);
+      outEl.innerHTML = syntaxHighlight(json);
+      statusIn.innerHTML = `<span class="status-ok">✓ Converted successfully</span>`;
+      statusOut.innerHTML = `<span class="status-ok">✓ ${json.length} chars</span>`;
+    } catch (e) {
+      outEl.innerHTML = `<span class="status-err">✗ ${e.message}</span>`;
+      statusOut.innerHTML = `<span class="status-err">✗ Conversion failed</span>`;
+    }
+  }
+
+  function splitCSVRow(row, sep) {
+    // Handles quoted fields with commas inside
+    const result = [];
+    let cur = '', inQuote = false;
+    for (let i = 0; i < row.length; i++) {
+      const c = row[i];
+      if (c === '"') { inQuote = !inQuote; }
+      else if (c === sep && !inQuote) { result.push(cur); cur = ''; }
+      else { cur += c; }
+    }
+    result.push(cur);
+    return result.map(v => v.replace(/^"|"$/g, ''));
+  }
+
+  function autoType(val) {
+    if (val === '' || val === 'null' || val === 'NULL') return null;
+    if (val === 'true' || val === 'TRUE') return true;
+    if (val === 'false' || val === 'FALSE') return false;
+    const n = Number(val);
+    if (!isNaN(n) && val !== '') return n;
+    return val;
+  }
+
+  function clearConverter() {
+    document.getElementById('textInput').value = '';
+    document.getElementById('convertOutput').innerHTML = '<span style="color:var(--muted);font-style:italic">JSON will appear here…</span>';
+    document.getElementById('convertInputStatus').innerHTML = '<span class="status-idle">Paste text to begin</span>';
+    document.getElementById('convertOutputStatus').innerHTML = '<span class="status-idle">—</span>';
+  }
+
+  function loadSampleText() {
+    const fmt = document.getElementById('inputFormat').value;
+    const samples = {
+      csv: `name,age,city,salary_lpa\nRahul Sharma,29,Bengaluru,18\nPriya Patel,26,Mumbai,14\nAmit Kumar,33,Delhi,22`,
+      tsv: `name\tage\tcity\nRahul\t29\tBengaluru\nPriya\t26\tMumbai`,
+      kv: `name = Rahul Sharma\nage = 29\ncity = Bengaluru\nactive = true\nnotes = null`,
+      lines: `Apple\nBanana\nMango\nGuava\nPapaya`,
+      numbered: `1. Complete project report\n2. Send follow-up email\n3. Review pull request\n4. Update documentation`,
+    };
+    document.getElementById('textInput').value = samples[fmt] || samples.csv;
+    convertText();
+  }
+
+  function copyConverted() {
+    const text = document.getElementById('convertOutput').innerText;
+    if (!text || text.includes('JSON will appear')) return;
+    navigator.clipboard.writeText(text).then(() => {
+      const btn = document.getElementById('copyConvBtn');
+      btn.textContent = '✓ Copied!';
+      btn.classList.add('success');
+      setTimeout(() => { btn.textContent = '📋 Copy'; btn.classList.remove('success'); }, 2000);
+    });
+  }
+
+  function downloadJSON(name, fromConverter = false) {
+    const el = fromConverter ? document.getElementById('convertOutput') : document.getElementById('jsonOutput');
+    const text = el.innerText;
+    if (!text || text.includes('will appear')) return;
+    const blob = new Blob([text], { type: 'application/json' });
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement('a');
+    a.href = url; a.download = name; a.click();
+    URL.revokeObjectURL(url);
+  }
+
+  // ===========================
+  // NAV
+  // ===========================
+  function toggleDropdown(id, triggerEl) {
+    const panel = document.getElementById(id);
+    const isOpen = panel.classList.contains('open');
+    document.querySelectorAll('.dropdown-panel').forEach(p => p.classList.remove('open'));
+    document.querySelectorAll('.nav-trigger').forEach(t => t.classList.remove('open'));
+    if (!isOpen) { panel.classList.add('open'); triggerEl.classList.add('open'); }
+  }
+  document.addEventListener('click', e => {
+    if (!e.target.closest('.nav-item')) {
+      document.querySelectorAll('.dropdown-panel').forEach(p => p.classList.remove('open'));
+      document.querySelectorAll('.nav-trigger').forEach(t => t.classList.remove('open'));
+    }
+  });
+  document.addEventListener('keydown', e => {
+    if (e.key === 'Escape') {
+      document.querySelectorAll('.dropdown-panel').forEach(p => p.classList.remove('open'));
+      document.querySelectorAll('.nav-trigger').forEach(t => t.classList.remove('open'));
+      toggleMobilePanel(false);
+    }
+  });
+  function toggleMobilePanel(open) {
+    document.getElementById('mobilePanel').classList.toggle('open', open);
+    document.body.style.overflow = open ? 'hidden' : '';
+  }
+
+  // === Nav dropdowns + mobile menu (site-wide) ===
+  function toggleDropdown(id, triggerEl) {
+    const panel = document.getElementById(id);
+    const isOpen = panel.classList.contains('open');
+    document.querySelectorAll('.dropdown-panel').forEach(p => p.classList.remove('open'));
+    document.querySelectorAll('.nav-trigger').forEach(t => t.classList.remove('open'));
+    if (!isOpen) { panel.classList.add('open'); triggerEl.classList.add('open'); }
+  }
+  document.addEventListener('click', function(e) {
+    if (!e.target.closest('.nav-item')) {
+      document.querySelectorAll('.dropdown-panel').forEach(p => p.classList.remove('open'));
+      document.querySelectorAll('.nav-trigger').forEach(t => t.classList.remove('open'));
+    }
+  });
+  document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape') {
+      document.querySelectorAll('.dropdown-panel').forEach(p => p.classList.remove('open'));
+      document.querySelectorAll('.nav-trigger').forEach(t => t.classList.remove('open'));
+      toggleMobilePanel(false);
+    }
+  });
+  function toggleMobilePanel(open) {
+    document.getElementById('mobilePanel').classList.toggle('open', open);
+    document.body.style.overflow = open ? 'hidden' : '';
+  }
+</script>
+</body>
+</html>
