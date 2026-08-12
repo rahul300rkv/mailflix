@@ -1,0 +1,723 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Age Calculator & Days Between Dates — Exact Years Months Days | MailFix</title>
+<meta name="description" content="Calculate your exact age in years, months and days — or find how many days separate any two dates. Handles leap years, shows next birthday countdown. Free, instant."/>
+<meta name="keywords" content="age calculator india, days between dates calculator, date difference calculator, exact age calculator, how many days between two dates, birthday calculator"/>
+<meta name="robots" content="index, follow"/>
+<link rel="canonical" href="https://mailflix.netlify.app/date-calculator.html"/>
+<meta property="og:title" content="Age Calculator & Days Between Dates — Exact Years Months Days | MailFix"/>
+<meta property="og:description" content="Calculate your exact age in years, months and days — or find how many days separate any two dates. Handles leap years, shows next birthday countdown. Free, instant."/>
+<meta property="og:url" content="https://mailflix.netlify.app/date-calculator.html"/>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "Age Calculator & Days Between Dates",
+  "url": "https://mailflix.netlify.app/date-calculator.html",
+  "description": "Free online age calculator and days between dates tool with exact years, months and days breakdown.",
+  "applicationCategory": "UtilitiesApplication",
+  "offers": { "@type": "Offer", "price": "0", "priceCurrency": "INR" }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    { "@type": "Question", "name": "How is exact age calculated?", "acceptedAnswer": { "@type": "Answer", "text": "The calculator finds the difference between your date of birth and the target date in complete years, then months, then days — accounting for different month lengths and leap years." } },
+    { "@type": "Question", "name": "How many days between two dates?", "acceptedAnswer": { "@type": "Answer", "text": "Enter a start date and end date. The calculator uses UTC timestamps to avoid daylight saving issues and returns the exact number of calendar days, complete weeks, and remaining days." } },
+    { "@type": "Question", "name": "Does the age calculator handle leap years?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. The calculation uses actual calendar month lengths and handles leap years correctly, so someone born on 29 February gets an accurate result." } }
+  ]
+}
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet"/>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3532554351654388" crossorigin="anonymous"></script>
+<style>
+  :root {
+    --ink: #0f0e0c;
+    --paper: #f5f2ec;
+    --card: #ffffff;
+    --accent: #d44f1e;
+    --accent2: #2563eb;
+    --green: #16a34a;
+    --green-bg: #f0fdf4;
+    --red-bg: #fef2f2;
+    --red-text: #b91c1c;
+    --muted: #7a7570;
+    --border: #e2ddd5;
+    --radius: 12px;
+    --font-head: 'Syne', sans-serif;
+    --font-body: 'DM Sans', sans-serif;
+  }
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  body { background: var(--paper); color: var(--ink); font-family: var(--font-body); font-size: 16px; line-height: 1.6; min-height: 100vh; }
+
+  /* NAV */
+  nav { display: flex; justify-content: space-between; align-items: center; padding: 18px 5%; border-bottom: 1px solid var(--border); background: var(--paper); position: sticky; top: 0; z-index: 100; }
+  .logo { font-family: var(--font-head); font-size: 22px; font-weight: 800; letter-spacing: -0.5px; color: var(--ink); text-decoration: none; }
+  .logo span { color: var(--accent); }
+  .nav-badge { background: var(--accent); color: #fff; font-size: 12px; font-weight: 500; padding: 4px 12px; border-radius: 99px; font-family: var(--font-body); margin-left: 6px; }
+  .nav-right { display: flex; align-items: center; gap: 6px; }
+  .nav-links { display: flex; gap: 6px; align-items: center; }
+  .nav-item { position: relative; }
+  .nav-trigger { font-size: 13px; color: var(--muted); background: none; border: none; cursor: pointer; font-family: var(--font-body); display: flex; align-items: center; gap: 5px; padding: 8px 10px; border-radius: 8px; transition: color .15s; }
+  .nav-trigger:hover, .nav-trigger.open { color: var(--accent); }
+  .nav-trigger .caret { font-size: 9px; transition: transform .15s; opacity: .7; }
+  .nav-trigger.open .caret { transform: rotate(180deg); }
+  .dropdown-panel { position: absolute; top: calc(100% + 8px); left: 50%; transform: translateX(-50%); background: #fff; border: 1px solid var(--border); border-radius: 12px; box-shadow: 0 12px 32px rgba(15,14,12,.1); padding: 8px; min-width: 230px; display: none; z-index: 200; }
+  .dropdown-panel.open { display: block; }
+  .dropdown-panel a { display: flex; align-items: center; gap: 10px; padding: 9px 12px; border-radius: 8px; font-size: 13.5px; color: var(--ink); text-decoration: none; white-space: nowrap; font-family: var(--font-body); }
+  .dropdown-panel a:hover { background: var(--paper); color: var(--accent); }
+  .dropdown-panel a .emoji { font-size: 15px; width: 18px; text-align: center; }
+  .mobile-toggle { display: none; background: none; border: none; cursor: pointer; font-size: 22px; color: var(--ink); padding: 4px 6px; line-height: 1; }
+  @media(max-width:880px) { .nav-links { display: none; } .mobile-toggle { display: block; } }
+  .mobile-panel { display: none; position: fixed; inset: 0; background: var(--paper); z-index: 300; padding: 20px 6%; overflow-y: auto; }
+  .mobile-panel.open { display: block; }
+  .mobile-panel-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 28px; }
+  .mobile-close { background: none; border: none; font-size: 26px; color: var(--ink); cursor: pointer; line-height: 1; }
+  .mobile-group { margin-bottom: 28px; }
+  .mobile-group h4 { font-family: var(--font-head); font-size: 11px; text-transform: uppercase; letter-spacing: .1em; color: var(--accent); margin-bottom: 10px; }
+  .mobile-group a { display: flex; align-items: center; gap: 12px; padding: 13px 2px; border-bottom: 1px solid var(--border); font-size: 16px; color: var(--ink); text-decoration: none; font-family: var(--font-body); }
+  .mobile-group a .emoji { width: 22px; text-align: center; }
+
+  /* HERO */
+  .hero { max-width: 760px; margin: 0 auto; padding: 52px 5% 28px; text-align: center; }
+  .hero-tag { display: inline-flex; align-items: center; gap: 6px; background: #fff; border: 1px solid var(--border); border-radius: 99px; padding: 6px 16px; font-size: 13px; color: var(--muted); margin-bottom: 16px; }
+  .hero-tag .dot { width: 7px; height: 7px; background: #22c55e; border-radius: 50%; animation: pulse 2s infinite; }
+  @keyframes pulse { 0%,100%{opacity:1;transform:scale(1)} 50%{opacity:.6;transform:scale(1.3)} }
+  h1 { font-family: var(--font-head); font-size: clamp(30px, 5vw, 48px); font-weight: 800; line-height: 1.1; letter-spacing: -1.5px; margin-bottom: 14px; }
+  h1 em { color: var(--accent); font-style: normal; }
+  .hero-sub { font-size: 16px; color: var(--muted); font-weight: 300; max-width: 520px; margin: 0 auto; }
+
+  /* MODE TABS */
+  .mode-tabs { max-width: 900px; margin: 24px auto 0; padding: 0 5%; display: flex; gap: 10px; flex-wrap: wrap; justify-content: center; }
+  .mode-tab { padding: 10px 24px; border-radius: 10px; border: 1px solid var(--border); background: var(--card); font-family: var(--font-head); font-size: 14px; font-weight: 700; cursor: pointer; color: var(--muted); transition: all .15s; }
+  .mode-tab.active { background: var(--accent); color: #fff; border-color: var(--accent); }
+  .mode-tab:hover:not(.active) { border-color: var(--accent); color: var(--accent); }
+
+  /* TOOL */
+  .tool-wrap { max-width: 900px; margin: 20px auto 32px; padding: 0 5%; }
+  .tool-panel { display: none; }
+  .tool-panel.active { display: block; }
+
+  .calc-wrap { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
+  @media(max-width:640px) { .calc-wrap { grid-template-columns: 1fr; } }
+
+  /* INPUT CARD */
+  .card { background: var(--card); border: 1px solid var(--border); border-radius: 18px; overflow: hidden; box-shadow: 0 2px 20px rgba(0,0,0,0.05); }
+  .card-header { padding: 18px 24px; border-bottom: 1px solid var(--border); background: #fafaf8; }
+  .card-header h2 { font-family: var(--font-head); font-size: 16px; font-weight: 700; }
+  .card-header p { font-size: 13px; color: var(--muted); margin-top: 2px; }
+  .card-body { padding: 22px 24px; }
+
+  .f-group { margin-bottom: 18px; }
+  .f-label { font-size: 12.5px; font-weight: 600; color: var(--muted); margin-bottom: 6px; display: block; text-transform: uppercase; letter-spacing: .05em; font-family: var(--font-head); }
+  .f-date { width: 100%; padding: 11px 14px; border: 1px solid var(--border); border-radius: 8px; font-size: 15px; font-family: var(--font-body); color: var(--ink); background: var(--paper); outline: none; transition: border-color .15s; }
+  .f-date:focus { border-color: var(--accent); background: #fff; }
+
+  .btn-row { display: flex; gap: 10px; margin-top: 6px; }
+  .calc-btn { flex: 2; padding: 13px; background: var(--accent); color: #fff; border: none; border-radius: 10px; font-family: var(--font-head); font-size: 15px; font-weight: 700; cursor: pointer; transition: all .15s; }
+  .calc-btn:hover { background: #b83e12; transform: translateY(-1px); }
+  .clear-btn { flex: 1; padding: 13px; background: var(--card); color: var(--muted); border: 1px solid var(--border); border-radius: 10px; font-family: var(--font-body); font-size: 14px; cursor: pointer; transition: all .15s; }
+  .clear-btn:hover { border-color: var(--ink); color: var(--ink); }
+
+  .error-bar { margin-top: 12px; padding: 10px 14px; border-radius: 8px; font-size: 13.5px; background: var(--red-bg); color: var(--red-text); border: 1px solid #fca5a5; display: none; }
+  .error-bar.show { display: block; }
+
+  /* RESULT CARD */
+  .result-hero { background: linear-gradient(135deg, #0f0e0c 0%, #1a1917 100%); padding: 24px; text-align: center; }
+  .result-hero-value { font-family: var(--font-head); font-size: clamp(22px, 4vw, 30px); font-weight: 800; color: #22c55e; letter-spacing: -0.5px; }
+  .result-hero-sub { font-size: 12px; color: #7a7570; margin-top: 6px; }
+
+  .metric-row { display: flex; justify-content: space-between; align-items: center; padding: 12px 24px; border-bottom: 1px solid var(--border); }
+  .metric-row:last-child { border-bottom: none; }
+  .metric-row.alt { background: #fafaf8; }
+  .metric-label { font-size: 13.5px; color: var(--muted); }
+  .metric-val { font-size: 20px; font-weight: 800; font-family: var(--font-head); color: var(--accent2); }
+
+  .empty-state { padding: 48px 24px; text-align: center; color: var(--muted); font-size: 14px; }
+  .empty-icon { font-size: 40px; margin-bottom: 12px; display: block; opacity: 0.35; }
+
+  .copy-row { padding: 14px 24px; display: flex; justify-content: flex-end; border-top: 1px solid var(--border); }
+  .copy-btn { padding: 7px 16px; border: 1px solid var(--border); border-radius: 8px; background: var(--card); font-size: 13px; font-family: var(--font-body); cursor: pointer; color: var(--muted); transition: all .15s; }
+  .copy-btn:hover { border-color: var(--ink); color: var(--ink); }
+  .copy-btn.success { background: var(--green-bg); color: #166534; border-color: #bbf7d0; }
+
+  /* AD + EXPLAINER + FAQ */
+  .ad-banner { max-width: 900px; margin: 0 auto 32px; padding: 0 5%; }
+  .explainer { max-width: 900px; margin: 0 auto; padding: 44px 5%; }
+  .explainer h2 { font-family: var(--font-head); font-size: clamp(22px, 3vw, 32px); font-weight: 800; letter-spacing: -0.5px; margin-bottom: 28px; }
+  .explainer-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 14px; margin-bottom: 32px; }
+  .explainer-card { background: var(--card); border: 1px solid var(--border); border-radius: var(--radius); padding: 18px; }
+  .explainer-card h4 { font-family: var(--font-head); font-size: 14px; font-weight: 700; margin-bottom: 6px; }
+  .explainer-card p { font-size: 13px; color: var(--muted); line-height: 1.6; }
+  .explainer-card .tag { display: inline-block; font-size: 11px; padding: 2px 8px; border-radius: 4px; font-weight: 500; margin-bottom: 8px; background: var(--green-bg); color: #15803d; }
+  details { background: var(--card); border: 1px solid var(--border); border-radius: var(--radius); padding: 18px 20px; margin-bottom: 10px; }
+  summary { font-family: var(--font-head); font-size: 15px; font-weight: 700; cursor: pointer; list-style: none; display: flex; justify-content: space-between; align-items: center; }
+  summary .plus { color: var(--accent); font-size: 20px; }
+  details p { margin-top: 12px; font-size: 14px; color: var(--muted); line-height: 1.7; }
+
+  footer { border-top: 1px solid var(--border); padding: 28px 5%; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px; font-size: 13px; color: var(--muted); }
+  footer a { color: var(--muted); text-decoration: none; }
+  footer a:hover { color: var(--accent); }
+
+  /* === Grouped nav dropdowns + mobile menu (site-wide) === */
+  .nav-links{display:flex;gap:6px;align-items:center}
+  .nav-badge{background:var(--accent);color:#fff;font-size:12px;font-weight:500;padding:4px 12px;border-radius:99px;font-family:var(--font-body);margin-left:6px}
+  .nav-right{display:flex;align-items:center;gap:6px}
+  .nav-item{position:relative}
+  .nav-trigger{font-size:13px;color:var(--muted);background:none;border:none;cursor:pointer;font-family:var(--font-body);display:flex;align-items:center;gap:5px;padding:8px 10px;border-radius:8px;transition:color .15s}
+  .nav-trigger:hover,.nav-trigger.open{color:var(--accent)}
+  .nav-trigger .caret{font-size:9px;transition:transform .15s;opacity:.7}
+  .nav-trigger.open .caret{transform:rotate(180deg)}
+  .dropdown-panel{position:absolute;top:calc(100% + 8px);left:50%;transform:translateX(-50%);background:#fff;border:1px solid var(--border);border-radius:12px;box-shadow:0 12px 32px rgba(15,14,12,.1);padding:8px;min-width:230px;display:none;z-index:200}
+  .dropdown-panel.open{display:block}
+  .dropdown-panel a{display:flex;align-items:center;gap:10px;padding:9px 12px;border-radius:8px;font-size:13.5px;color:var(--ink);text-decoration:none;white-space:nowrap;font-family:var(--font-body)}
+  .dropdown-panel a:hover{background:var(--paper);color:var(--accent)}
+  .dropdown-panel a .emoji{font-size:15px;width:18px;text-align:center}
+  .mobile-toggle{display:none;background:none;border:none;cursor:pointer;font-size:22px;color:var(--ink);padding:4px 6px;line-height:1}
+  @media(max-width:880px){.nav-links{display:none}.mobile-toggle{display:block}}
+  .mobile-panel{display:none;position:fixed;inset:0;background:var(--paper);z-index:300;padding:20px 6%;overflow-y:auto}
+  .mobile-panel.open{display:block}
+  .mobile-panel-header{display:flex;justify-content:space-between;align-items:center;margin-bottom:28px}
+  .mobile-close{background:none;border:none;font-size:26px;color:var(--ink);cursor:pointer;line-height:1}
+  .mobile-group{margin-bottom:28px}
+  .mobile-group h4{font-family:var(--font-head);font-size:11px;text-transform:uppercase;letter-spacing:.1em;color:var(--accent);margin-bottom:10px}
+  .mobile-group a{display:flex;align-items:center;gap:12px;padding:13px 2px;border-bottom:1px solid var(--border);font-size:16px;color:var(--ink);text-decoration:none;font-family:var(--font-body)}
+  .mobile-group a .emoji{width:22px;text-align:center}
+</style>
+</head>
+<body>
+
+<nav>
+  <a class="logo" href="index.html">Mail<span>Fix</span></a>
+  <div class="nav-links" id="navLinks">
+    <div class="nav-item">
+      <button class="nav-trigger" onclick="toggleDropdown('calcDropdown', this)">🧮 Calculators <span class="caret">▾</span></button>
+      <div class="dropdown-panel" id="calcDropdown">
+        <a href="ctc-calculator.html"><span class="emoji">💰</span> CTC to In-Hand Salary</a>
+        <a href="hra-calculator.html"><span class="emoji">🏠</span> HRA Exemption</a>
+        <a href="itr-calculator.html"><span class="emoji">📊</span> ITR / Income Tax</a>
+        <a href="leave-encashment.html"><span class="emoji">🏖️</span> Leave Encashment</a>
+        <a href="retirement-calculator.html"><span class="emoji">🎯</span> Retirement Package</a>
+        <a href="increment-calculator.html"><span class="emoji">📈</span> Annual Increment</a>
+        <a href="date-calculator.html"><span class="emoji">📅</span> Age &amp; Date Calculator</a>
+        <a href="health-calculator.html"><span class="emoji">❤️</span> Health Calculators</a>
+      </div>
+    </div>
+    <div class="nav-item">
+      <button class="nav-trigger" onclick="toggleDropdown('lettersDropdown', this)">✉️ Letters &amp; Docs <span class="caret">▾</span></button>
+      <div class="dropdown-panel" id="lettersDropdown">
+        <a href="index.html"><span class="emoji">💬</span> Hinglish Email Fixer</a>
+        <a href="job-application.html"><span class="emoji">🎓</span> Job Application Email</a>
+        <a href="sarkari-letter.html"><span class="emoji">🏛️</span> Sarkari Letter</a>
+        <a href="resignation.html"><span class="emoji">🚪</span> Resignation Kit</a>
+        <a href="rent-receipt.html"><span class="emoji">🧾</span> Rent Receipt</a>
+        <a href="gst-invoice.html"><span class="emoji">📄</span> GST Invoice</a>
+        <a href="paraphrase.html"><span class="emoji">✍️</span> Paraphrasing Tool</a>
+      </div>
+    </div>
+    <div class="nav-item">
+      <button class="nav-trigger" onclick="toggleDropdown('utilsDropdown', this)">🛠️ Utilities <span class="caret">▾</span></button>
+      <div class="dropdown-panel" id="utilsDropdown">
+        <a href="whatsapp-dhanda.html"><span class="emoji">📱</span> WhatsApp Dhanda</a>
+        <a href="photo-resizer.html"><span class="emoji">🖼️</span> Photo Resizer</a>
+        <a href="city-compare.html"><span class="emoji">🏙️</span> City Salary Compare</a>
+        <a href="vehicle-scrappage.html"><span class="emoji">🚗</span> Vehicle Scrappage</a>
+        <a href="qr-generator.html"><span class="emoji">🔲</span> QR Generator</a>
+        <a href="json-tools.html"><span class="emoji">{ }</span> JSON Tools</a>
+      </div>
+    </div>
+  </div>
+  <div class="nav-right">
+    <span class="nav-badge">Free</span>
+    <button class="mobile-toggle" onclick="toggleMobilePanel(true)" aria-label="Open menu">☰</button>
+  </div>
+</nav>
+
+<div class="mobile-panel" id="mobilePanel">
+  <div class="mobile-panel-header">
+    <a class="logo" href="index.html">Mail<span>Fix</span></a>
+    <button class="mobile-close" onclick="toggleMobilePanel(false)" aria-label="Close menu">×</button>
+  </div>
+  <div class="mobile-group">
+    <h4>Calculators</h4>
+    <a href="ctc-calculator.html"><span class="emoji">💰</span> CTC to In-Hand Salary</a>
+    <a href="hra-calculator.html"><span class="emoji">🏠</span> HRA Exemption</a>
+    <a href="itr-calculator.html"><span class="emoji">📊</span> ITR / Income Tax</a>
+    <a href="leave-encashment.html"><span class="emoji">🏖️</span> Leave Encashment</a>
+    <a href="retirement-calculator.html"><span class="emoji">🎯</span> Retirement Package</a>
+    <a href="increment-calculator.html"><span class="emoji">📈</span> Annual Increment</a>
+    <a href="date-calculator.html"><span class="emoji">📅</span> Age &amp; Date Calculator</a>
+    <a href="health-calculator.html"><span class="emoji">❤️</span> Health Calculators</a>
+  </div>
+  <div class="mobile-group">
+    <h4>Letters &amp; Docs</h4>
+    <a href="index.html"><span class="emoji">💬</span> Hinglish Email Fixer</a>
+    <a href="job-application.html"><span class="emoji">🎓</span> Job Application Email</a>
+    <a href="sarkari-letter.html"><span class="emoji">🏛️</span> Sarkari Letter</a>
+    <a href="resignation.html"><span class="emoji">🚪</span> Resignation Kit</a>
+    <a href="rent-receipt.html"><span class="emoji">🧾</span> Rent Receipt</a>
+    <a href="gst-invoice.html"><span class="emoji">📄</span> GST Invoice</a>
+    <a href="paraphrase.html"><span class="emoji">✍️</span> Paraphrasing Tool</a>
+  </div>
+  <div class="mobile-group">
+    <h4>Utilities</h4>
+    <a href="whatsapp-dhanda.html"><span class="emoji">📱</span> WhatsApp Dhanda</a>
+    <a href="photo-resizer.html"><span class="emoji">🖼️</span> Photo Resizer</a>
+    <a href="city-compare.html"><span class="emoji">🏙️</span> City Salary Compare</a>
+    <a href="vehicle-scrappage.html"><span class="emoji">🚗</span> Vehicle Scrappage</a>
+    <a href="qr-generator.html"><span class="emoji">🔲</span> QR Generator</a>
+    <a href="json-tools.html"><span class="emoji">{ }</span> JSON Tools</a>
+  </div>
+</div>
+
+<div class="mobile-panel" id="mobilePanel">
+  <div class="mobile-panel-header">
+    <a class="logo" href="index.html">Mail<span>Fix</span></a>
+    <button class="mobile-close" onclick="toggleMobilePanel(false)" aria-label="Close menu">×</button>
+  </div>
+  <div class="mobile-group">
+    <h4>Calculators</h4>
+    <a href="ctc-calculator.html"><span class="emoji">💰</span> CTC to In-Hand Salary</a>
+    <a href="hra-calculator.html"><span class="emoji">🏠</span> HRA Exemption</a>
+    <a href="itr-calculator.html"><span class="emoji">📊</span> ITR / Income Tax</a>
+    <a href="leave-encashment.html"><span class="emoji">🏖️</span> Leave Encashment</a>
+    <a href="retirement-calculator.html"><span class="emoji">🎯</span> Retirement Package</a>
+    <a href="increment-calculator.html"><span class="emoji">📈</span> Annual Increment</a>
+    <a href="date-calculator.html"><span class="emoji">📅</span> Age & Date Calculator</a>
+  </div>
+  <div class="mobile-group">
+    <h4>Letters & Docs</h4>
+    <a href="index.html"><span class="emoji">💬</span> Hinglish Email Fixer</a>
+    <a href="job-application.html"><span class="emoji">🎓</span> Job Application Email</a>
+    <a href="sarkari-letter.html"><span class="emoji">🏛️</span> Sarkari Letter</a>
+    <a href="resignation.html"><span class="emoji">🚪</span> Resignation Kit</a>
+    <a href="rent-receipt.html"><span class="emoji">🧾</span> Rent Receipt</a>
+    <a href="gst-invoice.html"><span class="emoji">📄</span> GST Invoice</a>
+    <a href="paraphrase.html"><span class="emoji">✍️</span> Paraphrasing Tool</a>
+  </div>
+  <div class="mobile-group">
+    <h4>Utilities</h4>
+    <a href="whatsapp-dhanda.html"><span class="emoji">📱</span> WhatsApp Dhanda</a>
+    <a href="photo-resizer.html"><span class="emoji">🖼️</span> Photo Resizer</a>
+    <a href="city-compare.html"><span class="emoji">🏙️</span> City Compare</a>
+    <a href="vehicle-scrappage.html"><span class="emoji">🚗</span> Vehicle Scrappage</a>
+    <a href="qr-generator.html"><span class="emoji">🔲</span> QR Generator</a>
+    <a href="json-tools.html"><span class="emoji">{ }</span> JSON Tools</a>
+  </div>
+</div>
+
+<section class="hero">
+  <div class="hero-tag"><span class="dot"></span> Leap-year accurate · UTC date diff</div>
+  <h1>Apni age aur dates,<br/><em>exactly</em> nikalo</h1>
+  <p class="hero-sub">Calculate your exact age in years, months and days — or find the number of days between any two dates. Instant, no signup.</p>
+</section>
+
+<div class="mode-tabs">
+  <button class="mode-tab active" id="tab-age" onclick="switchTab('age')">🎂 Age Calculator</button>
+  <button class="mode-tab" id="tab-days" onclick="switchTab('days')">📅 Days Between Dates</button>
+</div>
+
+<div class="tool-wrap">
+
+  <!-- AGE PANEL -->
+  <div class="tool-panel active" id="panel-age">
+    <div class="calc-wrap">
+
+      <div class="card">
+        <div class="card-header">
+          <h2>Enter dates</h2>
+          <p>Fill both fields — "Calculate Age On" defaults to today</p>
+        </div>
+        <div class="card-body">
+          <div class="f-group">
+            <label class="f-label" for="dob">Date of Birth</label>
+            <input type="date" id="dob" class="f-date" oninput="calcAge()"/>
+          </div>
+          <div class="f-group">
+            <label class="f-label" for="ageAsOf">Calculate Age On</label>
+            <input type="date" id="ageAsOf" class="f-date" oninput="calcAge()"/>
+          </div>
+          <div class="btn-row">
+            <button class="calc-btn" onclick="calcAge()">Calculate Age</button>
+            <button class="clear-btn" onclick="clearAge()">Clear</button>
+          </div>
+          <div class="error-bar" id="ageError"></div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div id="ageEmpty" class="empty-state">
+          <span class="empty-icon">🎂</span>
+          Enter your date of birth<br/>to see your exact age
+        </div>
+        <div id="ageResult" style="display:none">
+          <div class="result-hero">
+            <div class="result-hero-value" id="ageMainResult">—</div>
+            <div class="result-hero-sub">Exact age</div>
+          </div>
+          <div class="metric-row alt"><span class="metric-label">Years</span><span class="metric-val" id="ageYears">0</span></div>
+          <div class="metric-row"><span class="metric-label">Months (beyond years)</span><span class="metric-val" id="ageMonths">0</span></div>
+          <div class="metric-row alt"><span class="metric-label">Days (beyond months)</span><span class="metric-val" id="ageDays">0</span></div>
+          <div class="metric-row"><span class="metric-label">Total days lived</span><span class="metric-val" id="ageTotalDays">0</span></div>
+          <div class="metric-row alt"><span class="metric-label">Next birthday in</span><span class="metric-val" id="ageNextBday">—</span></div>
+          <div class="copy-row">
+            <button class="copy-btn" id="copyAgeBtn" onclick="copyAge()">📋 Copy Result</button>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- DAYS PANEL -->
+  <div class="tool-panel" id="panel-days">
+    <div class="calc-wrap">
+
+      <div class="card">
+        <div class="card-header">
+          <h2>Enter dates</h2>
+          <p>Select a start and end date</p>
+        </div>
+        <div class="card-body">
+          <div class="f-group">
+            <label class="f-label" for="startDate">Start Date</label>
+            <input type="date" id="startDate" class="f-date" oninput="calcDays()"/>
+          </div>
+          <div class="f-group">
+            <label class="f-label" for="endDate">End Date</label>
+            <input type="date" id="endDate" class="f-date" oninput="calcDays()"/>
+          </div>
+          <div class="btn-row">
+            <button class="calc-btn" onclick="calcDays()">Calculate Difference</button>
+            <button class="clear-btn" onclick="clearDays()">Clear</button>
+          </div>
+          <div class="error-bar" id="daysError"></div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div id="daysEmpty" class="empty-state">
+          <span class="empty-icon">📅</span>
+          Select two dates to see<br/>the difference between them
+        </div>
+        <div id="daysResult" style="display:none">
+          <div class="result-hero">
+            <div class="result-hero-value" id="daysMainResult">—</div>
+            <div class="result-hero-sub">Calendar days between dates</div>
+          </div>
+          <div class="metric-row alt"><span class="metric-label">Total days</span><span class="metric-val" id="totalDays">0</span></div>
+          <div class="metric-row"><span class="metric-label">Complete weeks</span><span class="metric-val" id="totalWeeks">0</span></div>
+          <div class="metric-row alt"><span class="metric-label">Remaining days</span><span class="metric-val" id="remainingDays">0</span></div>
+          <div class="metric-row"><span class="metric-label">Complete months (approx.)</span><span class="metric-val" id="totalMonths">0</span></div>
+          <div class="copy-row">
+            <button class="copy-btn" id="copyDaysBtn" onclick="copyDays()">📋 Copy Result</button>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+</div>
+
+<div class="ad-banner">
+  <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-3532554351654388" data-ad-slot="3962323207" data-ad-format="auto" data-full-width-responsive="true"></ins>
+  <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+</div>
+
+<section class="explainer">
+  <h2>What this tool calculates</h2>
+  <div class="explainer-grid">
+    <div class="explainer-card">
+      <span class="tag">Age</span>
+      <h4>Exact years, months and days</h4>
+      <p>The age calculator breaks down the difference between two dates into complete years, then months, then days — handling leap years and different month lengths correctly.</p>
+    </div>
+    <div class="explainer-card">
+      <span class="tag">Next birthday</span>
+      <h4>Days until your next birthday</h4>
+      <p>After calculating your age, the tool also shows how many days are left until your next birthday — useful if you need it for government forms or age-verification purposes.</p>
+    </div>
+    <div class="explainer-card">
+      <span class="tag">Date diff</span>
+      <h4>Calendar days between any two dates</h4>
+      <p>Uses UTC timestamps to avoid daylight saving time errors — returns the exact number of calendar days, complete weeks, remaining days, and approximate months.</p>
+    </div>
+    <div class="explainer-card">
+      <span class="tag">Common uses</span>
+      <h4>Forms, documents, deadlines</h4>
+      <p>Useful for government forms that ask for exact age, calculating notice period lengths, finding deadlines, or checking service duration for leave encashment and gratuity.</p>
+    </div>
+  </div>
+
+  <h2>Frequently asked questions</h2>
+  <details>
+    <summary>How is exact age calculated? <span class="plus">+</span></summary>
+    <p>The calculator finds the difference between your date of birth and the target date in complete years, then months, then days — accounting for different month lengths and leap years. If the day of the month hasn't been reached yet in the current month, it borrows from the previous month's actual day count.</p>
+  </details>
+  <details>
+    <summary>Does the age calculator handle leap years? <span class="plus">+</span></summary>
+    <p>Yes. The calculation uses actual calendar month lengths and handles leap years correctly, so someone born on 29 February gets an accurate result for any target date.</p>
+  </details>
+  <details>
+    <summary>How many days between two dates? <span class="plus">+</span></summary>
+    <p>Enter a start date and end date. The calculator uses UTC timestamps to avoid daylight saving issues and returns the exact number of calendar days, complete weeks, and remaining days.</p>
+  </details>
+  <details>
+    <summary>Why would I need to know days between dates? <span class="plus">+</span></summary>
+    <p>Common uses include calculating notice period duration for resignation, checking how many days of service you have completed for gratuity or leave encashment, finding deadline gaps, or verifying age for government forms and job applications.</p>
+  </details>
+</section>
+
+<footer>
+  <span>© 2025 MailFix — Free Tools for Indian Professionals</span>
+  <div style="display:flex;gap:16px;flex-wrap:wrap">
+    <a href="index.html">Hinglish Email</a>
+    <a href="job-application.html">Job Email</a>
+    <a href="ctc-calculator.html">Salary Calculator</a>
+    <a href="hra-calculator.html">HRA Calculator</a>
+    <a href="itr-calculator.html">ITR / Tax</a>
+    <a href="leave-encashment.html">Leave Encashment</a>
+    <a href="retirement-calculator.html">Retirement</a>
+    <a href="increment-calculator.html">Increment</a>
+    <a href="date-calculator.html">Age &amp; Date</a>
+    <a href="health-calculator.html">Health Calculators</a>
+    <a href="photo-resizer.html">Photo Resizer</a>
+    <a href="rent-receipt.html">Rent Receipt</a>
+    <a href="gst-invoice.html">GST Invoice</a>
+    <a href="paraphrase.html">Paraphrasing Tool</a>
+    <a href="vehicle-scrappage.html">Vehicle Scrappage</a>
+    <a href="qr-generator.html">QR Generator</a>
+    <a href="json-tools.html">JSON Tools</a>
+    <a href="whatsapp-dhanda.html">WhatsApp Dhanda</a>
+    <a href="sarkari-letter.html">Sarkari Letter</a>
+    <a href="resignation.html">Resignation Kit</a>
+    <a href="city-compare.html">City Compare</a>
+    <a href="privacy.html">Privacy Policy</a>
+  </div>
+</footer>
+
+<script>
+  // ========================
+  // HELPERS
+  // ========================
+  function todayStr() {
+    const d = new Date();
+    return d.getFullYear() + '-' + String(d.getMonth()+1).padStart(2,'0') + '-' + String(d.getDate()).padStart(2,'0');
+  }
+  function parseDate(val) {
+    const [y, m, d] = val.split('-').map(Number);
+    return new Date(y, m-1, d);
+  }
+  function fmtN(n) { return n.toLocaleString('en-IN'); }
+
+  // Set default "as of" to today
+  document.getElementById('ageAsOf').value = todayStr();
+
+  // ========================
+  // TAB SWITCHING
+  // ========================
+  function switchTab(tab) {
+    document.querySelectorAll('.tool-panel').forEach(p => p.classList.remove('active'));
+    document.querySelectorAll('.mode-tab').forEach(t => t.classList.remove('active'));
+    document.getElementById('panel-' + tab).classList.add('active');
+    document.getElementById('tab-' + tab).classList.add('active');
+  }
+
+  // ========================
+  // AGE CALCULATOR
+  // ========================
+  function calcAge() {
+    const dobVal   = document.getElementById('dob').value;
+    const asOfVal  = document.getElementById('ageAsOf').value;
+    const errEl    = document.getElementById('ageError');
+    const emptyEl  = document.getElementById('ageEmpty');
+    const resultEl = document.getElementById('ageResult');
+
+    errEl.classList.remove('show');
+
+    if (!dobVal || !asOfVal) { emptyEl.style.display='block'; resultEl.style.display='none'; return; }
+
+    const dob  = parseDate(dobVal);
+    const asOf = parseDate(asOfVal);
+
+    if (dob > asOf) {
+      errEl.textContent = 'Date of birth cannot be after the calculation date.';
+      errEl.classList.add('show');
+      emptyEl.style.display='block'; resultEl.style.display='none';
+      return;
+    }
+
+    let years  = asOf.getFullYear() - dob.getFullYear();
+    let months = asOf.getMonth()    - dob.getMonth();
+    let days   = asOf.getDate()     - dob.getDate();
+
+    if (days < 0) {
+      months--;
+      const prevMonth = new Date(asOf.getFullYear(), asOf.getMonth(), 0);
+      days += prevMonth.getDate();
+    }
+    if (months < 0) { years--; months += 12; }
+
+    // Total days lived
+    const totalDays = Math.round((Date.UTC(asOf.getFullYear(), asOf.getMonth(), asOf.getDate()) - Date.UTC(dob.getFullYear(), dob.getMonth(), dob.getDate())) / 86400000);
+
+    // Next birthday
+    let nextBday = new Date(asOf.getFullYear(), dob.getMonth(), dob.getDate());
+    if (nextBday <= asOf) nextBday = new Date(asOf.getFullYear() + 1, dob.getMonth(), dob.getDate());
+    const daysToNextBday = Math.round((Date.UTC(nextBday.getFullYear(), nextBday.getMonth(), nextBday.getDate()) - Date.UTC(asOf.getFullYear(), asOf.getMonth(), asOf.getDate())) / 86400000);
+
+    document.getElementById('ageYears').textContent  = fmtN(years);
+    document.getElementById('ageMonths').textContent = months;
+    document.getElementById('ageDays').textContent   = days;
+    document.getElementById('ageTotalDays').textContent  = fmtN(totalDays);
+    document.getElementById('ageNextBday').textContent   = daysToNextBday === 0 ? 'Today! 🎂' : fmtN(daysToNextBday) + ' days';
+    document.getElementById('ageMainResult').textContent = years + ' yrs, ' + months + ' mo, ' + days + ' days';
+
+    emptyEl.style.display='none';
+    resultEl.style.display='block';
+  }
+
+  function clearAge() {
+    document.getElementById('dob').value = '';
+    document.getElementById('ageAsOf').value = todayStr();
+    document.getElementById('ageEmpty').style.display  = 'block';
+    document.getElementById('ageResult').style.display = 'none';
+    document.getElementById('ageError').classList.remove('show');
+  }
+
+  function copyAge() {
+    const y = document.getElementById('ageYears').textContent;
+    const m = document.getElementById('ageMonths').textContent;
+    const d = document.getElementById('ageDays').textContent;
+    const total = document.getElementById('ageTotalDays').textContent;
+    navigator.clipboard.writeText(`Age: ${y} years, ${m} months, ${d} days (${total} total days)`).then(() => {
+      const btn = document.getElementById('copyAgeBtn');
+      btn.textContent = '✓ Copied!';
+      btn.classList.add('success');
+      setTimeout(() => { btn.textContent = '📋 Copy Result'; btn.classList.remove('success'); }, 2000);
+    });
+  }
+
+  // ========================
+  // DAYS CALCULATOR
+  // ========================
+  function calcDays() {
+    const startVal = document.getElementById('startDate').value;
+    const endVal   = document.getElementById('endDate').value;
+    const errEl    = document.getElementById('daysError');
+    const emptyEl  = document.getElementById('daysEmpty');
+    const resultEl = document.getElementById('daysResult');
+
+    errEl.classList.remove('show');
+
+    if (!startVal || !endVal) { emptyEl.style.display='block'; resultEl.style.display='none'; return; }
+
+    const start = parseDate(startVal);
+    const end   = parseDate(endVal);
+
+    if (start > end) {
+      errEl.textContent = 'Start date cannot be after the end date.';
+      errEl.classList.add('show');
+      emptyEl.style.display='block'; resultEl.style.display='none';
+      return;
+    }
+
+    const totalDays    = Math.round((Date.UTC(end.getFullYear(), end.getMonth(), end.getDate()) - Date.UTC(start.getFullYear(), start.getMonth(), start.getDate())) / 86400000);
+    const totalWeeks   = Math.floor(totalDays / 7);
+    const remaining    = totalDays % 7;
+    const totalMonths  = Math.floor(totalDays / 30.4375);
+
+    document.getElementById('totalDays').textContent    = fmtN(totalDays);
+    document.getElementById('totalWeeks').textContent   = fmtN(totalWeeks);
+    document.getElementById('remainingDays').textContent = remaining;
+    document.getElementById('totalMonths').textContent  = fmtN(totalMonths);
+    document.getElementById('daysMainResult').textContent = fmtN(totalDays) + ' days';
+
+    emptyEl.style.display='none';
+    resultEl.style.display='block';
+  }
+
+  function clearDays() {
+    document.getElementById('startDate').value = '';
+    document.getElementById('endDate').value   = '';
+    document.getElementById('daysEmpty').style.display  = 'block';
+    document.getElementById('daysResult').style.display = 'none';
+    document.getElementById('daysError').classList.remove('show');
+  }
+
+  function copyDays() {
+    const total   = document.getElementById('totalDays').textContent;
+    const weeks   = document.getElementById('totalWeeks').textContent;
+    const rem     = document.getElementById('remainingDays').textContent;
+    const months  = document.getElementById('totalMonths').textContent;
+    navigator.clipboard.writeText(`Date difference: ${total} days (${weeks} weeks and ${rem} days, approx. ${months} months)`).then(() => {
+      const btn = document.getElementById('copyDaysBtn');
+      btn.textContent = '✓ Copied!';
+      btn.classList.add('success');
+      setTimeout(() => { btn.textContent = '📋 Copy Result'; btn.classList.remove('success'); }, 2000);
+    });
+  }
+
+  // ========================
+  // NAV
+  // ========================
+  function toggleDropdown(id, triggerEl) {
+    const panel = document.getElementById(id);
+    const isOpen = panel.classList.contains('open');
+    document.querySelectorAll('.dropdown-panel').forEach(p => p.classList.remove('open'));
+    document.querySelectorAll('.nav-trigger').forEach(t => t.classList.remove('open'));
+    if (!isOpen) { panel.classList.add('open'); triggerEl.classList.add('open'); }
+  }
+  document.addEventListener('click', e => {
+    if (!e.target.closest('.nav-item')) {
+      document.querySelectorAll('.dropdown-panel').forEach(p => p.classList.remove('open'));
+      document.querySelectorAll('.nav-trigger').forEach(t => t.classList.remove('open'));
+    }
+  });
+  document.addEventListener('keydown', e => {
+    if (e.key === 'Escape') {
+      document.querySelectorAll('.dropdown-panel').forEach(p => p.classList.remove('open'));
+      document.querySelectorAll('.nav-trigger').forEach(t => t.classList.remove('open'));
+      toggleMobilePanel(false);
+    }
+  });
+  function toggleMobilePanel(open) {
+    document.getElementById('mobilePanel').classList.toggle('open', open);
+    document.body.style.overflow = open ? 'hidden' : '';
+  }
+
+  // === Nav dropdowns + mobile menu (site-wide) ===
+  function toggleDropdown(id, triggerEl) {
+    const panel = document.getElementById(id);
+    const isOpen = panel.classList.contains('open');
+    document.querySelectorAll('.dropdown-panel').forEach(p => p.classList.remove('open'));
+    document.querySelectorAll('.nav-trigger').forEach(t => t.classList.remove('open'));
+    if (!isOpen) { panel.classList.add('open'); triggerEl.classList.add('open'); }
+  }
+  document.addEventListener('click', function(e) {
+    if (!e.target.closest('.nav-item')) {
+      document.querySelectorAll('.dropdown-panel').forEach(p => p.classList.remove('open'));
+      document.querySelectorAll('.nav-trigger').forEach(t => t.classList.remove('open'));
+    }
+  });
+  document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape') {
+      document.querySelectorAll('.dropdown-panel').forEach(p => p.classList.remove('open'));
+      document.querySelectorAll('.nav-trigger').forEach(t => t.classList.remove('open'));
+      toggleMobilePanel(false);
+    }
+  });
+  function toggleMobilePanel(open) {
+    document.getElementById('mobilePanel').classList.toggle('open', open);
+    document.body.style.overflow = open ? 'hidden' : '';
+  }
+</script>
+</body>
+</html>

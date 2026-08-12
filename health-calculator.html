@@ -1,0 +1,835 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Free Health Calculators — BMI, BMR, Calories, Body Fat, Water & Macros | MailFix</title>
+<meta name="description" content="Free health calculators including BMI, BMR, daily calorie needs (TDEE), ideal weight, body fat percentage (Navy method), water intake and macronutrients. Instant, no signup."/>
+<meta name="keywords" content="bmi calculator india, bmr calculator, daily calorie calculator tdee, ideal weight calculator, body fat calculator navy method, water intake calculator, macro calculator"/>
+<meta name="robots" content="index, follow"/>
+<link rel="canonical" href="https://mailflix.netlify.app/health-calculator.html"/>
+<meta property="og:title" content="Free Health Calculators — BMI, BMR, Calories, Body Fat, Water & Macros | MailFix"/>
+<meta property="og:description" content="Free health calculators including BMI, BMR, daily calorie needs (TDEE), ideal weight, body fat percentage (Navy method), water intake and macronutrients. Instant, no signup."/>
+<meta property="og:url" content="https://mailflix.netlify.app/health-calculator.html"/>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "Free Health Calculators",
+  "url": "https://mailflix.netlify.app/health-calculator.html",
+  "description": "Free health calculators including BMI, BMR, daily calorie needs, ideal body weight, body fat percentage, water intake and macronutrients.",
+  "applicationCategory": "HealthApplication",
+  "offers": { "@type": "Offer", "price": "0", "priceCurrency": "INR" }
+}
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet"/>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3532554351654388" crossorigin="anonymous"></script>
+<style>
+  :root {
+    --ink: #0f0e0c;
+    --paper: #f5f2ec;
+    --card: #ffffff;
+    --accent: #d44f1e;
+    --accent2: #2563eb;
+    --green: #16a34a;
+    --green-bg: #f0fdf4;
+    --red-bg: #fef2f2;
+    --red-text: #b91c1c;
+    --orange-bg: #fff7ed;
+    --orange-border: #fed7aa;
+    --orange-text: #9a3412;
+    --muted: #7a7570;
+    --border: #e2ddd5;
+    --radius: 12px;
+    --font-head: 'Syne', sans-serif;
+    --font-body: 'DM Sans', sans-serif;
+  }
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  body { background: var(--paper); color: var(--ink); font-family: var(--font-body); font-size: 16px; line-height: 1.6; min-height: 100vh; }
+
+  /* NAV */
+  nav { display: flex; justify-content: space-between; align-items: center; padding: 18px 5%; border-bottom: 1px solid var(--border); background: var(--paper); position: sticky; top: 0; z-index: 100; }
+  .logo { font-family: var(--font-head); font-size: 22px; font-weight: 800; letter-spacing: -0.5px; color: var(--ink); text-decoration: none; }
+  .logo span { color: var(--accent); }
+  .nav-badge { background: var(--accent); color: #fff; font-size: 12px; font-weight: 500; padding: 4px 12px; border-radius: 99px; font-family: var(--font-body); margin-left: 6px; }
+  .nav-right { display: flex; align-items: center; gap: 6px; }
+  .nav-links { display: flex; gap: 6px; align-items: center; }
+  .nav-item { position: relative; }
+  .nav-trigger { font-size: 13px; color: var(--muted); background: none; border: none; cursor: pointer; font-family: var(--font-body); display: flex; align-items: center; gap: 5px; padding: 8px 10px; border-radius: 8px; transition: color .15s; }
+  .nav-trigger:hover, .nav-trigger.open { color: var(--accent); }
+  .nav-trigger .caret { font-size: 9px; transition: transform .15s; opacity: .7; }
+  .nav-trigger.open .caret { transform: rotate(180deg); }
+  .dropdown-panel { position: absolute; top: calc(100% + 8px); left: 50%; transform: translateX(-50%); background: #fff; border: 1px solid var(--border); border-radius: 12px; box-shadow: 0 12px 32px rgba(15,14,12,.1); padding: 8px; min-width: 230px; display: none; z-index: 200; }
+  .dropdown-panel.open { display: block; }
+  .dropdown-panel a { display: flex; align-items: center; gap: 10px; padding: 9px 12px; border-radius: 8px; font-size: 13.5px; color: var(--ink); text-decoration: none; white-space: nowrap; font-family: var(--font-body); }
+  .dropdown-panel a:hover { background: var(--paper); color: var(--accent); }
+  .dropdown-panel a .emoji { font-size: 15px; width: 18px; text-align: center; }
+  .mobile-toggle { display: none; background: none; border: none; cursor: pointer; font-size: 22px; color: var(--ink); padding: 4px 6px; line-height: 1; }
+  @media(max-width:880px) { .nav-links { display: none; } .mobile-toggle { display: block; } }
+  .mobile-panel { display: none; position: fixed; inset: 0; background: var(--paper); z-index: 300; padding: 20px 6%; overflow-y: auto; }
+  .mobile-panel.open { display: block; }
+  .mobile-panel-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 28px; }
+  .mobile-close { background: none; border: none; font-size: 26px; color: var(--ink); cursor: pointer; line-height: 1; }
+  .mobile-group { margin-bottom: 28px; }
+  .mobile-group h4 { font-family: var(--font-head); font-size: 11px; text-transform: uppercase; letter-spacing: .1em; color: var(--accent); margin-bottom: 10px; }
+  .mobile-group a { display: flex; align-items: center; gap: 12px; padding: 13px 2px; border-bottom: 1px solid var(--border); font-size: 16px; color: var(--ink); text-decoration: none; font-family: var(--font-body); }
+  .mobile-group a .emoji { width: 22px; text-align: center; }
+
+  /* HERO */
+  .hero { max-width: 760px; margin: 0 auto; padding: 52px 5% 28px; text-align: center; }
+  .hero-tag { display: inline-flex; align-items: center; gap: 6px; background: #fff; border: 1px solid var(--border); border-radius: 99px; padding: 6px 16px; font-size: 13px; color: var(--muted); margin-bottom: 16px; }
+  .hero-tag .dot { width: 7px; height: 7px; background: #22c55e; border-radius: 50%; animation: pulse 2s infinite; }
+  @keyframes pulse { 0%,100%{opacity:1;transform:scale(1)} 50%{opacity:.6;transform:scale(1.3)} }
+  h1 { font-family: var(--font-head); font-size: clamp(30px, 5vw, 48px); font-weight: 800; line-height: 1.1; letter-spacing: -1.5px; margin-bottom: 14px; }
+  h1 em { color: var(--accent); font-style: normal; }
+  .hero-sub { font-size: 16px; color: var(--muted); font-weight: 300; max-width: 540px; margin: 0 auto; }
+
+  /* TOOL AREA */
+  .tool-wrap { max-width: 1000px; margin: 28px auto 32px; padding: 0 5%; }
+
+  /* TOOL TABS */
+  .tool-tabs { display: flex; gap: 8px; overflow-x: auto; padding-bottom: 4px; margin-bottom: 20px; scrollbar-width: none; }
+  .tool-tabs::-webkit-scrollbar { display: none; }
+  .tool-tab { white-space: nowrap; padding: 9px 16px; border: 1px solid var(--border); background: var(--card); border-radius: 8px; cursor: pointer; font-size: 13.5px; font-weight: 600; color: var(--muted); transition: all .15s; font-family: var(--font-body); }
+  .tool-tab:hover { border-color: var(--accent); color: var(--accent); }
+  .tool-tab.active { background: var(--ink); color: #fff; border-color: var(--ink); }
+
+  /* CALCULATOR PANELS */
+  .calc-panel { display: none; }
+  .calc-panel.active { display: block; }
+
+  .calc-card { background: var(--card); border: 1px solid var(--border); border-radius: 18px; overflow: hidden; box-shadow: 0 2px 20px rgba(0,0,0,0.05); }
+  .calc-card-header { padding: 18px 24px; border-bottom: 1px solid var(--border); background: #fafaf8; }
+  .calc-card-header h2 { font-family: var(--font-head); font-size: 18px; font-weight: 800; }
+  .calc-card-header p { font-size: 13px; color: var(--muted); margin-top: 3px; }
+  .calc-body { display: grid; grid-template-columns: 1fr 1fr; }
+  @media(max-width:640px) { .calc-body { grid-template-columns: 1fr; } }
+  .calc-inputs { padding: 22px 24px; border-right: 1px solid var(--border); }
+  @media(max-width:640px) { .calc-inputs { border-right: none; border-bottom: 1px solid var(--border); } }
+  .calc-output { padding: 22px 24px; background: #fafaf8; }
+
+  .form-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+  @media(max-width:500px) { .form-grid { grid-template-columns: 1fr; } }
+  .f-group { display: flex; flex-direction: column; margin-bottom: 14px; }
+  .f-group.full { grid-column: 1/-1; }
+  .f-label { font-size: 12px; font-weight: 600; color: var(--muted); margin-bottom: 6px; text-transform: uppercase; letter-spacing: .05em; font-family: var(--font-head); }
+  .f-input, .f-select { width: 100%; padding: 10px 14px; border: 1px solid var(--border); border-radius: 8px; font-size: 14.5px; font-family: var(--font-body); color: var(--ink); background: var(--paper); outline: none; transition: border-color .15s; }
+  .f-input:focus, .f-select:focus { border-color: var(--accent); background: #fff; }
+
+  .btn-row { display: flex; gap: 10px; margin-top: 18px; }
+  .calc-btn { flex: 2; padding: 12px; background: var(--accent); color: #fff; border: none; border-radius: 10px; font-family: var(--font-head); font-size: 15px; font-weight: 700; cursor: pointer; transition: all .15s; }
+  .calc-btn:hover { background: #b83e12; transform: translateY(-1px); }
+  .clear-btn { flex: 1; padding: 12px; background: var(--card); color: var(--muted); border: 1px solid var(--border); border-radius: 10px; font-family: var(--font-body); font-size: 13.5px; cursor: pointer; transition: all .15s; }
+  .clear-btn:hover { border-color: var(--ink); color: var(--ink); }
+  .error-bar { margin-top: 12px; padding: 10px 14px; border-radius: 8px; font-size: 13px; background: var(--red-bg); color: var(--red-text); border: 1px solid #fca5a5; display: none; }
+  .error-bar.show { display: block; }
+
+  /* RESULTS */
+  .result-empty { color: var(--muted); font-size: 14px; display: flex; flex-direction: column; align-items: center; justify-content: center; min-height: 200px; text-align: center; gap: 10px; }
+  .result-empty .e-icon { font-size: 38px; opacity: .3; }
+  .result-section { display: none; }
+  .result-section.show { display: block; }
+  .result-hero-val { font-family: var(--font-head); font-size: clamp(24px, 4vw, 34px); font-weight: 800; color: var(--accent2); margin-bottom: 16px; }
+  .result-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin-bottom: 14px; }
+  @media(max-width:500px) { .result-grid { grid-template-columns: 1fr; } }
+  .result-item { background: var(--card); border: 1px solid var(--border); border-radius: 8px; padding: 12px; text-align: center; }
+  .r-num { display: block; font-size: 18px; font-weight: 800; font-family: var(--font-head); color: var(--ink); }
+  .r-label { display: block; font-size: 11.5px; color: var(--muted); margin-top: 3px; }
+  .result-note { font-size: 12.5px; color: var(--muted); line-height: 1.6; margin-top: 8px; }
+  .result-label-badge { display: inline-block; padding: 4px 12px; border-radius: 99px; font-size: 13px; font-weight: 700; font-family: var(--font-head); margin-bottom: 12px; }
+  .badge-normal     { background: var(--green-bg); color: #166534; }
+  .badge-underweight{ background: #eff6ff; color: #1d4ed8; }
+  .badge-overweight { background: #fff7ed; color: #9a3412; }
+  .badge-obese      { background: var(--red-bg); color: var(--red-text); }
+
+  /* DISCLAIMER */
+  .disclaimer { background: var(--orange-bg); border: 1px solid var(--orange-border); color: var(--orange-text); padding: 14px 18px; border-radius: 10px; font-size: 13px; line-height: 1.6; margin-top: 20px; }
+  .disclaimer strong { font-weight: 700; }
+
+  /* AD + EXPLAINER + FAQ */
+  .ad-banner { max-width: 1000px; margin: 0 auto 32px; padding: 0 5%; }
+  .explainer { max-width: 1000px; margin: 0 auto; padding: 40px 5%; }
+  .explainer h2 { font-family: var(--font-head); font-size: clamp(22px, 3vw, 32px); font-weight: 800; letter-spacing: -0.5px; margin-bottom: 28px; }
+  .explainer-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 14px; margin-bottom: 32px; }
+  .explainer-card { background: var(--card); border: 1px solid var(--border); border-radius: var(--radius); padding: 18px; }
+  .explainer-card h4 { font-family: var(--font-head); font-size: 14px; font-weight: 700; margin-bottom: 6px; }
+  .explainer-card p { font-size: 13px; color: var(--muted); line-height: 1.6; }
+  .explainer-card .tag { display: inline-block; font-size: 11px; padding: 2px 8px; border-radius: 4px; font-weight: 500; margin-bottom: 8px; background: var(--green-bg); color: #15803d; }
+  details { background: var(--card); border: 1px solid var(--border); border-radius: var(--radius); padding: 18px 20px; margin-bottom: 10px; }
+  summary { font-family: var(--font-head); font-size: 15px; font-weight: 700; cursor: pointer; list-style: none; display: flex; justify-content: space-between; align-items: center; }
+  summary .plus { color: var(--accent); font-size: 20px; }
+  details p { margin-top: 12px; font-size: 14px; color: var(--muted); line-height: 1.7; }
+
+  footer { border-top: 1px solid var(--border); padding: 28px 5%; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px; font-size: 13px; color: var(--muted); }
+  footer a { color: var(--muted); text-decoration: none; }
+  footer a:hover { color: var(--accent); }
+
+  /* === Grouped nav dropdowns + mobile menu (site-wide) === */
+  .nav-links{display:flex;gap:6px;align-items:center}
+  .nav-badge{background:var(--accent);color:#fff;font-size:12px;font-weight:500;padding:4px 12px;border-radius:99px;font-family:var(--font-body);margin-left:6px}
+  .nav-right{display:flex;align-items:center;gap:6px}
+  .nav-item{position:relative}
+  .nav-trigger{font-size:13px;color:var(--muted);background:none;border:none;cursor:pointer;font-family:var(--font-body);display:flex;align-items:center;gap:5px;padding:8px 10px;border-radius:8px;transition:color .15s}
+  .nav-trigger:hover,.nav-trigger.open{color:var(--accent)}
+  .nav-trigger .caret{font-size:9px;transition:transform .15s;opacity:.7}
+  .nav-trigger.open .caret{transform:rotate(180deg)}
+  .dropdown-panel{position:absolute;top:calc(100% + 8px);left:50%;transform:translateX(-50%);background:#fff;border:1px solid var(--border);border-radius:12px;box-shadow:0 12px 32px rgba(15,14,12,.1);padding:8px;min-width:230px;display:none;z-index:200}
+  .dropdown-panel.open{display:block}
+  .dropdown-panel a{display:flex;align-items:center;gap:10px;padding:9px 12px;border-radius:8px;font-size:13.5px;color:var(--ink);text-decoration:none;white-space:nowrap;font-family:var(--font-body)}
+  .dropdown-panel a:hover{background:var(--paper);color:var(--accent)}
+  .dropdown-panel a .emoji{font-size:15px;width:18px;text-align:center}
+  .mobile-toggle{display:none;background:none;border:none;cursor:pointer;font-size:22px;color:var(--ink);padding:4px 6px;line-height:1}
+  @media(max-width:880px){.nav-links{display:none}.mobile-toggle{display:block}}
+  .mobile-panel{display:none;position:fixed;inset:0;background:var(--paper);z-index:300;padding:20px 6%;overflow-y:auto}
+  .mobile-panel.open{display:block}
+  .mobile-panel-header{display:flex;justify-content:space-between;align-items:center;margin-bottom:28px}
+  .mobile-close{background:none;border:none;font-size:26px;color:var(--ink);cursor:pointer;line-height:1}
+  .mobile-group{margin-bottom:28px}
+  .mobile-group h4{font-family:var(--font-head);font-size:11px;text-transform:uppercase;letter-spacing:.1em;color:var(--accent);margin-bottom:10px}
+  .mobile-group a{display:flex;align-items:center;gap:12px;padding:13px 2px;border-bottom:1px solid var(--border);font-size:16px;color:var(--ink);text-decoration:none;font-family:var(--font-body)}
+  .mobile-group a .emoji{width:22px;text-align:center}
+</style>
+</head>
+<body>
+
+<nav>
+  <a class="logo" href="index.html">Mail<span>Fix</span></a>
+  <div class="nav-links" id="navLinks">
+    <div class="nav-item">
+      <button class="nav-trigger" onclick="toggleDropdown('calcDropdown', this)">🧮 Calculators <span class="caret">▾</span></button>
+      <div class="dropdown-panel" id="calcDropdown">
+        <a href="ctc-calculator.html"><span class="emoji">💰</span> CTC to In-Hand Salary</a>
+        <a href="hra-calculator.html"><span class="emoji">🏠</span> HRA Exemption</a>
+        <a href="itr-calculator.html"><span class="emoji">📊</span> ITR / Income Tax</a>
+        <a href="leave-encashment.html"><span class="emoji">🏖️</span> Leave Encashment</a>
+        <a href="retirement-calculator.html"><span class="emoji">🎯</span> Retirement Package</a>
+        <a href="increment-calculator.html"><span class="emoji">📈</span> Annual Increment</a>
+        <a href="date-calculator.html"><span class="emoji">📅</span> Age &amp; Date Calculator</a>
+        <a href="health-calculator.html"><span class="emoji">❤️</span> Health Calculators</a>
+      </div>
+    </div>
+    <div class="nav-item">
+      <button class="nav-trigger" onclick="toggleDropdown('lettersDropdown', this)">✉️ Letters &amp; Docs <span class="caret">▾</span></button>
+      <div class="dropdown-panel" id="lettersDropdown">
+        <a href="index.html"><span class="emoji">💬</span> Hinglish Email Fixer</a>
+        <a href="job-application.html"><span class="emoji">🎓</span> Job Application Email</a>
+        <a href="sarkari-letter.html"><span class="emoji">🏛️</span> Sarkari Letter</a>
+        <a href="resignation.html"><span class="emoji">🚪</span> Resignation Kit</a>
+        <a href="rent-receipt.html"><span class="emoji">🧾</span> Rent Receipt</a>
+        <a href="gst-invoice.html"><span class="emoji">📄</span> GST Invoice</a>
+        <a href="paraphrase.html"><span class="emoji">✍️</span> Paraphrasing Tool</a>
+      </div>
+    </div>
+    <div class="nav-item">
+      <button class="nav-trigger" onclick="toggleDropdown('utilsDropdown', this)">🛠️ Utilities <span class="caret">▾</span></button>
+      <div class="dropdown-panel" id="utilsDropdown">
+        <a href="whatsapp-dhanda.html"><span class="emoji">📱</span> WhatsApp Dhanda</a>
+        <a href="photo-resizer.html"><span class="emoji">🖼️</span> Photo Resizer</a>
+        <a href="city-compare.html"><span class="emoji">🏙️</span> City Salary Compare</a>
+        <a href="vehicle-scrappage.html"><span class="emoji">🚗</span> Vehicle Scrappage</a>
+        <a href="qr-generator.html"><span class="emoji">🔲</span> QR Generator</a>
+        <a href="json-tools.html"><span class="emoji">{ }</span> JSON Tools</a>
+      </div>
+    </div>
+  </div>
+  <div class="nav-right">
+    <span class="nav-badge">Free</span>
+    <button class="mobile-toggle" onclick="toggleMobilePanel(true)" aria-label="Open menu">☰</button>
+  </div>
+</nav>
+
+<div class="mobile-panel" id="mobilePanel">
+  <div class="mobile-panel-header">
+    <a class="logo" href="index.html">Mail<span>Fix</span></a>
+    <button class="mobile-close" onclick="toggleMobilePanel(false)" aria-label="Close menu">×</button>
+  </div>
+  <div class="mobile-group">
+    <h4>Calculators</h4>
+    <a href="ctc-calculator.html"><span class="emoji">💰</span> CTC to In-Hand Salary</a>
+    <a href="hra-calculator.html"><span class="emoji">🏠</span> HRA Exemption</a>
+    <a href="itr-calculator.html"><span class="emoji">📊</span> ITR / Income Tax</a>
+    <a href="leave-encashment.html"><span class="emoji">🏖️</span> Leave Encashment</a>
+    <a href="retirement-calculator.html"><span class="emoji">🎯</span> Retirement Package</a>
+    <a href="increment-calculator.html"><span class="emoji">📈</span> Annual Increment</a>
+    <a href="date-calculator.html"><span class="emoji">📅</span> Age &amp; Date Calculator</a>
+    <a href="health-calculator.html"><span class="emoji">❤️</span> Health Calculators</a>
+  </div>
+  <div class="mobile-group">
+    <h4>Letters &amp; Docs</h4>
+    <a href="index.html"><span class="emoji">💬</span> Hinglish Email Fixer</a>
+    <a href="job-application.html"><span class="emoji">🎓</span> Job Application Email</a>
+    <a href="sarkari-letter.html"><span class="emoji">🏛️</span> Sarkari Letter</a>
+    <a href="resignation.html"><span class="emoji">🚪</span> Resignation Kit</a>
+    <a href="rent-receipt.html"><span class="emoji">🧾</span> Rent Receipt</a>
+    <a href="gst-invoice.html"><span class="emoji">📄</span> GST Invoice</a>
+    <a href="paraphrase.html"><span class="emoji">✍️</span> Paraphrasing Tool</a>
+  </div>
+  <div class="mobile-group">
+    <h4>Utilities</h4>
+    <a href="whatsapp-dhanda.html"><span class="emoji">📱</span> WhatsApp Dhanda</a>
+    <a href="photo-resizer.html"><span class="emoji">🖼️</span> Photo Resizer</a>
+    <a href="city-compare.html"><span class="emoji">🏙️</span> City Salary Compare</a>
+    <a href="vehicle-scrappage.html"><span class="emoji">🚗</span> Vehicle Scrappage</a>
+    <a href="qr-generator.html"><span class="emoji">🔲</span> QR Generator</a>
+    <a href="json-tools.html"><span class="emoji">{ }</span> JSON Tools</a>
+  </div>
+</div>
+
+<div class="mobile-panel" id="mobilePanel">
+  <div class="mobile-panel-header">
+    <a class="logo" href="index.html">Mail<span>Fix</span></a>
+    <button class="mobile-close" onclick="toggleMobilePanel(false)" aria-label="Close menu">×</button>
+  </div>
+  <div class="mobile-group">
+    <h4>Calculators</h4>
+    <a href="ctc-calculator.html"><span class="emoji">💰</span> CTC to In-Hand Salary</a>
+    <a href="hra-calculator.html"><span class="emoji">🏠</span> HRA Exemption</a>
+    <a href="itr-calculator.html"><span class="emoji">📊</span> ITR / Income Tax</a>
+    <a href="leave-encashment.html"><span class="emoji">🏖️</span> Leave Encashment</a>
+    <a href="retirement-calculator.html"><span class="emoji">🎯</span> Retirement Package</a>
+    <a href="increment-calculator.html"><span class="emoji">📈</span> Annual Increment</a>
+    <a href="date-calculator.html"><span class="emoji">📅</span> Age & Date Calculator</a>
+    <a href="health-calculator.html"><span class="emoji">❤️</span> Health Calculators</a>
+  </div>
+  <div class="mobile-group">
+    <h4>Letters & Docs</h4>
+    <a href="index.html"><span class="emoji">💬</span> Hinglish Email Fixer</a>
+    <a href="job-application.html"><span class="emoji">🎓</span> Job Application Email</a>
+    <a href="sarkari-letter.html"><span class="emoji">🏛️</span> Sarkari Letter</a>
+    <a href="resignation.html"><span class="emoji">🚪</span> Resignation Kit</a>
+    <a href="rent-receipt.html"><span class="emoji">🧾</span> Rent Receipt</a>
+    <a href="gst-invoice.html"><span class="emoji">📄</span> GST Invoice</a>
+    <a href="paraphrase.html"><span class="emoji">✍️</span> Paraphrasing Tool</a>
+  </div>
+  <div class="mobile-group">
+    <h4>Utilities</h4>
+    <a href="whatsapp-dhanda.html"><span class="emoji">📱</span> WhatsApp Dhanda</a>
+    <a href="photo-resizer.html"><span class="emoji">🖼️</span> Photo Resizer</a>
+    <a href="city-compare.html"><span class="emoji">🏙️</span> City Compare</a>
+    <a href="vehicle-scrappage.html"><span class="emoji">🚗</span> Vehicle Scrappage</a>
+    <a href="qr-generator.html"><span class="emoji">🔲</span> QR Generator</a>
+    <a href="json-tools.html"><span class="emoji">{ }</span> JSON Tools</a>
+  </div>
+</div>
+
+<section class="hero">
+  <div class="hero-tag"><span class="dot"></span> BMI · BMR · Calories · Body Fat · Macros</div>
+  <h1>Apni health,<br/><em>numbers</em> mein samjho</h1>
+  <p class="hero-sub">7 free health calculators — BMI, BMR, daily calories, ideal weight, body fat, water intake and macros. Instant, no signup, everything stays in your browser.</p>
+</section>
+
+<div class="tool-wrap">
+
+  <div class="tool-tabs" id="toolTabs">
+    <button class="tool-tab active" onclick="showTool('bmi', this)">🧮 BMI</button>
+    <button class="tool-tab" onclick="showTool('bmr', this)">🔥 BMR</button>
+    <button class="tool-tab" onclick="showTool('calories', this)">🍽️ Calories</button>
+    <button class="tool-tab" onclick="showTool('ideal', this)">⚖️ Ideal Weight</button>
+    <button class="tool-tab" onclick="showTool('bodyfat', this)">💪 Body Fat</button>
+    <button class="tool-tab" onclick="showTool('water', this)">💧 Water</button>
+    <button class="tool-tab" onclick="showTool('macro', this)">🥗 Macros</button>
+  </div>
+
+  <!-- ===== BMI ===== -->
+  <div class="calc-panel active" id="panel-bmi">
+    <div class="calc-card">
+      <div class="calc-card-header">
+        <h2>BMI Calculator</h2>
+        <p>Body Mass Index from your height and weight</p>
+      </div>
+      <div class="calc-body">
+        <div class="calc-inputs">
+          <div class="form-grid">
+            <div class="f-group"><label class="f-label">Weight (kg)</label><input type="number" id="bmiWeight" class="f-input" placeholder="e.g. 70" min="1" oninput="calcBMI()"/></div>
+            <div class="f-group"><label class="f-label">Height (cm)</label><input type="number" id="bmiHeight" class="f-input" placeholder="e.g. 175" min="50" oninput="calcBMI()"/></div>
+          </div>
+          <div class="btn-row">
+            <button class="calc-btn" onclick="calcBMI()">Calculate BMI</button>
+            <button class="clear-btn" onclick="clearPanel('bmi')">Clear</button>
+          </div>
+          <div class="error-bar" id="bmiError"></div>
+        </div>
+        <div class="calc-output">
+          <div id="bmiEmpty" class="result-empty"><span class="e-icon">🧮</span>Enter your weight and height</div>
+          <div class="result-section" id="bmiResult">
+            <div class="result-hero-val" id="bmiValue">—</div>
+            <span class="result-label-badge" id="bmiBadge">—</span>
+            <div class="result-grid">
+              <div class="result-item"><span class="r-num" id="bmiCategory">—</span><span class="r-label">Category</span></div>
+              <div class="result-item"><span class="r-num">18.5–24.9</span><span class="r-label">Normal BMI</span></div>
+              <div class="result-item"><span class="r-num" id="bmiStatus">—</span><span class="r-label">Status</span></div>
+            </div>
+            <p class="result-note">BMI is a screening measure and does not directly measure body fat or health.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== BMR ===== -->
+  <div class="calc-panel" id="panel-bmr">
+    <div class="calc-card">
+      <div class="calc-card-header">
+        <h2>BMR Calculator</h2>
+        <p>Mifflin-St Jeor formula — calories your body burns at complete rest</p>
+      </div>
+      <div class="calc-body">
+        <div class="calc-inputs">
+          <div class="form-grid">
+            <div class="f-group"><label class="f-label">Age</label><input type="number" id="bmrAge" class="f-input" placeholder="e.g. 28" min="1" oninput="calcBMR()"/></div>
+            <div class="f-group"><label class="f-label">Sex</label><select id="bmrSex" class="f-select" onchange="calcBMR()"><option value="male">Male</option><option value="female">Female</option></select></div>
+            <div class="f-group"><label class="f-label">Weight (kg)</label><input type="number" id="bmrWeight" class="f-input" placeholder="e.g. 70" min="1" oninput="calcBMR()"/></div>
+            <div class="f-group"><label class="f-label">Height (cm)</label><input type="number" id="bmrHeight" class="f-input" placeholder="e.g. 175" min="50" oninput="calcBMR()"/></div>
+          </div>
+          <div class="btn-row">
+            <button class="calc-btn" onclick="calcBMR()">Calculate BMR</button>
+            <button class="clear-btn" onclick="clearPanel('bmr')">Clear</button>
+          </div>
+          <div class="error-bar" id="bmrError"></div>
+        </div>
+        <div class="calc-output">
+          <div id="bmrEmpty" class="result-empty"><span class="e-icon">🔥</span>Enter your details</div>
+          <div class="result-section" id="bmrResult">
+            <div class="result-hero-val" id="bmrValue">—</div>
+            <p class="result-note">Calories your body uses at complete rest — multiply by your activity level for daily needs.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== CALORIES ===== -->
+  <div class="calc-panel" id="panel-calories">
+    <div class="calc-card">
+      <div class="calc-card-header">
+        <h2>Daily Calorie Calculator</h2>
+        <p>TDEE — total daily energy expenditure based on your activity level</p>
+      </div>
+      <div class="calc-body">
+        <div class="calc-inputs">
+          <div class="form-grid">
+            <div class="f-group"><label class="f-label">Age</label><input type="number" id="calAge" class="f-input" placeholder="e.g. 28" min="1" oninput="calcCalories()"/></div>
+            <div class="f-group"><label class="f-label">Sex</label><select id="calSex" class="f-select" onchange="calcCalories()"><option value="male">Male</option><option value="female">Female</option></select></div>
+            <div class="f-group"><label class="f-label">Weight (kg)</label><input type="number" id="calWeight" class="f-input" placeholder="e.g. 70" min="1" oninput="calcCalories()"/></div>
+            <div class="f-group"><label class="f-label">Height (cm)</label><input type="number" id="calHeight" class="f-input" placeholder="e.g. 175" min="50" oninput="calcCalories()"/></div>
+            <div class="f-group full"><label class="f-label">Activity Level</label>
+              <select id="calActivity" class="f-select" onchange="calcCalories()">
+                <option value="1.2">Sedentary — little or no exercise</option>
+                <option value="1.375">Lightly active — 1–3 days/week</option>
+                <option value="1.55" selected>Moderately active — 3–5 days/week</option>
+                <option value="1.725">Very active — 6–7 days/week</option>
+                <option value="1.9">Extra active — intense exercise/physical job</option>
+              </select>
+            </div>
+          </div>
+          <div class="btn-row">
+            <button class="calc-btn" onclick="calcCalories()">Calculate Calories</button>
+            <button class="clear-btn" onclick="clearPanel('calories')">Clear</button>
+          </div>
+          <div class="error-bar" id="calError"></div>
+        </div>
+        <div class="calc-output">
+          <div id="calEmpty" class="result-empty"><span class="e-icon">🍽️</span>Enter your details</div>
+          <div class="result-section" id="calResult">
+            <div class="result-hero-val" id="calValue">—</div>
+            <div class="result-grid">
+              <div class="result-item"><span class="r-num" id="calLose">—</span><span class="r-label">Weight Loss (–500)</span></div>
+              <div class="result-item"><span class="r-num" id="calMaintain">—</span><span class="r-label">Maintenance</span></div>
+              <div class="result-item"><span class="r-num" id="calGain">—</span><span class="r-label">Weight Gain (+300)</span></div>
+            </div>
+            <p class="result-note">These are general estimates, not personalised medical recommendations.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== IDEAL WEIGHT ===== -->
+  <div class="calc-panel" id="panel-ideal">
+    <div class="calc-card">
+      <div class="calc-card-header">
+        <h2>Ideal Weight Calculator</h2>
+        <p>Devine formula — estimated ideal body weight from height</p>
+      </div>
+      <div class="calc-body">
+        <div class="calc-inputs">
+          <div class="form-grid">
+            <div class="f-group"><label class="f-label">Sex</label><select id="idealSex" class="f-select" onchange="calcIdeal()"><option value="male">Male</option><option value="female">Female</option></select></div>
+            <div class="f-group"><label class="f-label">Height (cm)</label><input type="number" id="idealHeight" class="f-input" placeholder="e.g. 175" min="100" oninput="calcIdeal()"/></div>
+          </div>
+          <div class="btn-row">
+            <button class="calc-btn" onclick="calcIdeal()">Calculate Ideal Weight</button>
+            <button class="clear-btn" onclick="clearPanel('ideal')">Clear</button>
+          </div>
+          <div class="error-bar" id="idealError"></div>
+        </div>
+        <div class="calc-output">
+          <div id="idealEmpty" class="result-empty"><span class="e-icon">⚖️</span>Enter your height</div>
+          <div class="result-section" id="idealResult">
+            <div class="result-hero-val" id="idealValue">—</div>
+            <p class="result-note">Ideal body weight formulas are estimates and should not be treated as a medical target.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== BODY FAT ===== -->
+  <div class="calc-panel" id="panel-bodyfat">
+    <div class="calc-card">
+      <div class="calc-card-header">
+        <h2>Body Fat Calculator</h2>
+        <p>U.S. Navy circumference method — measure waist, neck (and hip for females)</p>
+      </div>
+      <div class="calc-body">
+        <div class="calc-inputs">
+          <div class="form-grid">
+            <div class="f-group"><label class="f-label">Sex</label><select id="bfSex" class="f-select" onchange="toggleHip(); calcBodyFat()"><option value="male">Male</option><option value="female">Female</option></select></div>
+            <div class="f-group"><label class="f-label">Height (cm)</label><input type="number" id="bfHeight" class="f-input" placeholder="e.g. 175" oninput="calcBodyFat()"/></div>
+            <div class="f-group"><label class="f-label">Waist (cm)</label><input type="number" id="bfWaist" class="f-input" placeholder="at navel" oninput="calcBodyFat()"/></div>
+            <div class="f-group"><label class="f-label">Neck (cm)</label><input type="number" id="bfNeck" class="f-input" placeholder="below larynx" oninput="calcBodyFat()"/></div>
+            <div class="f-group" id="hipGroup" style="display:none"><label class="f-label">Hip (cm) — females</label><input type="number" id="bfHip" class="f-input" placeholder="widest point" oninput="calcBodyFat()"/></div>
+          </div>
+          <div class="btn-row">
+            <button class="calc-btn" onclick="calcBodyFat()">Calculate Body Fat</button>
+            <button class="clear-btn" onclick="clearPanel('bodyfat')">Clear</button>
+          </div>
+          <div class="error-bar" id="bfError"></div>
+        </div>
+        <div class="calc-output">
+          <div id="bfEmpty" class="result-empty"><span class="e-icon">💪</span>Enter your measurements</div>
+          <div class="result-section" id="bfResult">
+            <div class="result-hero-val" id="bfValue">—</div>
+            <p class="result-note">This is an estimate. Professional methods like DEXA or hydrostatic weighing are more accurate.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== WATER ===== -->
+  <div class="calc-panel" id="panel-water">
+    <div class="calc-card">
+      <div class="calc-card-header">
+        <h2>Water Intake Calculator</h2>
+        <p>General estimate — approximately 35 ml per kg body weight</p>
+      </div>
+      <div class="calc-body">
+        <div class="calc-inputs">
+          <div class="form-grid">
+            <div class="f-group"><label class="f-label">Weight (kg)</label><input type="number" id="waterWeight" class="f-input" placeholder="e.g. 70" min="1" oninput="calcWater()"/></div>
+          </div>
+          <div class="btn-row">
+            <button class="calc-btn" onclick="calcWater()">Calculate Water Intake</button>
+            <button class="clear-btn" onclick="clearPanel('water')">Clear</button>
+          </div>
+          <div class="error-bar" id="waterError"></div>
+        </div>
+        <div class="calc-output">
+          <div id="waterEmpty" class="result-empty"><span class="e-icon">💧</span>Enter your weight</div>
+          <div class="result-section" id="waterResult">
+            <div class="result-hero-val" id="waterValue">—</div>
+            <div class="result-grid">
+              <div class="result-item"><span class="r-num" id="waterLitres">—</span><span class="r-label">Litres/day</span></div>
+              <div class="result-item"><span class="r-num" id="waterMl">—</span><span class="r-label">ml/day</span></div>
+              <div class="result-item"><span class="r-num" id="waterGlasses">—</span><span class="r-label">250ml glasses</span></div>
+            </div>
+            <p class="result-note">Individual needs vary with activity, climate, diet and health. This is a general guideline.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== MACROS ===== -->
+  <div class="calc-panel" id="panel-macro">
+    <div class="calc-card">
+      <div class="calc-card-header">
+        <h2>Macro Calculator</h2>
+        <p>Convert daily calories into protein, carbs and fat targets — must total 100%</p>
+      </div>
+      <div class="calc-body">
+        <div class="calc-inputs">
+          <div class="form-grid">
+            <div class="f-group full"><label class="f-label">Daily Calories</label><input type="number" id="macroCalories" class="f-input" placeholder="e.g. 2000" min="500" oninput="calcMacros()"/></div>
+            <div class="f-group"><label class="f-label">Protein (%)</label><input type="number" id="proteinPct" class="f-input" value="30" min="0" max="100" oninput="calcMacros()"/></div>
+            <div class="f-group"><label class="f-label">Carbohydrates (%)</label><input type="number" id="carbPct" class="f-input" value="40" min="0" max="100" oninput="calcMacros()"/></div>
+            <div class="f-group"><label class="f-label">Fat (%)</label><input type="number" id="fatPct" class="f-input" value="30" min="0" max="100" oninput="calcMacros()"/></div>
+          </div>
+          <div class="btn-row">
+            <button class="calc-btn" onclick="calcMacros()">Calculate Macros</button>
+            <button class="clear-btn" onclick="clearPanel('macro')">Clear</button>
+          </div>
+          <div class="error-bar" id="macroError"></div>
+        </div>
+        <div class="calc-output">
+          <div id="macroEmpty" class="result-empty"><span class="e-icon">🥗</span>Enter your calorie target</div>
+          <div class="result-section" id="macroResult">
+            <div class="result-grid">
+              <div class="result-item"><span class="r-num" id="proteinResult">—</span><span class="r-label">Protein (g)</span></div>
+              <div class="result-item"><span class="r-num" id="carbResult">—</span><span class="r-label">Carbs (g)</span></div>
+              <div class="result-item"><span class="r-num" id="fatResult">—</span><span class="r-label">Fat (g)</span></div>
+            </div>
+            <p class="result-note">Protein & carbs = 4 kcal/g. Fat = 9 kcal/g.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="disclaimer">
+    <strong>Health Disclaimer:</strong> These calculators provide general estimates for informational purposes only. They are not a substitute for professional medical advice, diagnosis or treatment. Consult a qualified healthcare professional before making health or dietary changes.
+  </div>
+
+</div>
+
+<div class="ad-banner">
+  <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-3532554351654388" data-ad-slot="3962323207" data-ad-format="auto" data-full-width-responsive="true"></ins>
+  <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+</div>
+
+<section class="explainer">
+  <h2>All 7 health calculators explained</h2>
+  <div class="explainer-grid">
+    <div class="explainer-card"><span class="tag">BMI</span><h4>Body Mass Index</h4><p>Weight ÷ height² — a screening measure for weight categories. Doesn't directly measure body fat.</p></div>
+    <div class="explainer-card"><span class="tag">BMR</span><h4>Basal Metabolic Rate</h4><p>Calories your body burns at complete rest using the Mifflin-St Jeor formula. Starting point for calorie planning.</p></div>
+    <div class="explainer-card"><span class="tag">TDEE</span><h4>Daily Calories</h4><p>BMR × activity multiplier — your total daily energy expenditure. Shows loss, maintenance and gain targets.</p></div>
+    <div class="explainer-card"><span class="tag">Ideal Weight</span><h4>Devine Formula</h4><p>Estimated ideal body weight from height alone. An estimate — not a medical target.</p></div>
+    <div class="explainer-card"><span class="tag">Body Fat</span><h4>U.S. Navy Method</h4><p>Estimates body fat from neck, waist and hip measurements. More accessible than calipers but less precise than DEXA.</p></div>
+    <div class="explainer-card"><span class="tag">Water</span><h4>Daily Hydration</h4><p>General rule of ~35 ml per kg. Actual needs vary with climate, exercise and diet.</p></div>
+    <div class="explainer-card"><span class="tag">Macros</span><h4>Macronutrient Grams</h4><p>Converts a calorie target and %split into grams of protein (4 kcal/g), carbs (4 kcal/g) and fat (9 kcal/g).</p></div>
+  </div>
+
+  <h2>Frequently asked questions</h2>
+  <details>
+    <summary>What is a healthy BMI range? <span class="plus">+</span></summary>
+    <p>The standard BMI ranges are: below 18.5 is underweight, 18.5–24.9 is normal, 25–29.9 is overweight, and 30 and above is obese. BMI is a screening tool, not a direct measure of health or body fat.</p>
+  </details>
+  <details>
+    <summary>What is the difference between BMR and TDEE? <span class="plus">+</span></summary>
+    <p>BMR (Basal Metabolic Rate) is the calories your body uses at complete rest — just to keep organs functioning. TDEE (Total Daily Energy Expenditure) multiplies BMR by your activity level to give your actual daily calorie needs.</p>
+  </details>
+  <details>
+    <summary>How accurate is the body fat calculator? <span class="plus">+</span></summary>
+    <p>The U.S. Navy circumference method gives a reasonable estimate but can be off by several percentage points compared to professional methods like DEXA scans or hydrostatic weighing. Use it as a directional guide, not a precise measurement.</p>
+  </details>
+  <details>
+    <summary>How much water should I drink per day? <span class="plus">+</span></summary>
+    <p>A common estimate is 35 ml per kg of body weight. A 70 kg person would need about 2.45 litres — roughly 10 glasses of water. This varies with exercise, climate, diet and individual health.</p>
+  </details>
+</section>
+
+<footer>
+  <span>© 2025 MailFix — Free Tools for Indian Professionals</span>
+  <div style="display:flex;gap:16px;flex-wrap:wrap">
+    <a href="index.html">Hinglish Email</a>
+    <a href="job-application.html">Job Email</a>
+    <a href="ctc-calculator.html">Salary Calculator</a>
+    <a href="hra-calculator.html">HRA Calculator</a>
+    <a href="itr-calculator.html">ITR / Tax</a>
+    <a href="leave-encashment.html">Leave Encashment</a>
+    <a href="retirement-calculator.html">Retirement</a>
+    <a href="increment-calculator.html">Increment</a>
+    <a href="date-calculator.html">Age &amp; Date</a>
+    <a href="health-calculator.html">Health Calculators</a>
+    <a href="photo-resizer.html">Photo Resizer</a>
+    <a href="rent-receipt.html">Rent Receipt</a>
+    <a href="gst-invoice.html">GST Invoice</a>
+    <a href="paraphrase.html">Paraphrasing Tool</a>
+    <a href="vehicle-scrappage.html">Vehicle Scrappage</a>
+    <a href="qr-generator.html">QR Generator</a>
+    <a href="json-tools.html">JSON Tools</a>
+    <a href="whatsapp-dhanda.html">WhatsApp Dhanda</a>
+    <a href="sarkari-letter.html">Sarkari Letter</a>
+    <a href="resignation.html">Resignation Kit</a>
+    <a href="city-compare.html">City Compare</a>
+    <a href="privacy.html">Privacy Policy</a>
+  </div>
+</footer>
+
+<script>
+  function fmtN(n) { return Number(n).toLocaleString('en-IN', { maximumFractionDigits: 1 }); }
+  function v(id) { return parseFloat(document.getElementById(id).value); }
+  function showErr(id, msg) { const el = document.getElementById(id); el.textContent = msg; el.classList.add('show'); }
+  function hideErr(id) { document.getElementById(id).classList.remove('show'); }
+  function showRes(tool) { document.getElementById(tool + 'Empty').style.display = 'none'; document.getElementById(tool + 'Result').classList.add('show'); }
+  function hideRes(tool) { document.getElementById(tool + 'Empty').style.display = 'flex'; document.getElementById(tool + 'Result').classList.remove('show'); }
+
+  function showTool(id, btn) {
+    document.querySelectorAll('.calc-panel').forEach(p => p.classList.remove('active'));
+    document.querySelectorAll('.tool-tab').forEach(t => t.classList.remove('active'));
+    document.getElementById('panel-' + id).classList.add('active');
+    btn.classList.add('active');
+  }
+
+  function clearPanel(tool) {
+    document.querySelectorAll('#panel-' + tool + ' input').forEach(i => { if (i.dataset.default) i.value = i.dataset.default; else if (['proteinPct','carbPct','fatPct'].includes(i.id)) {} else i.value = ''; });
+    hideErr(tool + 'Error'); hideRes(tool);
+  }
+
+  // BMI
+  function calcBMI() {
+    hideErr('bmiError');
+    const w = v('bmiWeight'), h = v('bmiHeight');
+    if (!w || !h || w <= 0 || h <= 0) { hideRes('bmi'); return; }
+    const bmi = w / ((h/100) ** 2);
+    let cat, status, badgeClass;
+    if (bmi < 18.5)      { cat = 'Underweight'; status = 'Low';    badgeClass = 'badge-underweight'; }
+    else if (bmi < 25)   { cat = 'Normal';      status = 'Normal'; badgeClass = 'badge-normal'; }
+    else if (bmi < 30)   { cat = 'Overweight';  status = 'High';   badgeClass = 'badge-overweight'; }
+    else                 { cat = 'Obese';        status = 'High';   badgeClass = 'badge-obese'; }
+    document.getElementById('bmiValue').textContent = fmtN(bmi);
+    document.getElementById('bmiCategory').textContent = cat;
+    document.getElementById('bmiStatus').textContent = status;
+    const badge = document.getElementById('bmiBadge');
+    badge.textContent = cat; badge.className = 'result-label-badge ' + badgeClass;
+    showRes('bmi');
+  }
+
+  // BMR (Mifflin-St Jeor)
+  function calcBMR() {
+    hideErr('bmrError');
+    const age = v('bmrAge'), w = v('bmrWeight'), h = v('bmrHeight');
+    const sex = document.getElementById('bmrSex').value;
+    if (!age || !w || !h || age <= 0 || w <= 0 || h <= 0) { hideRes('bmr'); return; }
+    let bmr = 10 * w + 6.25 * h - 5 * age + (sex === 'male' ? 5 : -161);
+    document.getElementById('bmrValue').textContent = fmtN(bmr) + ' cal/day';
+    showRes('bmr');
+  }
+
+  // Calories / TDEE
+  function calcCalories() {
+    hideErr('calError');
+    const age = v('calAge'), w = v('calWeight'), h = v('calHeight');
+    const sex = document.getElementById('calSex').value;
+    const act = parseFloat(document.getElementById('calActivity').value);
+    if (!age || !w || !h || age <= 0 || w <= 0 || h <= 0) { hideRes('calories'); return; }
+    let bmr = 10 * w + 6.25 * h - 5 * age + (sex === 'male' ? 5 : -161);
+    const maint = bmr * act;
+    document.getElementById('calValue').textContent = fmtN(maint) + ' cal/day';
+    document.getElementById('calLose').textContent = fmtN(maint - 500);
+    document.getElementById('calMaintain').textContent = fmtN(maint);
+    document.getElementById('calGain').textContent = fmtN(maint + 300);
+    showRes('calories');
+  }
+
+  // Ideal Weight (Devine)
+  function calcIdeal() {
+    hideErr('idealError');
+    const h = v('idealHeight');
+    const sex = document.getElementById('idealSex').value;
+    if (!h || h <= 0) { hideRes('ideal'); return; }
+    const inches = h / 2.54;
+    if (inches < 60) { showErr('idealError', 'This formula applies to adults around 152 cm (5 ft) or taller.'); hideRes('ideal'); return; }
+    const extra = inches - 60;
+    const ideal = (sex === 'male' ? 50 : 45.5) + 2.3 * extra;
+    document.getElementById('idealValue').textContent = fmtN(ideal) + ' kg';
+    showRes('ideal');
+  }
+
+  // Body Fat (US Navy)
+  function toggleHip() {
+    const isFemale = document.getElementById('bfSex').value === 'female';
+    document.getElementById('hipGroup').style.display = isFemale ? 'flex' : 'none';
+  }
+  function calcBodyFat() {
+    hideErr('bfError');
+    const h = v('bfHeight'), waist = v('bfWaist'), neck = v('bfNeck'), hip = v('bfHip');
+    const sex = document.getElementById('bfSex').value;
+    if (!h || !waist || !neck) { hideRes('bodyfat'); return; }
+    let bf;
+    if (sex === 'male') {
+      if (waist <= neck) { showErr('bfError', 'Waist must be greater than neck measurement.'); hideRes('bodyfat'); return; }
+      bf = 495 / (1.0324 - 0.19077 * Math.log10(waist - neck) + 0.15456 * Math.log10(h)) - 450;
+    } else {
+      if (!hip) { showErr('bfError', 'Please enter hip measurement for females.'); hideRes('bodyfat'); return; }
+      if (waist + hip <= neck) { showErr('bfError', 'Please check your measurements.'); hideRes('bodyfat'); return; }
+      bf = 495 / (1.29579 - 0.35004 * Math.log10(waist + hip - neck) + 0.22100 * Math.log10(h)) - 450;
+    }
+    if (!isFinite(bf) || bf < 0) { showErr('bfError', 'Cannot calculate — please check your measurements.'); hideRes('bodyfat'); return; }
+    document.getElementById('bfValue').textContent = fmtN(bf) + '%';
+    showRes('bodyfat');
+  }
+
+  // Water
+  function calcWater() {
+    hideErr('waterError');
+    const w = v('waterWeight');
+    if (!w || w <= 0) { hideRes('water'); return; }
+    const ml = w * 35;
+    const litres = ml / 1000;
+    const glasses = ml / 250;
+    document.getElementById('waterValue').textContent = fmtN(litres) + ' litres/day';
+    document.getElementById('waterLitres').textContent = fmtN(litres);
+    document.getElementById('waterMl').textContent = fmtN(ml);
+    document.getElementById('waterGlasses').textContent = fmtN(glasses);
+    showRes('water');
+  }
+
+  // Macros
+  function calcMacros() {
+    hideErr('macroError');
+    const cal = v('macroCalories'), pro = v('proteinPct'), carb = v('carbPct'), fat = v('fatPct');
+    if (!cal || cal <= 0) { hideRes('macro'); return; }
+    if (Math.abs((pro + carb + fat) - 100) > 0.01) { showErr('macroError', 'Protein + Carbs + Fat must total 100%.'); hideRes('macro'); return; }
+    document.getElementById('proteinResult').textContent = fmtN((cal * pro / 100) / 4);
+    document.getElementById('carbResult').textContent    = fmtN((cal * carb / 100) / 4);
+    document.getElementById('fatResult').textContent     = fmtN((cal * fat / 100) / 9);
+    showRes('macro');
+  }
+
+  // NAV
+  function toggleDropdown(id, triggerEl) {
+    const panel = document.getElementById(id);
+    const isOpen = panel.classList.contains('open');
+    document.querySelectorAll('.dropdown-panel').forEach(p => p.classList.remove('open'));
+    document.querySelectorAll('.nav-trigger').forEach(t => t.classList.remove('open'));
+    if (!isOpen) { panel.classList.add('open'); triggerEl.classList.add('open'); }
+  }
+  document.addEventListener('click', e => {
+    if (!e.target.closest('.nav-item')) {
+      document.querySelectorAll('.dropdown-panel').forEach(p => p.classList.remove('open'));
+      document.querySelectorAll('.nav-trigger').forEach(t => t.classList.remove('open'));
+    }
+  });
+  document.addEventListener('keydown', e => {
+    if (e.key === 'Escape') {
+      document.querySelectorAll('.dropdown-panel').forEach(p => p.classList.remove('open'));
+      document.querySelectorAll('.nav-trigger').forEach(t => t.classList.remove('open'));
+      toggleMobilePanel(false);
+    }
+  });
+  function toggleMobilePanel(open) {
+    document.getElementById('mobilePanel').classList.toggle('open', open);
+    document.body.style.overflow = open ? 'hidden' : '';
+  }
+
+  // === Nav dropdowns + mobile menu (site-wide) ===
+  function toggleDropdown(id, triggerEl) {
+    const panel = document.getElementById(id);
+    const isOpen = panel.classList.contains('open');
+    document.querySelectorAll('.dropdown-panel').forEach(p => p.classList.remove('open'));
+    document.querySelectorAll('.nav-trigger').forEach(t => t.classList.remove('open'));
+    if (!isOpen) { panel.classList.add('open'); triggerEl.classList.add('open'); }
+  }
+  document.addEventListener('click', function(e) {
+    if (!e.target.closest('.nav-item')) {
+      document.querySelectorAll('.dropdown-panel').forEach(p => p.classList.remove('open'));
+      document.querySelectorAll('.nav-trigger').forEach(t => t.classList.remove('open'));
+    }
+  });
+  document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape') {
+      document.querySelectorAll('.dropdown-panel').forEach(p => p.classList.remove('open'));
+      document.querySelectorAll('.nav-trigger').forEach(t => t.classList.remove('open'));
+      toggleMobilePanel(false);
+    }
+  });
+  function toggleMobilePanel(open) {
+    document.getElementById('mobilePanel').classList.toggle('open', open);
+    document.body.style.overflow = open ? 'hidden' : '';
+  }
+</script>
+</body>
+</html>

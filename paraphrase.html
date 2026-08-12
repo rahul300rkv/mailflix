@@ -1,0 +1,618 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Free Paraphrasing Tool — Hindi, Hinglish & English Rewriter | MailFix</title>
+<meta name="description" content="Free AI paraphrasing tool — rewrite text in Standard, Fluency, Formal, Simple or Creative style. Supports English, Hindi, Hinglish and 6 more Indian languages. No signup."/>
+<meta name="keywords" content="paraphrasing tool free india, rewrite text online, hindi paraphrasing tool, hinglish rewriter, ai paraphrase free, text rewriter online"/>
+<meta name="robots" content="index, follow"/>
+<link rel="canonical" href="https://mailflix.netlify.app/paraphrase.html"/>
+<meta property="og:title" content="Free Paraphrasing Tool — Hindi, Hinglish & English Rewriter | MailFix"/>
+<meta property="og:description" content="Free AI paraphrasing tool — rewrite text in Standard, Fluency, Formal, Simple or Creative style. Supports English, Hindi, Hinglish and 6 more Indian languages. No signup."/>
+<meta property="og:url" content="https://mailflix.netlify.app/paraphrase.html"/>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "Free Paraphrasing Tool",
+  "url": "https://mailflix.netlify.app/paraphrase.html",
+  "description": "Free AI-powered paraphrasing tool that rewrites text in Standard, Fluency, Formal, Simple and Creative styles across English, Hindi, Hinglish and major Indian languages.",
+  "applicationCategory": "UtilitiesApplication",
+  "offers": { "@type": "Offer", "price": "0", "priceCurrency": "INR" }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    { "@type": "Question", "name": "Is this paraphrasing tool free?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. The tool is completely free to use with no signup required, subject to a fair-use limit of 20 paraphrases per hour per IP address." } },
+    { "@type": "Question", "name": "Can I paraphrase Hindi text?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. Select Hindi as the output language and the tool will rewrite your text in Hindi, preserving the original meaning." } },
+    { "@type": "Question", "name": "Can I paraphrase Hinglish?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. Select Hinglish when you want natural Hindi-English mixed-language output — the kind of language used in everyday Indian conversations." } },
+    { "@type": "Question", "name": "Does the tool change the meaning?", "acceptedAnswer": { "@type": "Answer", "text": "The tool is designed to preserve the original meaning, but always review AI-generated text before using it, as errors can occasionally appear." } }
+  ]
+}
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet"/>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3532554351654388" crossorigin="anonymous"></script>
+<style>
+  :root {
+    --ink: #0f0e0c;
+    --paper: #f5f2ec;
+    --card: #ffffff;
+    --accent: #d44f1e;
+    --accent2: #2563eb;
+    --green: #16a34a;
+    --green-bg: #f0fdf4;
+    --red-bg: #fef2f2;
+    --red-text: #b91c1c;
+    --muted: #7a7570;
+    --border: #e2ddd5;
+    --radius: 12px;
+    --font-head: 'Syne', sans-serif;
+    --font-body: 'DM Sans', sans-serif;
+  }
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  body { background: var(--paper); color: var(--ink); font-family: var(--font-body); font-size: 16px; line-height: 1.6; min-height: 100vh; }
+
+  /* NAV */
+  nav { display: flex; justify-content: space-between; align-items: center; padding: 18px 5%; border-bottom: 1px solid var(--border); background: var(--paper); position: sticky; top: 0; z-index: 100; }
+  .logo { font-family: var(--font-head); font-size: 22px; font-weight: 800; letter-spacing: -0.5px; color: var(--ink); text-decoration: none; }
+  .logo span { color: var(--accent); }
+  .nav-badge { background: var(--accent); color: #fff; font-size: 12px; font-weight: 500; padding: 4px 12px; border-radius: 99px; font-family: var(--font-body); margin-left: 6px; }
+  .nav-right { display: flex; align-items: center; gap: 6px; }
+  .nav-links { display: flex; gap: 6px; align-items: center; }
+  .nav-item { position: relative; }
+  .nav-trigger { font-size: 13px; color: var(--muted); background: none; border: none; cursor: pointer; font-family: var(--font-body); display: flex; align-items: center; gap: 5px; padding: 8px 10px; border-radius: 8px; transition: color .15s; }
+  .nav-trigger:hover, .nav-trigger.open { color: var(--accent); }
+  .nav-trigger .caret { font-size: 9px; transition: transform .15s; opacity: .7; }
+  .nav-trigger.open .caret { transform: rotate(180deg); }
+  .dropdown-panel { position: absolute; top: calc(100% + 8px); left: 50%; transform: translateX(-50%); background: #fff; border: 1px solid var(--border); border-radius: 12px; box-shadow: 0 12px 32px rgba(15,14,12,.1); padding: 8px; min-width: 230px; display: none; z-index: 200; }
+  .dropdown-panel.open { display: block; }
+  .dropdown-panel a { display: flex; align-items: center; gap: 10px; padding: 9px 12px; border-radius: 8px; font-size: 13.5px; color: var(--ink); text-decoration: none; white-space: nowrap; font-family: var(--font-body); }
+  .dropdown-panel a:hover { background: var(--paper); color: var(--accent); }
+  .dropdown-panel a .emoji { font-size: 15px; width: 18px; text-align: center; }
+  .mobile-toggle { display: none; background: none; border: none; cursor: pointer; font-size: 22px; color: var(--ink); padding: 4px 6px; line-height: 1; }
+  @media(max-width:880px) { .nav-links { display: none; } .mobile-toggle { display: block; } }
+  .mobile-panel { display: none; position: fixed; inset: 0; background: var(--paper); z-index: 300; padding: 20px 6%; overflow-y: auto; }
+  .mobile-panel.open { display: block; }
+  .mobile-panel-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 28px; }
+  .mobile-close { background: none; border: none; font-size: 26px; color: var(--ink); cursor: pointer; line-height: 1; }
+  .mobile-group { margin-bottom: 28px; }
+  .mobile-group h4 { font-family: var(--font-head); font-size: 11px; text-transform: uppercase; letter-spacing: .1em; color: var(--accent); margin-bottom: 10px; }
+  .mobile-group a { display: flex; align-items: center; gap: 12px; padding: 13px 2px; border-bottom: 1px solid var(--border); font-size: 16px; color: var(--ink); text-decoration: none; font-family: var(--font-body); }
+  .mobile-group a .emoji { width: 22px; text-align: center; }
+
+  /* HERO */
+  .hero { max-width: 760px; margin: 0 auto; padding: 52px 5% 28px; text-align: center; }
+  .hero-tag { display: inline-flex; align-items: center; gap: 6px; background: #fff; border: 1px solid var(--border); border-radius: 99px; padding: 6px 16px; font-size: 13px; color: var(--muted); margin-bottom: 16px; }
+  .hero-tag .dot { width: 7px; height: 7px; background: #22c55e; border-radius: 50%; animation: pulse 2s infinite; }
+  @keyframes pulse { 0%,100%{opacity:1;transform:scale(1)} 50%{opacity:.6;transform:scale(1.3)} }
+  h1 { font-family: var(--font-head); font-size: clamp(30px, 5vw, 48px); font-weight: 800; line-height: 1.1; letter-spacing: -1.5px; margin-bottom: 14px; }
+  h1 em { color: var(--accent); font-style: normal; }
+  .hero-sub { font-size: 16px; color: var(--muted); font-weight: 300; max-width: 520px; margin: 0 auto; }
+
+  /* TOOL */
+  .tool-wrap { max-width: 1100px; margin: 28px auto; padding: 0 5%; }
+  .card { background: var(--card); border: 1px solid var(--border); border-radius: 18px; overflow: hidden; box-shadow: 0 2px 20px rgba(0,0,0,0.05); padding: 24px; }
+
+  /* MODE PILLS */
+  .mode-row { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 18px; }
+  .mode-pill { padding: 8px 18px; border: 1px solid var(--border); border-radius: 8px; background: var(--card); font-size: 13.5px; color: var(--muted); cursor: pointer; transition: all .15s; font-family: var(--font-body); }
+  .mode-pill:hover { border-color: var(--accent); color: var(--accent); }
+  .mode-pill.active { background: var(--ink); border-color: var(--ink); color: #fff; font-weight: 600; }
+
+  /* LANGUAGE ROW */
+  .lang-row { display: flex; align-items: center; gap: 16px; margin-bottom: 20px; flex-wrap: wrap; }
+  .lang-label { font-size: 13px; font-weight: 600; color: var(--muted); white-space: nowrap; font-family: var(--font-head); text-transform: uppercase; letter-spacing: .05em; }
+  .lang-select { padding: 9px 14px; border: 1px solid var(--border); border-radius: 8px; font-size: 14px; font-family: var(--font-body); color: var(--ink); background: var(--paper); outline: none; min-width: 200px; }
+  .lang-select:focus { border-color: var(--accent); }
+
+  /* EDITOR GRID */
+  .editor-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; }
+  @media(max-width:700px) { .editor-grid { grid-template-columns: 1fr; } }
+
+  .panel { border: 1px solid var(--border); border-radius: 14px; overflow: hidden; background: var(--card); display: flex; flex-direction: column; }
+  .panel-header { display: flex; justify-content: space-between; align-items: center; padding: 12px 16px; background: #fafaf8; border-bottom: 1px solid var(--border); }
+  .panel-title { font-family: var(--font-head); font-size: 13px; font-weight: 700; color: var(--ink); }
+  .panel-btn { padding: 5px 12px; border: 1px solid var(--border); border-radius: 6px; background: var(--card); font-size: 12px; cursor: pointer; color: var(--muted); font-family: var(--font-body); transition: all .15s; }
+  .panel-btn:hover { border-color: var(--accent); color: var(--accent); }
+  .panel-btn.success { background: var(--green-bg); color: #166534; border-color: #bbf7d0; }
+
+  textarea.editor { flex: 1; border: none; outline: none; resize: none; padding: 18px; font-family: var(--font-body); font-size: 15px; line-height: 1.75; color: var(--ink); background: transparent; min-height: 300px; }
+
+  .output-body { flex: 1; padding: 18px; font-size: 15px; line-height: 1.75; color: var(--ink); min-height: 300px; white-space: pre-wrap; overflow-wrap: anywhere; }
+  .output-placeholder { color: #c8c3ba; font-style: italic; }
+  .output-loading { color: var(--muted); font-style: italic; display: flex; align-items: center; gap: 8px; }
+  .dots-anim::after { content: ''; animation: dots 1.5s steps(3, end) infinite; }
+  @keyframes dots { 0%{content:''} 33%{content:'.'} 66%{content:'..'} 100%{content:'...'} }
+
+  /* BOTTOM BAR */
+  .bottom-bar { display: flex; justify-content: space-between; align-items: center; gap: 12px; margin-top: 18px; flex-wrap: wrap; }
+  .stats { font-size: 13px; color: var(--muted); }
+  .stats .warn { color: var(--accent); font-weight: 600; }
+  .paraphrase-btn { padding: 13px 32px; background: var(--accent); color: #fff; border: none; border-radius: 10px; font-family: var(--font-head); font-size: 16px; font-weight: 700; cursor: pointer; transition: all .15s; white-space: nowrap; }
+  .paraphrase-btn:hover { background: #b83e12; transform: translateY(-1px); }
+  .paraphrase-btn:disabled { background: #ccc; cursor: not-allowed; transform: none; }
+
+  /* MESSAGE */
+  .message-bar { margin-top: 14px; padding: 11px 16px; border-radius: 8px; font-size: 13.5px; display: none; }
+  .message-bar.success { display: block; background: var(--green-bg); color: #166534; border: 1px solid #bbf7d0; }
+  .message-bar.error   { display: block; background: var(--red-bg); color: var(--red-text); border: 1px solid #fca5a5; }
+
+  /* REMAINING BADGE */
+  .remaining { font-size: 12px; color: var(--muted); margin-top: 8px; text-align: right; }
+
+  /* AD */
+  .ad-banner { max-width: 1100px; margin: 0 auto 32px; padding: 0 5%; }
+
+  /* EXPLAINER */
+  .explainer { max-width: 1000px; margin: 0 auto; padding: 44px 5%; }
+  .explainer h2 { font-family: var(--font-head); font-size: clamp(24px, 3vw, 34px); font-weight: 800; letter-spacing: -0.5px; margin-bottom: 28px; }
+  .explainer h3 { font-family: var(--font-head); font-size: 18px; font-weight: 700; margin: 28px 0 8px; }
+  .explainer p { font-size: 14.5px; color: var(--muted); line-height: 1.75; margin-bottom: 12px; }
+  .explainer-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(210px, 1fr)); gap: 14px; margin-bottom: 32px; }
+  .explainer-card { background: var(--card); border: 1px solid var(--border); border-radius: var(--radius); padding: 18px; }
+  .explainer-card h4 { font-family: var(--font-head); font-size: 14px; font-weight: 700; margin-bottom: 6px; }
+  .explainer-card p { font-size: 13px; color: var(--muted); line-height: 1.6; margin: 0; }
+  .explainer-card .tag { display: inline-block; font-size: 11px; padding: 2px 8px; border-radius: 4px; font-weight: 500; margin-bottom: 8px; background: var(--green-bg); color: #15803d; }
+
+  /* FAQ */
+  details { background: var(--card); border: 1px solid var(--border); border-radius: var(--radius); padding: 18px 20px; margin-bottom: 10px; }
+  summary { font-family: var(--font-head); font-size: 15px; font-weight: 700; cursor: pointer; list-style: none; display: flex; justify-content: space-between; align-items: center; }
+  summary .plus { color: var(--accent); font-size: 20px; }
+  details p { margin-top: 12px; font-size: 14px; color: var(--muted); line-height: 1.7; }
+
+  footer { border-top: 1px solid var(--border); padding: 28px 5%; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px; font-size: 13px; color: var(--muted); }
+  footer a { color: var(--muted); text-decoration: none; }
+  footer a:hover { color: var(--accent); }
+
+  /* === Grouped nav dropdowns + mobile menu (site-wide) === */
+  .nav-links{display:flex;gap:6px;align-items:center}
+  .nav-badge{background:var(--accent);color:#fff;font-size:12px;font-weight:500;padding:4px 12px;border-radius:99px;font-family:var(--font-body);margin-left:6px}
+  .nav-right{display:flex;align-items:center;gap:6px}
+  .nav-item{position:relative}
+  .nav-trigger{font-size:13px;color:var(--muted);background:none;border:none;cursor:pointer;font-family:var(--font-body);display:flex;align-items:center;gap:5px;padding:8px 10px;border-radius:8px;transition:color .15s}
+  .nav-trigger:hover,.nav-trigger.open{color:var(--accent)}
+  .nav-trigger .caret{font-size:9px;transition:transform .15s;opacity:.7}
+  .nav-trigger.open .caret{transform:rotate(180deg)}
+  .dropdown-panel{position:absolute;top:calc(100% + 8px);left:50%;transform:translateX(-50%);background:#fff;border:1px solid var(--border);border-radius:12px;box-shadow:0 12px 32px rgba(15,14,12,.1);padding:8px;min-width:230px;display:none;z-index:200}
+  .dropdown-panel.open{display:block}
+  .dropdown-panel a{display:flex;align-items:center;gap:10px;padding:9px 12px;border-radius:8px;font-size:13.5px;color:var(--ink);text-decoration:none;white-space:nowrap;font-family:var(--font-body)}
+  .dropdown-panel a:hover{background:var(--paper);color:var(--accent)}
+  .dropdown-panel a .emoji{font-size:15px;width:18px;text-align:center}
+  .mobile-toggle{display:none;background:none;border:none;cursor:pointer;font-size:22px;color:var(--ink);padding:4px 6px;line-height:1}
+  @media(max-width:880px){.nav-links{display:none}.mobile-toggle{display:block}}
+  .mobile-panel{display:none;position:fixed;inset:0;background:var(--paper);z-index:300;padding:20px 6%;overflow-y:auto}
+  .mobile-panel.open{display:block}
+  .mobile-panel-header{display:flex;justify-content:space-between;align-items:center;margin-bottom:28px}
+  .mobile-close{background:none;border:none;font-size:26px;color:var(--ink);cursor:pointer;line-height:1}
+  .mobile-group{margin-bottom:28px}
+  .mobile-group h4{font-family:var(--font-head);font-size:11px;text-transform:uppercase;letter-spacing:.1em;color:var(--accent);margin-bottom:10px}
+  .mobile-group a{display:flex;align-items:center;gap:12px;padding:13px 2px;border-bottom:1px solid var(--border);font-size:16px;color:var(--ink);text-decoration:none;font-family:var(--font-body)}
+  .mobile-group a .emoji{width:22px;text-align:center}
+</style>
+</head>
+<body>
+
+<nav>
+  <a class="logo" href="index.html">Mail<span>Fix</span></a>
+  <div class="nav-links" id="navLinks">
+    <div class="nav-item">
+      <button class="nav-trigger" onclick="toggleDropdown('calcDropdown', this)">🧮 Calculators <span class="caret">▾</span></button>
+      <div class="dropdown-panel" id="calcDropdown">
+        <a href="ctc-calculator.html"><span class="emoji">💰</span> CTC to In-Hand Salary</a>
+        <a href="hra-calculator.html"><span class="emoji">🏠</span> HRA Exemption</a>
+        <a href="itr-calculator.html"><span class="emoji">📊</span> ITR / Income Tax</a>
+        <a href="leave-encashment.html"><span class="emoji">🏖️</span> Leave Encashment</a>
+        <a href="retirement-calculator.html"><span class="emoji">🎯</span> Retirement Package</a>
+        <a href="increment-calculator.html"><span class="emoji">📈</span> Annual Increment</a>
+        <a href="date-calculator.html"><span class="emoji">📅</span> Age &amp; Date Calculator</a>
+        <a href="health-calculator.html"><span class="emoji">❤️</span> Health Calculators</a>
+      </div>
+    </div>
+    <div class="nav-item">
+      <button class="nav-trigger" onclick="toggleDropdown('lettersDropdown', this)">✉️ Letters &amp; Docs <span class="caret">▾</span></button>
+      <div class="dropdown-panel" id="lettersDropdown">
+        <a href="index.html"><span class="emoji">💬</span> Hinglish Email Fixer</a>
+        <a href="job-application.html"><span class="emoji">🎓</span> Job Application Email</a>
+        <a href="sarkari-letter.html"><span class="emoji">🏛️</span> Sarkari Letter</a>
+        <a href="resignation.html"><span class="emoji">🚪</span> Resignation Kit</a>
+        <a href="rent-receipt.html"><span class="emoji">🧾</span> Rent Receipt</a>
+        <a href="gst-invoice.html"><span class="emoji">📄</span> GST Invoice</a>
+        <a href="paraphrase.html"><span class="emoji">✍️</span> Paraphrasing Tool</a>
+      </div>
+    </div>
+    <div class="nav-item">
+      <button class="nav-trigger" onclick="toggleDropdown('utilsDropdown', this)">🛠️ Utilities <span class="caret">▾</span></button>
+      <div class="dropdown-panel" id="utilsDropdown">
+        <a href="whatsapp-dhanda.html"><span class="emoji">📱</span> WhatsApp Dhanda</a>
+        <a href="photo-resizer.html"><span class="emoji">🖼️</span> Photo Resizer</a>
+        <a href="city-compare.html"><span class="emoji">🏙️</span> City Salary Compare</a>
+        <a href="vehicle-scrappage.html"><span class="emoji">🚗</span> Vehicle Scrappage</a>
+        <a href="qr-generator.html"><span class="emoji">🔲</span> QR Generator</a>
+        <a href="json-tools.html"><span class="emoji">{ }</span> JSON Tools</a>
+      </div>
+    </div>
+  </div>
+  <div class="nav-right">
+    <span class="nav-badge">Free</span>
+    <button class="mobile-toggle" onclick="toggleMobilePanel(true)" aria-label="Open menu">☰</button>
+  </div>
+</nav>
+
+<div class="mobile-panel" id="mobilePanel">
+  <div class="mobile-panel-header">
+    <a class="logo" href="index.html">Mail<span>Fix</span></a>
+    <button class="mobile-close" onclick="toggleMobilePanel(false)" aria-label="Close menu">×</button>
+  </div>
+  <div class="mobile-group">
+    <h4>Calculators</h4>
+    <a href="ctc-calculator.html"><span class="emoji">💰</span> CTC to In-Hand Salary</a>
+    <a href="hra-calculator.html"><span class="emoji">🏠</span> HRA Exemption</a>
+    <a href="itr-calculator.html"><span class="emoji">📊</span> ITR / Income Tax</a>
+    <a href="leave-encashment.html"><span class="emoji">🏖️</span> Leave Encashment</a>
+    <a href="retirement-calculator.html"><span class="emoji">🎯</span> Retirement Package</a>
+    <a href="increment-calculator.html"><span class="emoji">📈</span> Annual Increment</a>
+    <a href="date-calculator.html"><span class="emoji">📅</span> Age &amp; Date Calculator</a>
+    <a href="health-calculator.html"><span class="emoji">❤️</span> Health Calculators</a>
+  </div>
+  <div class="mobile-group">
+    <h4>Letters &amp; Docs</h4>
+    <a href="index.html"><span class="emoji">💬</span> Hinglish Email Fixer</a>
+    <a href="job-application.html"><span class="emoji">🎓</span> Job Application Email</a>
+    <a href="sarkari-letter.html"><span class="emoji">🏛️</span> Sarkari Letter</a>
+    <a href="resignation.html"><span class="emoji">🚪</span> Resignation Kit</a>
+    <a href="rent-receipt.html"><span class="emoji">🧾</span> Rent Receipt</a>
+    <a href="gst-invoice.html"><span class="emoji">📄</span> GST Invoice</a>
+    <a href="paraphrase.html"><span class="emoji">✍️</span> Paraphrasing Tool</a>
+  </div>
+  <div class="mobile-group">
+    <h4>Utilities</h4>
+    <a href="whatsapp-dhanda.html"><span class="emoji">📱</span> WhatsApp Dhanda</a>
+    <a href="photo-resizer.html"><span class="emoji">🖼️</span> Photo Resizer</a>
+    <a href="city-compare.html"><span class="emoji">🏙️</span> City Salary Compare</a>
+    <a href="vehicle-scrappage.html"><span class="emoji">🚗</span> Vehicle Scrappage</a>
+    <a href="qr-generator.html"><span class="emoji">🔲</span> QR Generator</a>
+    <a href="json-tools.html"><span class="emoji">{ }</span> JSON Tools</a>
+  </div>
+</div>
+
+<div class="mobile-panel" id="mobilePanel">
+  <div class="mobile-panel-header">
+    <a class="logo" href="index.html">Mail<span>Fix</span></a>
+    <button class="mobile-close" onclick="toggleMobilePanel(false)" aria-label="Close menu">×</button>
+  </div>
+  <div class="mobile-group">
+    <h4>Calculators</h4>
+    <a href="ctc-calculator.html"><span class="emoji">💰</span> CTC to In-Hand Salary</a>
+    <a href="hra-calculator.html"><span class="emoji">🏠</span> HRA Exemption</a>
+    <a href="itr-calculator.html"><span class="emoji">📊</span> ITR / Income Tax</a>
+    <a href="leave-encashment.html"><span class="emoji">🏖️</span> Leave Encashment</a>
+    <a href="retirement-calculator.html"><span class="emoji">🎯</span> Retirement Package</a>
+    <a href="increment-calculator.html"><span class="emoji">📈</span> Annual Increment</a>
+  </div>
+  <div class="mobile-group">
+    <h4>Letters & Docs</h4>
+    <a href="index.html"><span class="emoji">💬</span> Hinglish Email Fixer</a>
+    <a href="job-application.html"><span class="emoji">🎓</span> Job Application Email</a>
+    <a href="sarkari-letter.html"><span class="emoji">🏛️</span> Sarkari Letter</a>
+    <a href="resignation.html"><span class="emoji">🚪</span> Resignation Kit</a>
+    <a href="rent-receipt.html"><span class="emoji">🧾</span> Rent Receipt</a>
+    <a href="gst-invoice.html"><span class="emoji">📄</span> GST Invoice</a>
+    <a href="paraphrase.html"><span class="emoji">✍️</span> Paraphrasing Tool</a>
+  </div>
+  <div class="mobile-group">
+    <h4>Utilities</h4>
+    <a href="whatsapp-dhanda.html"><span class="emoji">📱</span> WhatsApp Dhanda</a>
+    <a href="photo-resizer.html"><span class="emoji">🖼️</span> Photo Resizer</a>
+    <a href="city-compare.html"><span class="emoji">🏙️</span> City Compare</a>
+    <a href="vehicle-scrappage.html"><span class="emoji">🚗</span> Vehicle Scrappage</a>
+    <a href="qr-generator.html"><span class="emoji">🔲</span> QR Generator</a>
+    <a href="json-tools.html"><span class="emoji">{ }</span> JSON Tools</a>
+  </div>
+</div>
+
+<section class="hero">
+  <div class="hero-tag"><span class="dot"></span> Groq AI · 5 modes · 9 Indian languages</div>
+  <h1>Text ko <em>instantly</em><br/>rewrite karo</h1>
+  <p class="hero-sub">Paste any text — choose a style and output language — get a clean rewrite in seconds. Supports English, Hindi, Hinglish and 6 more Indian languages.</p>
+</section>
+
+<div class="tool-wrap">
+  <div class="card">
+
+    <!-- MODE PILLS -->
+    <div class="mode-row" id="modeRow">
+      <button class="mode-pill active" data-mode="standard" onclick="setMode(this)">Standard</button>
+      <button class="mode-pill" data-mode="fluency"  onclick="setMode(this)">✨ Fluency</button>
+      <button class="mode-pill" data-mode="formal"   onclick="setMode(this)">🎩 Formal</button>
+      <button class="mode-pill" data-mode="simple"   onclick="setMode(this)">🔤 Simple</button>
+      <button class="mode-pill" data-mode="creative" onclick="setMode(this)">🎨 Creative</button>
+    </div>
+
+    <!-- LANGUAGE -->
+    <div class="lang-row">
+      <span class="lang-label">Output language</span>
+      <select id="language" class="lang-select">
+        <option value="English">🇬🇧 English</option>
+        <option value="Hindi">🇮🇳 Hindi</option>
+        <option value="Hinglish">🇮🇳 Hinglish</option>
+        <option value="Bengali">Bengali</option>
+        <option value="Tamil">Tamil</option>
+        <option value="Telugu">Telugu</option>
+        <option value="Marathi">Marathi</option>
+        <option value="Gujarati">Gujarati</option>
+        <option value="Punjabi">Punjabi</option>
+      </select>
+    </div>
+
+    <!-- EDITOR GRID -->
+    <div class="editor-grid">
+      <div class="panel">
+        <div class="panel-header">
+          <span class="panel-title">Original Text</span>
+          <button class="panel-btn" onclick="clearInput()">Clear</button>
+        </div>
+        <textarea class="editor" id="inputText" maxlength="2000" placeholder="Enter or paste your text here…" oninput="updateCounters()"></textarea>
+      </div>
+      <div class="panel">
+        <div class="panel-header">
+          <span class="panel-title">Paraphrased Text</span>
+          <button class="panel-btn" id="copyBtn" onclick="copyOutput()">📋 Copy</button>
+        </div>
+        <div class="output-body" id="outputText">
+          <span class="output-placeholder">Your paraphrased text will appear here…</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- BOTTOM BAR -->
+    <div class="bottom-bar">
+      <div class="stats">
+        <span id="wordCount">0 words</span>
+        &nbsp;·&nbsp;
+        <span id="charCount">0 / 2,000</span>
+      </div>
+      <button class="paraphrase-btn" id="paraphraseBtn" onclick="paraphrase()">✨ Paraphrase Text</button>
+    </div>
+
+    <div class="message-bar" id="messageBar"></div>
+    <div class="remaining" id="remainingInfo"></div>
+  </div>
+</div>
+
+<div class="ad-banner">
+  <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-3532554351654388" data-ad-slot="3962323207" data-ad-format="auto" data-full-width-responsive="true"></ins>
+  <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+</div>
+
+<section class="explainer">
+  <h2>5 styles, 9 Indian languages</h2>
+  <div class="explainer-grid">
+    <div class="explainer-card">
+      <span class="tag">Standard</span>
+      <h4>Natural rewrite</h4>
+      <p>Rewrites your text naturally while keeping every detail of the original meaning intact.</p>
+    </div>
+    <div class="explainer-card">
+      <span class="tag">Fluency</span>
+      <h4>Better grammar & flow</h4>
+      <p>Fixes grammar, improves sentence flow, and makes the text read more naturally without changing what it says.</p>
+    </div>
+    <div class="explainer-card">
+      <span class="tag">Formal</span>
+      <h4>Professional tone</h4>
+      <p>Rewrites in a polished, professional style — good for emails, applications and official communication.</p>
+    </div>
+    <div class="explainer-card">
+      <span class="tag">Simple</span>
+      <h4>Easy to understand</h4>
+      <p>Converts complex text into simple, clear language — useful for explaining technical content to a general audience.</p>
+    </div>
+    <div class="explainer-card">
+      <span class="tag">Creative</span>
+      <h4>Expressive & engaging</h4>
+      <p>Rewrites with varied sentence structure and expressive language — good for social posts, blogs and storytelling.</p>
+    </div>
+  </div>
+
+  <h2 style="margin-top:0">How it works</h2>
+  <p>Type or paste your text into the left box — up to 2,000 characters. Choose a rewriting mode and your preferred output language, then click Paraphrase. The AI rewrites the text while preserving the original meaning, and the result appears on the right. Copy it, tweak it, and use it wherever you need it.</p>
+
+  <h3>When is paraphrasing useful?</h3>
+  <p>Emails, cover letters, WhatsApp messages, blog drafts, educational notes, professional summaries — any writing task where you want to express something differently, more clearly, or in a different language. The Formal and Fluency modes are especially useful before sending anything official.</p>
+
+  <h3>Paraphrasing vs summarizing</h3>
+  <p>Paraphrasing rewrites the original content using different words while keeping all the important details. Summarizing shortens the content and focuses only on the main points. This tool paraphrases — it does not shrink your content.</p>
+
+  <h2>Frequently asked questions</h2>
+
+  <details>
+    <summary>Is this paraphrasing tool free? <span class="plus">+</span></summary>
+    <p>Yes, completely free with no signup required. A fair-use limit of 20 paraphrases per hour per connection applies to keep the service available for everyone.</p>
+  </details>
+  <details>
+    <summary>Can I paraphrase Hindi text? <span class="plus">+</span></summary>
+    <p>Yes. Select Hindi as the output language and the tool will rewrite your text in Hindi, preserving the original meaning.</p>
+  </details>
+  <details>
+    <summary>Can I paraphrase Hinglish? <span class="plus">+</span></summary>
+    <p>Yes. Select Hinglish when you want natural Hindi-English mixed-language output — the kind of language used in everyday Indian conversations and messages.</p>
+  </details>
+  <details>
+    <summary>Does the tool change the meaning? <span class="plus">+</span></summary>
+    <p>It is designed to preserve the original meaning, but AI-generated text can occasionally introduce errors. Always review the result before using it in anything important.</p>
+  </details>
+  <details>
+    <summary>Is paraphrasing the same as copying? <span class="plus">+</span></summary>
+    <p>No. Paraphrasing changes the wording and structure while retaining the underlying idea. When using someone else's ideas or information, follow the appropriate citation and attribution requirements for your context.</p>
+  </details>
+</section>
+
+<footer>
+  <span>© 2025 MailFix — Free Tools for Indian Professionals</span>
+  <div style="display:flex;gap:16px;flex-wrap:wrap">
+    <a href="index.html">Hinglish Email</a>
+    <a href="job-application.html">Job Email</a>
+    <a href="ctc-calculator.html">Salary Calculator</a>
+    <a href="hra-calculator.html">HRA Calculator</a>
+    <a href="itr-calculator.html">ITR / Tax</a>
+    <a href="leave-encashment.html">Leave Encashment</a>
+    <a href="retirement-calculator.html">Retirement</a>
+    <a href="increment-calculator.html">Increment</a>
+    <a href="date-calculator.html">Age &amp; Date</a>
+    <a href="health-calculator.html">Health Calculators</a>
+    <a href="photo-resizer.html">Photo Resizer</a>
+    <a href="rent-receipt.html">Rent Receipt</a>
+    <a href="gst-invoice.html">GST Invoice</a>
+    <a href="paraphrase.html">Paraphrasing Tool</a>
+    <a href="vehicle-scrappage.html">Vehicle Scrappage</a>
+    <a href="qr-generator.html">QR Generator</a>
+    <a href="json-tools.html">JSON Tools</a>
+    <a href="whatsapp-dhanda.html">WhatsApp Dhanda</a>
+    <a href="sarkari-letter.html">Sarkari Letter</a>
+    <a href="resignation.html">Resignation Kit</a>
+    <a href="city-compare.html">City Compare</a>
+    <a href="privacy.html">Privacy Policy</a>
+  </div>
+</footer>
+
+<script>
+  let selectedMode = 'standard';
+
+  function setMode(el) {
+    document.querySelectorAll('.mode-pill').forEach(p => p.classList.remove('active'));
+    el.classList.add('active');
+    selectedMode = el.dataset.mode;
+  }
+
+  function updateCounters() {
+    const val = document.getElementById('inputText').value;
+    const words = val.trim() ? val.trim().split(/\s+/).length : 0;
+    document.getElementById('wordCount').textContent = words + ' words';
+    const charEl = document.getElementById('charCount');
+    charEl.textContent = val.length.toLocaleString('en-IN') + ' / 2,000';
+    charEl.className = val.length > 1800 ? 'warn' : '';
+  }
+
+  function clearInput() {
+    document.getElementById('inputText').value = '';
+    document.getElementById('outputText').innerHTML = '<span class="output-placeholder">Your paraphrased text will appear here…</span>';
+    updateCounters();
+    hideMessage();
+    document.getElementById('remainingInfo').textContent = '';
+  }
+
+  async function paraphrase() {
+    const text = document.getElementById('inputText').value.trim();
+    if (!text) { showMessage('Please enter some text first.', 'error'); return; }
+    if (text.length > 2000) { showMessage('Please keep your text under 2,000 characters.', 'error'); return; }
+
+    const btn = document.getElementById('paraphraseBtn');
+    const output = document.getElementById('outputText');
+    btn.disabled = true;
+    btn.textContent = '⏳ Rewriting…';
+    output.innerHTML = '<span class="output-loading">Rewriting your text<span class="dots-anim"></span></span>';
+    hideMessage();
+
+    try {
+      const res = await fetch('/.netlify/functions/paraphrase', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ text, mode: selectedMode, language: document.getElementById('language').value })
+      });
+      const data = await res.json();
+      if (!res.ok) throw new Error(data.error || 'Unable to paraphrase text.');
+      output.textContent = data.paraphrased;
+      showMessage('Text paraphrased successfully.', 'success');
+      if (data.remainingRequests !== undefined) {
+        document.getElementById('remainingInfo').textContent = data.remainingRequests + ' free uses remaining this hour';
+      }
+    } catch (err) {
+      output.innerHTML = '<span class="output-placeholder">Your paraphrased text will appear here…</span>';
+      showMessage(err.message || 'Something went wrong. Please try again.', 'error');
+    } finally {
+      btn.disabled = false;
+      btn.textContent = '✨ Paraphrase Text';
+    }
+  }
+
+  function copyOutput() {
+    const text = document.getElementById('outputText').textContent.trim();
+    if (!text || text.includes('will appear here')) { showMessage('Nothing to copy yet.', 'error'); return; }
+    navigator.clipboard.writeText(text).then(() => {
+      const btn = document.getElementById('copyBtn');
+      btn.textContent = '✓ Copied!';
+      btn.classList.add('success');
+      setTimeout(() => { btn.textContent = '📋 Copy'; btn.classList.remove('success'); }, 2000);
+    });
+  }
+
+  function showMessage(text, type) {
+    const el = document.getElementById('messageBar');
+    el.textContent = text;
+    el.className = 'message-bar ' + type;
+  }
+  function hideMessage() {
+    const el = document.getElementById('messageBar');
+    el.className = 'message-bar';
+    el.textContent = '';
+  }
+
+  // Nav
+  function toggleDropdown(id, triggerEl) {
+    const panel = document.getElementById(id);
+    const isOpen = panel.classList.contains('open');
+    document.querySelectorAll('.dropdown-panel').forEach(p => p.classList.remove('open'));
+    document.querySelectorAll('.nav-trigger').forEach(t => t.classList.remove('open'));
+    if (!isOpen) { panel.classList.add('open'); triggerEl.classList.add('open'); }
+  }
+  document.addEventListener('click', e => {
+    if (!e.target.closest('.nav-item')) {
+      document.querySelectorAll('.dropdown-panel').forEach(p => p.classList.remove('open'));
+      document.querySelectorAll('.nav-trigger').forEach(t => t.classList.remove('open'));
+    }
+  });
+  document.addEventListener('keydown', e => {
+    if (e.key === 'Escape') {
+      document.querySelectorAll('.dropdown-panel').forEach(p => p.classList.remove('open'));
+      document.querySelectorAll('.nav-trigger').forEach(t => t.classList.remove('open'));
+      toggleMobilePanel(false);
+    }
+  });
+  function toggleMobilePanel(open) {
+    document.getElementById('mobilePanel').classList.toggle('open', open);
+    document.body.style.overflow = open ? 'hidden' : '';
+  }
+
+  // === Nav dropdowns + mobile menu (site-wide) ===
+  function toggleDropdown(id, triggerEl) {
+    const panel = document.getElementById(id);
+    const isOpen = panel.classList.contains('open');
+    document.querySelectorAll('.dropdown-panel').forEach(p => p.classList.remove('open'));
+    document.querySelectorAll('.nav-trigger').forEach(t => t.classList.remove('open'));
+    if (!isOpen) { panel.classList.add('open'); triggerEl.classList.add('open'); }
+  }
+  document.addEventListener('click', function(e) {
+    if (!e.target.closest('.nav-item')) {
+      document.querySelectorAll('.dropdown-panel').forEach(p => p.classList.remove('open'));
+      document.querySelectorAll('.nav-trigger').forEach(t => t.classList.remove('open'));
+    }
+  });
+  document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape') {
+      document.querySelectorAll('.dropdown-panel').forEach(p => p.classList.remove('open'));
+      document.querySelectorAll('.nav-trigger').forEach(t => t.classList.remove('open'));
+      toggleMobilePanel(false);
+    }
+  });
+  function toggleMobilePanel(open) {
+    document.getElementById('mobilePanel').classList.toggle('open', open);
+    document.body.style.overflow = open ? 'hidden' : '';
+  }
+</script>
+</body>
+</html>
