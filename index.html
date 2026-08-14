@@ -158,11 +158,16 @@
   .nav-item:hover .nav-trigger svg { transform: rotate(180deg); }
 
   .dropdown-panel {
-    display: none; position: absolute; top: calc(100% + 8px); left: 0;
-    min-width: 200px;
+    display: none; position: absolute; top: 100%; left: 0;
+    min-width: 210px;
     background: var(--white); border: 2px solid var(--black);
     border-radius: 14px; box-shadow: var(--shadow);
-    padding: 6px; z-index: 200;
+    padding: 10px 6px 6px; z-index: 200;
+  }
+  /* Invisible bridge between trigger and panel */
+  .nav-item::after {
+    content: ''; position: absolute; top: 100%; left: 0;
+    width: 100%; height: 12px; display: block;
   }
   .nav-item:hover .dropdown-panel,
   .dropdown-panel.open { display: flex; flex-direction: column; }
@@ -614,10 +619,13 @@
           <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/></svg>
         </button>
         <div class="dropdown-panel">
-          <a href="ctc-calculator.html">CTC to In-Hand Calc</a>
+          <a href="ctc-calculator.html">CTC to In-Hand</a>
           <a href="city-compare.html">City Salary Compare</a>
-          <a href="itr-calculator.html">ITR Calculator</a>
           <a href="hra-calculator.html">HRA Exemption</a>
+          <a href="itr-calculator.html">ITR / Tax</a>
+          <a href="increment-calculator.html">Govt Increment</a>
+          <a href="leave-encashment.html">Leave Encashment</a>
+          <a href="retirement-calculator.html">Retirement</a>
         </div>
       </div>
       <!-- Documents -->
@@ -627,10 +635,12 @@
           <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/></svg>
         </button>
         <div class="dropdown-panel">
+          <a href="index.html">Email Fixer</a>
           <a href="job-application.html">Job Application</a>
           <a href="sarkari-letter.html">Sarkari Letter</a>
           <a href="resignation.html">Resignation Kit</a>
           <a href="rent-receipt.html">Rent Receipt</a>
+          <a href="gst-invoice.html">GST Invoice</a>
         </div>
       </div>
       <!-- Utilities -->
@@ -642,8 +652,12 @@
         <div class="dropdown-panel">
           <a href="whatsapp-dhanda.html">WhatsApp Dhanda</a>
           <a href="paraphrase.html">Paraphrase Tool</a>
+          <a href="photo-resizer.html">Photo Resizer</a>
           <a href="qr-generator.html">QR Generator</a>
           <a href="json-tools.html">JSON Tools</a>
+          <a href="date-calculator.html">Date & Age Calc</a>
+          <a href="health-calculator.html">Health Calculators</a>
+          <a href="vehicle-scrappage.html">Vehicle Scrappage</a>
         </div>
       </div>
     </div>
@@ -667,13 +681,30 @@
   </div>
   <div class="mobile-panel-body">
     <a href="#main-tool" class="mobile-cta" id="mobileCtaBtn">Fix Email Free →</a>
-    <p class="mobile-section-label">Tools</p>
+    <p class="mobile-section-label">AI Tools</p>
     <a href="#main-tool" class="mobile-link">📧 Email Fixer</a>
-    <a href="ctc-calculator.html" class="mobile-link">💰 CTC to In-Hand</a>
-    <a href="city-compare.html" class="mobile-link">🏙️ City Salary Compare</a>
-    <a href="whatsapp-dhanda.html" class="mobile-link">📱 WhatsApp Dhanda</a>
+    <a href="job-application.html" class="mobile-link">🎓 Job Application</a>
     <a href="sarkari-letter.html" class="mobile-link">🏛️ Sarkari Letter</a>
     <a href="resignation.html" class="mobile-link">🚪 Resignation Kit</a>
+    <a href="whatsapp-dhanda.html" class="mobile-link">📱 WhatsApp Dhanda</a>
+    <a href="paraphrase.html" class="mobile-link">✍️ Paraphrase Tool</a>
+    <p class="mobile-section-label">Calculators</p>
+    <a href="ctc-calculator.html" class="mobile-link">💰 CTC to In-Hand</a>
+    <a href="city-compare.html" class="mobile-link">🏙️ City Salary Compare</a>
+    <a href="hra-calculator.html" class="mobile-link">🏠 HRA Exemption</a>
+    <a href="itr-calculator.html" class="mobile-link">📊 ITR / Tax</a>
+    <a href="increment-calculator.html" class="mobile-link">📈 Govt Increment</a>
+    <a href="leave-encashment.html" class="mobile-link">🏖️ Leave Encashment</a>
+    <a href="retirement-calculator.html" class="mobile-link">🎯 Retirement</a>
+    <p class="mobile-section-label">Utilities</p>
+    <a href="photo-resizer.html" class="mobile-link">🖼️ Photo Resizer</a>
+    <a href="qr-generator.html" class="mobile-link">📷 QR Generator</a>
+    <a href="json-tools.html" class="mobile-link">🔧 JSON Tools</a>
+    <a href="date-calculator.html" class="mobile-link">📅 Date & Age</a>
+    <a href="health-calculator.html" class="mobile-link">💪 Health Calculators</a>
+    <a href="vehicle-scrappage.html" class="mobile-link">🚗 Vehicle Scrappage</a>
+    <a href="rent-receipt.html" class="mobile-link">📄 Rent Receipt</a>
+    <a href="gst-invoice.html" class="mobile-link">🧾 GST Invoice</a>
     <p class="mobile-section-label">Sections</p>
     <a href="#tools" class="mobile-link">🛠️ All Free Tools</a>
     <a href="#templates" class="mobile-link">📋 Templates</a>
