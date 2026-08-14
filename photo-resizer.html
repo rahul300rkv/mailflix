@@ -1,614 +1,472 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8"/>
-<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title>Govt Portal Photo & Signature Resizer India — Passport, EPFO, PAN | MailFix</title>
-<meta name="description" content="Resize and compress your photo or signature to exact Indian government portal specs — Passport Seva, EPFO, PAN, PSC exams. Instant, free, fully in-browser."/>
-<meta name="keywords" content="passport photo resizer india, signature resizer kb, epfo photo size, psc exam photo upload size, government portal photo compressor, image resize kb"/>
+<meta charset="UTF-8"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Free Photo Resizer Online India — Resize Images Instantly | MailFix</title>
+<meta name="description" content="Resize photos online for passport, WhatsApp DP, LinkedIn, Instagram, email. Custom size, JPEG/PNG/WebP output. Free, no upload to server."/>
 <meta name="robots" content="index, follow"/>
 <link rel="canonical" href="https://mailflix.netlify.app/photo-resizer.html"/>
-<meta property="og:title" content="Govt Portal Photo & Signature Resizer India — Passport, EPFO, PAN | MailFix"/>
-<meta property="og:description" content="Resize and compress your photo or signature to exact Indian government portal specs — Passport Seva, EPFO, PAN, PSC exams. Instant, free, fully in-browser."/>
-<meta property="og:url" content="https://mailflix.netlify.app/photo-resizer.html"/>
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "WebApplication",
-  "name": "Govt Photo & Signature Resizer India",
-  "url": "https://mailflix.netlify.app/photo-resizer.html",
-  "description": "Free tool that resizes and compresses photos and signatures to exact Indian government portal specifications for Passport Seva, EPFO, PAN and PSC exam uploads.",
-  "applicationCategory": "UtilitiesApplication",
-  "offers": { "@type": "Offer", "price": "0", "priceCurrency": "INR" }
-}
-</script>
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  "mainEntity": [
-    { "@type": "Question", "name": "What is the photo size limit for Passport Seva?", "acceptedAnswer": { "@type": "Answer", "text": "Passport Seva requires a photo of 3.5 x 4.5 cm, usually between 20KB and 50KB in JPEG format. This tool resizes and compresses to fit that exact range automatically." } },
-    { "@type": "Question", "name": "What is the signature size limit for govt portals?", "acceptedAnswer": { "@type": "Answer", "text": "Most Indian government portals, including EPFO and PSC exam forms, require a signature image around 3.5 x 1.5 cm and under 10KB to 20KB. This tool compresses your signature to meet that limit." } },
-    { "@type": "Question", "name": "Is it safe to upload my photo or signature here?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. All resizing and compression happens entirely inside your browser using canvas processing. Your image is never uploaded to any server, so your identity documents stay private." } },
-    { "@type": "Question", "name": "Why does my portal reject my photo even after resizing?", "acceptedAnswer": { "@type": "Answer", "text": "Most rejections happen because the file size, not just dimensions, is outside the allowed KB range. This tool automatically reduces JPEG quality step by step until the file fits the target size." } }
-  ]
-}
-</script>
-<link rel="preconnect" href="https://fonts.googleapis.com"/>
-<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet"/>
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3532554351654388" crossorigin="anonymous"></script>
-<style>
-  :root {
-    --ink: #0f0e0c;
-    --paper: #f5f2ec;
-    --card: #ffffff;
-    --accent: #d44f1e;
-    --accent2: #2563eb;
-    --green: #16a34a;
-    --green-bg: #f0fdf4;
-    --muted: #7a7570;
-    --border: #e2ddd5;
-    --radius: 12px;
-    --font-head: 'Syne', sans-serif;
-    --font-body: 'DM Sans', sans-serif;
-  }
-  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-  body { background: var(--paper); color: var(--ink); font-family: var(--font-body); font-size: 16px; line-height: 1.6; min-height: 100vh; }
+<link rel="preconnect" href="https://fonts.googleapis.com"/><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/><link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet"/>
 
-  nav { display: flex; justify-content: space-between; align-items: center; padding: 18px 5%; border-bottom: 1px solid var(--border); background: var(--paper); position: sticky; top: 0; z-index: 100; }
-  .logo { font-family: var(--font-head); font-size: 22px; font-weight: 800; letter-spacing: -0.5px; color: var(--ink); text-decoration: none; }
-  .logo span { color: var(--accent); }
-  .nav-links { display: flex; gap: 16px; align-items: center; flex-wrap: wrap; }
-  .nav-links a { font-size: 13px; color: var(--muted); text-decoration: none; }
-  .nav-links a:hover { color: var(--accent); }
-  .nav-badge { background: var(--accent); color: #fff; font-size: 12px; font-weight: 500; padding: 4px 12px; border-radius: 99px; }
+<style>/* ─── SHARED DESIGN SYSTEM ─────────────────────────────── */
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --green:#22c55e;--green-dk:#16a34a;--green-lt:#dcfce7;--green-xs:#f0fdf4;
+  --black:#000;--white:#fff;--ink:#0f172a;--muted:#64748b;
+  --border:#e2e8f0;--paper:#fdfdfc;--card:#fff;
+  --red-lt:#fef2f2;--red:#dc2626;
+  --shadow:4px 4px 0px 0px #000;--shadow-sm:2px 2px 0px 0px #000;--shadow-lg:6px 6px 0px 0px #000;
+  --radius:12px;--font:'Plus Jakarta Sans',sans-serif;
+}
+html{scroll-behavior:smooth}
+body{font-family:var(--font);background:var(--paper);color:var(--ink);font-size:16px;line-height:1.6;min-height:100vh;-webkit-font-smoothing:antialiased}
+::-webkit-scrollbar{width:8px}::-webkit-scrollbar-track{background:transparent}::-webkit-scrollbar-thumb{background:#cbd5e1;border-radius:4px}
 
-  .hero { max-width: 760px; margin: 0 auto; padding: 56px 5% 32px; text-align: center; }
-  .hero-tag { display: inline-flex; align-items: center; gap: 6px; background: #fff; border: 1px solid var(--border); border-radius: 99px; padding: 6px 16px; font-size: 13px; color: var(--muted); margin-bottom: 20px; }
-  .hero-tag .dot { width: 7px; height: 7px; background: #22c55e; border-radius: 50%; animation: pulse 2s infinite; }
-  @keyframes pulse { 0%,100%{opacity:1;transform:scale(1)} 50%{opacity:.6;transform:scale(1.3)} }
-  h1 { font-family: var(--font-head); font-size: clamp(32px, 5vw, 52px); font-weight: 800; line-height: 1.08; letter-spacing: -1.5px; margin-bottom: 14px; }
-  h1 em { color: var(--accent); font-style: normal; }
-  .hero-sub { font-size: 17px; color: var(--muted); font-weight: 300; max-width: 520px; margin: 0 auto; }
+/* NAV */
+nav{position:sticky;top:0;z-index:100;background:rgba(255,255,255,.92);backdrop-filter:blur(10px);border-bottom:2px solid var(--black)}
+.nav-inner{max-width:1100px;margin:0 auto;padding:0 24px;display:flex;align-items:center;justify-content:space-between;height:64px}
+.logo{display:flex;align-items:center;gap:10px;font-size:20px;font-weight:800;letter-spacing:-.5px;color:var(--black);text-decoration:none}
+.logo-icon{width:34px;height:34px;background:var(--green);border:2px solid var(--black);border-radius:8px;display:flex;align-items:center;justify-content:center;transform:rotate(-3deg);box-shadow:var(--shadow-sm)}
+.logo-icon svg{width:18px;height:18px}
+.logo span{color:var(--green-dk)}
+.nav-links{display:flex;align-items:center;gap:4px}
+.nav-item{position:relative}
+.nav-trigger{display:flex;align-items:center;gap:4px;padding:6px 12px;border-radius:8px;font-size:14px;font-weight:700;color:var(--muted);background:none;border:none;cursor:pointer;font-family:var(--font);transition:color .15s,background .15s}
+.nav-trigger:hover{color:var(--black);background:#f8fafc}
+.nav-trigger svg{width:14px;height:14px;transition:transform .2s}
+.nav-item:hover .nav-trigger svg{transform:rotate(180deg)}
+.dropdown-panel{display:none;position:absolute;top:calc(100% + 8px);left:0;min-width:200px;background:var(--white);border:2px solid var(--black);border-radius:14px;box-shadow:var(--shadow);padding:6px;z-index:200}
+.nav-item:hover .dropdown-panel,.dropdown-panel.open{display:flex;flex-direction:column}
+.dropdown-panel a{display:block;padding:9px 14px;border-radius:8px;font-size:13px;font-weight:700;color:var(--muted);text-decoration:none;transition:background .12s,color .12s}
+.dropdown-panel a:hover{background:var(--green-xs);color:var(--black)}
+.nav-cta{padding:9px 20px;background:var(--green);color:white;font-size:13px;font-weight:800;border:2px solid var(--black);border-radius:10px;box-shadow:var(--shadow-sm);cursor:pointer;text-decoration:none;transition:transform .12s,box-shadow .12s}
+.nav-cta:hover{transform:translate(2px,2px);box-shadow:none}
+.mobile-toggle{display:none;background:white;border:2px solid var(--black);border-radius:8px;padding:6px;cursor:pointer;box-shadow:var(--shadow-sm);transition:transform .1s,box-shadow .1s;align-items:center}
+.mobile-toggle:active{transform:translate(2px,2px);box-shadow:none}
+.mobile-toggle svg{width:22px;height:22px;display:block}
+.mobile-panel{display:none;position:fixed;inset:0;z-index:500;background:white;overflow-y:auto;transform:translateX(100%);transition:transform .28s ease;border-left:2px solid var(--black)}
+.mobile-panel.open{transform:translateX(0)}
+.mobile-panel-head{display:flex;align-items:center;justify-content:space-between;padding:16px 20px;border-bottom:2px solid var(--black);background:var(--green-xs)}
+.mobile-panel-body{padding:24px 20px;display:flex;flex-direction:column;gap:10px}
+.mobile-link{display:flex;align-items:center;gap:10px;padding:12px 16px;border-radius:10px;border:2px solid var(--border);font-size:15px;font-weight:700;color:var(--ink);text-decoration:none;transition:border-color .12s,background .12s}
+.mobile-link:hover{border-color:var(--green);background:var(--green-xs)}
+.mobile-cta{display:block;text-align:center;padding:14px;background:var(--green);color:white;font-weight:800;font-size:15px;border:2px solid var(--black);border-radius:12px;box-shadow:var(--shadow);text-decoration:none;transition:transform .12s,box-shadow .12s}
+.mobile-cta:hover{transform:translate(4px,4px);box-shadow:none}
+.mobile-section-label{font-size:10px;font-weight:800;letter-spacing:.12em;text-transform:uppercase;color:#94a3b8;margin-top:6px;padding:0 4px}
+.close-btn{background:white;border:2px solid var(--black);border-radius:8px;padding:6px;cursor:pointer;box-shadow:var(--shadow-sm)}
+.close-btn svg{width:20px;height:20px;display:block}
 
-  .calc-wrap { max-width: 1000px; margin: 32px auto; padding: 0 5%; display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
-  @media(max-width: 700px) { .calc-wrap { grid-template-columns: 1fr; } }
+/* PAGE HERO */
+.page-hero{max-width:900px;margin:0 auto;padding:56px 24px 40px;text-align:center}
+.page-badge{display:inline-flex;align-items:center;gap:8px;padding:5px 18px;border:2px solid var(--black);border-radius:99px;background:white;box-shadow:var(--shadow-sm);font-size:11px;font-weight:800;letter-spacing:.12em;text-transform:uppercase;margin-bottom:20px;color:var(--black)}
+h1{font-size:clamp(28px,5vw,52px);font-weight:800;line-height:1.1;letter-spacing:-1px;color:var(--black);margin-bottom:14px}
+h1 .accent{color:var(--green-dk)}
+.page-sub{font-size:17px;color:var(--muted);font-weight:500;max-width:560px;margin:0 auto;line-height:1.65}
 
-  .card { background: var(--card); border: 1px solid var(--border); border-radius: 18px; overflow: hidden; box-shadow: 0 2px 20px rgba(0,0,0,0.05); }
-  .card-header { padding: 18px 24px; border-bottom: 1px solid var(--border); background: #fafaf8; }
-  .card-header h2 { font-family: var(--font-head); font-size: 16px; font-weight: 700; }
-  .card-header p { font-size: 13px; color: var(--muted); margin-top: 2px; }
-  .card-body { padding: 20px 24px; }
+/* FORM CARD */
+.form-wrap{max-width:900px;margin:0 auto;padding:0 24px 80px}
+.form-card{background:white;border:4px solid var(--black);border-radius:20px;box-shadow:var(--shadow-lg);overflow:hidden}
+.form-card-header{padding:18px 24px;border-bottom:2px solid var(--black);background:var(--green-xs);display:flex;align-items:center;justify-content:space-between}
+.form-card-title{font-size:13px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;color:var(--green-dk)}
+.form-body{padding:28px 24px}
+.form-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+.form-group{display:flex;flex-direction:column;gap:6px}
+.form-group.full{grid-column:1/-1}
+label{font-size:13px;font-weight:700;color:var(--ink)}
+label span{font-weight:500;color:var(--muted);font-size:12px;margin-left:4px}
+input,select,textarea{width:100%;padding:11px 14px;border:2px solid var(--border);border-radius:10px;font-family:var(--font);font-size:15px;font-weight:500;color:var(--ink);background:white;outline:none;transition:border-color .15s,box-shadow .15s}
+input:focus,select:focus,textarea:focus{border-color:var(--black);box-shadow:var(--shadow-sm)}
+textarea{resize:vertical;min-height:100px}
+input[type=date]{cursor:pointer}
+input[type=number]{-moz-appearance:textfield}
+input[type=number]::-webkit-outer-spin-button,input[type=number]::-webkit-inner-spin-button{-webkit-appearance:none}
 
-  .input-group { margin-bottom: 18px; }
-  .input-group label { display: block; font-size: 13px; font-weight: 500; color: var(--muted); margin-bottom: 6px; font-family: var(--font-head); text-transform: uppercase; letter-spacing: 0.06em; }
+/* OUTPUT SECTION */
+.output-section{border-top:4px solid var(--black);background:#f8fafc;padding:24px}
+.output-label{font-size:11px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin-bottom:14px}
+.output-box{background:white;border:2px solid var(--black);border-radius:12px;padding:20px;min-height:140px;box-shadow:var(--shadow-sm);font-size:15px;font-weight:500;line-height:1.8;white-space:pre-wrap;color:var(--ink)}
+.output-placeholder{color:#94a3b8;font-style:italic}
+.loading-dots{display:none;align-items:center;gap:5px;padding:8px 0}
+.loading-dots.show{display:flex}
+.loading-dots span{width:8px;height:8px;background:var(--black);border-radius:50%;animation:bounce 1s infinite}
+.loading-dots span:nth-child(2){animation-delay:.15s;background:var(--green)}
+.loading-dots span:nth-child(3){animation-delay:.3s}
+@keyframes bounce{0%,60%,100%{transform:translateY(0)}30%{transform:translateY(-9px)}}
 
-  .preset-pills { display: flex; flex-direction: column; gap: 8px; }
-  .preset-pill { padding: 12px 14px; border: 1px solid var(--border); border-radius: 8px; cursor: pointer; background: var(--card); transition: all 0.15s; }
-  .preset-pill:hover { border-color: var(--accent2); }
-  .preset-pill.active { background: #eff6ff; border-color: var(--accent2); }
-  .preset-pill .p-name { font-size: 14px; font-weight: 600; color: var(--ink); }
-  .preset-pill .p-spec { font-size: 12px; color: var(--muted); margin-top: 2px; }
+/* BUTTONS */
+.btn{display:inline-flex;align-items:center;gap:6px;padding:10px 22px;border-radius:10px;font-family:var(--font);font-size:14px;font-weight:700;cursor:pointer;border:2px solid var(--black);box-shadow:var(--shadow-sm);transition:transform .12s,box-shadow .12s}
+.btn:hover{transform:translate(2px,2px);box-shadow:none}
+.btn:disabled{opacity:.5;cursor:not-allowed;transform:none!important;box-shadow:var(--shadow-sm)!important}
+.btn-primary{background:var(--green);color:white}
+.btn-black{background:var(--black);color:white}
+.btn-white{background:white;color:var(--ink)}
+.btn-lg{padding:13px 32px;font-size:15px;font-weight:800;box-shadow:var(--shadow)}
+.btn-lg:hover{box-shadow:none;transform:translate(4px,4px)}
+.btn-full{width:100%;justify-content:center}
+.btn-group{display:flex;gap:10px;flex-wrap:wrap;margin-top:16px}
 
-  .file-drop { border: 2px dashed var(--border); border-radius: 10px; padding: 20px; text-align: center; background: var(--paper); cursor: pointer; transition: border-color 0.15s; }
-  .file-drop:hover { border-color: var(--accent); }
-  .file-drop input { display: none; }
-  .file-drop-label { font-size: 13px; color: var(--muted); }
-  .file-drop-label strong { color: var(--accent); }
-  .file-name { font-size: 12px; color: var(--ink); margin-top: 8px; font-weight: 500; }
+/* ERROR */
+.error-msg{display:none;width:100%;background:var(--red-lt);border:2px solid var(--black);color:var(--red);font-size:13px;font-weight:700;padding:10px 16px;border-radius:8px;margin-bottom:12px;text-align:center}
+.error-msg.show{display:block}
 
-  .calc-btn { width: 100%; padding: 13px; background: var(--accent); color: #fff; border: none; border-radius: 10px; font-family: var(--font-head); font-size: 16px; font-weight: 700; cursor: pointer; margin-top: 6px; transition: all 0.15s; }
-  .calc-btn:hover { background: #b83e12; transform: translateY(-1px); }
-  .calc-btn:disabled { background: #ccc; cursor: not-allowed; transform: none; }
+/* RESULT CARDS */
+.result-card{background:white;border:2px solid var(--black);border-radius:14px;overflow:hidden;box-shadow:var(--shadow)}
+.result-hero{padding:28px;text-align:center;background:var(--green-xs);border-bottom:2px solid var(--black)}
+.result-hero h2{font-size:clamp(32px,6vw,52px);font-weight:800;color:var(--black)}
+.result-hero p{font-size:14px;color:var(--muted);margin-top:4px;font-weight:600}
+.result-rows{display:flex;flex-direction:column}
+.result-row{display:flex;align-items:center;justify-content:space-between;padding:14px 20px;border-bottom:1px solid var(--border)}
+.result-row:last-child{border-bottom:none}
+.result-row-label{font-size:14px;font-weight:700;color:var(--ink)}
+.result-row-sub{font-size:12px;color:var(--muted);font-weight:500;margin-top:1px}
+.result-row-value{font-size:15px;font-weight:800;color:var(--black)}
+.result-row-value.positive{color:#16a34a}
+.result-row-value.negative{color:var(--red)}
+.section-divider{padding:10px 20px 6px;font-size:10px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);background:#f8fafc;border-bottom:1px solid var(--border)}
 
-  .empty-state { padding: 48px 24px; text-align: center; color: var(--muted); font-size: 14px; }
-  .empty-icon { font-size: 40px; margin-bottom: 12px; display: block; opacity: 0.4; }
+/* SELECTOR CARDS (modes, types) */
+.selector-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(160px,1fr));gap:10px;margin-bottom:24px}
+.selector-card{padding:14px 16px;background:white;border:2px solid var(--border);border-radius:12px;cursor:pointer;transition:all .15s;text-align:left}
+.selector-card:hover{border-color:var(--green);background:var(--green-xs)}
+.selector-card.active{border-color:var(--black);background:white;box-shadow:var(--shadow-sm)}
+.selector-card-icon{font-size:20px;margin-bottom:6px}
+.selector-card-title{font-size:13px;font-weight:800;color:var(--black)}
+.selector-card-sub{font-size:11px;color:var(--muted);font-weight:500;margin-top:2px;line-height:1.4}
 
-  .result-hero { background: linear-gradient(135deg, #0f0e0c 0%, #1a1917 100%); padding: 24px; text-align: center; }
-  .preview-box { max-width: 160px; max-height: 200px; border: 1px solid #2c2a26; border-radius: 6px; padding: 4px; background: #fff; margin: 0 auto 14px; display: block; }
-  .size-badge { display: inline-block; background: rgba(34, 197, 94, 0.12); color: #22c55e; padding: 5px 14px; border-radius: 99px; font-size: 13px; font-weight: 600; font-family: var(--font-head); }
-  .size-target { font-size: 12px; color: #7a7570; margin-top: 8px; }
+/* MODE PILLS */
+.pill-row{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:20px}
+.pill{padding:7px 16px;border-radius:99px;border:2px solid var(--border);background:white;font-family:var(--font);font-size:13px;font-weight:700;color:var(--muted);cursor:pointer;transition:all .15s}
+.pill:hover{border-color:var(--green);color:var(--black)}
+.pill.active{border-color:var(--black);color:var(--black);box-shadow:var(--shadow-sm);background:white}
 
-  .result-body { padding: 20px 24px; text-align: center; }
-  .download-btn { display: inline-block; background: var(--green); color: #fff; text-decoration: none; padding: 11px 28px; font-size: 14px; font-weight: 700; font-family: var(--font-head); border-radius: 8px; transition: background 0.15s; }
-  .download-btn:hover { background: #15803d; }
-  .privacy-note { margin-top: 16px; font-size: 12px; color: var(--muted); font-style: italic; }
+/* TOGGLE */
+.toggle-row{display:flex;align-items:center;justify-content:space-between;padding:12px 0;border-bottom:1px solid var(--border)}
+.toggle-row:last-child{border-bottom:none}
+.toggle-label{font-size:14px;font-weight:700;color:var(--ink)}
+.toggle-sub{font-size:12px;color:var(--muted);font-weight:500}
+.toggle{position:relative;display:inline-block;width:40px;height:22px;flex-shrink:0}
+.toggle input{opacity:0;width:0;height:0}
+.toggle-slider{position:absolute;cursor:pointer;top:0;left:0;right:0;bottom:0;background:#e2e8f0;border:2px solid var(--black);border-radius:99px;transition:.2s}
+.toggle-slider:before{position:absolute;content:'';height:14px;width:14px;left:2px;bottom:2px;background:white;border-radius:50%;border:1.5px solid #94a3b8;transition:.2s}
+input:checked+.toggle-slider{background:var(--green)}
+input:checked+.toggle-slider:before{transform:translateX(18px);border-color:white}
 
-  .ad-banner { max-width: 1000px; margin: 0 auto 32px; padding: 0 5%; }
+/* LETTER PAPER */
+.letter-paper{background:white;border:2px solid var(--black);border-radius:12px;padding:28px;font-family:'Times New Roman',serif;font-size:15px;line-height:1.8;color:var(--ink);white-space:pre-wrap;box-shadow:var(--shadow-sm)}
 
-  .explainer { max-width: 1000px; margin: 0 auto; padding: 48px 5%; }
-  .explainer h2 { font-family: var(--font-head); font-size: clamp(24px, 3vw, 34px); font-weight: 800; letter-spacing: -0.5px; margin-bottom: 32px; }
-  .explainer-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 16px; }
-  .explainer-card { background: var(--card); border: 1px solid var(--border); border-radius: var(--radius); padding: 20px; }
-  .explainer-card h4 { font-family: var(--font-head); font-size: 14px; font-weight: 700; margin-bottom: 8px; color: var(--ink); }
-  .explainer-card p { font-size: 13px; color: var(--muted); line-height: 1.65; }
-  .explainer-card .tag { display: inline-block; font-size: 11px; padding: 2px 8px; border-radius: 4px; font-weight: 500; margin-bottom: 8px; background: var(--green-bg); color: #15803d; }
+/* SECTION EXPLAINER */
+.section-explainer{max-width:900px;margin:0 auto;padding:60px 24px 40px}
+.section-explainer h2{font-size:clamp(22px,4vw,34px);font-weight:800;color:var(--black);margin-bottom:28px}
+.explainer-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:16px;margin-bottom:40px}
+.explainer-card{background:white;border:2px solid var(--black);border-radius:14px;padding:20px;box-shadow:var(--shadow-sm)}
+.explainer-card .tag{display:inline-block;background:var(--green-xs);border:1.5px solid var(--green);border-radius:6px;padding:2px 10px;font-size:11px;font-weight:800;letter-spacing:.06em;text-transform:uppercase;color:var(--green-dk);margin-bottom:10px}
+.explainer-card h4{font-size:14px;font-weight:800;color:var(--black);margin-bottom:6px}
+.explainer-card p{font-size:13px;color:var(--muted);font-weight:500;line-height:1.6}
 
-  .faq-section { max-width: 1000px; margin: 0 auto; padding: 0 5% 72px; }
-  .faq-section h2 { font-family: var(--font-head); font-size: clamp(24px, 3vw, 34px); font-weight: 800; letter-spacing: -0.5px; margin-bottom: 24px; }
-  details { background: var(--card); border: 1px solid var(--border); border-radius: var(--radius); padding: 18px 20px; margin-bottom: 10px; }
-  summary { font-family: var(--font-head); font-size: 15px; font-weight: 700; cursor: pointer; list-style: none; display: flex; justify-content: space-between; align-items: center; }
-  summary .plus { color: var(--accent); font-size: 20px; }
-  details p { margin-top: 12px; font-size: 14px; color: var(--muted); line-height: 1.7; }
+/* FAQ */
+.section-faq{border-top:4px solid var(--black);background:white;padding:60px 24px}
+.section-faq-inner{max-width:760px;margin:0 auto}
+.section-faq h2{font-size:clamp(22px,4vw,34px);font-weight:800;color:var(--black);margin-bottom:28px}
+.faq-list{display:flex;flex-direction:column;gap:10px}
+details.faq-item{background:white;border:2px solid var(--black);border-radius:14px;overflow:hidden;box-shadow:var(--shadow-sm)}
+details.faq-item summary{display:flex;align-items:center;justify-content:space-between;padding:16px 20px;cursor:pointer;list-style:none;font-size:14px;font-weight:800;color:var(--black);background:#f8fafc;transition:background .12s}
+details.faq-item summary::-webkit-details-marker{display:none}
+details.faq-item summary:hover{background:var(--green-xs)}
+.faq-arrow{width:26px;height:26px;background:white;border:2px solid var(--black);border-radius:50%;display:flex;align-items:center;justify-content:center;box-shadow:var(--shadow-sm);flex-shrink:0;transition:transform .2s}
+.faq-arrow svg{width:12px;height:12px}
+details[open] .faq-arrow{transform:rotate(180deg);background:var(--green-xs)}
+.faq-body{padding:14px 20px 18px;font-size:13px;font-weight:500;color:#475569;line-height:1.7;border-top:2px solid var(--black)}
 
-  footer { border-top: 1px solid var(--border); padding: 28px 5%; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px; font-size: 13px; color: var(--muted); }
-  footer a { color: var(--muted); text-decoration: none; }
-  footer a:hover { color: var(--accent); }
+/* FOOTER */
+footer{background:var(--black);color:white;padding:40px 24px;border-top:4px solid var(--black)}
+.footer-inner{max-width:1100px;margin:0 auto;display:flex;flex-direction:column;gap:24px}
+.footer-top{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:16px}
+.footer-logo{font-size:18px;font-weight:800;color:white}
+.footer-links{display:flex;flex-wrap:wrap;gap:16px}
+.footer-links a{font-size:13px;font-weight:700;color:#94a3b8;text-decoration:none;transition:color .12s}
+.footer-links a:hover{color:var(--green)}
+.footer-copy{font-size:12px;color:#475569;font-weight:500;padding-top:16px;border-top:1px solid #1e293b}
 
-  /* === Grouped nav dropdowns + mobile menu (site-wide) === */
-  .nav-links{display:flex;gap:6px;align-items:center}
-  .nav-badge{background:var(--accent);color:#fff;font-size:12px;font-weight:500;padding:4px 12px;border-radius:99px;font-family:var(--font-body);margin-left:6px}
-  .nav-right{display:flex;align-items:center;gap:6px}
-  .nav-item{position:relative}
-  .nav-trigger{font-size:13px;color:var(--muted);background:none;border:none;cursor:pointer;font-family:var(--font-body);display:flex;align-items:center;gap:5px;padding:8px 10px;border-radius:8px;transition:color .15s}
-  .nav-trigger:hover,.nav-trigger.open{color:var(--accent)}
-  .nav-trigger .caret{font-size:9px;transition:transform .15s;opacity:.7}
-  .nav-trigger.open .caret{transform:rotate(180deg)}
-  .dropdown-panel{position:absolute;top:calc(100% + 8px);left:50%;transform:translateX(-50%);background:#fff;border:1px solid var(--border);border-radius:12px;box-shadow:0 12px 32px rgba(15,14,12,.1);padding:8px;min-width:230px;display:none;z-index:200}
-  .dropdown-panel.open{display:block}
-  .dropdown-panel a{display:flex;align-items:center;gap:10px;padding:9px 12px;border-radius:8px;font-size:13.5px;color:var(--ink);text-decoration:none;white-space:nowrap;font-family:var(--font-body)}
-  .dropdown-panel a:hover{background:var(--paper);color:var(--accent)}
-  .dropdown-panel a .emoji{font-size:15px;width:18px;text-align:center}
-  .mobile-toggle{display:none;background:none;border:none;cursor:pointer;font-size:22px;color:var(--ink);padding:4px 6px;line-height:1}
-  @media(max-width:880px){
-    .nav-links{display:none}
-    .mobile-toggle{display:block}
-  }
-  .mobile-panel{display:none;position:fixed;inset:0;background:var(--paper);z-index:300;padding:20px 6%;overflow-y:auto}
-  .mobile-panel.open{display:block}
-  .mobile-panel-header{display:flex;justify-content:space-between;align-items:center;margin-bottom:28px}
-  .mobile-close{background:none;border:none;font-size:26px;color:var(--ink);cursor:pointer;line-height:1}
-  .mobile-group{margin-bottom:28px}
-  .mobile-group h4{font-family:var(--font-head);font-size:11px;text-transform:uppercase;letter-spacing:.1em;color:var(--accent);margin-bottom:10px}
-  .mobile-group a{display:flex;align-items:center;gap:12px;padding:13px 2px;border-bottom:1px solid var(--border);font-size:16px;color:var(--ink);text-decoration:none;font-family:var(--font-body)}
-  .mobile-group a .emoji{width:22px;text-align:center}
+/* RESPONSIVE */
+@media(max-width:768px){
+  .nav-links,.nav-cta{display:none}
+  .mobile-toggle{display:flex}
+  .mobile-panel{display:block}
+  .form-grid{grid-template-columns:1fr}
+  .form-group.full{grid-column:1}
+  .page-hero{padding:40px 20px 28px}
+  .form-wrap{padding:0 16px 60px}
+  .explainer-grid{grid-template-columns:1fr 1fr}
+  .btn-group{flex-direction:column}
+  .btn-full{width:100%}
+}
+@media(max-width:480px){
+  .explainer-grid{grid-template-columns:1fr}
+  .selector-grid{grid-template-columns:1fr 1fr}
+}
+
+.upload-zone{border:3px dashed var(--border);border-radius:14px;padding:36px;text-align:center;cursor:pointer;transition:all .15s;background:white}
+.upload-zone:hover,.upload-zone.drag{border-color:var(--green);background:var(--green-xs)}
+.upload-zone.has-file{border-color:var(--black);border-style:solid}
+.preset-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(130px,1fr));gap:8px;margin-bottom:16px}
+.preset-card{padding:10px 12px;background:white;border:2px solid var(--border);border-radius:10px;cursor:pointer;transition:all .15s;text-align:left}
+.preset-card:hover{border-color:var(--green);background:var(--green-xs)}
+.preset-card.active{border-color:var(--black);box-shadow:var(--shadow-sm)}
+.preset-title{font-size:12px;font-weight:800;color:var(--black)}
+.preset-size{font-size:10px;color:var(--muted);font-weight:500;margin-top:2px}
+.preview-area{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:16px}
+.preview-box{background:#f8fafc;border:2px solid var(--black);border-radius:12px;padding:12px;text-align:center;box-shadow:var(--shadow-sm)}
+.preview-box img{max-width:100%;max-height:180px;border-radius:6px;border:1px solid var(--border)}
+.preview-label{font-size:11px;font-weight:700;color:var(--muted);margin-top:8px;text-transform:uppercase;letter-spacing:.06em}
+@media(max-width:560px){.preview-area{grid-template-columns:1fr}}
 </style>
 </head>
 <body>
-
+<!-- ═══════════════ SHARED NAV SNIPPET ═══════════════ -->
 <nav>
-  <a class="logo" href="index.html">Mail<span>Fix</span></a>
-  <div class="nav-links" id="navLinks">
-    <div class="nav-item">
-      <button class="nav-trigger" onclick="toggleDropdown('calcDropdown', this)">🧮 Calculators <span class="caret">▾</span></button>
-      <div class="dropdown-panel" id="calcDropdown">
-        <a href="ctc-calculator.html"><span class="emoji">💰</span> CTC to In-Hand Salary</a>
-        <a href="hra-calculator.html"><span class="emoji">🏠</span> HRA Exemption</a>
-        <a href="itr-calculator.html"><span class="emoji">📊</span> ITR / Income Tax</a>
-        <a href="leave-encashment.html"><span class="emoji">🏖️</span> Leave Encashment</a>
-        <a href="retirement-calculator.html"><span class="emoji">🎯</span> Retirement Package</a>
-        <a href="increment-calculator.html"><span class="emoji">📈</span> Annual Increment</a>
-        <a href="date-calculator.html"><span class="emoji">📅</span> Age &amp; Date Calculator</a>
-        <a href="health-calculator.html"><span class="emoji">❤️</span> Health Calculators</a>
+  <div class="nav-inner">
+    <a href="index.html" class="logo">
+      <div class="logo-icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="3"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+      </div>
+      MailFix<span>.in</span>
+    </a>
+    <div class="nav-links">
+      <div class="nav-item">
+        <button class="nav-trigger">Calculators <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/></svg></button>
+        <div class="dropdown-panel">
+          <a href="ctc-calculator.html">CTC to In-Hand</a>
+          <a href="city-compare.html">City Salary Compare</a>
+          <a href="hra-calculator.html">HRA Exemption</a>
+          <a href="itr-calculator.html">ITR / Tax</a>
+          <a href="increment-calculator.html">Govt Increment</a>
+          <a href="leave-encashment.html">Leave Encashment</a>
+          <a href="retirement-calculator.html">Retirement</a>
+        </div>
+      </div>
+      <div class="nav-item">
+        <button class="nav-trigger">Documents <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/></svg></button>
+        <div class="dropdown-panel">
+          <a href="index.html">Email Fixer</a>
+          <a href="job-application.html">Job Application</a>
+          <a href="sarkari-letter.html">Sarkari Letter</a>
+          <a href="resignation.html">Resignation Kit</a>
+          <a href="rent-receipt.html">Rent Receipt</a>
+          <a href="gst-invoice.html">GST Invoice</a>
+        </div>
+      </div>
+      <div class="nav-item">
+        <button class="nav-trigger">Utilities <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/></svg></button>
+        <div class="dropdown-panel">
+          <a href="whatsapp-dhanda.html">WhatsApp Dhanda</a>
+          <a href="paraphrase.html">Paraphrase Tool</a>
+          <a href="photo-resizer.html">Photo Resizer</a>
+          <a href="qr-generator.html">QR Generator</a>
+          <a href="json-tools.html">JSON Tools</a>
+          <a href="date-calculator.html">Date & Age Calc</a>
+          <a href="health-calculator.html">Health Calculators</a>
+          <a href="vehicle-scrappage.html">Vehicle Scrappage</a>
+        </div>
       </div>
     </div>
-    <div class="nav-item">
-      <button class="nav-trigger" onclick="toggleDropdown('lettersDropdown', this)">✉️ Letters &amp; Docs <span class="caret">▾</span></button>
-      <div class="dropdown-panel" id="lettersDropdown">
-        <a href="index.html"><span class="emoji">💬</span> Hinglish Email Fixer</a>
-        <a href="job-application.html"><span class="emoji">🎓</span> Job Application Email</a>
-        <a href="sarkari-letter.html"><span class="emoji">🏛️</span> Sarkari Letter</a>
-        <a href="resignation.html"><span class="emoji">🚪</span> Resignation Kit</a>
-        <a href="rent-receipt.html"><span class="emoji">🧾</span> Rent Receipt</a>
-        <a href="gst-invoice.html"><span class="emoji">📄</span> GST Invoice</a>
-        <a href="paraphrase.html"><span class="emoji">✍️</span> Paraphrasing Tool</a>
-      </div>
+    <div style="display:flex;align-items:center;gap:12px">
+      <a href="index.html#main-tool" class="nav-cta">Fix Email Free</a>
+      <button class="mobile-toggle" id="mobileMenuBtn">
+        <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"/></svg>
+      </button>
     </div>
-    <div class="nav-item">
-      <button class="nav-trigger" onclick="toggleDropdown('utilsDropdown', this)">🛠️ Utilities <span class="caret">▾</span></button>
-      <div class="dropdown-panel" id="utilsDropdown">
-        <a href="whatsapp-dhanda.html"><span class="emoji">📱</span> WhatsApp Dhanda</a>
-        <a href="photo-resizer.html"><span class="emoji">🖼️</span> Photo Resizer</a>
-        <a href="city-compare.html"><span class="emoji">🏙️</span> City Salary Compare</a>
-        <a href="vehicle-scrappage.html"><span class="emoji">🚗</span> Vehicle Scrappage</a>
-        <a href="qr-generator.html"><span class="emoji">🔲</span> QR Generator</a>
-        <a href="json-tools.html"><span class="emoji">{ }</span> JSON Tools</a>
-      </div>
-    </div>
-  </div>
-  <div class="nav-right">
-    <span class="nav-badge">Free</span>
-    <button class="mobile-toggle" onclick="toggleMobilePanel(true)" aria-label="Open menu">☰</button>
   </div>
 </nav>
-
 <div class="mobile-panel" id="mobilePanel">
-  <div class="mobile-panel-header">
-    <a class="logo" href="index.html">Mail<span>Fix</span></a>
-    <button class="mobile-close" onclick="toggleMobilePanel(false)" aria-label="Close menu">×</button>
+  <div class="mobile-panel-head">
+    <a href="index.html" class="logo">MailFix<span style="color:var(--green-dk)">.in</span></a>
+    <button class="close-btn" id="closeMobileBtn">
+      <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/></svg>
+    </button>
   </div>
-  <div class="mobile-group">
-    <h4>Calculators</h4>
-    <a href="ctc-calculator.html"><span class="emoji">💰</span> CTC to In-Hand Salary</a>
-    <a href="hra-calculator.html"><span class="emoji">🏠</span> HRA Exemption</a>
-    <a href="itr-calculator.html"><span class="emoji">📊</span> ITR / Income Tax</a>
-    <a href="leave-encashment.html"><span class="emoji">🏖️</span> Leave Encashment</a>
-    <a href="retirement-calculator.html"><span class="emoji">🎯</span> Retirement Package</a>
-    <a href="increment-calculator.html"><span class="emoji">📈</span> Annual Increment</a>
-    <a href="date-calculator.html"><span class="emoji">📅</span> Age &amp; Date Calculator</a>
-    <a href="health-calculator.html"><span class="emoji">❤️</span> Health Calculators</a>
-  </div>
-  <div class="mobile-group">
-    <h4>Letters &amp; Docs</h4>
-    <a href="index.html"><span class="emoji">💬</span> Hinglish Email Fixer</a>
-    <a href="job-application.html"><span class="emoji">🎓</span> Job Application Email</a>
-    <a href="sarkari-letter.html"><span class="emoji">🏛️</span> Sarkari Letter</a>
-    <a href="resignation.html"><span class="emoji">🚪</span> Resignation Kit</a>
-    <a href="rent-receipt.html"><span class="emoji">🧾</span> Rent Receipt</a>
-    <a href="gst-invoice.html"><span class="emoji">📄</span> GST Invoice</a>
-    <a href="paraphrase.html"><span class="emoji">✍️</span> Paraphrasing Tool</a>
-  </div>
-  <div class="mobile-group">
-    <h4>Utilities</h4>
-    <a href="whatsapp-dhanda.html"><span class="emoji">📱</span> WhatsApp Dhanda</a>
-    <a href="photo-resizer.html"><span class="emoji">🖼️</span> Photo Resizer</a>
-    <a href="city-compare.html"><span class="emoji">🏙️</span> City Salary Compare</a>
-    <a href="vehicle-scrappage.html"><span class="emoji">🚗</span> Vehicle Scrappage</a>
-    <a href="qr-generator.html"><span class="emoji">🔲</span> QR Generator</a>
-    <a href="json-tools.html"><span class="emoji">{ }</span> JSON Tools</a>
+  <div class="mobile-panel-body">
+    <a href="index.html#main-tool" class="mobile-cta">Fix Email Free →</a>
+    <p class="mobile-section-label">AI Tools</p>
+    <a href="index.html" class="mobile-link">📧 Email Fixer</a>
+    <a href="job-application.html" class="mobile-link">🎓 Job Application</a>
+    <a href="sarkari-letter.html" class="mobile-link">🏛️ Sarkari Letter</a>
+    <a href="resignation.html" class="mobile-link">🚪 Resignation Kit</a>
+    <a href="whatsapp-dhanda.html" class="mobile-link">📱 WhatsApp Dhanda</a>
+    <a href="paraphrase.html" class="mobile-link">✍️ Paraphrase Tool</a>
+    <p class="mobile-section-label">Calculators</p>
+    <a href="ctc-calculator.html" class="mobile-link">💰 CTC to In-Hand</a>
+    <a href="city-compare.html" class="mobile-link">🏙️ City Compare</a>
+    <a href="hra-calculator.html" class="mobile-link">🏠 HRA Exemption</a>
+    <a href="itr-calculator.html" class="mobile-link">📊 ITR / Tax</a>
+    <a href="increment-calculator.html" class="mobile-link">📈 Govt Increment</a>
+    <a href="leave-encashment.html" class="mobile-link">🏖️ Leave Encashment</a>
+    <a href="retirement-calculator.html" class="mobile-link">🎯 Retirement</a>
+    <p class="mobile-section-label">Utilities</p>
+    <a href="photo-resizer.html" class="mobile-link">🖼️ Photo Resizer</a>
+    <a href="qr-generator.html" class="mobile-link">📷 QR Generator</a>
+    <a href="json-tools.html" class="mobile-link">🔧 JSON Tools</a>
+    <a href="date-calculator.html" class="mobile-link">📅 Date & Age</a>
+    <a href="health-calculator.html" class="mobile-link">💪 Health Calculators</a>
+    <a href="vehicle-scrappage.html" class="mobile-link">🚗 Vehicle Scrappage</a>
+    <a href="rent-receipt.html" class="mobile-link">📄 Rent Receipt</a>
+    <a href="gst-invoice.html" class="mobile-link">🧾 GST Invoice</a>
   </div>
 </div>
+<!-- ═══════════════ END NAV SNIPPET ═══════════════ -->
 
-<div class="mobile-panel" id="mobilePanel">
-  <div class="mobile-panel-header">
-    <a class="logo" href="index.html">Mail<span>Fix</span></a>
-    <button class="mobile-close" onclick="toggleMobilePanel(false)" aria-label="Close menu">×</button>
-  </div>
-
-  <div class="mobile-group">
-    <h4>Calculators</h4>
-    <a href="ctc-calculator.html"><span class="emoji">💰</span> CTC to In-Hand Salary</a>
-    <a href="hra-calculator.html"><span class="emoji">🏠</span> HRA Exemption</a>
-    <a href="itr-calculator.html"><span class="emoji">📊</span> ITR / Income Tax</a>
-    <a href="leave-encashment.html"><span class="emoji">🏖️</span> Leave Encashment</a>
-    <a href="retirement-calculator.html"><span class="emoji">🎯</span> Retirement Package</a>
-    <a href="increment-calculator.html"><span class="emoji">📈</span> Annual Increment</a>
-  </div>
-
-  <div class="mobile-group">
-    <h4>Letters &amp; Docs</h4>
-    <a href="index.html"><span class="emoji">💬</span> Hinglish Email Fixer</a>
-    <a href="job-application.html"><span class="emoji">🎓</span> Job Application Email</a>
-    <a href="sarkari-letter.html"><span class="emoji">🏛️</span> Sarkari Letter</a>
-    <a href="resignation.html"><span class="emoji">🚪</span> Resignation Kit</a>
-    <a href="rent-receipt.html"><span class="emoji">🧾</span> Rent Receipt</a>
-    <a href="gst-invoice.html"><span class="emoji">📄</span> GST Invoice</a>
-  </div>
-
-  <div class="mobile-group">
-    <h4>Utilities</h4>
-    <a href="whatsapp-dhanda.html"><span class="emoji">📱</span> WhatsApp Dhanda</a>
-    <a href="photo-resizer.html"><span class="emoji">🖼️</span> Photo Resizer</a>
-    <a href="city-compare.html"><span class="emoji">🏙️</span> City Compare</a>
-    <a href="vehicle-scrappage.html"><span class="emoji">🚗</span> Vehicle Scrappage</a>
-    <a href="qr-generator.html"><span class="emoji">🔲</span> QR Generator</a>
-    <a href="json-tools.html"><span class="emoji">{ }</span> JSON Tools</a>
-  </div>
+<main>
+<div class="page-hero" style="padding-bottom:28px">
+  <div class="page-badge">🖼️ Utility Tool</div>
+  <h1>Photo <span class="accent">Resizer</span></h1>
+  <p class="page-sub">Resize photos for passport, WhatsApp, LinkedIn, Instagram. Custom dimensions, JPEG/PNG/WebP. All processing happens in your browser — nothing uploaded.</p>
 </div>
+<div class="form-wrap">
 
-<div class="mobile-panel" id="mobilePanel">
-  <div class="mobile-panel-header">
-    <a class="logo" href="index.html">Mail<span>Fix</span></a>
-    <button class="mobile-close" onclick="toggleMobilePanel(false)" aria-label="Close menu">×</button>
-  </div>
-
-  <div class="mobile-group">
-    <h4>Calculators</h4>
-    <a href="ctc-calculator.html"><span class="emoji">💰</span> CTC to In-Hand Salary</a>
-    <a href="hra-calculator.html"><span class="emoji">🏠</span> HRA Exemption</a>
-    <a href="itr-calculator.html"><span class="emoji">📊</span> ITR / Income Tax</a>
-    <a href="leave-encashment.html"><span class="emoji">🏖️</span> Leave Encashment</a>
-    <a href="retirement-calculator.html"><span class="emoji">🎯</span> Retirement Package</a>
-    <a href="increment-calculator.html"><span class="emoji">📈</span> Annual Increment</a>
-  </div>
-
-  <div class="mobile-group">
-    <h4>Letters & Docs</h4>
-    <a href="index.html"><span class="emoji">💬</span> Hinglish Email Fixer</a>
-    <a href="job-application.html"><span class="emoji">🎓</span> Job Application Email</a>
-    <a href="sarkari-letter.html"><span class="emoji">🏛️</span> Sarkari Letter</a>
-    <a href="resignation.html"><span class="emoji">🚪</span> Resignation Kit</a>
-    <a href="rent-receipt.html"><span class="emoji">🧾</span> Rent Receipt</a>
-    <a href="gst-invoice.html"><span class="emoji">📄</span> GST Invoice</a>
-  </div>
-
-  <div class="mobile-group">
-    <h4>Utilities</h4>
-    <a href="whatsapp-dhanda.html"><span class="emoji">📱</span> WhatsApp Dhanda</a>
-    <a href="photo-resizer.html"><span class="emoji">🖼️</span> Photo Resizer</a>
-    <a href="city-compare.html"><span class="emoji">🏙️</span> City Compare</a>
-  </div>
-</div>
-
-<div class="mobile-panel" id="mobilePanel">
-  <div class="mobile-panel-header">
-    <a class="logo" href="index.html">Mail<span>Fix</span></a>
-    <button class="mobile-close" onclick="toggleMobilePanel(false)" aria-label="Close menu">×</button>
-  </div>
-
-  <div class="mobile-group">
-    <h4>Calculators</h4>
-    <a href="ctc-calculator.html"><span class="emoji">💰</span> CTC to In-Hand Salary</a>
-    <a href="hra-calculator.html"><span class="emoji">🏠</span> HRA Exemption</a>
-    <a href="itr-calculator.html"><span class="emoji">📊</span> ITR / Income Tax</a>
-    <a href="leave-encashment.html"><span class="emoji">🏖️</span> Leave Encashment</a>
-    <a href="retirement-calculator.html"><span class="emoji">🎯</span> Retirement Package</a>
-  </div>
-
-  <div class="mobile-group">
-    <h4>Letters & Docs</h4>
-    <a href="index.html"><span class="emoji">💬</span> Hinglish Email Fixer</a>
-    <a href="job-application.html"><span class="emoji">🎓</span> Job Application Email</a>
-    <a href="sarkari-letter.html"><span class="emoji">🏛️</span> Sarkari Letter</a>
-    <a href="resignation.html"><span class="emoji">🚪</span> Resignation Kit</a>
-    <a href="rent-receipt.html"><span class="emoji">🧾</span> Rent Receipt</a>
-    <a href="gst-invoice.html"><span class="emoji">📄</span> GST Invoice</a>
-  </div>
-
-  <div class="mobile-group">
-    <h4>Utilities</h4>
-    <a href="whatsapp-dhanda.html"><span class="emoji">📱</span> WhatsApp Dhanda</a>
-    <a href="photo-resizer.html"><span class="emoji">🖼️</span> Photo Resizer</a>
-    <a href="city-compare.html"><span class="emoji">🏙️</span> City Compare</a>
-  </div>
-</div>
-
-<section class="hero">
-  <div class="hero-tag"><span class="dot"></span> Works for Passport Seva, EPFO, PAN, PSC exams</div>
-  <h1>Photo & signature,<br/><em>exact KB</em> mein resize karo</h1>
-  <p class="hero-sub">Upload your photo or signature, pick the portal you're applying to — get a perfectly sized file ready to upload, in seconds.</p>
-</section>
-
-<div class="calc-wrap">
-
-  <!-- INPUT CARD -->
-  <div class="card">
-    <div class="card-header">
-      <h2>Upload & select spec</h2>
-      <p>JPEG or PNG, any size — we'll resize it for you</p>
+<div class="form-card">
+  <div class="form-card-header"><span class="form-card-title">🖼️ Photo Resizer</span></div>
+  <div class="form-body">
+    <div class="upload-zone" id="uploadZone" onclick="document.getElementById('fileInput').click()" ondragover="event.preventDefault();this.classList.add('drag')" ondragleave="this.classList.remove('drag')" ondrop="handleDrop(event)">
+      <div style="font-size:36px;margin-bottom:10px">📁</div>
+      <div style="font-size:15px;font-weight:700;color:var(--ink)" id="uploadLabel">Click to upload or drag & drop</div>
+      <div style="font-size:12px;color:var(--muted);margin-top:4px">JPG, PNG, WebP — max 10MB</div>
     </div>
-    <div class="card-body">
+    <input type="file" id="fileInput" accept="image/*" style="display:none" onchange="loadImage(event)"/>
 
-      <div class="input-group">
-        <label>Target Specification</label>
-        <div class="preset-pills">
-          <div class="preset-pill active" id="preset-passport" onclick="setPreset('passport')">
-            <div class="p-name">Passport Photo</div>
-            <div class="p-spec">3.5 × 4.5 cm  ·  20KB – 50KB  ·  Passport Seva</div>
-          </div>
-          <div class="preset-pill" id="preset-signature" onclick="setPreset('signature')">
-            <div class="p-name">Signature</div>
-            <div class="p-spec">3.5 × 1.5 cm  ·  10KB – 20KB  ·  EPFO, PSC forms</div>
-          </div>
-          <div class="preset-pill" id="preset-pan" onclick="setPreset('pan')">
-            <div class="p-name">PAN Card Document</div>
-            <div class="p-spec">2 × 2 inches  ·  Under 100KB</div>
-          </div>
+    <div id="controlsPanel" style="display:none;margin-top:20px">
+      <div style="font-size:11px;font-weight:800;text-transform:uppercase;letter-spacing:.1em;color:var(--muted);margin-bottom:10px">Quick Presets</div>
+      <div class="preset-grid">
+        <div class="preset-card" onclick="applyPreset(200,200,'image/jpeg')" ><div class="preset-title">Passport Photo</div><div class="preset-size">200×200 px</div></div>
+        <div class="preset-card" onclick="applyPreset(1200,630,'image/jpeg')"><div class="preset-title">LinkedIn Cover</div><div class="preset-size">1200×630 px</div></div>
+        <div class="preset-card" onclick="applyPreset(800,800,'image/jpeg')"><div class="preset-title">WhatsApp DP</div><div class="preset-size">800×800 px</div></div>
+        <div class="preset-card" onclick="applyPreset(1080,1080,'image/jpeg')"><div class="preset-title">Instagram Post</div><div class="preset-size">1080×1080 px</div></div>
+        <div class="preset-card" onclick="applyPreset(1920,1080,'image/jpeg')"><div class="preset-title">HD Wallpaper</div><div class="preset-size">1920×1080 px</div></div>
+        <div class="preset-card" onclick="applyPreset(400,300,'image/jpeg')"><div class="preset-title">Email Banner</div><div class="preset-size">400×300 px</div></div>
+      </div>
+
+      <div style="font-size:11px;font-weight:800;text-transform:uppercase;letter-spacing:.1em;color:var(--muted);margin-bottom:10px">Custom Size</div>
+      <div class="form-grid">
+        <div class="form-group"><label>Width (px)</label><input type="number" id="customW" placeholder="800" oninput="updateCustom()"/></div>
+        <div class="form-group"><label>Height (px)</label><input type="number" id="customH" placeholder="600" oninput="updateCustom()"/></div>
+        <div class="form-group">
+          <label>Format</label>
+          <select id="outputFormat" onchange="updateCustom()">
+            <option value="image/jpeg">JPEG</option>
+            <option value="image/png">PNG</option>
+            <option value="image/webp">WebP</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label>Quality (JPEG/WebP)</label>
+          <input type="range" id="quality" min="10" max="100" value="85" oninput="document.getElementById('qualityVal').textContent=this.value+'%';updateCustom()"/>
+          <span id="qualityVal" style="font-size:12px;font-weight:700;color:var(--muted)">85%</span>
         </div>
       </div>
 
-      <div class="input-group">
-        <label>Your Image</label>
-        <div class="file-drop" onclick="document.getElementById('imageInput').click()">
-          <input type="file" id="imageInput" accept="image/jpeg, image/png" onchange="handleFileSelect()"/>
-          <div class="file-drop-label">📁 <strong>Click to choose</strong> a photo or signature image</div>
-          <div class="file-name" id="fileName"></div>
+      <div class="preview-area">
+        <div class="preview-box">
+          <img id="originalPreview" src=""/>
+          <div class="preview-label" id="origLabel">Original</div>
+        </div>
+        <div class="preview-box">
+          <img id="resizedPreview" src=""/>
+          <div class="preview-label" id="resizedLabel">Resized</div>
         </div>
       </div>
 
-      <button class="calc-btn" id="processBtn" onclick="processImage()" disabled>Resize & Compress</button>
-    </div>
-  </div>
-
-  <!-- RESULTS CARD -->
-  <div class="card">
-    <div id="empty-state" class="empty-state">
-      <span class="empty-icon">🖼️</span>
-      Upload an image and pick a spec<br/>to get your resized file
-    </div>
-
-    <div id="results" style="display:none">
-      <div class="result-hero">
-        <img id="previewImage" class="preview-box" src="" alt="Resized preview"/>
-        <div class="size-badge" id="sizeBadge">0 KB</div>
-        <div class="size-target" id="sizeTarget">Target: —</div>
-      </div>
-      <div class="result-body">
-        <a id="downloadLink" class="download-btn" download="govt_portal_ready.jpg">Download Optimized Image</a>
-        <div class="privacy-note">🔒 Processed entirely in your browser. Nothing is uploaded to any server.</div>
+      <div class="btn-group" style="margin-top:16px">
+        <button class="btn btn-primary btn-lg" id="downloadBtn" onclick="downloadImage()" style="display:none">⬇️ Download Resized Image</button>
       </div>
     </div>
   </div>
-
 </div>
-
-<div class="ad-banner">
-  <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-3532554351654388" data-ad-slot="3962323207" data-ad-format="auto" data-full-width-responsive="true"></ins>
-  <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
 </div>
-
-<section class="explainer">
-  <h2>Why portals reject your upload</h2>
-  <div class="explainer-grid">
-    <div class="explainer-card">
-      <span class="tag">File size</span>
-      <h4>Wrong KB, not wrong photo</h4>
-      <p>Most "invalid image" errors are about file size, not quality. A great photo at 200KB still gets rejected if the portal wants under 50KB.</p>
-    </div>
-    <div class="explainer-card">
-      <span class="tag">Dimensions</span>
-      <h4>Exact aspect ratio matters</h4>
-      <p>Passport photos need 3.5:4.5 cm proportions specifically. A square or wrongly-cropped photo gets auto-rejected even if the size is fine.</p>
-    </div>
-    <div class="explainer-card">
-      <span class="tag">Format</span>
-      <h4>JPEG over PNG</h4>
-      <p>Government portals almost always expect JPEG. PNGs are often larger for the same visual quality and can fail upload validation.</p>
-    </div>
-    <div class="explainer-card">
-      <span class="tag">Privacy</span>
-      <h4>Nothing leaves your browser</h4>
-      <p>This tool uses HTML canvas to resize and compress locally. Your photo, signature or ID document is never sent to any server.</p>
-    </div>
-  </div>
-</section>
-
-<section class="faq-section">
-  <h2>Commonly asked questions</h2>
-  <details>
-    <summary>What is the photo size limit for Passport Seva? <span class="plus">+</span></summary>
-    <p>Passport Seva requires a photo of 3.5 × 4.5 cm, usually between 20KB and 50KB in JPEG format. This tool resizes and compresses your photo to fit that exact range automatically.</p>
-  </details>
-  <details>
-    <summary>What is the signature size limit for govt portals? <span class="plus">+</span></summary>
-    <p>Most Indian government portals, including EPFO and PSC exam forms, require a signature image around 3.5 × 1.5 cm and under 10KB to 20KB. This tool compresses your signature to meet that limit.</p>
-  </details>
-  <details>
-    <summary>Is it safe to upload my photo or signature here? <span class="plus">+</span></summary>
-    <p>Yes. All resizing and compression happens entirely inside your browser using canvas processing. Your image is never uploaded to any server, so your identity documents stay private.</p>
-  </details>
-  <details>
-    <summary>Why does my portal reject my photo even after resizing? <span class="plus">+</span></summary>
-    <p>Most rejections happen because the file size, not just the dimensions, is outside the allowed KB range. This tool automatically reduces JPEG quality step by step until the file fits the target size.</p>
-  </details>
-</section>
-
-<footer>
-  <span>© 2025 MailFix — Free Tools for Indian Professionals</span>
-  <div style="display:flex;gap:16px;flex-wrap:wrap">
-    <a href="index.html">Hinglish Email</a>
-    <a href="job-application.html">Job Email</a>
-    <a href="ctc-calculator.html">Salary Calculator</a>
-    <a href="hra-calculator.html">HRA Calculator</a>
-    <a href="itr-calculator.html">ITR / Tax</a>
-    <a href="leave-encashment.html">Leave Encashment</a>
-    <a href="retirement-calculator.html">Retirement</a>
-    <a href="increment-calculator.html">Increment</a>
-    <a href="date-calculator.html">Age &amp; Date</a>
-    <a href="health-calculator.html">Health Calculators</a>
-    <a href="photo-resizer.html">Photo Resizer</a>
-    <a href="rent-receipt.html">Rent Receipt</a>
-    <a href="gst-invoice.html">GST Invoice</a>
-    <a href="paraphrase.html">Paraphrasing Tool</a>
-    <a href="vehicle-scrappage.html">Vehicle Scrappage</a>
-    <a href="qr-generator.html">QR Generator</a>
-    <a href="json-tools.html">JSON Tools</a>
-    <a href="whatsapp-dhanda.html">WhatsApp Dhanda</a>
-    <a href="sarkari-letter.html">Sarkari Letter</a>
-    <a href="resignation.html">Resignation Kit</a>
-    <a href="city-compare.html">City Compare</a>
-    <a href="privacy.html">Privacy Policy</a>
-  </div>
-</footer>
-
+</main>
+<footer><div class="footer-inner"><div class="footer-top"><div class="footer-logo">MailFix.in</div><div class="footer-links"><a href="index.html">Email Tool</a><a href="ctc-calculator.html">Salary Calc</a><a href="city-compare.html">City Compare</a><a href="whatsapp-dhanda.html">WA Dhanda</a><a href="sarkari-letter.html">Sarkari Letter</a><a href="privacy.html">Privacy Policy</a></div></div><div class="footer-copy">© 2026 MailFix. Free Tools for Indian Professionals.</div></div></footer>
 <script>
-  let selectedPreset = 'passport';
-  let selectedFile = null;
+  let originalFile = null;
+  let canvas = document.createElement('canvas');
+  let ctx = canvas.getContext('2d');
+  let currentW = 800, currentH = 600, currentFmt = 'image/jpeg', currentQ = 0.85;
 
-  const SPECS = {
-    passport: { width: 350, height: 450, maxKb: 45, label: '3.5 × 4.5 cm  ·  20KB – 50KB' },
-    signature: { width: 350, height: 150, maxKb: 18, label: '3.5 × 1.5 cm  ·  10KB – 20KB' },
-    pan: { width: 400, height: 400, maxKb: 95, label: '2 × 2 inches  ·  Under 100KB' }
-  };
-
-  function setPreset(p) {
-    selectedPreset = p;
-    document.querySelectorAll('.preset-pill').forEach(el => el.classList.remove('active'));
-    document.getElementById('preset-' + p).classList.add('active');
+  function handleDrop(e) {
+    e.preventDefault();
+    document.getElementById('uploadZone').classList.remove('drag');
+    const file = e.dataTransfer.files[0];
+    if(file && file.type.startsWith('image/')) processFile(file);
   }
 
-  function handleFileSelect() {
-    const fileInput = document.getElementById('imageInput');
-    selectedFile = fileInput.files && fileInput.files[0] ? fileInput.files[0] : null;
-    document.getElementById('fileName').textContent = selectedFile ? '✓ ' + selectedFile.name : '';
-    document.getElementById('processBtn').disabled = !selectedFile;
-  }
+  function loadImage(e) { processFile(e.target.files[0]); }
 
-  function processImage() {
-    if (!selectedFile) return;
-
-    const btn = document.getElementById('processBtn');
-    btn.disabled = true;
-    btn.textContent = 'Processing...';
-
-    const spec = SPECS[selectedPreset];
+  function processFile(file) {
+    if(!file) return;
+    if(file.size > 10*1024*1024){alert('File too large. Please use an image under 10MB.');return;}
+    originalFile = file;
     const reader = new FileReader();
-
-    reader.onload = function (event) {
+    reader.onload = function(e) {
       const img = new Image();
-      img.onload = function () {
-        const canvas = document.createElement('canvas');
-        canvas.width = spec.width;
-        canvas.height = spec.height;
-        const ctx = canvas.getContext('2d');
-        ctx.drawImage(img, 0, 0, spec.width, spec.height);
-
-        let quality = 0.9;
-        let dataUrl = canvas.toDataURL('image/jpeg', quality);
-        let sizeInKb = (dataUrl.length * 3 / 4) / 1024;
-
-        while (sizeInKb > spec.maxKb && quality > 0.1) {
-          quality -= 0.05;
-          dataUrl = canvas.toDataURL('image/jpeg', quality);
-          sizeInKb = (dataUrl.length * 3 / 4) / 1024;
-        }
-
-        document.getElementById('empty-state').style.display = 'none';
-        document.getElementById('results').style.display = 'block';
-
-        const previewImg = document.getElementById('previewImage');
-        previewImg.src = dataUrl;
-        if (selectedPreset === 'signature') {
-          previewImg.style.width = '170px';
-          previewImg.style.height = '73px';
-        } else if (selectedPreset === 'pan') {
-          previewImg.style.width = '150px';
-          previewImg.style.height = '150px';
-        } else {
-          previewImg.style.width = '135px';
-          previewImg.style.height = '174px';
-        }
-
-        document.getElementById('sizeBadge').textContent = sizeInKb.toFixed(1) + ' KB';
-        document.getElementById('sizeTarget').textContent = 'Target: ' + spec.label;
-        document.getElementById('downloadLink').href = dataUrl;
-
-        btn.disabled = false;
-        btn.textContent = 'Resize & Compress';
+      img.onload = function() {
+        document.getElementById('originalPreview').src = e.target.result;
+        document.getElementById('origLabel').textContent = 'Original: '+img.width+'×'+img.height+' ('+Math.round(file.size/1024)+'KB)';
+        document.getElementById('uploadLabel').textContent = '✓ '+file.name;
+        document.getElementById('uploadZone').classList.add('has-file');
+        document.getElementById('controlsPanel').style.display = 'block';
+        document.getElementById('customW').value = img.width;
+        document.getElementById('customH').value = img.height;
+        currentW = img.width; currentH = img.height;
+        resize(img);
       };
-      img.src = event.target.result;
+      img.src = e.target.result;
     };
-    reader.readAsDataURL(selectedFile);
+    reader.readAsDataURL(file);
   }
 
-  // === Nav dropdowns + mobile menu (site-wide) ===
-  function toggleDropdown(id, triggerEl) {
-    const panel = document.getElementById(id);
-    const isOpen = panel.classList.contains('open');
-    document.querySelectorAll('.dropdown-panel').forEach(p => p.classList.remove('open'));
-    document.querySelectorAll('.nav-trigger').forEach(t => t.classList.remove('open'));
-    if (!isOpen) {
-      panel.classList.add('open');
-      triggerEl.classList.add('open');
-    }
+  function resize(imgEl) {
+    canvas.width = currentW; canvas.height = currentH;
+    ctx.clearRect(0,0,currentW,currentH);
+    ctx.drawImage(imgEl||document.getElementById('originalPreview'), 0, 0, currentW, currentH);
+    const dataUrl = canvas.toDataURL(currentFmt, currentQ);
+    document.getElementById('resizedPreview').src = dataUrl;
+    const bytes = Math.round(dataUrl.length * 0.75);
+    document.getElementById('resizedLabel').textContent = 'Resized: '+currentW+'×'+currentH+' (~'+Math.round(bytes/1024)+'KB)';
+    document.getElementById('downloadBtn').style.display = 'inline-flex';
   }
-  document.addEventListener('click', function (e) {
-    if (!e.target.closest('.nav-item')) {
-      document.querySelectorAll('.dropdown-panel').forEach(p => p.classList.remove('open'));
-      document.querySelectorAll('.nav-trigger').forEach(t => t.classList.remove('open'));
-    }
-  });
-  document.addEventListener('keydown', function (e) {
-    if (e.key === 'Escape') {
-      document.querySelectorAll('.dropdown-panel').forEach(p => p.classList.remove('open'));
-      document.querySelectorAll('.nav-trigger').forEach(t => t.classList.remove('open'));
-      toggleMobilePanel(false);
-    }
-  });
-  function toggleMobilePanel(open) {
-    document.getElementById('mobilePanel').classList.toggle('open', open);
-    document.body.style.overflow = open ? 'hidden' : '';
+
+  function applyPreset(w,h,fmt) {
+    currentW=w; currentH=h; currentFmt=fmt;
+    document.getElementById('customW').value=w;
+    document.getElementById('customH').value=h;
+    document.getElementById('outputFormat').value=fmt;
+    document.querySelectorAll('.preset-card').forEach(c=>c.classList.remove('active'));
+    event.currentTarget.classList.add('active');
+    const img=new Image();img.src=document.getElementById('originalPreview').src;
+    img.onload=()=>resize(img);
+    if(img.complete)resize(img);
   }
+
+  function updateCustom() {
+    currentW=parseInt(document.getElementById('customW').value)||currentW;
+    currentH=parseInt(document.getElementById('customH').value)||currentH;
+    currentFmt=document.getElementById('outputFormat').value;
+    currentQ=parseInt(document.getElementById('quality').value)/100;
+    if(!document.getElementById('originalPreview').src) return;
+    const img=new Image();img.src=document.getElementById('originalPreview').src;
+    img.onload=()=>resize(img);if(img.complete)resize(img);
+  }
+
+  function downloadImage() {
+    const ext = currentFmt.split('/')[1];
+    const a=document.createElement('a');
+    a.href=canvas.toDataURL(currentFmt,currentQ);
+    a.download='mailfix-resized-'+currentW+'x'+currentH+'.'+ext;
+    a.click();
+  }
+
+  const _mp=document.getElementById('mobilePanel');const _mb=document.getElementById('mobileMenuBtn');const _cb=document.getElementById('closeMobileBtn');
+  if(_mb)_mb.addEventListener('click',()=>{_mp.classList.add('open');document.body.style.overflow='hidden'});
+  if(_cb)_cb.addEventListener('click',()=>{_mp.classList.remove('open');document.body.style.overflow=''});
+  _mp.querySelectorAll('.mobile-link,.mobile-cta').forEach(a=>a.addEventListener('click',()=>{_mp.classList.remove('open');document.body.style.overflow=''}));
+  document.addEventListener('keydown',e=>{if(e.key==='Escape'){_mp.classList.remove('open');document.body.style.overflow=''}});
 </script>
 </body>
 </html>

@@ -1,723 +1,460 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8"/>
-<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title>Age Calculator & Days Between Dates — Exact Years Months Days | MailFix</title>
-<meta name="description" content="Calculate your exact age in years, months and days — or find how many days separate any two dates. Handles leap years, shows next birthday countdown. Free, instant."/>
-<meta name="keywords" content="age calculator india, days between dates calculator, date difference calculator, exact age calculator, how many days between two dates, birthday calculator"/>
+<meta charset="UTF-8"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Date & Age Calculator India — Date Difference, Add Days | MailFix</title>
+<meta name="description" content="Calculate exact age, date difference in days/months/years, and add or subtract days from any date. Free, instant. No signup."/>
 <meta name="robots" content="index, follow"/>
 <link rel="canonical" href="https://mailflix.netlify.app/date-calculator.html"/>
-<meta property="og:title" content="Age Calculator & Days Between Dates — Exact Years Months Days | MailFix"/>
-<meta property="og:description" content="Calculate your exact age in years, months and days — or find how many days separate any two dates. Handles leap years, shows next birthday countdown. Free, instant."/>
-<meta property="og:url" content="https://mailflix.netlify.app/date-calculator.html"/>
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "WebApplication",
-  "name": "Age Calculator & Days Between Dates",
-  "url": "https://mailflix.netlify.app/date-calculator.html",
-  "description": "Free online age calculator and days between dates tool with exact years, months and days breakdown.",
-  "applicationCategory": "UtilitiesApplication",
-  "offers": { "@type": "Offer", "price": "0", "priceCurrency": "INR" }
-}
-</script>
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  "mainEntity": [
-    { "@type": "Question", "name": "How is exact age calculated?", "acceptedAnswer": { "@type": "Answer", "text": "The calculator finds the difference between your date of birth and the target date in complete years, then months, then days — accounting for different month lengths and leap years." } },
-    { "@type": "Question", "name": "How many days between two dates?", "acceptedAnswer": { "@type": "Answer", "text": "Enter a start date and end date. The calculator uses UTC timestamps to avoid daylight saving issues and returns the exact number of calendar days, complete weeks, and remaining days." } },
-    { "@type": "Question", "name": "Does the age calculator handle leap years?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. The calculation uses actual calendar month lengths and handles leap years correctly, so someone born on 29 February gets an accurate result." } }
-  ]
-}
-</script>
-<link rel="preconnect" href="https://fonts.googleapis.com"/>
-<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet"/>
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3532554351654388" crossorigin="anonymous"></script>
-<style>
-  :root {
-    --ink: #0f0e0c;
-    --paper: #f5f2ec;
-    --card: #ffffff;
-    --accent: #d44f1e;
-    --accent2: #2563eb;
-    --green: #16a34a;
-    --green-bg: #f0fdf4;
-    --red-bg: #fef2f2;
-    --red-text: #b91c1c;
-    --muted: #7a7570;
-    --border: #e2ddd5;
-    --radius: 12px;
-    --font-head: 'Syne', sans-serif;
-    --font-body: 'DM Sans', sans-serif;
-  }
-  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-  body { background: var(--paper); color: var(--ink); font-family: var(--font-body); font-size: 16px; line-height: 1.6; min-height: 100vh; }
+<link rel="preconnect" href="https://fonts.googleapis.com"/><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/><link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet"/>
 
-  /* NAV */
-  nav { display: flex; justify-content: space-between; align-items: center; padding: 18px 5%; border-bottom: 1px solid var(--border); background: var(--paper); position: sticky; top: 0; z-index: 100; }
-  .logo { font-family: var(--font-head); font-size: 22px; font-weight: 800; letter-spacing: -0.5px; color: var(--ink); text-decoration: none; }
-  .logo span { color: var(--accent); }
-  .nav-badge { background: var(--accent); color: #fff; font-size: 12px; font-weight: 500; padding: 4px 12px; border-radius: 99px; font-family: var(--font-body); margin-left: 6px; }
-  .nav-right { display: flex; align-items: center; gap: 6px; }
-  .nav-links { display: flex; gap: 6px; align-items: center; }
-  .nav-item { position: relative; }
-  .nav-trigger { font-size: 13px; color: var(--muted); background: none; border: none; cursor: pointer; font-family: var(--font-body); display: flex; align-items: center; gap: 5px; padding: 8px 10px; border-radius: 8px; transition: color .15s; }
-  .nav-trigger:hover, .nav-trigger.open { color: var(--accent); }
-  .nav-trigger .caret { font-size: 9px; transition: transform .15s; opacity: .7; }
-  .nav-trigger.open .caret { transform: rotate(180deg); }
-  .dropdown-panel { position: absolute; top: calc(100% + 8px); left: 50%; transform: translateX(-50%); background: #fff; border: 1px solid var(--border); border-radius: 12px; box-shadow: 0 12px 32px rgba(15,14,12,.1); padding: 8px; min-width: 230px; display: none; z-index: 200; }
-  .dropdown-panel.open { display: block; }
-  .dropdown-panel a { display: flex; align-items: center; gap: 10px; padding: 9px 12px; border-radius: 8px; font-size: 13.5px; color: var(--ink); text-decoration: none; white-space: nowrap; font-family: var(--font-body); }
-  .dropdown-panel a:hover { background: var(--paper); color: var(--accent); }
-  .dropdown-panel a .emoji { font-size: 15px; width: 18px; text-align: center; }
-  .mobile-toggle { display: none; background: none; border: none; cursor: pointer; font-size: 22px; color: var(--ink); padding: 4px 6px; line-height: 1; }
-  @media(max-width:880px) { .nav-links { display: none; } .mobile-toggle { display: block; } }
-  .mobile-panel { display: none; position: fixed; inset: 0; background: var(--paper); z-index: 300; padding: 20px 6%; overflow-y: auto; }
-  .mobile-panel.open { display: block; }
-  .mobile-panel-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 28px; }
-  .mobile-close { background: none; border: none; font-size: 26px; color: var(--ink); cursor: pointer; line-height: 1; }
-  .mobile-group { margin-bottom: 28px; }
-  .mobile-group h4 { font-family: var(--font-head); font-size: 11px; text-transform: uppercase; letter-spacing: .1em; color: var(--accent); margin-bottom: 10px; }
-  .mobile-group a { display: flex; align-items: center; gap: 12px; padding: 13px 2px; border-bottom: 1px solid var(--border); font-size: 16px; color: var(--ink); text-decoration: none; font-family: var(--font-body); }
-  .mobile-group a .emoji { width: 22px; text-align: center; }
+<style>/* ─── SHARED DESIGN SYSTEM ─────────────────────────────── */
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --green:#22c55e;--green-dk:#16a34a;--green-lt:#dcfce7;--green-xs:#f0fdf4;
+  --black:#000;--white:#fff;--ink:#0f172a;--muted:#64748b;
+  --border:#e2e8f0;--paper:#fdfdfc;--card:#fff;
+  --red-lt:#fef2f2;--red:#dc2626;
+  --shadow:4px 4px 0px 0px #000;--shadow-sm:2px 2px 0px 0px #000;--shadow-lg:6px 6px 0px 0px #000;
+  --radius:12px;--font:'Plus Jakarta Sans',sans-serif;
+}
+html{scroll-behavior:smooth}
+body{font-family:var(--font);background:var(--paper);color:var(--ink);font-size:16px;line-height:1.6;min-height:100vh;-webkit-font-smoothing:antialiased}
+::-webkit-scrollbar{width:8px}::-webkit-scrollbar-track{background:transparent}::-webkit-scrollbar-thumb{background:#cbd5e1;border-radius:4px}
 
-  /* HERO */
-  .hero { max-width: 760px; margin: 0 auto; padding: 52px 5% 28px; text-align: center; }
-  .hero-tag { display: inline-flex; align-items: center; gap: 6px; background: #fff; border: 1px solid var(--border); border-radius: 99px; padding: 6px 16px; font-size: 13px; color: var(--muted); margin-bottom: 16px; }
-  .hero-tag .dot { width: 7px; height: 7px; background: #22c55e; border-radius: 50%; animation: pulse 2s infinite; }
-  @keyframes pulse { 0%,100%{opacity:1;transform:scale(1)} 50%{opacity:.6;transform:scale(1.3)} }
-  h1 { font-family: var(--font-head); font-size: clamp(30px, 5vw, 48px); font-weight: 800; line-height: 1.1; letter-spacing: -1.5px; margin-bottom: 14px; }
-  h1 em { color: var(--accent); font-style: normal; }
-  .hero-sub { font-size: 16px; color: var(--muted); font-weight: 300; max-width: 520px; margin: 0 auto; }
+/* NAV */
+nav{position:sticky;top:0;z-index:100;background:rgba(255,255,255,.92);backdrop-filter:blur(10px);border-bottom:2px solid var(--black)}
+.nav-inner{max-width:1100px;margin:0 auto;padding:0 24px;display:flex;align-items:center;justify-content:space-between;height:64px}
+.logo{display:flex;align-items:center;gap:10px;font-size:20px;font-weight:800;letter-spacing:-.5px;color:var(--black);text-decoration:none}
+.logo-icon{width:34px;height:34px;background:var(--green);border:2px solid var(--black);border-radius:8px;display:flex;align-items:center;justify-content:center;transform:rotate(-3deg);box-shadow:var(--shadow-sm)}
+.logo-icon svg{width:18px;height:18px}
+.logo span{color:var(--green-dk)}
+.nav-links{display:flex;align-items:center;gap:4px}
+.nav-item{position:relative}
+.nav-trigger{display:flex;align-items:center;gap:4px;padding:6px 12px;border-radius:8px;font-size:14px;font-weight:700;color:var(--muted);background:none;border:none;cursor:pointer;font-family:var(--font);transition:color .15s,background .15s}
+.nav-trigger:hover{color:var(--black);background:#f8fafc}
+.nav-trigger svg{width:14px;height:14px;transition:transform .2s}
+.nav-item:hover .nav-trigger svg{transform:rotate(180deg)}
+.dropdown-panel{display:none;position:absolute;top:calc(100% + 8px);left:0;min-width:200px;background:var(--white);border:2px solid var(--black);border-radius:14px;box-shadow:var(--shadow);padding:6px;z-index:200}
+.nav-item:hover .dropdown-panel,.dropdown-panel.open{display:flex;flex-direction:column}
+.dropdown-panel a{display:block;padding:9px 14px;border-radius:8px;font-size:13px;font-weight:700;color:var(--muted);text-decoration:none;transition:background .12s,color .12s}
+.dropdown-panel a:hover{background:var(--green-xs);color:var(--black)}
+.nav-cta{padding:9px 20px;background:var(--green);color:white;font-size:13px;font-weight:800;border:2px solid var(--black);border-radius:10px;box-shadow:var(--shadow-sm);cursor:pointer;text-decoration:none;transition:transform .12s,box-shadow .12s}
+.nav-cta:hover{transform:translate(2px,2px);box-shadow:none}
+.mobile-toggle{display:none;background:white;border:2px solid var(--black);border-radius:8px;padding:6px;cursor:pointer;box-shadow:var(--shadow-sm);transition:transform .1s,box-shadow .1s;align-items:center}
+.mobile-toggle:active{transform:translate(2px,2px);box-shadow:none}
+.mobile-toggle svg{width:22px;height:22px;display:block}
+.mobile-panel{display:none;position:fixed;inset:0;z-index:500;background:white;overflow-y:auto;transform:translateX(100%);transition:transform .28s ease;border-left:2px solid var(--black)}
+.mobile-panel.open{transform:translateX(0)}
+.mobile-panel-head{display:flex;align-items:center;justify-content:space-between;padding:16px 20px;border-bottom:2px solid var(--black);background:var(--green-xs)}
+.mobile-panel-body{padding:24px 20px;display:flex;flex-direction:column;gap:10px}
+.mobile-link{display:flex;align-items:center;gap:10px;padding:12px 16px;border-radius:10px;border:2px solid var(--border);font-size:15px;font-weight:700;color:var(--ink);text-decoration:none;transition:border-color .12s,background .12s}
+.mobile-link:hover{border-color:var(--green);background:var(--green-xs)}
+.mobile-cta{display:block;text-align:center;padding:14px;background:var(--green);color:white;font-weight:800;font-size:15px;border:2px solid var(--black);border-radius:12px;box-shadow:var(--shadow);text-decoration:none;transition:transform .12s,box-shadow .12s}
+.mobile-cta:hover{transform:translate(4px,4px);box-shadow:none}
+.mobile-section-label{font-size:10px;font-weight:800;letter-spacing:.12em;text-transform:uppercase;color:#94a3b8;margin-top:6px;padding:0 4px}
+.close-btn{background:white;border:2px solid var(--black);border-radius:8px;padding:6px;cursor:pointer;box-shadow:var(--shadow-sm)}
+.close-btn svg{width:20px;height:20px;display:block}
 
-  /* MODE TABS */
-  .mode-tabs { max-width: 900px; margin: 24px auto 0; padding: 0 5%; display: flex; gap: 10px; flex-wrap: wrap; justify-content: center; }
-  .mode-tab { padding: 10px 24px; border-radius: 10px; border: 1px solid var(--border); background: var(--card); font-family: var(--font-head); font-size: 14px; font-weight: 700; cursor: pointer; color: var(--muted); transition: all .15s; }
-  .mode-tab.active { background: var(--accent); color: #fff; border-color: var(--accent); }
-  .mode-tab:hover:not(.active) { border-color: var(--accent); color: var(--accent); }
+/* PAGE HERO */
+.page-hero{max-width:900px;margin:0 auto;padding:56px 24px 40px;text-align:center}
+.page-badge{display:inline-flex;align-items:center;gap:8px;padding:5px 18px;border:2px solid var(--black);border-radius:99px;background:white;box-shadow:var(--shadow-sm);font-size:11px;font-weight:800;letter-spacing:.12em;text-transform:uppercase;margin-bottom:20px;color:var(--black)}
+h1{font-size:clamp(28px,5vw,52px);font-weight:800;line-height:1.1;letter-spacing:-1px;color:var(--black);margin-bottom:14px}
+h1 .accent{color:var(--green-dk)}
+.page-sub{font-size:17px;color:var(--muted);font-weight:500;max-width:560px;margin:0 auto;line-height:1.65}
 
-  /* TOOL */
-  .tool-wrap { max-width: 900px; margin: 20px auto 32px; padding: 0 5%; }
-  .tool-panel { display: none; }
-  .tool-panel.active { display: block; }
+/* FORM CARD */
+.form-wrap{max-width:900px;margin:0 auto;padding:0 24px 80px}
+.form-card{background:white;border:4px solid var(--black);border-radius:20px;box-shadow:var(--shadow-lg);overflow:hidden}
+.form-card-header{padding:18px 24px;border-bottom:2px solid var(--black);background:var(--green-xs);display:flex;align-items:center;justify-content:space-between}
+.form-card-title{font-size:13px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;color:var(--green-dk)}
+.form-body{padding:28px 24px}
+.form-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+.form-group{display:flex;flex-direction:column;gap:6px}
+.form-group.full{grid-column:1/-1}
+label{font-size:13px;font-weight:700;color:var(--ink)}
+label span{font-weight:500;color:var(--muted);font-size:12px;margin-left:4px}
+input,select,textarea{width:100%;padding:11px 14px;border:2px solid var(--border);border-radius:10px;font-family:var(--font);font-size:15px;font-weight:500;color:var(--ink);background:white;outline:none;transition:border-color .15s,box-shadow .15s}
+input:focus,select:focus,textarea:focus{border-color:var(--black);box-shadow:var(--shadow-sm)}
+textarea{resize:vertical;min-height:100px}
+input[type=date]{cursor:pointer}
+input[type=number]{-moz-appearance:textfield}
+input[type=number]::-webkit-outer-spin-button,input[type=number]::-webkit-inner-spin-button{-webkit-appearance:none}
 
-  .calc-wrap { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
-  @media(max-width:640px) { .calc-wrap { grid-template-columns: 1fr; } }
+/* OUTPUT SECTION */
+.output-section{border-top:4px solid var(--black);background:#f8fafc;padding:24px}
+.output-label{font-size:11px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin-bottom:14px}
+.output-box{background:white;border:2px solid var(--black);border-radius:12px;padding:20px;min-height:140px;box-shadow:var(--shadow-sm);font-size:15px;font-weight:500;line-height:1.8;white-space:pre-wrap;color:var(--ink)}
+.output-placeholder{color:#94a3b8;font-style:italic}
+.loading-dots{display:none;align-items:center;gap:5px;padding:8px 0}
+.loading-dots.show{display:flex}
+.loading-dots span{width:8px;height:8px;background:var(--black);border-radius:50%;animation:bounce 1s infinite}
+.loading-dots span:nth-child(2){animation-delay:.15s;background:var(--green)}
+.loading-dots span:nth-child(3){animation-delay:.3s}
+@keyframes bounce{0%,60%,100%{transform:translateY(0)}30%{transform:translateY(-9px)}}
 
-  /* INPUT CARD */
-  .card { background: var(--card); border: 1px solid var(--border); border-radius: 18px; overflow: hidden; box-shadow: 0 2px 20px rgba(0,0,0,0.05); }
-  .card-header { padding: 18px 24px; border-bottom: 1px solid var(--border); background: #fafaf8; }
-  .card-header h2 { font-family: var(--font-head); font-size: 16px; font-weight: 700; }
-  .card-header p { font-size: 13px; color: var(--muted); margin-top: 2px; }
-  .card-body { padding: 22px 24px; }
+/* BUTTONS */
+.btn{display:inline-flex;align-items:center;gap:6px;padding:10px 22px;border-radius:10px;font-family:var(--font);font-size:14px;font-weight:700;cursor:pointer;border:2px solid var(--black);box-shadow:var(--shadow-sm);transition:transform .12s,box-shadow .12s}
+.btn:hover{transform:translate(2px,2px);box-shadow:none}
+.btn:disabled{opacity:.5;cursor:not-allowed;transform:none!important;box-shadow:var(--shadow-sm)!important}
+.btn-primary{background:var(--green);color:white}
+.btn-black{background:var(--black);color:white}
+.btn-white{background:white;color:var(--ink)}
+.btn-lg{padding:13px 32px;font-size:15px;font-weight:800;box-shadow:var(--shadow)}
+.btn-lg:hover{box-shadow:none;transform:translate(4px,4px)}
+.btn-full{width:100%;justify-content:center}
+.btn-group{display:flex;gap:10px;flex-wrap:wrap;margin-top:16px}
 
-  .f-group { margin-bottom: 18px; }
-  .f-label { font-size: 12.5px; font-weight: 600; color: var(--muted); margin-bottom: 6px; display: block; text-transform: uppercase; letter-spacing: .05em; font-family: var(--font-head); }
-  .f-date { width: 100%; padding: 11px 14px; border: 1px solid var(--border); border-radius: 8px; font-size: 15px; font-family: var(--font-body); color: var(--ink); background: var(--paper); outline: none; transition: border-color .15s; }
-  .f-date:focus { border-color: var(--accent); background: #fff; }
+/* ERROR */
+.error-msg{display:none;width:100%;background:var(--red-lt);border:2px solid var(--black);color:var(--red);font-size:13px;font-weight:700;padding:10px 16px;border-radius:8px;margin-bottom:12px;text-align:center}
+.error-msg.show{display:block}
 
-  .btn-row { display: flex; gap: 10px; margin-top: 6px; }
-  .calc-btn { flex: 2; padding: 13px; background: var(--accent); color: #fff; border: none; border-radius: 10px; font-family: var(--font-head); font-size: 15px; font-weight: 700; cursor: pointer; transition: all .15s; }
-  .calc-btn:hover { background: #b83e12; transform: translateY(-1px); }
-  .clear-btn { flex: 1; padding: 13px; background: var(--card); color: var(--muted); border: 1px solid var(--border); border-radius: 10px; font-family: var(--font-body); font-size: 14px; cursor: pointer; transition: all .15s; }
-  .clear-btn:hover { border-color: var(--ink); color: var(--ink); }
+/* RESULT CARDS */
+.result-card{background:white;border:2px solid var(--black);border-radius:14px;overflow:hidden;box-shadow:var(--shadow)}
+.result-hero{padding:28px;text-align:center;background:var(--green-xs);border-bottom:2px solid var(--black)}
+.result-hero h2{font-size:clamp(32px,6vw,52px);font-weight:800;color:var(--black)}
+.result-hero p{font-size:14px;color:var(--muted);margin-top:4px;font-weight:600}
+.result-rows{display:flex;flex-direction:column}
+.result-row{display:flex;align-items:center;justify-content:space-between;padding:14px 20px;border-bottom:1px solid var(--border)}
+.result-row:last-child{border-bottom:none}
+.result-row-label{font-size:14px;font-weight:700;color:var(--ink)}
+.result-row-sub{font-size:12px;color:var(--muted);font-weight:500;margin-top:1px}
+.result-row-value{font-size:15px;font-weight:800;color:var(--black)}
+.result-row-value.positive{color:#16a34a}
+.result-row-value.negative{color:var(--red)}
+.section-divider{padding:10px 20px 6px;font-size:10px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);background:#f8fafc;border-bottom:1px solid var(--border)}
 
-  .error-bar { margin-top: 12px; padding: 10px 14px; border-radius: 8px; font-size: 13.5px; background: var(--red-bg); color: var(--red-text); border: 1px solid #fca5a5; display: none; }
-  .error-bar.show { display: block; }
+/* SELECTOR CARDS (modes, types) */
+.selector-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(160px,1fr));gap:10px;margin-bottom:24px}
+.selector-card{padding:14px 16px;background:white;border:2px solid var(--border);border-radius:12px;cursor:pointer;transition:all .15s;text-align:left}
+.selector-card:hover{border-color:var(--green);background:var(--green-xs)}
+.selector-card.active{border-color:var(--black);background:white;box-shadow:var(--shadow-sm)}
+.selector-card-icon{font-size:20px;margin-bottom:6px}
+.selector-card-title{font-size:13px;font-weight:800;color:var(--black)}
+.selector-card-sub{font-size:11px;color:var(--muted);font-weight:500;margin-top:2px;line-height:1.4}
 
-  /* RESULT CARD */
-  .result-hero { background: linear-gradient(135deg, #0f0e0c 0%, #1a1917 100%); padding: 24px; text-align: center; }
-  .result-hero-value { font-family: var(--font-head); font-size: clamp(22px, 4vw, 30px); font-weight: 800; color: #22c55e; letter-spacing: -0.5px; }
-  .result-hero-sub { font-size: 12px; color: #7a7570; margin-top: 6px; }
+/* MODE PILLS */
+.pill-row{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:20px}
+.pill{padding:7px 16px;border-radius:99px;border:2px solid var(--border);background:white;font-family:var(--font);font-size:13px;font-weight:700;color:var(--muted);cursor:pointer;transition:all .15s}
+.pill:hover{border-color:var(--green);color:var(--black)}
+.pill.active{border-color:var(--black);color:var(--black);box-shadow:var(--shadow-sm);background:white}
 
-  .metric-row { display: flex; justify-content: space-between; align-items: center; padding: 12px 24px; border-bottom: 1px solid var(--border); }
-  .metric-row:last-child { border-bottom: none; }
-  .metric-row.alt { background: #fafaf8; }
-  .metric-label { font-size: 13.5px; color: var(--muted); }
-  .metric-val { font-size: 20px; font-weight: 800; font-family: var(--font-head); color: var(--accent2); }
+/* TOGGLE */
+.toggle-row{display:flex;align-items:center;justify-content:space-between;padding:12px 0;border-bottom:1px solid var(--border)}
+.toggle-row:last-child{border-bottom:none}
+.toggle-label{font-size:14px;font-weight:700;color:var(--ink)}
+.toggle-sub{font-size:12px;color:var(--muted);font-weight:500}
+.toggle{position:relative;display:inline-block;width:40px;height:22px;flex-shrink:0}
+.toggle input{opacity:0;width:0;height:0}
+.toggle-slider{position:absolute;cursor:pointer;top:0;left:0;right:0;bottom:0;background:#e2e8f0;border:2px solid var(--black);border-radius:99px;transition:.2s}
+.toggle-slider:before{position:absolute;content:'';height:14px;width:14px;left:2px;bottom:2px;background:white;border-radius:50%;border:1.5px solid #94a3b8;transition:.2s}
+input:checked+.toggle-slider{background:var(--green)}
+input:checked+.toggle-slider:before{transform:translateX(18px);border-color:white}
 
-  .empty-state { padding: 48px 24px; text-align: center; color: var(--muted); font-size: 14px; }
-  .empty-icon { font-size: 40px; margin-bottom: 12px; display: block; opacity: 0.35; }
+/* LETTER PAPER */
+.letter-paper{background:white;border:2px solid var(--black);border-radius:12px;padding:28px;font-family:'Times New Roman',serif;font-size:15px;line-height:1.8;color:var(--ink);white-space:pre-wrap;box-shadow:var(--shadow-sm)}
 
-  .copy-row { padding: 14px 24px; display: flex; justify-content: flex-end; border-top: 1px solid var(--border); }
-  .copy-btn { padding: 7px 16px; border: 1px solid var(--border); border-radius: 8px; background: var(--card); font-size: 13px; font-family: var(--font-body); cursor: pointer; color: var(--muted); transition: all .15s; }
-  .copy-btn:hover { border-color: var(--ink); color: var(--ink); }
-  .copy-btn.success { background: var(--green-bg); color: #166534; border-color: #bbf7d0; }
+/* SECTION EXPLAINER */
+.section-explainer{max-width:900px;margin:0 auto;padding:60px 24px 40px}
+.section-explainer h2{font-size:clamp(22px,4vw,34px);font-weight:800;color:var(--black);margin-bottom:28px}
+.explainer-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:16px;margin-bottom:40px}
+.explainer-card{background:white;border:2px solid var(--black);border-radius:14px;padding:20px;box-shadow:var(--shadow-sm)}
+.explainer-card .tag{display:inline-block;background:var(--green-xs);border:1.5px solid var(--green);border-radius:6px;padding:2px 10px;font-size:11px;font-weight:800;letter-spacing:.06em;text-transform:uppercase;color:var(--green-dk);margin-bottom:10px}
+.explainer-card h4{font-size:14px;font-weight:800;color:var(--black);margin-bottom:6px}
+.explainer-card p{font-size:13px;color:var(--muted);font-weight:500;line-height:1.6}
 
-  /* AD + EXPLAINER + FAQ */
-  .ad-banner { max-width: 900px; margin: 0 auto 32px; padding: 0 5%; }
-  .explainer { max-width: 900px; margin: 0 auto; padding: 44px 5%; }
-  .explainer h2 { font-family: var(--font-head); font-size: clamp(22px, 3vw, 32px); font-weight: 800; letter-spacing: -0.5px; margin-bottom: 28px; }
-  .explainer-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 14px; margin-bottom: 32px; }
-  .explainer-card { background: var(--card); border: 1px solid var(--border); border-radius: var(--radius); padding: 18px; }
-  .explainer-card h4 { font-family: var(--font-head); font-size: 14px; font-weight: 700; margin-bottom: 6px; }
-  .explainer-card p { font-size: 13px; color: var(--muted); line-height: 1.6; }
-  .explainer-card .tag { display: inline-block; font-size: 11px; padding: 2px 8px; border-radius: 4px; font-weight: 500; margin-bottom: 8px; background: var(--green-bg); color: #15803d; }
-  details { background: var(--card); border: 1px solid var(--border); border-radius: var(--radius); padding: 18px 20px; margin-bottom: 10px; }
-  summary { font-family: var(--font-head); font-size: 15px; font-weight: 700; cursor: pointer; list-style: none; display: flex; justify-content: space-between; align-items: center; }
-  summary .plus { color: var(--accent); font-size: 20px; }
-  details p { margin-top: 12px; font-size: 14px; color: var(--muted); line-height: 1.7; }
+/* FAQ */
+.section-faq{border-top:4px solid var(--black);background:white;padding:60px 24px}
+.section-faq-inner{max-width:760px;margin:0 auto}
+.section-faq h2{font-size:clamp(22px,4vw,34px);font-weight:800;color:var(--black);margin-bottom:28px}
+.faq-list{display:flex;flex-direction:column;gap:10px}
+details.faq-item{background:white;border:2px solid var(--black);border-radius:14px;overflow:hidden;box-shadow:var(--shadow-sm)}
+details.faq-item summary{display:flex;align-items:center;justify-content:space-between;padding:16px 20px;cursor:pointer;list-style:none;font-size:14px;font-weight:800;color:var(--black);background:#f8fafc;transition:background .12s}
+details.faq-item summary::-webkit-details-marker{display:none}
+details.faq-item summary:hover{background:var(--green-xs)}
+.faq-arrow{width:26px;height:26px;background:white;border:2px solid var(--black);border-radius:50%;display:flex;align-items:center;justify-content:center;box-shadow:var(--shadow-sm);flex-shrink:0;transition:transform .2s}
+.faq-arrow svg{width:12px;height:12px}
+details[open] .faq-arrow{transform:rotate(180deg);background:var(--green-xs)}
+.faq-body{padding:14px 20px 18px;font-size:13px;font-weight:500;color:#475569;line-height:1.7;border-top:2px solid var(--black)}
 
-  footer { border-top: 1px solid var(--border); padding: 28px 5%; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px; font-size: 13px; color: var(--muted); }
-  footer a { color: var(--muted); text-decoration: none; }
-  footer a:hover { color: var(--accent); }
+/* FOOTER */
+footer{background:var(--black);color:white;padding:40px 24px;border-top:4px solid var(--black)}
+.footer-inner{max-width:1100px;margin:0 auto;display:flex;flex-direction:column;gap:24px}
+.footer-top{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:16px}
+.footer-logo{font-size:18px;font-weight:800;color:white}
+.footer-links{display:flex;flex-wrap:wrap;gap:16px}
+.footer-links a{font-size:13px;font-weight:700;color:#94a3b8;text-decoration:none;transition:color .12s}
+.footer-links a:hover{color:var(--green)}
+.footer-copy{font-size:12px;color:#475569;font-weight:500;padding-top:16px;border-top:1px solid #1e293b}
 
-  /* === Grouped nav dropdowns + mobile menu (site-wide) === */
-  .nav-links{display:flex;gap:6px;align-items:center}
-  .nav-badge{background:var(--accent);color:#fff;font-size:12px;font-weight:500;padding:4px 12px;border-radius:99px;font-family:var(--font-body);margin-left:6px}
-  .nav-right{display:flex;align-items:center;gap:6px}
-  .nav-item{position:relative}
-  .nav-trigger{font-size:13px;color:var(--muted);background:none;border:none;cursor:pointer;font-family:var(--font-body);display:flex;align-items:center;gap:5px;padding:8px 10px;border-radius:8px;transition:color .15s}
-  .nav-trigger:hover,.nav-trigger.open{color:var(--accent)}
-  .nav-trigger .caret{font-size:9px;transition:transform .15s;opacity:.7}
-  .nav-trigger.open .caret{transform:rotate(180deg)}
-  .dropdown-panel{position:absolute;top:calc(100% + 8px);left:50%;transform:translateX(-50%);background:#fff;border:1px solid var(--border);border-radius:12px;box-shadow:0 12px 32px rgba(15,14,12,.1);padding:8px;min-width:230px;display:none;z-index:200}
-  .dropdown-panel.open{display:block}
-  .dropdown-panel a{display:flex;align-items:center;gap:10px;padding:9px 12px;border-radius:8px;font-size:13.5px;color:var(--ink);text-decoration:none;white-space:nowrap;font-family:var(--font-body)}
-  .dropdown-panel a:hover{background:var(--paper);color:var(--accent)}
-  .dropdown-panel a .emoji{font-size:15px;width:18px;text-align:center}
-  .mobile-toggle{display:none;background:none;border:none;cursor:pointer;font-size:22px;color:var(--ink);padding:4px 6px;line-height:1}
-  @media(max-width:880px){.nav-links{display:none}.mobile-toggle{display:block}}
-  .mobile-panel{display:none;position:fixed;inset:0;background:var(--paper);z-index:300;padding:20px 6%;overflow-y:auto}
-  .mobile-panel.open{display:block}
-  .mobile-panel-header{display:flex;justify-content:space-between;align-items:center;margin-bottom:28px}
-  .mobile-close{background:none;border:none;font-size:26px;color:var(--ink);cursor:pointer;line-height:1}
-  .mobile-group{margin-bottom:28px}
-  .mobile-group h4{font-family:var(--font-head);font-size:11px;text-transform:uppercase;letter-spacing:.1em;color:var(--accent);margin-bottom:10px}
-  .mobile-group a{display:flex;align-items:center;gap:12px;padding:13px 2px;border-bottom:1px solid var(--border);font-size:16px;color:var(--ink);text-decoration:none;font-family:var(--font-body)}
-  .mobile-group a .emoji{width:22px;text-align:center}
+/* RESPONSIVE */
+@media(max-width:768px){
+  .nav-links,.nav-cta{display:none}
+  .mobile-toggle{display:flex}
+  .mobile-panel{display:block}
+  .form-grid{grid-template-columns:1fr}
+  .form-group.full{grid-column:1}
+  .page-hero{padding:40px 20px 28px}
+  .form-wrap{padding:0 16px 60px}
+  .explainer-grid{grid-template-columns:1fr 1fr}
+  .btn-group{flex-direction:column}
+  .btn-full{width:100%}
+}
+@media(max-width:480px){
+  .explainer-grid{grid-template-columns:1fr}
+  .selector-grid{grid-template-columns:1fr 1fr}
+}
+
+.calc-split{display:grid;grid-template-columns:1fr 1.1fr;gap:0}
+.calc-input{border-right:2px solid var(--black)}
+@media(max-width:700px){.calc-split{grid-template-columns:1fr}.calc-input{border-right:none;border-bottom:2px solid var(--black)}}
+.result-panel{padding:24px}
+.result-hero-sm{background:var(--green-xs);border:2px solid var(--black);border-radius:12px;padding:20px;text-align:center;margin-bottom:14px;box-shadow:var(--shadow-sm)}
+.result-hero-sm .big{font-size:clamp(26px,5vw,40px);font-weight:800;color:var(--black);line-height:1.15}
+.result-hero-sm .lbl{font-size:12px;font-weight:700;color:var(--muted);text-transform:uppercase;letter-spacing:.06em;margin-top:6px}
+.breakdown-box{background:white;border:2px solid var(--black);border-radius:12px;overflow:hidden;box-shadow:var(--shadow-sm)}
+.bd-row{display:flex;justify-content:space-between;align-items:center;padding:11px 16px;border-bottom:1px solid var(--border);font-size:13px}
+.bd-row:last-child{border:none}
+.bd-row .k{font-weight:600;color:var(--muted)}
+.bd-row .v{font-weight:800;color:var(--black)}
+.bd-row .v.pos{color:#16a34a}
+.bd-row .v.neg{color:var(--red)}
+.empty-state{text-align:center;padding:40px 20px;color:#94a3b8;font-style:italic;font-size:14px}
+.sec-head{padding:8px 16px;font-size:10px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);background:#f8fafc;border-bottom:1px solid var(--border)}
 </style>
 </head>
 <body>
-
+<!-- ═══════════════ SHARED NAV SNIPPET ═══════════════ -->
 <nav>
-  <a class="logo" href="index.html">Mail<span>Fix</span></a>
-  <div class="nav-links" id="navLinks">
-    <div class="nav-item">
-      <button class="nav-trigger" onclick="toggleDropdown('calcDropdown', this)">🧮 Calculators <span class="caret">▾</span></button>
-      <div class="dropdown-panel" id="calcDropdown">
-        <a href="ctc-calculator.html"><span class="emoji">💰</span> CTC to In-Hand Salary</a>
-        <a href="hra-calculator.html"><span class="emoji">🏠</span> HRA Exemption</a>
-        <a href="itr-calculator.html"><span class="emoji">📊</span> ITR / Income Tax</a>
-        <a href="leave-encashment.html"><span class="emoji">🏖️</span> Leave Encashment</a>
-        <a href="retirement-calculator.html"><span class="emoji">🎯</span> Retirement Package</a>
-        <a href="increment-calculator.html"><span class="emoji">📈</span> Annual Increment</a>
-        <a href="date-calculator.html"><span class="emoji">📅</span> Age &amp; Date Calculator</a>
-        <a href="health-calculator.html"><span class="emoji">❤️</span> Health Calculators</a>
+  <div class="nav-inner">
+    <a href="index.html" class="logo">
+      <div class="logo-icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="3"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+      </div>
+      MailFix<span>.in</span>
+    </a>
+    <div class="nav-links">
+      <div class="nav-item">
+        <button class="nav-trigger">Calculators <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/></svg></button>
+        <div class="dropdown-panel">
+          <a href="ctc-calculator.html">CTC to In-Hand</a>
+          <a href="city-compare.html">City Salary Compare</a>
+          <a href="hra-calculator.html">HRA Exemption</a>
+          <a href="itr-calculator.html">ITR / Tax</a>
+          <a href="increment-calculator.html">Govt Increment</a>
+          <a href="leave-encashment.html">Leave Encashment</a>
+          <a href="retirement-calculator.html">Retirement</a>
+        </div>
+      </div>
+      <div class="nav-item">
+        <button class="nav-trigger">Documents <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/></svg></button>
+        <div class="dropdown-panel">
+          <a href="index.html">Email Fixer</a>
+          <a href="job-application.html">Job Application</a>
+          <a href="sarkari-letter.html">Sarkari Letter</a>
+          <a href="resignation.html">Resignation Kit</a>
+          <a href="rent-receipt.html">Rent Receipt</a>
+          <a href="gst-invoice.html">GST Invoice</a>
+        </div>
+      </div>
+      <div class="nav-item">
+        <button class="nav-trigger">Utilities <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/></svg></button>
+        <div class="dropdown-panel">
+          <a href="whatsapp-dhanda.html">WhatsApp Dhanda</a>
+          <a href="paraphrase.html">Paraphrase Tool</a>
+          <a href="photo-resizer.html">Photo Resizer</a>
+          <a href="qr-generator.html">QR Generator</a>
+          <a href="json-tools.html">JSON Tools</a>
+          <a href="date-calculator.html">Date & Age Calc</a>
+          <a href="health-calculator.html">Health Calculators</a>
+          <a href="vehicle-scrappage.html">Vehicle Scrappage</a>
+        </div>
       </div>
     </div>
-    <div class="nav-item">
-      <button class="nav-trigger" onclick="toggleDropdown('lettersDropdown', this)">✉️ Letters &amp; Docs <span class="caret">▾</span></button>
-      <div class="dropdown-panel" id="lettersDropdown">
-        <a href="index.html"><span class="emoji">💬</span> Hinglish Email Fixer</a>
-        <a href="job-application.html"><span class="emoji">🎓</span> Job Application Email</a>
-        <a href="sarkari-letter.html"><span class="emoji">🏛️</span> Sarkari Letter</a>
-        <a href="resignation.html"><span class="emoji">🚪</span> Resignation Kit</a>
-        <a href="rent-receipt.html"><span class="emoji">🧾</span> Rent Receipt</a>
-        <a href="gst-invoice.html"><span class="emoji">📄</span> GST Invoice</a>
-        <a href="paraphrase.html"><span class="emoji">✍️</span> Paraphrasing Tool</a>
-      </div>
+    <div style="display:flex;align-items:center;gap:12px">
+      <a href="index.html#main-tool" class="nav-cta">Fix Email Free</a>
+      <button class="mobile-toggle" id="mobileMenuBtn">
+        <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"/></svg>
+      </button>
     </div>
-    <div class="nav-item">
-      <button class="nav-trigger" onclick="toggleDropdown('utilsDropdown', this)">🛠️ Utilities <span class="caret">▾</span></button>
-      <div class="dropdown-panel" id="utilsDropdown">
-        <a href="whatsapp-dhanda.html"><span class="emoji">📱</span> WhatsApp Dhanda</a>
-        <a href="photo-resizer.html"><span class="emoji">🖼️</span> Photo Resizer</a>
-        <a href="city-compare.html"><span class="emoji">🏙️</span> City Salary Compare</a>
-        <a href="vehicle-scrappage.html"><span class="emoji">🚗</span> Vehicle Scrappage</a>
-        <a href="qr-generator.html"><span class="emoji">🔲</span> QR Generator</a>
-        <a href="json-tools.html"><span class="emoji">{ }</span> JSON Tools</a>
-      </div>
-    </div>
-  </div>
-  <div class="nav-right">
-    <span class="nav-badge">Free</span>
-    <button class="mobile-toggle" onclick="toggleMobilePanel(true)" aria-label="Open menu">☰</button>
   </div>
 </nav>
-
 <div class="mobile-panel" id="mobilePanel">
-  <div class="mobile-panel-header">
-    <a class="logo" href="index.html">Mail<span>Fix</span></a>
-    <button class="mobile-close" onclick="toggleMobilePanel(false)" aria-label="Close menu">×</button>
+  <div class="mobile-panel-head">
+    <a href="index.html" class="logo">MailFix<span style="color:var(--green-dk)">.in</span></a>
+    <button class="close-btn" id="closeMobileBtn">
+      <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/></svg>
+    </button>
   </div>
-  <div class="mobile-group">
-    <h4>Calculators</h4>
-    <a href="ctc-calculator.html"><span class="emoji">💰</span> CTC to In-Hand Salary</a>
-    <a href="hra-calculator.html"><span class="emoji">🏠</span> HRA Exemption</a>
-    <a href="itr-calculator.html"><span class="emoji">📊</span> ITR / Income Tax</a>
-    <a href="leave-encashment.html"><span class="emoji">🏖️</span> Leave Encashment</a>
-    <a href="retirement-calculator.html"><span class="emoji">🎯</span> Retirement Package</a>
-    <a href="increment-calculator.html"><span class="emoji">📈</span> Annual Increment</a>
-    <a href="date-calculator.html"><span class="emoji">📅</span> Age &amp; Date Calculator</a>
-    <a href="health-calculator.html"><span class="emoji">❤️</span> Health Calculators</a>
-  </div>
-  <div class="mobile-group">
-    <h4>Letters &amp; Docs</h4>
-    <a href="index.html"><span class="emoji">💬</span> Hinglish Email Fixer</a>
-    <a href="job-application.html"><span class="emoji">🎓</span> Job Application Email</a>
-    <a href="sarkari-letter.html"><span class="emoji">🏛️</span> Sarkari Letter</a>
-    <a href="resignation.html"><span class="emoji">🚪</span> Resignation Kit</a>
-    <a href="rent-receipt.html"><span class="emoji">🧾</span> Rent Receipt</a>
-    <a href="gst-invoice.html"><span class="emoji">📄</span> GST Invoice</a>
-    <a href="paraphrase.html"><span class="emoji">✍️</span> Paraphrasing Tool</a>
-  </div>
-  <div class="mobile-group">
-    <h4>Utilities</h4>
-    <a href="whatsapp-dhanda.html"><span class="emoji">📱</span> WhatsApp Dhanda</a>
-    <a href="photo-resizer.html"><span class="emoji">🖼️</span> Photo Resizer</a>
-    <a href="city-compare.html"><span class="emoji">🏙️</span> City Salary Compare</a>
-    <a href="vehicle-scrappage.html"><span class="emoji">🚗</span> Vehicle Scrappage</a>
-    <a href="qr-generator.html"><span class="emoji">🔲</span> QR Generator</a>
-    <a href="json-tools.html"><span class="emoji">{ }</span> JSON Tools</a>
-  </div>
-</div>
-
-<div class="mobile-panel" id="mobilePanel">
-  <div class="mobile-panel-header">
-    <a class="logo" href="index.html">Mail<span>Fix</span></a>
-    <button class="mobile-close" onclick="toggleMobilePanel(false)" aria-label="Close menu">×</button>
-  </div>
-  <div class="mobile-group">
-    <h4>Calculators</h4>
-    <a href="ctc-calculator.html"><span class="emoji">💰</span> CTC to In-Hand Salary</a>
-    <a href="hra-calculator.html"><span class="emoji">🏠</span> HRA Exemption</a>
-    <a href="itr-calculator.html"><span class="emoji">📊</span> ITR / Income Tax</a>
-    <a href="leave-encashment.html"><span class="emoji">🏖️</span> Leave Encashment</a>
-    <a href="retirement-calculator.html"><span class="emoji">🎯</span> Retirement Package</a>
-    <a href="increment-calculator.html"><span class="emoji">📈</span> Annual Increment</a>
-    <a href="date-calculator.html"><span class="emoji">📅</span> Age & Date Calculator</a>
-  </div>
-  <div class="mobile-group">
-    <h4>Letters & Docs</h4>
-    <a href="index.html"><span class="emoji">💬</span> Hinglish Email Fixer</a>
-    <a href="job-application.html"><span class="emoji">🎓</span> Job Application Email</a>
-    <a href="sarkari-letter.html"><span class="emoji">🏛️</span> Sarkari Letter</a>
-    <a href="resignation.html"><span class="emoji">🚪</span> Resignation Kit</a>
-    <a href="rent-receipt.html"><span class="emoji">🧾</span> Rent Receipt</a>
-    <a href="gst-invoice.html"><span class="emoji">📄</span> GST Invoice</a>
-    <a href="paraphrase.html"><span class="emoji">✍️</span> Paraphrasing Tool</a>
-  </div>
-  <div class="mobile-group">
-    <h4>Utilities</h4>
-    <a href="whatsapp-dhanda.html"><span class="emoji">📱</span> WhatsApp Dhanda</a>
-    <a href="photo-resizer.html"><span class="emoji">🖼️</span> Photo Resizer</a>
-    <a href="city-compare.html"><span class="emoji">🏙️</span> City Compare</a>
-    <a href="vehicle-scrappage.html"><span class="emoji">🚗</span> Vehicle Scrappage</a>
-    <a href="qr-generator.html"><span class="emoji">🔲</span> QR Generator</a>
-    <a href="json-tools.html"><span class="emoji">{ }</span> JSON Tools</a>
+  <div class="mobile-panel-body">
+    <a href="index.html#main-tool" class="mobile-cta">Fix Email Free →</a>
+    <p class="mobile-section-label">AI Tools</p>
+    <a href="index.html" class="mobile-link">📧 Email Fixer</a>
+    <a href="job-application.html" class="mobile-link">🎓 Job Application</a>
+    <a href="sarkari-letter.html" class="mobile-link">🏛️ Sarkari Letter</a>
+    <a href="resignation.html" class="mobile-link">🚪 Resignation Kit</a>
+    <a href="whatsapp-dhanda.html" class="mobile-link">📱 WhatsApp Dhanda</a>
+    <a href="paraphrase.html" class="mobile-link">✍️ Paraphrase Tool</a>
+    <p class="mobile-section-label">Calculators</p>
+    <a href="ctc-calculator.html" class="mobile-link">💰 CTC to In-Hand</a>
+    <a href="city-compare.html" class="mobile-link">🏙️ City Compare</a>
+    <a href="hra-calculator.html" class="mobile-link">🏠 HRA Exemption</a>
+    <a href="itr-calculator.html" class="mobile-link">📊 ITR / Tax</a>
+    <a href="increment-calculator.html" class="mobile-link">📈 Govt Increment</a>
+    <a href="leave-encashment.html" class="mobile-link">🏖️ Leave Encashment</a>
+    <a href="retirement-calculator.html" class="mobile-link">🎯 Retirement</a>
+    <p class="mobile-section-label">Utilities</p>
+    <a href="photo-resizer.html" class="mobile-link">🖼️ Photo Resizer</a>
+    <a href="qr-generator.html" class="mobile-link">📷 QR Generator</a>
+    <a href="json-tools.html" class="mobile-link">🔧 JSON Tools</a>
+    <a href="date-calculator.html" class="mobile-link">📅 Date & Age</a>
+    <a href="health-calculator.html" class="mobile-link">💪 Health Calculators</a>
+    <a href="vehicle-scrappage.html" class="mobile-link">🚗 Vehicle Scrappage</a>
+    <a href="rent-receipt.html" class="mobile-link">📄 Rent Receipt</a>
+    <a href="gst-invoice.html" class="mobile-link">🧾 GST Invoice</a>
   </div>
 </div>
+<!-- ═══════════════ END NAV SNIPPET ═══════════════ -->
 
-<section class="hero">
-  <div class="hero-tag"><span class="dot"></span> Leap-year accurate · UTC date diff</div>
-  <h1>Apni age aur dates,<br/><em>exactly</em> nikalo</h1>
-  <p class="hero-sub">Calculate your exact age in years, months and days — or find the number of days between any two dates. Instant, no signup.</p>
-</section>
-
-<div class="mode-tabs">
-  <button class="mode-tab active" id="tab-age" onclick="switchTab('age')">🎂 Age Calculator</button>
-  <button class="mode-tab" id="tab-days" onclick="switchTab('days')">📅 Days Between Dates</button>
+<main>
+<div class="page-hero" style="padding-bottom:28px">
+  <div class="page-badge">📅 Utility Tool</div>
+  <h1>Date & Age <span class="accent">Calculator</span></h1>
+  <p class="page-sub">Calculate exact age, find date differences, or add/subtract days from any date. Includes zodiac, weekday count and next birthday.</p>
 </div>
+<div class="form-wrap">
 
-<div class="tool-wrap">
+<div class="form-card">
+  <div class="form-card-header"><span class="form-card-title">📅 Date & Age Calculator</span></div>
+  <div class="form-body">
+    <div style="display:flex;gap:10px;flex-wrap:wrap;margin-bottom:20px">
+      <button class="btn btn-black" id="tab-age" onclick="switchTab('age')">🎂 Age Calculator</button>
+      <button class="btn btn-white" id="tab-diff" onclick="switchTab('diff')">📅 Date Difference</button>
+      <button class="btn btn-white" id="tab-add"  onclick="switchTab('add')">➕ Add/Subtract Days</button>
+    </div>
 
-  <!-- AGE PANEL -->
-  <div class="tool-panel active" id="panel-age">
-    <div class="calc-wrap">
-
-      <div class="card">
-        <div class="card-header">
-          <h2>Enter dates</h2>
-          <p>Fill both fields — "Calculate Age On" defaults to today</p>
-        </div>
-        <div class="card-body">
-          <div class="f-group">
-            <label class="f-label" for="dob">Date of Birth</label>
-            <input type="date" id="dob" class="f-date" oninput="calcAge()"/>
-          </div>
-          <div class="f-group">
-            <label class="f-label" for="ageAsOf">Calculate Age On</label>
-            <input type="date" id="ageAsOf" class="f-date" oninput="calcAge()"/>
-          </div>
-          <div class="btn-row">
-            <button class="calc-btn" onclick="calcAge()">Calculate Age</button>
-            <button class="clear-btn" onclick="clearAge()">Clear</button>
-          </div>
-          <div class="error-bar" id="ageError"></div>
-        </div>
+    <!-- Age Calculator -->
+    <div id="panel-age">
+      <div class="form-grid">
+        <div class="form-group full"><label>Date of Birth</label><input type="date" id="dob" onchange="calcAge()"/></div>
+        <div class="form-group full"><label>As on Date</label><input type="date" id="asOn" onchange="calcAge()"/></div>
       </div>
+    </div>
 
-      <div class="card">
-        <div id="ageEmpty" class="empty-state">
-          <span class="empty-icon">🎂</span>
-          Enter your date of birth<br/>to see your exact age
-        </div>
-        <div id="ageResult" style="display:none">
-          <div class="result-hero">
-            <div class="result-hero-value" id="ageMainResult">—</div>
-            <div class="result-hero-sub">Exact age</div>
-          </div>
-          <div class="metric-row alt"><span class="metric-label">Years</span><span class="metric-val" id="ageYears">0</span></div>
-          <div class="metric-row"><span class="metric-label">Months (beyond years)</span><span class="metric-val" id="ageMonths">0</span></div>
-          <div class="metric-row alt"><span class="metric-label">Days (beyond months)</span><span class="metric-val" id="ageDays">0</span></div>
-          <div class="metric-row"><span class="metric-label">Total days lived</span><span class="metric-val" id="ageTotalDays">0</span></div>
-          <div class="metric-row alt"><span class="metric-label">Next birthday in</span><span class="metric-val" id="ageNextBday">—</span></div>
-          <div class="copy-row">
-            <button class="copy-btn" id="copyAgeBtn" onclick="copyAge()">📋 Copy Result</button>
-          </div>
-        </div>
+    <!-- Date Difference -->
+    <div id="panel-diff" style="display:none">
+      <div class="form-grid">
+        <div class="form-group"><label>Start Date</label><input type="date" id="diffStart" onchange="calcDiff()"/></div>
+        <div class="form-group"><label>End Date</label><input type="date" id="diffEnd" onchange="calcDiff()"/></div>
       </div>
+    </div>
 
+    <!-- Add/Subtract -->
+    <div id="panel-add" style="display:none">
+      <div class="form-grid">
+        <div class="form-group"><label>Start Date</label><input type="date" id="addStart" onchange="calcAdd()"/></div>
+        <div class="form-group"><label>Days to Add / Subtract</label><input type="number" id="addDays" placeholder="e.g. 30 or -30" oninput="calcAdd()"/></div>
+      </div>
     </div>
   </div>
 
-  <!-- DAYS PANEL -->
-  <div class="tool-panel" id="panel-days">
-    <div class="calc-wrap">
-
-      <div class="card">
-        <div class="card-header">
-          <h2>Enter dates</h2>
-          <p>Select a start and end date</p>
-        </div>
-        <div class="card-body">
-          <div class="f-group">
-            <label class="f-label" for="startDate">Start Date</label>
-            <input type="date" id="startDate" class="f-date" oninput="calcDays()"/>
-          </div>
-          <div class="f-group">
-            <label class="f-label" for="endDate">End Date</label>
-            <input type="date" id="endDate" class="f-date" oninput="calcDays()"/>
-          </div>
-          <div class="btn-row">
-            <button class="calc-btn" onclick="calcDays()">Calculate Difference</button>
-            <button class="clear-btn" onclick="clearDays()">Clear</button>
-          </div>
-          <div class="error-bar" id="daysError"></div>
-        </div>
-      </div>
-
-      <div class="card">
-        <div id="daysEmpty" class="empty-state">
-          <span class="empty-icon">📅</span>
-          Select two dates to see<br/>the difference between them
-        </div>
-        <div id="daysResult" style="display:none">
-          <div class="result-hero">
-            <div class="result-hero-value" id="daysMainResult">—</div>
-            <div class="result-hero-sub">Calendar days between dates</div>
-          </div>
-          <div class="metric-row alt"><span class="metric-label">Total days</span><span class="metric-val" id="totalDays">0</span></div>
-          <div class="metric-row"><span class="metric-label">Complete weeks</span><span class="metric-val" id="totalWeeks">0</span></div>
-          <div class="metric-row alt"><span class="metric-label">Remaining days</span><span class="metric-val" id="remainingDays">0</span></div>
-          <div class="metric-row"><span class="metric-label">Complete months (approx.)</span><span class="metric-val" id="totalMonths">0</span></div>
-          <div class="copy-row">
-            <button class="copy-btn" id="copyDaysBtn" onclick="copyDays()">📋 Copy Result</button>
-          </div>
-        </div>
-      </div>
-
+  <div class="output-section">
+    <div id="output" class="breakdown-box">
+      <div style="padding:28px;text-align:center;color:#94a3b8;font-style:italic">Select a date to see the result</div>
     </div>
   </div>
-
 </div>
-
-<div class="ad-banner">
-  <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-3532554351654388" data-ad-slot="3962323207" data-ad-format="auto" data-full-width-responsive="true"></ins>
-  <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
 </div>
-
-<section class="explainer">
-  <h2>What this tool calculates</h2>
-  <div class="explainer-grid">
-    <div class="explainer-card">
-      <span class="tag">Age</span>
-      <h4>Exact years, months and days</h4>
-      <p>The age calculator breaks down the difference between two dates into complete years, then months, then days — handling leap years and different month lengths correctly.</p>
-    </div>
-    <div class="explainer-card">
-      <span class="tag">Next birthday</span>
-      <h4>Days until your next birthday</h4>
-      <p>After calculating your age, the tool also shows how many days are left until your next birthday — useful if you need it for government forms or age-verification purposes.</p>
-    </div>
-    <div class="explainer-card">
-      <span class="tag">Date diff</span>
-      <h4>Calendar days between any two dates</h4>
-      <p>Uses UTC timestamps to avoid daylight saving time errors — returns the exact number of calendar days, complete weeks, remaining days, and approximate months.</p>
-    </div>
-    <div class="explainer-card">
-      <span class="tag">Common uses</span>
-      <h4>Forms, documents, deadlines</h4>
-      <p>Useful for government forms that ask for exact age, calculating notice period lengths, finding deadlines, or checking service duration for leave encashment and gratuity.</p>
-    </div>
-  </div>
-
-  <h2>Frequently asked questions</h2>
-  <details>
-    <summary>How is exact age calculated? <span class="plus">+</span></summary>
-    <p>The calculator finds the difference between your date of birth and the target date in complete years, then months, then days — accounting for different month lengths and leap years. If the day of the month hasn't been reached yet in the current month, it borrows from the previous month's actual day count.</p>
-  </details>
-  <details>
-    <summary>Does the age calculator handle leap years? <span class="plus">+</span></summary>
-    <p>Yes. The calculation uses actual calendar month lengths and handles leap years correctly, so someone born on 29 February gets an accurate result for any target date.</p>
-  </details>
-  <details>
-    <summary>How many days between two dates? <span class="plus">+</span></summary>
-    <p>Enter a start date and end date. The calculator uses UTC timestamps to avoid daylight saving issues and returns the exact number of calendar days, complete weeks, and remaining days.</p>
-  </details>
-  <details>
-    <summary>Why would I need to know days between dates? <span class="plus">+</span></summary>
-    <p>Common uses include calculating notice period duration for resignation, checking how many days of service you have completed for gratuity or leave encashment, finding deadline gaps, or verifying age for government forms and job applications.</p>
-  </details>
-</section>
-
-<footer>
-  <span>© 2025 MailFix — Free Tools for Indian Professionals</span>
-  <div style="display:flex;gap:16px;flex-wrap:wrap">
-    <a href="index.html">Hinglish Email</a>
-    <a href="job-application.html">Job Email</a>
-    <a href="ctc-calculator.html">Salary Calculator</a>
-    <a href="hra-calculator.html">HRA Calculator</a>
-    <a href="itr-calculator.html">ITR / Tax</a>
-    <a href="leave-encashment.html">Leave Encashment</a>
-    <a href="retirement-calculator.html">Retirement</a>
-    <a href="increment-calculator.html">Increment</a>
-    <a href="date-calculator.html">Age &amp; Date</a>
-    <a href="health-calculator.html">Health Calculators</a>
-    <a href="photo-resizer.html">Photo Resizer</a>
-    <a href="rent-receipt.html">Rent Receipt</a>
-    <a href="gst-invoice.html">GST Invoice</a>
-    <a href="paraphrase.html">Paraphrasing Tool</a>
-    <a href="vehicle-scrappage.html">Vehicle Scrappage</a>
-    <a href="qr-generator.html">QR Generator</a>
-    <a href="json-tools.html">JSON Tools</a>
-    <a href="whatsapp-dhanda.html">WhatsApp Dhanda</a>
-    <a href="sarkari-letter.html">Sarkari Letter</a>
-    <a href="resignation.html">Resignation Kit</a>
-    <a href="city-compare.html">City Compare</a>
-    <a href="privacy.html">Privacy Policy</a>
-  </div>
-</footer>
-
+</main>
+<footer><div class="footer-inner"><div class="footer-top"><div class="footer-logo">MailFix.in</div><div class="footer-links"><a href="index.html">Email Tool</a><a href="ctc-calculator.html">Salary Calc</a><a href="city-compare.html">City Compare</a><a href="whatsapp-dhanda.html">WA Dhanda</a><a href="sarkari-letter.html">Sarkari Letter</a><a href="privacy.html">Privacy Policy</a></div></div><div class="footer-copy">© 2026 MailFix. Free Tools for Indian Professionals.</div></div></footer>
 <script>
-  // ========================
-  // HELPERS
-  // ========================
-  function todayStr() {
-    const d = new Date();
-    return d.getFullYear() + '-' + String(d.getMonth()+1).padStart(2,'0') + '-' + String(d.getDate()).padStart(2,'0');
-  }
-  function parseDate(val) {
-    const [y, m, d] = val.split('-').map(Number);
-    return new Date(y, m-1, d);
-  }
-  function fmtN(n) { return n.toLocaleString('en-IN'); }
+  let activeTab = 'age';
+  const today = new Date().toISOString().split('T')[0];
+  document.getElementById('asOn').value = today;
+  document.getElementById('diffEnd').value = today;
+  document.getElementById('addStart').value = today;
 
-  // Set default "as of" to today
-  document.getElementById('ageAsOf').value = todayStr();
-
-  // ========================
-  // TAB SWITCHING
-  // ========================
   function switchTab(tab) {
-    document.querySelectorAll('.tool-panel').forEach(p => p.classList.remove('active'));
-    document.querySelectorAll('.mode-tab').forEach(t => t.classList.remove('active'));
-    document.getElementById('panel-' + tab).classList.add('active');
-    document.getElementById('tab-' + tab).classList.add('active');
+    activeTab = tab;
+    ['age','diff','add'].forEach(t => {
+      document.getElementById('panel-'+t).style.display = t===tab ? 'block' : 'none';
+      document.getElementById('tab-'+t).className = t===tab ? 'btn btn-black' : 'btn btn-white';
+    });
+    document.getElementById('output').innerHTML = '<div style="padding:28px;text-align:center;color:#94a3b8;font-style:italic">Select a date to see the result</div>';
   }
 
-  // ========================
-  // AGE CALCULATOR
-  // ========================
+  function row(k, v, cls='') { return `<div class="bd-row"><span class="k">${k}</span><span class="v ${cls}">${v}</span></div>`; }
+
   function calcAge() {
-    const dobVal   = document.getElementById('dob').value;
-    const asOfVal  = document.getElementById('ageAsOf').value;
-    const errEl    = document.getElementById('ageError');
-    const emptyEl  = document.getElementById('ageEmpty');
-    const resultEl = document.getElementById('ageResult');
-
-    errEl.classList.remove('show');
-
-    if (!dobVal || !asOfVal) { emptyEl.style.display='block'; resultEl.style.display='none'; return; }
-
-    const dob  = parseDate(dobVal);
-    const asOf = parseDate(asOfVal);
-
-    if (dob > asOf) {
-      errEl.textContent = 'Date of birth cannot be after the calculation date.';
-      errEl.classList.add('show');
-      emptyEl.style.display='block'; resultEl.style.display='none';
-      return;
-    }
-
-    let years  = asOf.getFullYear() - dob.getFullYear();
-    let months = asOf.getMonth()    - dob.getMonth();
-    let days   = asOf.getDate()     - dob.getDate();
-
-    if (days < 0) {
-      months--;
-      const prevMonth = new Date(asOf.getFullYear(), asOf.getMonth(), 0);
-      days += prevMonth.getDate();
-    }
-    if (months < 0) { years--; months += 12; }
-
-    // Total days lived
-    const totalDays = Math.round((Date.UTC(asOf.getFullYear(), asOf.getMonth(), asOf.getDate()) - Date.UTC(dob.getFullYear(), dob.getMonth(), dob.getDate())) / 86400000);
-
-    // Next birthday
-    let nextBday = new Date(asOf.getFullYear(), dob.getMonth(), dob.getDate());
-    if (nextBday <= asOf) nextBday = new Date(asOf.getFullYear() + 1, dob.getMonth(), dob.getDate());
-    const daysToNextBday = Math.round((Date.UTC(nextBday.getFullYear(), nextBday.getMonth(), nextBday.getDate()) - Date.UTC(asOf.getFullYear(), asOf.getMonth(), asOf.getDate())) / 86400000);
-
-    document.getElementById('ageYears').textContent  = fmtN(years);
-    document.getElementById('ageMonths').textContent = months;
-    document.getElementById('ageDays').textContent   = days;
-    document.getElementById('ageTotalDays').textContent  = fmtN(totalDays);
-    document.getElementById('ageNextBday').textContent   = daysToNextBday === 0 ? 'Today! 🎂' : fmtN(daysToNextBday) + ' days';
-    document.getElementById('ageMainResult').textContent = years + ' yrs, ' + months + ' mo, ' + days + ' days';
-
-    emptyEl.style.display='none';
-    resultEl.style.display='block';
+    const dob = new Date(document.getElementById('dob').value);
+    const asOn = new Date(document.getElementById('asOn').value);
+    if (isNaN(dob)||isNaN(asOn)||dob>asOn) { document.getElementById('output').innerHTML='<div style="padding:20px;text-align:center;color:var(--red);font-weight:700">Invalid dates</div>'; return; }
+    let yrs=asOn.getFullYear()-dob.getFullYear(), mos=asOn.getMonth()-dob.getMonth(), days=asOn.getDate()-dob.getDate();
+    if(days<0){mos--;const prev=new Date(asOn.getFullYear(),asOn.getMonth(),0);days+=prev.getDate();}
+    if(mos<0){yrs--;mos+=12;}
+    const totalDays=Math.floor((asOn-dob)/(1000*60*60*24));
+    const totalWeeks=Math.floor(totalDays/7);
+    const totalMonths=yrs*12+mos;
+    const nextBday=new Date(asOn.getFullYear(),dob.getMonth(),dob.getDate());
+    if(nextBday<=asOn)nextBday.setFullYear(asOn.getFullYear()+1);
+    const daysToNext=Math.floor((nextBday-asOn)/(1000*60*60*24));
+    const zodiac=['Capricorn','Aquarius','Pisces','Aries','Taurus','Gemini','Cancer','Leo','Virgo','Libra','Scorpio','Sagittarius','Capricorn'];
+    const zodiacDays=[20,19,20,20,21,21,22,23,23,23,22,21];
+    const m=dob.getMonth(),d=dob.getDate();
+    const sign=d<=zodiacDays[m]?zodiac[m]:zodiac[m+1];
+    document.getElementById('output').innerHTML =
+      `<div class="sec-head">Age</div>`+
+      row('Age',''+yrs+' years, '+mos+' months, '+days+' days')+
+      row('Total months',''+totalMonths.toLocaleString('en-IN')+' months')+
+      row('Total weeks',''+totalWeeks.toLocaleString('en-IN')+' weeks')+
+      row('Total days',''+totalDays.toLocaleString('en-IN')+' days')+
+      `<div class="sec-head">Upcoming</div>`+
+      row('Next birthday in',''+daysToNext+' days')+
+      row('Zodiac sign',sign)+
+      row('Day of birth',dob.toLocaleDateString('en-IN',{weekday:'long'}));
   }
 
-  function clearAge() {
-    document.getElementById('dob').value = '';
-    document.getElementById('ageAsOf').value = todayStr();
-    document.getElementById('ageEmpty').style.display  = 'block';
-    document.getElementById('ageResult').style.display = 'none';
-    document.getElementById('ageError').classList.remove('show');
+  function calcDiff() {
+    const s=new Date(document.getElementById('diffStart').value);
+    const e=new Date(document.getElementById('diffEnd').value);
+    if(isNaN(s)||isNaN(e)){return;}
+    const swap=e<s;
+    const [from,to]=swap?[e,s]:[s,e];
+    const totalDays=Math.floor((to-from)/(1000*60*60*24));
+    let yrs=to.getFullYear()-from.getFullYear(),mos=to.getMonth()-from.getMonth(),days=to.getDate()-from.getDate();
+    if(days<0){mos--;const prev=new Date(to.getFullYear(),to.getMonth(),0);days+=prev.getDate();}
+    if(mos<0){yrs--;mos+=12;}
+    const weekdays=Array.from({length:totalDays},(_,i)=>{const d=new Date(from);d.setDate(from.getDate()+i);return d.getDay();}).filter(d=>d>0&&d<6).length;
+    document.getElementById('output').innerHTML =
+      `<div class="sec-head">Difference${swap?' (reversed)':''}</div>`+
+      row('Duration',''+yrs+'y '+mos+'m '+days+'d')+
+      row('Total days',''+totalDays.toLocaleString('en-IN'))+
+      row('Weekdays (approx)',''+weekdays.toLocaleString('en-IN'))+
+      row('Weekends',''+Math.floor(totalDays/7)*2+' (approx)')+
+      row('Total weeks',''+Math.floor(totalDays/7))+
+      row('Total months',''+Math.floor(totalDays/30.44).toFixed(1));
   }
 
-  function copyAge() {
-    const y = document.getElementById('ageYears').textContent;
-    const m = document.getElementById('ageMonths').textContent;
-    const d = document.getElementById('ageDays').textContent;
-    const total = document.getElementById('ageTotalDays').textContent;
-    navigator.clipboard.writeText(`Age: ${y} years, ${m} months, ${d} days (${total} total days)`).then(() => {
-      const btn = document.getElementById('copyAgeBtn');
-      btn.textContent = '✓ Copied!';
-      btn.classList.add('success');
-      setTimeout(() => { btn.textContent = '📋 Copy Result'; btn.classList.remove('success'); }, 2000);
-    });
+  function calcAdd() {
+    const s=new Date(document.getElementById('addStart').value);
+    const d=parseInt(document.getElementById('addDays').value)||0;
+    if(isNaN(s)){return;}
+    const result=new Date(s);result.setDate(result.getDate()+d);
+    const label=d<0?'Subtracted '+Math.abs(d)+' days':'Added '+d+' days';
+    document.getElementById('output').innerHTML =
+      `<div class="sec-head">${label}</div>`+
+      row('Start date',s.toLocaleDateString('en-IN',{day:'numeric',month:'long',year:'numeric'}))+
+      row('Result date',result.toLocaleDateString('en-IN',{day:'numeric',month:'long',year:'numeric'}),'pos')+
+      row('Day of week',result.toLocaleDateString('en-IN',{weekday:'long'}))+
+      row('Days moved',''+Math.abs(d)+' days '+(d<0?'back':'forward'));
   }
 
-  // ========================
-  // DAYS CALCULATOR
-  // ========================
-  function calcDays() {
-    const startVal = document.getElementById('startDate').value;
-    const endVal   = document.getElementById('endDate').value;
-    const errEl    = document.getElementById('daysError');
-    const emptyEl  = document.getElementById('daysEmpty');
-    const resultEl = document.getElementById('daysResult');
-
-    errEl.classList.remove('show');
-
-    if (!startVal || !endVal) { emptyEl.style.display='block'; resultEl.style.display='none'; return; }
-
-    const start = parseDate(startVal);
-    const end   = parseDate(endVal);
-
-    if (start > end) {
-      errEl.textContent = 'Start date cannot be after the end date.';
-      errEl.classList.add('show');
-      emptyEl.style.display='block'; resultEl.style.display='none';
-      return;
-    }
-
-    const totalDays    = Math.round((Date.UTC(end.getFullYear(), end.getMonth(), end.getDate()) - Date.UTC(start.getFullYear(), start.getMonth(), start.getDate())) / 86400000);
-    const totalWeeks   = Math.floor(totalDays / 7);
-    const remaining    = totalDays % 7;
-    const totalMonths  = Math.floor(totalDays / 30.4375);
-
-    document.getElementById('totalDays').textContent    = fmtN(totalDays);
-    document.getElementById('totalWeeks').textContent   = fmtN(totalWeeks);
-    document.getElementById('remainingDays').textContent = remaining;
-    document.getElementById('totalMonths').textContent  = fmtN(totalMonths);
-    document.getElementById('daysMainResult').textContent = fmtN(totalDays) + ' days';
-
-    emptyEl.style.display='none';
-    resultEl.style.display='block';
-  }
-
-  function clearDays() {
-    document.getElementById('startDate').value = '';
-    document.getElementById('endDate').value   = '';
-    document.getElementById('daysEmpty').style.display  = 'block';
-    document.getElementById('daysResult').style.display = 'none';
-    document.getElementById('daysError').classList.remove('show');
-  }
-
-  function copyDays() {
-    const total   = document.getElementById('totalDays').textContent;
-    const weeks   = document.getElementById('totalWeeks').textContent;
-    const rem     = document.getElementById('remainingDays').textContent;
-    const months  = document.getElementById('totalMonths').textContent;
-    navigator.clipboard.writeText(`Date difference: ${total} days (${weeks} weeks and ${rem} days, approx. ${months} months)`).then(() => {
-      const btn = document.getElementById('copyDaysBtn');
-      btn.textContent = '✓ Copied!';
-      btn.classList.add('success');
-      setTimeout(() => { btn.textContent = '📋 Copy Result'; btn.classList.remove('success'); }, 2000);
-    });
-  }
-
-  // ========================
-  // NAV
-  // ========================
-  function toggleDropdown(id, triggerEl) {
-    const panel = document.getElementById(id);
-    const isOpen = panel.classList.contains('open');
-    document.querySelectorAll('.dropdown-panel').forEach(p => p.classList.remove('open'));
-    document.querySelectorAll('.nav-trigger').forEach(t => t.classList.remove('open'));
-    if (!isOpen) { panel.classList.add('open'); triggerEl.classList.add('open'); }
-  }
-  document.addEventListener('click', e => {
-    if (!e.target.closest('.nav-item')) {
-      document.querySelectorAll('.dropdown-panel').forEach(p => p.classList.remove('open'));
-      document.querySelectorAll('.nav-trigger').forEach(t => t.classList.remove('open'));
-    }
-  });
-  document.addEventListener('keydown', e => {
-    if (e.key === 'Escape') {
-      document.querySelectorAll('.dropdown-panel').forEach(p => p.classList.remove('open'));
-      document.querySelectorAll('.nav-trigger').forEach(t => t.classList.remove('open'));
-      toggleMobilePanel(false);
-    }
-  });
-  function toggleMobilePanel(open) {
-    document.getElementById('mobilePanel').classList.toggle('open', open);
-    document.body.style.overflow = open ? 'hidden' : '';
-  }
-
-  // === Nav dropdowns + mobile menu (site-wide) ===
-  function toggleDropdown(id, triggerEl) {
-    const panel = document.getElementById(id);
-    const isOpen = panel.classList.contains('open');
-    document.querySelectorAll('.dropdown-panel').forEach(p => p.classList.remove('open'));
-    document.querySelectorAll('.nav-trigger').forEach(t => t.classList.remove('open'));
-    if (!isOpen) { panel.classList.add('open'); triggerEl.classList.add('open'); }
-  }
-  document.addEventListener('click', function(e) {
-    if (!e.target.closest('.nav-item')) {
-      document.querySelectorAll('.dropdown-panel').forEach(p => p.classList.remove('open'));
-      document.querySelectorAll('.nav-trigger').forEach(t => t.classList.remove('open'));
-    }
-  });
-  document.addEventListener('keydown', function(e) {
-    if (e.key === 'Escape') {
-      document.querySelectorAll('.dropdown-panel').forEach(p => p.classList.remove('open'));
-      document.querySelectorAll('.nav-trigger').forEach(t => t.classList.remove('open'));
-      toggleMobilePanel(false);
-    }
-  });
-  function toggleMobilePanel(open) {
-    document.getElementById('mobilePanel').classList.toggle('open', open);
-    document.body.style.overflow = open ? 'hidden' : '';
-  }
+  const _mp=document.getElementById('mobilePanel');const _mb=document.getElementById('mobileMenuBtn');const _cb=document.getElementById('closeMobileBtn');
+  if(_mb)_mb.addEventListener('click',()=>{_mp.classList.add('open');document.body.style.overflow='hidden'});
+  if(_cb)_cb.addEventListener('click',()=>{_mp.classList.remove('open');document.body.style.overflow=''});
+  _mp.querySelectorAll('.mobile-link,.mobile-cta').forEach(a=>a.addEventListener('click',()=>{_mp.classList.remove('open');document.body.style.overflow=''}));
+  document.addEventListener('keydown',e=>{if(e.key==='Escape'){_mp.classList.remove('open');document.body.style.overflow=''}});
 </script>
 </body>
 </html>

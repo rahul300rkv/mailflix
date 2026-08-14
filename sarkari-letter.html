@@ -1,565 +1,407 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8"/>
-<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title>Sarkari Letter Generator India — Bank, Bijli, Paani, Ration Applications | MailFix</title>
-<meta name="description" content="Generate proper formal sarkari letters for any government office — bank manager, electricity department, water department, ration card, RTI and more. Free, instant."/>
-<meta name="keywords" content="sarkari letter generator, bank manager application kaise likhein, bijli vibhag application, government letter format india, sarkari application format hindi"/>
+<meta charset="UTF-8"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Sarkari Letter Generator India — Bank, Bijli, Paani, Police | MailFix</title>
+<meta name="description" content="Generate formal application letters for bank, electricity board, ration card, police, school and government offices. Free, instant, in English, Hindi or Hinglish."/>
 <meta name="robots" content="index, follow"/>
 <link rel="canonical" href="https://mailflix.netlify.app/sarkari-letter.html"/>
-<meta property="og:title" content="Sarkari Letter Generator India — Bank, Bijli, Paani, Ration Applications | MailFix"/>
-<meta property="og:description" content="Generate proper formal sarkari letters for any government office — bank manager, electricity department, water department, ration card, RTI and more. Free, instant."/>
-<meta property="og:url" content="https://mailflix.netlify.app/sarkari-letter.html"/>
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "WebApplication",
-  "name": "Sarkari Letter Generator",
-  "url": "https://mailflix.netlify.app/sarkari-letter.html",
-  "description": "Free tool to generate formal government and official application letters for Indian citizens.",
-  "applicationCategory": "ProductivityApplication",
-  "offers": { "@type": "Offer", "price": "0", "priceCurrency": "INR" }
-}
-</script>
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  "mainEntity": [
-    { "@type": "Question", "name": "Bank manager ko application kaise likhein?", "acceptedAnswer": { "@type": "Answer", "text": "MailFix Sarkari Letter tool mein 'Bank Application' select karo, apna naam, account number aur kaam ka reason bharo. AI ek proper formal bank application letter generate karega jo directly submit kar sakte hain." } },
-    { "@type": "Question", "name": "Electricity board complaint letter format kya hota hai?", "acceptedAnswer": { "@type": "Answer", "text": "Ek proper electricity complaint letter mein aapka naam, address, consumer number, complaint ka detail aur resolution ki request honi chahiye. MailFix ye sab automatically include karta hai." } },
-    { "@type": "Question", "name": "KYC update letter kaise likhein bank ke liye?", "acceptedAnswer": { "@type": "Answer", "text": "MailFix mein 'KYC Update' choose karo, apni details bharo aur ek formal KYC update application letter turant ready ho jayega jo bank mein submit kar sakte hain." } }
-  ]
-}
-</script>
-<link rel="preconnect" href="https://fonts.googleapis.com"/>
-<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet"/>
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3532554351654388" crossorigin="anonymous"></script>
-<style>
-  :root {
-    --ink: #0f0e0c;
-    --paper: #f5f2ec;
-    --card: #ffffff;
-    --accent: #d44f1e;
-    --sarkari: #1d4ed8;
-    --sarkari-bg: #eff6ff;
-    --sarkari-border: #bfdbfe;
-    --muted: #7a7570;
-    --border: #e2ddd5;
-    --radius: 12px;
-    --font-head: 'Syne', sans-serif;
-    --font-body: 'DM Sans', sans-serif;
-  }
-  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-  body { background: var(--paper); color: var(--ink); font-family: var(--font-body); font-size: 16px; line-height: 1.6; min-height: 100vh; }
+<link rel="preconnect" href="https://fonts.googleapis.com"/><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/><link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet"/>
+<style>/* ─── SHARED DESIGN SYSTEM ─────────────────────────────── */
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --green:#22c55e;--green-dk:#16a34a;--green-lt:#dcfce7;--green-xs:#f0fdf4;
+  --black:#000;--white:#fff;--ink:#0f172a;--muted:#64748b;
+  --border:#e2e8f0;--paper:#fdfdfc;--card:#fff;
+  --red-lt:#fef2f2;--red:#dc2626;
+  --shadow:4px 4px 0px 0px #000;--shadow-sm:2px 2px 0px 0px #000;--shadow-lg:6px 6px 0px 0px #000;
+  --radius:12px;--font:'Plus Jakarta Sans',sans-serif;
+}
+html{scroll-behavior:smooth}
+body{font-family:var(--font);background:var(--paper);color:var(--ink);font-size:16px;line-height:1.6;min-height:100vh;-webkit-font-smoothing:antialiased}
+::-webkit-scrollbar{width:8px}::-webkit-scrollbar-track{background:transparent}::-webkit-scrollbar-thumb{background:#cbd5e1;border-radius:4px}
 
-  nav { display: flex; justify-content: space-between; align-items: center; padding: 18px 5%; border-bottom: 1px solid var(--border); background: var(--paper); position: sticky; top: 0; z-index: 100; }
-  .logo { font-family: var(--font-head); font-size: 22px; font-weight: 800; letter-spacing: -0.5px; color: var(--ink); text-decoration: none; }
-  .logo span { color: var(--accent); }
-  .nav-links { display: flex; gap: 16px; align-items: center; }
-  .nav-links a { font-size: 14px; color: var(--muted); text-decoration: none; }
-  .nav-links a:hover { color: var(--accent); }
-  .nav-badge { background: var(--sarkari); color: #fff; font-size: 12px; font-weight: 500; padding: 4px 12px; border-radius: 99px; }
+/* NAV */
+nav{position:sticky;top:0;z-index:100;background:rgba(255,255,255,.92);backdrop-filter:blur(10px);border-bottom:2px solid var(--black)}
+.nav-inner{max-width:1100px;margin:0 auto;padding:0 24px;display:flex;align-items:center;justify-content:space-between;height:64px}
+.logo{display:flex;align-items:center;gap:10px;font-size:20px;font-weight:800;letter-spacing:-.5px;color:var(--black);text-decoration:none}
+.logo-icon{width:34px;height:34px;background:var(--green);border:2px solid var(--black);border-radius:8px;display:flex;align-items:center;justify-content:center;transform:rotate(-3deg);box-shadow:var(--shadow-sm)}
+.logo-icon svg{width:18px;height:18px}
+.logo span{color:var(--green-dk)}
+.nav-links{display:flex;align-items:center;gap:4px}
+.nav-item{position:relative}
+.nav-trigger{display:flex;align-items:center;gap:4px;padding:6px 12px;border-radius:8px;font-size:14px;font-weight:700;color:var(--muted);background:none;border:none;cursor:pointer;font-family:var(--font);transition:color .15s,background .15s}
+.nav-trigger:hover{color:var(--black);background:#f8fafc}
+.nav-trigger svg{width:14px;height:14px;transition:transform .2s}
+.nav-item:hover .nav-trigger svg{transform:rotate(180deg)}
+.dropdown-panel{display:none;position:absolute;top:calc(100% + 8px);left:0;min-width:200px;background:var(--white);border:2px solid var(--black);border-radius:14px;box-shadow:var(--shadow);padding:6px;z-index:200}
+.nav-item:hover .dropdown-panel,.dropdown-panel.open{display:flex;flex-direction:column}
+.dropdown-panel a{display:block;padding:9px 14px;border-radius:8px;font-size:13px;font-weight:700;color:var(--muted);text-decoration:none;transition:background .12s,color .12s}
+.dropdown-panel a:hover{background:var(--green-xs);color:var(--black)}
+.nav-cta{padding:9px 20px;background:var(--green);color:white;font-size:13px;font-weight:800;border:2px solid var(--black);border-radius:10px;box-shadow:var(--shadow-sm);cursor:pointer;text-decoration:none;transition:transform .12s,box-shadow .12s}
+.nav-cta:hover{transform:translate(2px,2px);box-shadow:none}
+.mobile-toggle{display:none;background:white;border:2px solid var(--black);border-radius:8px;padding:6px;cursor:pointer;box-shadow:var(--shadow-sm);transition:transform .1s,box-shadow .1s;align-items:center}
+.mobile-toggle:active{transform:translate(2px,2px);box-shadow:none}
+.mobile-toggle svg{width:22px;height:22px;display:block}
+.mobile-panel{display:none;position:fixed;inset:0;z-index:500;background:white;overflow-y:auto;transform:translateX(100%);transition:transform .28s ease;border-left:2px solid var(--black)}
+.mobile-panel.open{transform:translateX(0)}
+.mobile-panel-head{display:flex;align-items:center;justify-content:space-between;padding:16px 20px;border-bottom:2px solid var(--black);background:var(--green-xs)}
+.mobile-panel-body{padding:24px 20px;display:flex;flex-direction:column;gap:10px}
+.mobile-link{display:flex;align-items:center;gap:10px;padding:12px 16px;border-radius:10px;border:2px solid var(--border);font-size:15px;font-weight:700;color:var(--ink);text-decoration:none;transition:border-color .12s,background .12s}
+.mobile-link:hover{border-color:var(--green);background:var(--green-xs)}
+.mobile-cta{display:block;text-align:center;padding:14px;background:var(--green);color:white;font-weight:800;font-size:15px;border:2px solid var(--black);border-radius:12px;box-shadow:var(--shadow);text-decoration:none;transition:transform .12s,box-shadow .12s}
+.mobile-cta:hover{transform:translate(4px,4px);box-shadow:none}
+.mobile-section-label{font-size:10px;font-weight:800;letter-spacing:.12em;text-transform:uppercase;color:#94a3b8;margin-top:6px;padding:0 4px}
+.close-btn{background:white;border:2px solid var(--black);border-radius:8px;padding:6px;cursor:pointer;box-shadow:var(--shadow-sm)}
+.close-btn svg{width:20px;height:20px;display:block}
 
-  .hero { max-width: 760px; margin: 0 auto; padding: 56px 5% 32px; text-align: center; }
-  .hero-tag { display: inline-flex; align-items: center; gap: 6px; background: #fff; border: 1px solid var(--border); border-radius: 99px; padding: 6px 16px; font-size: 13px; color: var(--muted); margin-bottom: 20px; }
-  .hero-tag .dot { width: 7px; height: 7px; background: var(--sarkari); border-radius: 50%; animation: pulse 2s infinite; }
-  @keyframes pulse { 0%,100%{opacity:1;transform:scale(1)} 50%{opacity:.6;transform:scale(1.3)} }
-  h1 { font-family: var(--font-head); font-size: clamp(32px, 5vw, 52px); font-weight: 800; line-height: 1.08; letter-spacing: -1.5px; margin-bottom: 14px; }
-  h1 em { color: var(--sarkari); font-style: normal; }
-  .hero-sub { font-size: 17px; color: var(--muted); font-weight: 300; max-width: 520px; margin: 0 auto; }
+/* PAGE HERO */
+.page-hero{max-width:900px;margin:0 auto;padding:56px 24px 40px;text-align:center}
+.page-badge{display:inline-flex;align-items:center;gap:8px;padding:5px 18px;border:2px solid var(--black);border-radius:99px;background:white;box-shadow:var(--shadow-sm);font-size:11px;font-weight:800;letter-spacing:.12em;text-transform:uppercase;margin-bottom:20px;color:var(--black)}
+h1{font-size:clamp(28px,5vw,52px);font-weight:800;line-height:1.1;letter-spacing:-1px;color:var(--black);margin-bottom:14px}
+h1 .accent{color:var(--green-dk)}
+.page-sub{font-size:17px;color:var(--muted);font-weight:500;max-width:560px;margin:0 auto;line-height:1.65}
 
-  /* CATEGORY SELECTOR */
-  .cat-wrap { max-width: 900px; margin: 24px auto 0; padding: 0 5%; }
-  .cat-label { font-family: var(--font-head); font-size: 12px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.1em; color: var(--muted); margin-bottom: 12px; }
-  .cat-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(130px, 1fr)); gap: 10px; }
-  .cat-card { background: var(--card); border: 2px solid var(--border); border-radius: var(--radius); padding: 14px 10px; text-align: center; cursor: pointer; transition: all 0.15s; }
-  .cat-card:hover { border-color: var(--sarkari); }
-  .cat-card.active { border-color: var(--sarkari); background: var(--sarkari-bg); }
-  .cat-icon { font-size: 24px; display: block; margin-bottom: 6px; }
-  .cat-name { font-family: var(--font-head); font-size: 12px; font-weight: 700; color: var(--ink); line-height: 1.3; }
+/* FORM CARD */
+.form-wrap{max-width:900px;margin:0 auto;padding:0 24px 80px}
+.form-card{background:white;border:4px solid var(--black);border-radius:20px;box-shadow:var(--shadow-lg);overflow:hidden}
+.form-card-header{padding:18px 24px;border-bottom:2px solid var(--black);background:var(--green-xs);display:flex;align-items:center;justify-content:space-between}
+.form-card-title{font-size:13px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;color:var(--green-dk)}
+.form-body{padding:28px 24px}
+.form-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+.form-group{display:flex;flex-direction:column;gap:6px}
+.form-group.full{grid-column:1/-1}
+label{font-size:13px;font-weight:700;color:var(--ink)}
+label span{font-weight:500;color:var(--muted);font-size:12px;margin-left:4px}
+input,select,textarea{width:100%;padding:11px 14px;border:2px solid var(--border);border-radius:10px;font-family:var(--font);font-size:15px;font-weight:500;color:var(--ink);background:white;outline:none;transition:border-color .15s,box-shadow .15s}
+input:focus,select:focus,textarea:focus{border-color:var(--black);box-shadow:var(--shadow-sm)}
+textarea{resize:vertical;min-height:100px}
+input[type=date]{cursor:pointer}
+input[type=number]{-moz-appearance:textfield}
+input[type=number]::-webkit-outer-spin-button,input[type=number]::-webkit-inner-spin-button{-webkit-appearance:none}
 
-  /* TOOL LAYOUT */
-  .tool-wrap { max-width: 900px; margin: 24px auto; padding: 0 5%; display: grid; grid-template-columns: 1fr 1.2fr; gap: 20px; }
-  @media(max-width: 700px) { .tool-wrap { grid-template-columns: 1fr; } }
+/* OUTPUT SECTION */
+.output-section{border-top:4px solid var(--black);background:#f8fafc;padding:24px}
+.output-label{font-size:11px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin-bottom:14px}
+.output-box{background:white;border:2px solid var(--black);border-radius:12px;padding:20px;min-height:140px;box-shadow:var(--shadow-sm);font-size:15px;font-weight:500;line-height:1.8;white-space:pre-wrap;color:var(--ink)}
+.output-placeholder{color:#94a3b8;font-style:italic}
+.loading-dots{display:none;align-items:center;gap:5px;padding:8px 0}
+.loading-dots.show{display:flex}
+.loading-dots span{width:8px;height:8px;background:var(--black);border-radius:50%;animation:bounce 1s infinite}
+.loading-dots span:nth-child(2){animation-delay:.15s;background:var(--green)}
+.loading-dots span:nth-child(3){animation-delay:.3s}
+@keyframes bounce{0%,60%,100%{transform:translateY(0)}30%{transform:translateY(-9px)}}
 
-  .tool-card { background: var(--card); border: 1px solid var(--border); border-radius: 18px; overflow: hidden; box-shadow: 0 2px 20px rgba(0,0,0,0.05); }
-  .card-header { padding: 16px 20px; border-bottom: 1px solid var(--border); background: #fafaf8; }
-  .card-header h3 { font-family: var(--font-head); font-size: 15px; font-weight: 700; }
-  .card-header p { font-size: 12px; color: var(--muted); margin-top: 2px; }
-  .card-body { padding: 20px; }
+/* BUTTONS */
+.btn{display:inline-flex;align-items:center;gap:6px;padding:10px 22px;border-radius:10px;font-family:var(--font);font-size:14px;font-weight:700;cursor:pointer;border:2px solid var(--black);box-shadow:var(--shadow-sm);transition:transform .12s,box-shadow .12s}
+.btn:hover{transform:translate(2px,2px);box-shadow:none}
+.btn:disabled{opacity:.5;cursor:not-allowed;transform:none!important;box-shadow:var(--shadow-sm)!important}
+.btn-primary{background:var(--green);color:white}
+.btn-black{background:var(--black);color:white}
+.btn-white{background:white;color:var(--ink)}
+.btn-lg{padding:13px 32px;font-size:15px;font-weight:800;box-shadow:var(--shadow)}
+.btn-lg:hover{box-shadow:none;transform:translate(4px,4px)}
+.btn-full{width:100%;justify-content:center}
+.btn-group{display:flex;gap:10px;flex-wrap:wrap;margin-top:16px}
 
-  .form-group { margin-bottom: 14px; }
-  .form-group label { display: block; font-size: 12px; font-weight: 500; color: var(--muted); margin-bottom: 5px; font-family: var(--font-head); text-transform: uppercase; letter-spacing: 0.06em; }
-  input[type="text"], textarea, select { width: 100%; padding: 10px 14px; border: 1px solid var(--border); border-radius: 8px; font-family: var(--font-body); font-size: 14px; color: var(--ink); background: var(--paper); outline: none; transition: border-color 0.15s; }
-  input[type="text"]:focus, textarea:focus, select:focus { border-color: var(--sarkari); background: #fff; }
-  textarea { resize: none; height: 80px; }
+/* ERROR */
+.error-msg{display:none;width:100%;background:var(--red-lt);border:2px solid var(--black);color:var(--red);font-size:13px;font-weight:700;padding:10px 16px;border-radius:8px;margin-bottom:12px;text-align:center}
+.error-msg.show{display:block}
 
-  .generate-btn { width: 100%; padding: 12px; background: var(--sarkari); color: #fff; border: none; border-radius: 10px; font-family: var(--font-head); font-size: 15px; font-weight: 700; cursor: pointer; transition: all 0.15s; margin-top: 4px; }
-  .generate-btn:hover { background: #1e40af; transform: translateY(-1px); }
-  .generate-btn:disabled { background: #ccc; cursor: not-allowed; transform: none; }
+/* RESULT CARDS */
+.result-card{background:white;border:2px solid var(--black);border-radius:14px;overflow:hidden;box-shadow:var(--shadow)}
+.result-hero{padding:28px;text-align:center;background:var(--green-xs);border-bottom:2px solid var(--black)}
+.result-hero h2{font-size:clamp(32px,6vw,52px);font-weight:800;color:var(--black)}
+.result-hero p{font-size:14px;color:var(--muted);margin-top:4px;font-weight:600}
+.result-rows{display:flex;flex-direction:column}
+.result-row{display:flex;align-items:center;justify-content:space-between;padding:14px 20px;border-bottom:1px solid var(--border)}
+.result-row:last-child{border-bottom:none}
+.result-row-label{font-size:14px;font-weight:700;color:var(--ink)}
+.result-row-sub{font-size:12px;color:var(--muted);font-weight:500;margin-top:1px}
+.result-row-value{font-size:15px;font-weight:800;color:var(--black)}
+.result-row-value.positive{color:#16a34a}
+.result-row-value.negative{color:var(--red)}
+.section-divider{padding:10px 20px 6px;font-size:10px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);background:#f8fafc;border-bottom:1px solid var(--border)}
 
-  /* LETTER OUTPUT */
-  .letter-output { padding: 24px; min-height: 300px; font-family: 'DM Sans', sans-serif; }
-  .letter-paper { background: #fff; border: 1px solid #e0e0d0; border-radius: 4px; padding: 28px 32px; font-size: 14px; line-height: 1.9; color: #1a1a1a; white-space: pre-wrap; box-shadow: 0 2px 8px rgba(0,0,0,0.06); }
-  .letter-placeholder { color: #b8b3aa; font-size: 14px; font-style: italic; text-align: center; padding: 60px 20px; }
-  .loading-dots { display: none; gap: 5px; align-items: center; justify-content: center; padding: 60px; }
-  .loading-dots.show { display: flex; }
-  .loading-dots span { width: 8px; height: 8px; background: var(--sarkari); border-radius: 50%; animation: bounce 1s infinite; }
-  .loading-dots span:nth-child(2) { animation-delay: 0.15s; }
-  .loading-dots span:nth-child(3) { animation-delay: 0.3s; }
-  @keyframes bounce { 0%,60%,100%{transform:translateY(0)} 30%{transform:translateY(-8px)} }
+/* SELECTOR CARDS (modes, types) */
+.selector-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(160px,1fr));gap:10px;margin-bottom:24px}
+.selector-card{padding:14px 16px;background:white;border:2px solid var(--border);border-radius:12px;cursor:pointer;transition:all .15s;text-align:left}
+.selector-card:hover{border-color:var(--green);background:var(--green-xs)}
+.selector-card.active{border-color:var(--black);background:white;box-shadow:var(--shadow-sm)}
+.selector-card-icon{font-size:20px;margin-bottom:6px}
+.selector-card-title{font-size:13px;font-weight:800;color:var(--black)}
+.selector-card-sub{font-size:11px;color:var(--muted);font-weight:500;margin-top:2px;line-height:1.4}
 
-  .error-msg { display: none; background: #fef2f2; color: #b91c1c; border: 1px solid #fecaca; border-radius: 8px; padding: 10px 14px; font-size: 13px; margin: 0 20px 12px; }
-  .error-msg.show { display: block; }
+/* MODE PILLS */
+.pill-row{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:20px}
+.pill{padding:7px 16px;border-radius:99px;border:2px solid var(--border);background:white;font-family:var(--font);font-size:13px;font-weight:700;color:var(--muted);cursor:pointer;transition:all .15s}
+.pill:hover{border-color:var(--green);color:var(--black)}
+.pill.active{border-color:var(--black);color:var(--black);box-shadow:var(--shadow-sm);background:white}
 
-  .output-actions { padding: 12px 20px; border-top: 1px solid var(--border); display: flex; gap: 10px; }
-  .action-btn { flex: 1; padding: 9px 12px; border-radius: 8px; border: 1px solid var(--border); background: var(--card); font-size: 13px; font-family: var(--font-body); color: var(--muted); cursor: pointer; transition: all 0.15s; display: flex; align-items: center; justify-content: center; gap: 6px; }
-  .action-btn:hover { border-color: var(--ink); color: var(--ink); }
-  .action-btn.primary { background: var(--sarkari); border-color: var(--sarkari); color: #fff; font-weight: 500; }
-  .action-btn.primary:hover { background: #1e40af; }
-  .action-btn.copied { background: #dcfce7; color: #166534; border-color: #bbf7d0; }
+/* TOGGLE */
+.toggle-row{display:flex;align-items:center;justify-content:space-between;padding:12px 0;border-bottom:1px solid var(--border)}
+.toggle-row:last-child{border-bottom:none}
+.toggle-label{font-size:14px;font-weight:700;color:var(--ink)}
+.toggle-sub{font-size:12px;color:var(--muted);font-weight:500}
+.toggle{position:relative;display:inline-block;width:40px;height:22px;flex-shrink:0}
+.toggle input{opacity:0;width:0;height:0}
+.toggle-slider{position:absolute;cursor:pointer;top:0;left:0;right:0;bottom:0;background:#e2e8f0;border:2px solid var(--black);border-radius:99px;transition:.2s}
+.toggle-slider:before{position:absolute;content:'';height:14px;width:14px;left:2px;bottom:2px;background:white;border-radius:50%;border:1.5px solid #94a3b8;transition:.2s}
+input:checked+.toggle-slider{background:var(--green)}
+input:checked+.toggle-slider:before{transform:translateX(18px);border-color:white}
 
-  /* PERSISTENCE */
-  .persistence-wrap { max-width: 900px; margin: 0 auto 8px; padding: 0 5%; }
-  .persistence-card { background: #fffbeb; border: 1px solid #fde68a; border-radius: var(--radius); padding: 16px 20px; display: flex; align-items: center; gap: 14px; flex-wrap: wrap; }
-  .persistence-icon { font-size: 24px; flex-shrink: 0; }
-  .persistence-text h4 { font-family: var(--font-head); font-size: 14px; font-weight: 700; color: #92400e; }
-  .persistence-text p { font-size: 13px; color: #a16207; margin-top: 2px; }
-  .persistence-btn { margin-left: auto; padding: 7px 16px; background: #f59e0b; color: #fff; border: none; border-radius: 8px; font-family: var(--font-head); font-size: 13px; font-weight: 700; cursor: pointer; white-space: nowrap; }
-  .persistence-btn:hover { background: #d97706; }
+/* LETTER PAPER */
+.letter-paper{background:white;border:2px solid var(--black);border-radius:12px;padding:28px;font-family:'Times New Roman',serif;font-size:15px;line-height:1.8;color:var(--ink);white-space:pre-wrap;box-shadow:var(--shadow-sm)}
 
-  /* QUICK EXAMPLES */
-  .examples-wrap { max-width: 900px; margin: 24px auto 0; padding: 0 5%; }
-  .examples-wrap h2 { font-family: var(--font-head); font-size: 20px; font-weight: 800; margin-bottom: 14px; }
-  .example-chips { display: flex; flex-wrap: wrap; gap: 8px; }
-  .example-chip { background: var(--card); border: 1px solid var(--border); border-radius: 8px; padding: 8px 14px; font-size: 13px; cursor: pointer; transition: all 0.15s; color: var(--muted); }
-  .example-chip:hover { border-color: var(--sarkari); color: var(--sarkari); background: var(--sarkari-bg); }
+/* SECTION EXPLAINER */
+.section-explainer{max-width:900px;margin:0 auto;padding:60px 24px 40px}
+.section-explainer h2{font-size:clamp(22px,4vw,34px);font-weight:800;color:var(--black);margin-bottom:28px}
+.explainer-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:16px;margin-bottom:40px}
+.explainer-card{background:white;border:2px solid var(--black);border-radius:14px;padding:20px;box-shadow:var(--shadow-sm)}
+.explainer-card .tag{display:inline-block;background:var(--green-xs);border:1.5px solid var(--green);border-radius:6px;padding:2px 10px;font-size:11px;font-weight:800;letter-spacing:.06em;text-transform:uppercase;color:var(--green-dk);margin-bottom:10px}
+.explainer-card h4{font-size:14px;font-weight:800;color:var(--black);margin-bottom:6px}
+.explainer-card p{font-size:13px;color:var(--muted);font-weight:500;line-height:1.6}
 
-  .ad-banner { max-width: 900px; margin: 32px auto; padding: 0 5%; }
+/* FAQ */
+.section-faq{border-top:4px solid var(--black);background:white;padding:60px 24px}
+.section-faq-inner{max-width:760px;margin:0 auto}
+.section-faq h2{font-size:clamp(22px,4vw,34px);font-weight:800;color:var(--black);margin-bottom:28px}
+.faq-list{display:flex;flex-direction:column;gap:10px}
+details.faq-item{background:white;border:2px solid var(--black);border-radius:14px;overflow:hidden;box-shadow:var(--shadow-sm)}
+details.faq-item summary{display:flex;align-items:center;justify-content:space-between;padding:16px 20px;cursor:pointer;list-style:none;font-size:14px;font-weight:800;color:var(--black);background:#f8fafc;transition:background .12s}
+details.faq-item summary::-webkit-details-marker{display:none}
+details.faq-item summary:hover{background:var(--green-xs)}
+.faq-arrow{width:26px;height:26px;background:white;border:2px solid var(--black);border-radius:50%;display:flex;align-items:center;justify-content:center;box-shadow:var(--shadow-sm);flex-shrink:0;transition:transform .2s}
+.faq-arrow svg{width:12px;height:12px}
+details[open] .faq-arrow{transform:rotate(180deg);background:var(--green-xs)}
+.faq-body{padding:14px 20px 18px;font-size:13px;font-weight:500;color:#475569;line-height:1.7;border-top:2px solid var(--black)}
 
-  /* INFO SECTION */
-  .info-section { max-width: 900px; margin: 0 auto; padding: 48px 5%; }
-  .info-section h2 { font-family: var(--font-head); font-size: clamp(22px, 3vw, 32px); font-weight: 800; letter-spacing: -0.5px; margin-bottom: 24px; }
-  .info-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 16px; }
-  .info-card { background: var(--card); border: 1px solid var(--border); border-radius: var(--radius); padding: 18px; }
-  .info-card h4 { font-family: var(--font-head); font-size: 14px; font-weight: 700; margin-bottom: 6px; }
-  .info-card p { font-size: 13px; color: var(--muted); line-height: 1.65; }
+/* FOOTER */
+footer{background:var(--black);color:white;padding:40px 24px;border-top:4px solid var(--black)}
+.footer-inner{max-width:1100px;margin:0 auto;display:flex;flex-direction:column;gap:24px}
+.footer-top{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:16px}
+.footer-logo{font-size:18px;font-weight:800;color:white}
+.footer-links{display:flex;flex-wrap:wrap;gap:16px}
+.footer-links a{font-size:13px;font-weight:700;color:#94a3b8;text-decoration:none;transition:color .12s}
+.footer-links a:hover{color:var(--green)}
+.footer-copy{font-size:12px;color:#475569;font-weight:500;padding-top:16px;border-top:1px solid #1e293b}
 
-  /* FAQ */
-  .faq-section { max-width: 900px; margin: 0 auto; padding: 0 5% 72px; }
-  .faq-section h2 { font-family: var(--font-head); font-size: clamp(22px, 3vw, 32px); font-weight: 800; margin-bottom: 20px; }
-  details { background: var(--card); border: 1px solid var(--border); border-radius: var(--radius); padding: 16px 20px; margin-bottom: 10px; }
-  summary { font-family: var(--font-head); font-size: 15px; font-weight: 700; cursor: pointer; list-style: none; display: flex; justify-content: space-between; align-items: center; }
-  .plus { color: var(--sarkari); font-size: 20px; }
-  details p { margin-top: 10px; font-size: 14px; color: var(--muted); line-height: 1.7; }
+/* RESPONSIVE */
+@media(max-width:768px){
+  .nav-links,.nav-cta{display:none}
+  .mobile-toggle{display:flex}
+  .mobile-panel{display:block}
+  .form-grid{grid-template-columns:1fr}
+  .form-group.full{grid-column:1}
+  .page-hero{padding:40px 20px 28px}
+  .form-wrap{padding:0 16px 60px}
+  .explainer-grid{grid-template-columns:1fr 1fr}
+  .btn-group{flex-direction:column}
+  .btn-full{width:100%}
+}
+@media(max-width:480px){
+  .explainer-grid{grid-template-columns:1fr}
+  .selector-grid{grid-template-columns:1fr 1fr}
+}
 
-  footer { border-top: 1px solid var(--border); padding: 28px 5%; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px; font-size: 13px; color: var(--muted); }
-  footer a { color: var(--muted); text-decoration: none; }
-  footer a:hover { color: var(--accent); }
-
-  /* === Grouped nav dropdowns + mobile menu (site-wide) === */
-  .nav-links{display:flex;gap:6px;align-items:center}
-  .nav-badge{background:var(--accent);color:#fff;font-size:12px;font-weight:500;padding:4px 12px;border-radius:99px;font-family:var(--font-body);margin-left:6px}
-  .nav-right{display:flex;align-items:center;gap:6px}
-  .nav-item{position:relative}
-  .nav-trigger{font-size:13px;color:var(--muted);background:none;border:none;cursor:pointer;font-family:var(--font-body);display:flex;align-items:center;gap:5px;padding:8px 10px;border-radius:8px;transition:color .15s}
-  .nav-trigger:hover,.nav-trigger.open{color:var(--accent)}
-  .nav-trigger .caret{font-size:9px;transition:transform .15s;opacity:.7}
-  .nav-trigger.open .caret{transform:rotate(180deg)}
-  .dropdown-panel{position:absolute;top:calc(100% + 8px);left:50%;transform:translateX(-50%);background:#fff;border:1px solid var(--border);border-radius:12px;box-shadow:0 12px 32px rgba(15,14,12,.1);padding:8px;min-width:230px;display:none;z-index:200}
-  .dropdown-panel.open{display:block}
-  .dropdown-panel a{display:flex;align-items:center;gap:10px;padding:9px 12px;border-radius:8px;font-size:13.5px;color:var(--ink);text-decoration:none;white-space:nowrap;font-family:var(--font-body)}
-  .dropdown-panel a:hover{background:var(--paper);color:var(--accent)}
-  .dropdown-panel a .emoji{font-size:15px;width:18px;text-align:center}
-  .mobile-toggle{display:none;background:none;border:none;cursor:pointer;font-size:22px;color:var(--ink);padding:4px 6px;line-height:1}
-  @media(max-width:880px){
-    .nav-links{display:none}
-    .mobile-toggle{display:block}
-  }
-  .mobile-panel{display:none;position:fixed;inset:0;background:var(--paper);z-index:300;padding:20px 6%;overflow-y:auto}
-  .mobile-panel.open{display:block}
-  .mobile-panel-header{display:flex;justify-content:space-between;align-items:center;margin-bottom:28px}
-  .mobile-close{background:none;border:none;font-size:26px;color:var(--ink);cursor:pointer;line-height:1}
-  .mobile-group{margin-bottom:28px}
-  .mobile-group h4{font-family:var(--font-head);font-size:11px;text-transform:uppercase;letter-spacing:.1em;color:var(--accent);margin-bottom:10px}
-  .mobile-group a{display:flex;align-items:center;gap:12px;padding:13px 2px;border-bottom:1px solid var(--border);font-size:16px;color:var(--ink);text-decoration:none;font-family:var(--font-body)}
-  .mobile-group a .emoji{width:22px;text-align:center}
+.cat-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(160px,1fr));gap:10px;margin-bottom:24px}
+.cat-card{padding:14px;background:white;border:2px solid var(--border);border-radius:12px;cursor:pointer;transition:all .15s;text-align:left}
+.cat-card:hover{border-color:var(--green);background:var(--green-xs)}
+.cat-card.active{border-color:var(--black);box-shadow:var(--shadow-sm)}
+.cat-icon{font-size:20px;margin-bottom:6px}
+.cat-title{font-size:13px;font-weight:800;color:var(--black)}
+.cat-sub{font-size:11px;color:var(--muted);font-weight:500;margin-top:2px;line-height:1.4}
+.quick-chips{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:20px}
+.quick-chip{padding:6px 14px;background:white;border:2px solid var(--border);border-radius:8px;font-size:12px;font-weight:700;color:var(--muted);cursor:pointer;box-shadow:var(--shadow-sm);transition:all .12s}
+.quick-chip:hover{border-color:var(--black);color:var(--black);transform:translate(1px,1px);box-shadow:var(--shadow-sm)}
+.letter-container{background:white;border:2px solid var(--black);border-radius:12px;padding:24px;min-height:180px;box-shadow:var(--shadow-sm)}
+.letter-paper{font-family:'Times New Roman',serif;font-size:14px;line-height:1.85;white-space:pre-wrap;color:var(--ink)}
+.letter-placeholder{color:#94a3b8;font-style:italic;font-size:14px}
+.output-actions{display:none;gap:10px;flex-wrap:wrap;margin-top:16px}
+.persistence-wrap{display:none;margin-top:14px;background:var(--green-xs);border:2px solid var(--green);border-radius:10px;padding:14px}
+.persistence-wrap p{font-size:13px;font-weight:600;color:var(--ink);margin-bottom:10px}
 </style>
 </head>
 <body>
-
+<!-- ═══════════════ SHARED NAV SNIPPET ═══════════════ -->
 <nav>
-  <a class="logo" href="index.html">Mail<span>Fix</span></a>
-  <div class="nav-links" id="navLinks">
-    <div class="nav-item">
-      <button class="nav-trigger" onclick="toggleDropdown('calcDropdown', this)">🧮 Calculators <span class="caret">▾</span></button>
-      <div class="dropdown-panel" id="calcDropdown">
-        <a href="ctc-calculator.html"><span class="emoji">💰</span> CTC to In-Hand Salary</a>
-        <a href="hra-calculator.html"><span class="emoji">🏠</span> HRA Exemption</a>
-        <a href="itr-calculator.html"><span class="emoji">📊</span> ITR / Income Tax</a>
-        <a href="leave-encashment.html"><span class="emoji">🏖️</span> Leave Encashment</a>
-        <a href="retirement-calculator.html"><span class="emoji">🎯</span> Retirement Package</a>
-        <a href="increment-calculator.html"><span class="emoji">📈</span> Annual Increment</a>
-        <a href="date-calculator.html"><span class="emoji">📅</span> Age &amp; Date Calculator</a>
-        <a href="health-calculator.html"><span class="emoji">❤️</span> Health Calculators</a>
+  <div class="nav-inner">
+    <a href="index.html" class="logo">
+      <div class="logo-icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="3"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+      </div>
+      MailFix<span>.in</span>
+    </a>
+    <div class="nav-links">
+      <div class="nav-item">
+        <button class="nav-trigger">Calculators <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/></svg></button>
+        <div class="dropdown-panel">
+          <a href="ctc-calculator.html">CTC to In-Hand</a>
+          <a href="city-compare.html">City Salary Compare</a>
+          <a href="hra-calculator.html">HRA Exemption</a>
+          <a href="itr-calculator.html">ITR / Tax</a>
+          <a href="increment-calculator.html">Govt Increment</a>
+          <a href="leave-encashment.html">Leave Encashment</a>
+          <a href="retirement-calculator.html">Retirement</a>
+        </div>
+      </div>
+      <div class="nav-item">
+        <button class="nav-trigger">Documents <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/></svg></button>
+        <div class="dropdown-panel">
+          <a href="index.html">Email Fixer</a>
+          <a href="job-application.html">Job Application</a>
+          <a href="sarkari-letter.html">Sarkari Letter</a>
+          <a href="resignation.html">Resignation Kit</a>
+          <a href="rent-receipt.html">Rent Receipt</a>
+          <a href="gst-invoice.html">GST Invoice</a>
+        </div>
+      </div>
+      <div class="nav-item">
+        <button class="nav-trigger">Utilities <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/></svg></button>
+        <div class="dropdown-panel">
+          <a href="whatsapp-dhanda.html">WhatsApp Dhanda</a>
+          <a href="paraphrase.html">Paraphrase Tool</a>
+          <a href="photo-resizer.html">Photo Resizer</a>
+          <a href="qr-generator.html">QR Generator</a>
+          <a href="json-tools.html">JSON Tools</a>
+          <a href="date-calculator.html">Date & Age Calc</a>
+          <a href="health-calculator.html">Health Calculators</a>
+          <a href="vehicle-scrappage.html">Vehicle Scrappage</a>
+        </div>
       </div>
     </div>
-    <div class="nav-item">
-      <button class="nav-trigger" onclick="toggleDropdown('lettersDropdown', this)">✉️ Letters &amp; Docs <span class="caret">▾</span></button>
-      <div class="dropdown-panel" id="lettersDropdown">
-        <a href="index.html"><span class="emoji">💬</span> Hinglish Email Fixer</a>
-        <a href="job-application.html"><span class="emoji">🎓</span> Job Application Email</a>
-        <a href="sarkari-letter.html"><span class="emoji">🏛️</span> Sarkari Letter</a>
-        <a href="resignation.html"><span class="emoji">🚪</span> Resignation Kit</a>
-        <a href="rent-receipt.html"><span class="emoji">🧾</span> Rent Receipt</a>
-        <a href="gst-invoice.html"><span class="emoji">📄</span> GST Invoice</a>
-        <a href="paraphrase.html"><span class="emoji">✍️</span> Paraphrasing Tool</a>
-      </div>
+    <div style="display:flex;align-items:center;gap:12px">
+      <a href="index.html#main-tool" class="nav-cta">Fix Email Free</a>
+      <button class="mobile-toggle" id="mobileMenuBtn">
+        <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"/></svg>
+      </button>
     </div>
-    <div class="nav-item">
-      <button class="nav-trigger" onclick="toggleDropdown('utilsDropdown', this)">🛠️ Utilities <span class="caret">▾</span></button>
-      <div class="dropdown-panel" id="utilsDropdown">
-        <a href="whatsapp-dhanda.html"><span class="emoji">📱</span> WhatsApp Dhanda</a>
-        <a href="photo-resizer.html"><span class="emoji">🖼️</span> Photo Resizer</a>
-        <a href="city-compare.html"><span class="emoji">🏙️</span> City Salary Compare</a>
-        <a href="vehicle-scrappage.html"><span class="emoji">🚗</span> Vehicle Scrappage</a>
-        <a href="qr-generator.html"><span class="emoji">🔲</span> QR Generator</a>
-        <a href="json-tools.html"><span class="emoji">{ }</span> JSON Tools</a>
-      </div>
-    </div>
-  </div>
-  <div class="nav-right">
-    <span class="nav-badge">Free</span>
-    <button class="mobile-toggle" onclick="toggleMobilePanel(true)" aria-label="Open menu">☰</button>
   </div>
 </nav>
-
 <div class="mobile-panel" id="mobilePanel">
-  <div class="mobile-panel-header">
-    <a class="logo" href="index.html">Mail<span>Fix</span></a>
-    <button class="mobile-close" onclick="toggleMobilePanel(false)" aria-label="Close menu">×</button>
+  <div class="mobile-panel-head">
+    <a href="index.html" class="logo">MailFix<span style="color:var(--green-dk)">.in</span></a>
+    <button class="close-btn" id="closeMobileBtn">
+      <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/></svg>
+    </button>
   </div>
-  <div class="mobile-group">
-    <h4>Calculators</h4>
-    <a href="ctc-calculator.html"><span class="emoji">💰</span> CTC to In-Hand Salary</a>
-    <a href="hra-calculator.html"><span class="emoji">🏠</span> HRA Exemption</a>
-    <a href="itr-calculator.html"><span class="emoji">📊</span> ITR / Income Tax</a>
-    <a href="leave-encashment.html"><span class="emoji">🏖️</span> Leave Encashment</a>
-    <a href="retirement-calculator.html"><span class="emoji">🎯</span> Retirement Package</a>
-    <a href="increment-calculator.html"><span class="emoji">📈</span> Annual Increment</a>
-    <a href="date-calculator.html"><span class="emoji">📅</span> Age &amp; Date Calculator</a>
-    <a href="health-calculator.html"><span class="emoji">❤️</span> Health Calculators</a>
-  </div>
-  <div class="mobile-group">
-    <h4>Letters &amp; Docs</h4>
-    <a href="index.html"><span class="emoji">💬</span> Hinglish Email Fixer</a>
-    <a href="job-application.html"><span class="emoji">🎓</span> Job Application Email</a>
-    <a href="sarkari-letter.html"><span class="emoji">🏛️</span> Sarkari Letter</a>
-    <a href="resignation.html"><span class="emoji">🚪</span> Resignation Kit</a>
-    <a href="rent-receipt.html"><span class="emoji">🧾</span> Rent Receipt</a>
-    <a href="gst-invoice.html"><span class="emoji">📄</span> GST Invoice</a>
-    <a href="paraphrase.html"><span class="emoji">✍️</span> Paraphrasing Tool</a>
-  </div>
-  <div class="mobile-group">
-    <h4>Utilities</h4>
-    <a href="whatsapp-dhanda.html"><span class="emoji">📱</span> WhatsApp Dhanda</a>
-    <a href="photo-resizer.html"><span class="emoji">🖼️</span> Photo Resizer</a>
-    <a href="city-compare.html"><span class="emoji">🏙️</span> City Salary Compare</a>
-    <a href="vehicle-scrappage.html"><span class="emoji">🚗</span> Vehicle Scrappage</a>
-    <a href="qr-generator.html"><span class="emoji">🔲</span> QR Generator</a>
-    <a href="json-tools.html"><span class="emoji">{ }</span> JSON Tools</a>
-  </div>
-</div>
-
-<div class="mobile-panel" id="mobilePanel">
-  <div class="mobile-panel-header">
-    <a class="logo" href="index.html">Mail<span>Fix</span></a>
-    <button class="mobile-close" onclick="toggleMobilePanel(false)" aria-label="Close menu">×</button>
-  </div>
-
-  <div class="mobile-group">
-    <h4>Calculators</h4>
-    <a href="ctc-calculator.html"><span class="emoji">💰</span> CTC to In-Hand Salary</a>
-    <a href="hra-calculator.html"><span class="emoji">🏠</span> HRA Exemption</a>
-    <a href="itr-calculator.html"><span class="emoji">📊</span> ITR / Income Tax</a>
-    <a href="leave-encashment.html"><span class="emoji">🏖️</span> Leave Encashment</a>
-    <a href="retirement-calculator.html"><span class="emoji">🎯</span> Retirement Package</a>
-    <a href="increment-calculator.html"><span class="emoji">📈</span> Annual Increment</a>
-  </div>
-
-  <div class="mobile-group">
-    <h4>Letters &amp; Docs</h4>
-    <a href="index.html"><span class="emoji">💬</span> Hinglish Email Fixer</a>
-    <a href="job-application.html"><span class="emoji">🎓</span> Job Application Email</a>
-    <a href="sarkari-letter.html"><span class="emoji">🏛️</span> Sarkari Letter</a>
-    <a href="resignation.html"><span class="emoji">🚪</span> Resignation Kit</a>
-    <a href="rent-receipt.html"><span class="emoji">🧾</span> Rent Receipt</a>
-    <a href="gst-invoice.html"><span class="emoji">📄</span> GST Invoice</a>
-  </div>
-
-  <div class="mobile-group">
-    <h4>Utilities</h4>
-    <a href="whatsapp-dhanda.html"><span class="emoji">📱</span> WhatsApp Dhanda</a>
-    <a href="photo-resizer.html"><span class="emoji">🖼️</span> Photo Resizer</a>
-    <a href="city-compare.html"><span class="emoji">🏙️</span> City Compare</a>
-    <a href="vehicle-scrappage.html"><span class="emoji">🚗</span> Vehicle Scrappage</a>
-    <a href="qr-generator.html"><span class="emoji">🔲</span> QR Generator</a>
-    <a href="json-tools.html"><span class="emoji">{ }</span> JSON Tools</a>
+  <div class="mobile-panel-body">
+    <a href="index.html#main-tool" class="mobile-cta">Fix Email Free →</a>
+    <p class="mobile-section-label">AI Tools</p>
+    <a href="index.html" class="mobile-link">📧 Email Fixer</a>
+    <a href="job-application.html" class="mobile-link">🎓 Job Application</a>
+    <a href="sarkari-letter.html" class="mobile-link">🏛️ Sarkari Letter</a>
+    <a href="resignation.html" class="mobile-link">🚪 Resignation Kit</a>
+    <a href="whatsapp-dhanda.html" class="mobile-link">📱 WhatsApp Dhanda</a>
+    <a href="paraphrase.html" class="mobile-link">✍️ Paraphrase Tool</a>
+    <p class="mobile-section-label">Calculators</p>
+    <a href="ctc-calculator.html" class="mobile-link">💰 CTC to In-Hand</a>
+    <a href="city-compare.html" class="mobile-link">🏙️ City Compare</a>
+    <a href="hra-calculator.html" class="mobile-link">🏠 HRA Exemption</a>
+    <a href="itr-calculator.html" class="mobile-link">📊 ITR / Tax</a>
+    <a href="increment-calculator.html" class="mobile-link">📈 Govt Increment</a>
+    <a href="leave-encashment.html" class="mobile-link">🏖️ Leave Encashment</a>
+    <a href="retirement-calculator.html" class="mobile-link">🎯 Retirement</a>
+    <p class="mobile-section-label">Utilities</p>
+    <a href="photo-resizer.html" class="mobile-link">🖼️ Photo Resizer</a>
+    <a href="qr-generator.html" class="mobile-link">📷 QR Generator</a>
+    <a href="json-tools.html" class="mobile-link">🔧 JSON Tools</a>
+    <a href="date-calculator.html" class="mobile-link">📅 Date & Age</a>
+    <a href="health-calculator.html" class="mobile-link">💪 Health Calculators</a>
+    <a href="vehicle-scrappage.html" class="mobile-link">🚗 Vehicle Scrappage</a>
+    <a href="rent-receipt.html" class="mobile-link">📄 Rent Receipt</a>
+    <a href="gst-invoice.html" class="mobile-link">🧾 GST Invoice</a>
   </div>
 </div>
+<!-- ═══════════════ END NAV SNIPPET ═══════════════ -->
 
-<div class="mobile-panel" id="mobilePanel">
-  <div class="mobile-panel-header">
-    <a class="logo" href="index.html">Mail<span>Fix</span></a>
-    <button class="mobile-close" onclick="toggleMobilePanel(false)" aria-label="Close menu">×</button>
-  </div>
-
-  <div class="mobile-group">
-    <h4>Calculators</h4>
-    <a href="ctc-calculator.html"><span class="emoji">💰</span> CTC to In-Hand Salary</a>
-    <a href="hra-calculator.html"><span class="emoji">🏠</span> HRA Exemption</a>
-    <a href="itr-calculator.html"><span class="emoji">📊</span> ITR / Income Tax</a>
-    <a href="leave-encashment.html"><span class="emoji">🏖️</span> Leave Encashment</a>
-    <a href="retirement-calculator.html"><span class="emoji">🎯</span> Retirement Package</a>
-    <a href="increment-calculator.html"><span class="emoji">📈</span> Annual Increment</a>
-  </div>
-
-  <div class="mobile-group">
-    <h4>Letters & Docs</h4>
-    <a href="index.html"><span class="emoji">💬</span> Hinglish Email Fixer</a>
-    <a href="job-application.html"><span class="emoji">🎓</span> Job Application Email</a>
-    <a href="sarkari-letter.html"><span class="emoji">🏛️</span> Sarkari Letter</a>
-    <a href="resignation.html"><span class="emoji">🚪</span> Resignation Kit</a>
-    <a href="rent-receipt.html"><span class="emoji">🧾</span> Rent Receipt</a>
-    <a href="gst-invoice.html"><span class="emoji">📄</span> GST Invoice</a>
-  </div>
-
-  <div class="mobile-group">
-    <h4>Utilities</h4>
-    <a href="whatsapp-dhanda.html"><span class="emoji">📱</span> WhatsApp Dhanda</a>
-    <a href="photo-resizer.html"><span class="emoji">🖼️</span> Photo Resizer</a>
-    <a href="city-compare.html"><span class="emoji">🏙️</span> City Compare</a>
-  </div>
+<main>
+<div class="page-hero">
+  <div class="page-badge">🏛️ AI Letter Generator</div>
+  <h1>Sarkari Letter <span class="accent">Generator</span></h1>
+  <p class="page-sub">Bank, bijli, paani, ration — generate formal application letters for any government or official work. English, Hindi or Hinglish.</p>
 </div>
+<div class="form-wrap">
 
-<div class="mobile-panel" id="mobilePanel">
-  <div class="mobile-panel-header">
-    <a class="logo" href="index.html">Mail<span>Fix</span></a>
-    <button class="mobile-close" onclick="toggleMobilePanel(false)" aria-label="Close menu">×</button>
-  </div>
-
-  <div class="mobile-group">
-    <h4>Calculators</h4>
-    <a href="ctc-calculator.html"><span class="emoji">💰</span> CTC to In-Hand Salary</a>
-    <a href="hra-calculator.html"><span class="emoji">🏠</span> HRA Exemption</a>
-    <a href="itr-calculator.html"><span class="emoji">📊</span> ITR / Income Tax</a>
-    <a href="leave-encashment.html"><span class="emoji">🏖️</span> Leave Encashment</a>
-    <a href="retirement-calculator.html"><span class="emoji">🎯</span> Retirement Package</a>
-  </div>
-
-  <div class="mobile-group">
-    <h4>Letters & Docs</h4>
-    <a href="index.html"><span class="emoji">💬</span> Hinglish Email Fixer</a>
-    <a href="job-application.html"><span class="emoji">🎓</span> Job Application Email</a>
-    <a href="sarkari-letter.html"><span class="emoji">🏛️</span> Sarkari Letter</a>
-    <a href="resignation.html"><span class="emoji">🚪</span> Resignation Kit</a>
-    <a href="rent-receipt.html"><span class="emoji">🧾</span> Rent Receipt</a>
-    <a href="gst-invoice.html"><span class="emoji">📄</span> GST Invoice</a>
-  </div>
-
-  <div class="mobile-group">
-    <h4>Utilities</h4>
-    <a href="whatsapp-dhanda.html"><span class="emoji">📱</span> WhatsApp Dhanda</a>
-    <a href="photo-resizer.html"><span class="emoji">🖼️</span> Photo Resizer</a>
-    <a href="city-compare.html"><span class="emoji">🏙️</span> City Compare</a>
-  </div>
-</div>
-
-<section class="hero">
-  <div class="hero-tag"><span class="dot"></span> Free for all Indian citizens</div>
-  <h1>Sarkari kaam ke liye<br/><em>sahi application</em></h1>
-  <p class="hero-sub">Bank, bijli, paani, ration — kisi bhi sarkari kaam ke liye proper formal letter ek minute mein. Sirf apni details bharo, baaki AI karega.</p>
-</section>
-
-<!-- CATEGORY SELECTOR -->
-<div class="cat-wrap">
-  <p class="cat-label">Letter type choose karo</p>
-  <div class="cat-grid">
-    <div class="cat-card active" data-cat="bank" onclick="selectCat(this)"><span class="cat-icon">🏦</span><div class="cat-name">Bank Application</div></div>
-    <div class="cat-card" data-cat="electricity" onclick="selectCat(this)"><span class="cat-icon">⚡</span><div class="cat-name">Electricity Board</div></div>
-    <div class="cat-card" data-cat="water" onclick="selectCat(this)"><span class="cat-icon">💧</span><div class="cat-name">Water / Jal Board</div></div>
-    <div class="cat-card" data-cat="ration" onclick="selectCat(this)"><span class="cat-icon">🍚</span><div class="cat-name">Ration Card</div></div>
-    <div class="cat-card" data-cat="municipality" onclick="selectCat(this)"><span class="cat-icon">🏛️</span><div class="cat-name">Municipality / Nagar Palika</div></div>
-    <div class="cat-card" data-cat="school" onclick="selectCat(this)"><span class="cat-icon">🏫</span><div class="cat-name">School / College</div></div>
-    <div class="cat-card" data-cat="police" onclick="selectCat(this)"><span class="cat-icon">🚔</span><div class="cat-name">Police Complaint</div></div>
-    <div class="cat-card" data-cat="other" onclick="selectCat(this)"><span class="cat-icon">📝</span><div class="cat-name">Other / Custom</div></div>
-  </div>
-</div>
-
-<!-- TOOL -->
-<div class="tool-wrap">
-  <!-- FORM -->
-  <div class="tool-card">
-    <div class="card-header">
-      <h3 id="formTitle">Bank Application</h3>
-      <p id="formSub">Fill your details for the letter</p>
+<div class="form-card">
+  <div class="form-card-header"><span class="form-card-title">🏛️ Select Application Type</span></div>
+  <div class="form-body">
+    <div class="cat-grid">
+      <div class="cat-card active" data-cat="bank" onclick="selectCat(this)"><div class="cat-icon">🏦</div><div class="cat-title">Bank</div><div class="cat-sub">ATM, KYC, account issues</div></div>
+      <div class="cat-card" data-cat="electricity" onclick="selectCat(this)"><div class="cat-icon">⚡</div><div class="cat-title">Electricity</div><div class="cat-sub">Bill, connection, meter</div></div>
+      <div class="cat-card" data-cat="water" onclick="selectCat(this)"><div class="cat-icon">💧</div><div class="cat-title">Water / Jal Board</div><div class="cat-sub">New connection, complaint</div></div>
+      <div class="cat-card" data-cat="ration" onclick="selectCat(this)"><div class="cat-icon">🛒</div><div class="cat-title">Ration Card</div><div class="cat-sub">New card, name add</div></div>
+      <div class="cat-card" data-cat="municipality" onclick="selectCat(this)"><div class="cat-icon">🏢</div><div class="cat-title">Municipality</div><div class="cat-sub">Birth cert, property tax</div></div>
+      <div class="cat-card" data-cat="school" onclick="selectCat(this)"><div class="cat-icon">🏫</div><div class="cat-title">School/College</div><div class="cat-sub">TC, bonafide, fee waiver</div></div>
+      <div class="cat-card" data-cat="police" onclick="selectCat(this)"><div class="cat-icon">🚔</div><div class="cat-title">Police</div><div class="cat-sub">Complaint, FIR</div></div>
+      <div class="cat-card" data-cat="other" onclick="selectCat(this)"><div class="cat-icon">📋</div><div class="cat-title">Custom</div><div class="cat-sub">Any other office</div></div>
     </div>
-    <div class="card-body">
+
+    <div style="margin-bottom:16px">
+      <div style="font-size:11px;font-weight:800;text-transform:uppercase;letter-spacing:.1em;color:var(--muted);margin-bottom:8px">Quick examples:</div>
+      <div class="quick-chips">
+        <span class="quick-chip" onclick="loadExample('atm')">🏧 ATM Block</span>
+        <span class="quick-chip" onclick="loadExample('kyc')">📋 KYC Update</span>
+        <span class="quick-chip" onclick="loadExample('electricity')">⚡ High Bill</span>
+        <span class="quick-chip" onclick="loadExample('water')">💧 New Connection</span>
+        <span class="quick-chip" onclick="loadExample('tc')">🎓 Transfer Certificate</span>
+        <span class="quick-chip" onclick="loadExample('noise')">🔊 Noise Complaint</span>
+        <span class="quick-chip" onclick="loadExample('ration')">🛒 Ration Name Add</span>
+      </div>
+    </div>
+
+    <div style="margin-bottom:16px">
+      <div style="font-size:17px;font-weight:800;color:var(--black)" id="formTitle">Bank Application</div>
+      <div style="font-size:13px;color:var(--muted);font-weight:500;margin-top:2px" id="formSub">SBI, PNB, BOI, private banks sab ke liye</div>
+    </div>
+
+    <div class="form-grid">
+      <div class="form-group"><label>Applicant Name *</label><input id="applicantName" placeholder="Suresh Kumar"/></div>
+      <div class="form-group full"><label>Address *</label><input id="applicantAddress" placeholder="12, Shivaji Nagar, Bhopal MP 462001"/></div>
+      <div class="form-group full"><label id="refLabel">Account / Customer ID</label><input id="refNumber" placeholder="SB A/C: 0987654321 (optional)"/></div>
+      <div class="form-group full">
+        <label id="purposeLabel">Purpose (Hindi/English mein) *</label>
+        <textarea id="purpose" rows="3" placeholder="Mera ATM card kho gaya hai. Naya ATM card issue karwana hai..."></textarea>
+      </div>
+      <div class="form-group full"><label>To (Recipient)</label><input id="recipient" value="The Branch Manager"/></div>
       <div class="form-group">
-        <label>Your full name</label>
-        <input type="text" id="applicantName" placeholder="e.g. Ramesh Kumar Sharma"/>
-      </div>
-      <div class="form-group">
-        <label>Your address</label>
-        <input type="text" id="applicantAddress" placeholder="e.g. 42, Gandhi Nagar, Indore, MP"/>
-      </div>
-      <div class="form-group" id="refGroup">
-        <label id="refLabel">Account / Reference number</label>
-        <input type="text" id="refNumber" placeholder="e.g. SB Account No: 123456789"/>
-      </div>
-      <div class="form-group">
-        <label id="purposeLabel">Purpose / Request (in Hindi or English)</label>
-        <textarea id="purpose" placeholder="e.g. ATM card band ho gayi hai aur naya card chahiye, ya passbook update karwani hai"></textarea>
-      </div>
-      <div class="form-group" id="recipientGroup">
-        <label>Letter addressed to</label>
-        <input type="text" id="recipient" placeholder="e.g. The Branch Manager, SBI Indore"/>
-      </div>
-      <div class="form-group">
-        <label>Language preference</label>
+        <label>Language</label>
         <select id="language">
-          <option value="english">English (formal)</option>
-          <option value="hindi">Hindi (formal)</option>
-          <option value="hinglish">Hinglish (semi-formal)</option>
+          <option value="english">English (Formal)</option>
+          <option value="hindi">Hindi (हिंदी)</option>
+          <option value="hinglish">Hinglish (Mix)</option>
         </select>
       </div>
-      <button class="generate-btn" id="generateBtn" onclick="generateLetter()">
-        Generate Letter
-      </button>
     </div>
+
     <div class="error-msg" id="errorMsg"></div>
+    <button class="btn btn-black btn-lg btn-full" id="generateBtn" onclick="generateLetter()">Generate Application Letter</button>
   </div>
 
-  <!-- OUTPUT -->
-  <div class="tool-card">
-    <div class="card-header">
-      <h3>Your Application Letter</h3>
-      <p>Ready to print and submit</p>
+  <div class="output-section">
+    <div class="output-label">Generated Letter</div>
+    <div class="loading-dots" id="loadingDots"><span></span><span></span><span></span></div>
+    <div class="letter-container" id="letterContainer">
+      <div class="letter-placeholder">Aapki application yahan dikhegi...</div>
     </div>
-    <div class="letter-output">
-      <div class="loading-dots" id="loadingDots"><span></span><span></span><span></span></div>
-      <div id="letterContainer">
-        <div class="letter-placeholder">Aapki application yahan dikhegi... Print karke seedha submit kar sakte hain.</div>
-      </div>
+    <div class="output-actions" id="outputActions">
+      <button class="btn btn-white" onclick="copyLetter()"><span id="copyBtn">📋 Copy</span></button>
+      <button class="btn btn-white" onclick="printLetter()">🖨️ Print</button>
     </div>
-    <div class="output-actions" id="outputActions" style="display:none">
-      <button class="action-btn" id="copyBtn" onclick="copyLetter()">
-        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
-        Copy
-      </button>
-      <button class="action-btn" onclick="regeneratePersistence()">
-        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M1 4v6h6"/><path d="M23 20v-6h-6"/><path d="M20.49 9A9 9 0 0 0 5.64 5.64L1 10m22 4l-4.64 4.36A9 9 0 0 1 3.51 15"/></svg>
-        Regenerate
-      </button>
-      <button class="action-btn primary" onclick="printLetter()">
-        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 6 2 18 2 18 9"/><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/><rect x="6" y="14" width="12" height="8"/></svg>
-        Print
-      </button>
+    <div class="persistence-wrap" id="persistenceWrap">
+      <p>📬 No response yet? Generate a follow-up letter that references your first application.</p>
+      <button class="btn btn-primary" onclick="generatePersistenceLetter()">Generate Follow-Up Letter</button>
     </div>
   </div>
 </div>
-
-<!-- PERSISTENCE MODE -->
-<div class="persistence-wrap" id="persistenceWrap" style="display:none">
-  <div class="persistence-card">
-    <span class="persistence-icon">📅</span>
-    <div class="persistence-text">
-      <h4>Persistence Mode — Koi action nahi hua?</h4>
-      <p>15+ din ho gaye aur koi reply nahi? Ek firm follow-up application generate karo.</p>
-    </div>
-    <button class="persistence-btn" onclick="generatePersistenceLetter()">Follow-Up Application Generate Karo</button>
-  </div>
 </div>
-
-<!-- QUICK EXAMPLES -->
-<div class="examples-wrap">
-  <h2>Common requests</h2>
-  <div class="example-chips">
-    <span class="example-chip" onclick="loadExample('atm')">🏦 ATM card block/replace</span>
-    <span class="example-chip" onclick="loadExample('kyc')">🏦 KYC update bank mein</span>
-    <span class="example-chip" onclick="loadExample('electricity')">⚡ Bijli bill galat aaya</span>
-    <span class="example-chip" onclick="loadExample('newconnection')">⚡ Naya bijli connection chahiye</span>
-    <span class="example-chip" onclick="loadExample('water')">💧 Water connection application</span>
-    <span class="example-chip" onclick="loadExample('ration')">🍚 Ration card mein naam add karo</span>
-    <span class="example-chip" onclick="loadExample('tc')">🏫 School TC application</span>
-    <span class="example-chip" onclick="loadExample('noise')">🚔 Noise complaint police</span>
-  </div>
-</div>
-
-<div class="ad-banner">
-  <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-3532554351654388" data-ad-slot="3962323207" data-ad-format="auto" data-full-width-responsive="true"></ins>
-  <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
-</div>
-
-<section class="info-section">
-  <h2>Kaise use karein</h2>
-  <div class="info-grid">
-    <div class="info-card"><h4>1. Type choose karo</h4><p>Bank, bijli, paani ya koi bhi sarkari kaam — upar se select karo.</p></div>
-    <div class="info-card"><h4>2. Details bharo</h4><p>Naam, address, account/reference number aur kya kaam hai ye batao — Hindi mein bhi chal jayega.</p></div>
-    <div class="info-card"><h4>3. Letter ready</h4><p>Proper formal letter tayaar ho jayega. Copy karke email karo ya print karke seedha office mein submit karo.</p></div>
-    <div class="info-card"><h4>4. No response?</h4><p>15 din baad bhi koi reply nahi aaya toh Persistence Mode se ek firm follow-up letter generate karo.</p></div>
-  </div>
-</section>
-
-<section class="faq-section">
-  <h2>Aksar pooche jaane wale sawaal</h2>
-  <details><summary>Bank manager ko application kaise likhein? <span class="plus">+</span></summary><p>Upar 'Bank Application' select karo, apna naam, address, account number aur kaam bharo. AI ek proper formal bank application generate karega English ya Hindi mein — jo seedha submit kar sakte hain.</p></details>
-  <details><summary>Kya ye letter officially valid hoga? <span class="plus">+</span></summary><p>Ye tool ek proper format mein letter generate karta hai jo zyaatar government offices accept karte hain. Kuch jagah stamped letter chahiye hoti hai — wahan ye letter likhkar stamp karwa sakte hain. Judicial documents ke liye advocate se help lein.</p></details>
-  <details><summary>Electricity board complaint letter mein kya hona chahiye? <span class="plus">+</span></summary><p>Consumer number, address, complaint ka detail, aur kab se problem hai ye sab mention hona chahiye. Ye tool automatically sab include karta hai — sirf aapko basic details deni hain.</p></details>
-  <details><summary>Hindi mein letter generate ho sakta hai? <span class="plus">+</span></summary><p>Haan! Language preference mein 'Hindi (formal)' select karo aur poora letter shuddh formal Hindi mein aayega — government offices ke liye perfect.</p></details>
-  <details><summary>No response aaya toh kya karein? <span class="plus">+</span></summary><p>Persistence Mode use karo — ye ek stronger follow-up application generate karta hai jisme mention hoga ki pehle application submit ki thi aur abhi tak koi action nahi hua. Is se zyaatar cases mein response milta hai.</p></details>
-</section>
-
-<div class="ad-banner">
-  <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-3532554351654388" data-ad-slot="1120537447" data-ad-format="auto" data-full-width-responsive="true"></ins>
-  <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
-</div>
-
-<footer>
-  <span>© 2025 MailFix — Free Tools for Indian Professionals</span>
-  <div style="display:flex;gap:16px;flex-wrap:wrap">
-    <a href="index.html">Hinglish Email</a>
-    <a href="job-application.html">Job Email</a>
-    <a href="ctc-calculator.html">Salary Calculator</a>
-    <a href="hra-calculator.html">HRA Calculator</a>
-    <a href="itr-calculator.html">ITR / Tax</a>
-    <a href="leave-encashment.html">Leave Encashment</a>
-    <a href="retirement-calculator.html">Retirement</a>
-    <a href="increment-calculator.html">Increment</a>
-    <a href="date-calculator.html">Age &amp; Date</a>
-    <a href="health-calculator.html">Health Calculators</a>
-    <a href="photo-resizer.html">Photo Resizer</a>
-    <a href="rent-receipt.html">Rent Receipt</a>
-    <a href="gst-invoice.html">GST Invoice</a>
-    <a href="paraphrase.html">Paraphrasing Tool</a>
-    <a href="vehicle-scrappage.html">Vehicle Scrappage</a>
-    <a href="qr-generator.html">QR Generator</a>
-    <a href="json-tools.html">JSON Tools</a>
-    <a href="whatsapp-dhanda.html">WhatsApp Dhanda</a>
-    <a href="sarkari-letter.html">Sarkari Letter</a>
-    <a href="resignation.html">Resignation Kit</a>
-    <a href="city-compare.html">City Compare</a>
-    <a href="privacy.html">Privacy Policy</a>
-  </div>
-</footer>
-
+</main>
+<footer><div class="footer-inner"><div class="footer-top"><div class="footer-logo">MailFix.in</div><div class="footer-links"><a href="index.html">Email Tool</a><a href="ctc-calculator.html">Salary Calc</a><a href="city-compare.html">City Compare</a><a href="whatsapp-dhanda.html">WA Dhanda</a><a href="sarkari-letter.html">Sarkari Letter</a><a href="privacy.html">Privacy Policy</a></div></div><div class="footer-copy">© 2026 MailFix. Free Tools for Indian Professionals.</div></div></footer>
 <script>
   let selectedCat = 'bank';
   let lastLetter = '';
   let isPersistence = false;
-
   // Groq key removed — calls proxied via /.netlify/functions/groq Netlify function
 
   const CAT_CONFIG = {
@@ -577,11 +419,11 @@
     atm:           { cat: 'bank',        name: 'Suresh Kumar', address: '12, Shivaji Nagar, Bhopal MP', ref: 'SB A/C: 0987654321', purpose: 'Mera ATM card kho gaya hai. Naya ATM card issue karwana hai jaldi. Account se koi transaction na ho isliye purana block karein aur naya issue karein.', recipient: 'The Branch Manager, SBI Bhopal', lang: 'english' },
     kyc:           { cat: 'bank',        name: 'Priya Verma',  address: '5, Civil Lines, Allahabad UP',  ref: 'A/C No: 456789123',   purpose: 'KYC update karni hai. Mera mobile number aur address badal gaya hai. Naya Aadhaar aur address proof attached hai.', recipient: 'The Branch Manager, PNB Allahabad', lang: 'english' },
     electricity:   { cat: 'electricity', name: 'Mohan Yadav',  address: '78, Ram Nagar, Patna Bihar',    ref: 'Consumer No: 123-456-789', purpose: 'Pichle teen mahine se bijli ka bill bahut zyada aa raha hai — normally 500 rupaye aata tha ab 2000+ aa raha hai. Meter check karein aur bill correct karein.', recipient: 'The Executive Engineer, BSEB Patna', lang: 'hindi' },
-    newconnection: { cat: 'electricity', name: 'Ravi Shankar',  address: '34, Laxmi Colony, Jaipur Raj',  ref: '',                    purpose: 'Naya bijli connection chahiye. Ghar naya banaya hai aur abhi tak connection nahi mila. Sabhi documents attach hain.', recipient: 'The Junior Engineer, JVVNL Jaipur', lang: 'english' },
     water:         { cat: 'water',       name: 'Anita Devi',   address: '22, Gandhi Road, Lucknow UP',   ref: '',                    purpose: 'Paani ka naya connection chahiye. Naya ghar hai, connection ke liye apply karna hai. Sab documents ready hain.', recipient: 'The Executive Engineer, Jal Nigam Lucknow', lang: 'english' },
     ration:        { cat: 'ration',      name: 'Ramesh Patel', address: '9, Naya Mohalla, Surat Gujarat', ref: 'RC No: GJ-123456',    purpose: 'Meri beti ki shaadi ho gayi thi aur wo wapas aa gayi hai — uska naam ration card mein add karna hai. Aadhaar attached hai.', recipient: 'The Supply Officer, Surat', lang: 'hindi' },
     tc:            { cat: 'school',      name: 'Anjali Singh', address: '56, Model Town, Amritsar Punjab', ref: 'Roll No: 1045',      purpose: 'Transfer Certificate chahiye. Hum dusre city shift ho rahe hain isliye TC ki zaroorat hai jaldi. Sabhi fees clear hain.', recipient: 'The Principal, Govt. High School Amritsar', lang: 'english' },
-    noise:         { cat: 'police',      name: 'Deepak Gupta', address: '7, Shanti Nagar, Indore MP',    ref: '',                    purpose: 'Paas mein ek party function centre hai jo raat 2 baje tak loud music bajata hai. Kaafi baar bola par nahi sunate. Proper complaint darz karwani hai.', recipient: 'The SHO, Vijay Nagar Police Station, Indore', lang: 'english' }
+    noise:         { cat: 'police',      name: 'Deepak Gupta', address: '7, Shanti Nagar, Indore MP',    ref: '',                    purpose: 'Paas mein ek party function centre hai jo raat 2 baje tak loud music bajata hai. Kaafi baar bola par nahi sunate. Proper complaint darz karwani hai.', recipient: 'The SHO, Vijay Nagar Police Station, Indore', lang: 'english' },
+    newconnection: { cat: 'electricity', name: 'Ravi Shankar',  address: '34, Laxmi Colony, Jaipur Raj',  ref: '',                    purpose: 'Naya bijli connection chahiye. Ghar naya banaya hai aur abhi tak connection nahi mila. Sabhi documents attach hain.', recipient: 'The Junior Engineer, JVVNL Jaipur', lang: 'english' }
   };
 
   function selectCat(el) {
@@ -598,9 +440,7 @@
 
   function loadExample(key) {
     const ex = EXAMPLES[key];
-    document.querySelectorAll('.cat-card').forEach(c => {
-      if (c.dataset.cat === ex.cat) c.click();
-    });
+    document.querySelectorAll('.cat-card').forEach(c => { if (c.dataset.cat === ex.cat) c.click(); });
     document.getElementById('applicantName').value = ex.name;
     document.getElementById('applicantAddress').value = ex.address;
     document.getElementById('refNumber').value = ex.ref;
@@ -610,15 +450,8 @@
     generateLetter();
   }
 
-  function showError(msg) {
-    const el = document.getElementById('errorMsg');
-    el.textContent = msg;
-    el.classList.add('show');
-  }
-
-  function hideError() {
-    document.getElementById('errorMsg').classList.remove('show');
-  }
+  function showError(msg) { const el = document.getElementById('errorMsg'); el.textContent = msg; el.classList.add('show'); }
+  function hideError() { document.getElementById('errorMsg').classList.remove('show'); }
 
   async function generateLetter(persistence = false) {
     const name = document.getElementById('applicantName').value.trim();
@@ -634,97 +467,51 @@
 
     hideError();
     isPersistence = persistence;
-
     const btn = document.getElementById('generateBtn');
     const loading = document.getElementById('loadingDots');
     const container = document.getElementById('letterContainer');
     const actions = document.getElementById('outputActions');
     const persistenceWrap = document.getElementById('persistenceWrap');
 
-    btn.disabled = true;
-    loading.classList.add('show');
-    container.innerHTML = '';
-    actions.style.display = 'none';
-    persistenceWrap.style.display = 'none';
+    btn.disabled = true; loading.classList.add('show');
+    container.innerHTML = ''; actions.style.display = 'none'; persistenceWrap.style.display = 'none';
 
     const today = new Date().toLocaleDateString('en-IN', { day: 'numeric', month: 'long', year: 'numeric' });
     const langInstruction = language === 'hindi' ? 'Write the entire letter in formal Hindi (Devanagari script).' : language === 'hinglish' ? 'Write in semi-formal Hinglish (mix of Hindi and English, Roman script).' : 'Write in formal English.';
+    const persistenceNote = persistence ? '\n\nIMPORTANT: This is a FOLLOW-UP letter. The applicant had submitted a previous application about this matter but received no response for over 15 days. Mention this clearly and firmly request immediate action. Reference the previous application.' : '';
 
-    const persistenceNote = persistence ? `\n\nIMPORTANT: This is a FOLLOW-UP letter. The applicant had submitted a previous application about this matter but received no response for over 15 days. Mention this clearly and firmly request immediate action. Reference the previous application.` : '';
-
-    const prompt = `You are a formal letter writing expert for Indian government and official applications. Write a complete, properly formatted formal application letter with these details:
-
-Applicant: ${name}
-Address: ${address}
-${ref ? `Reference Number: ${ref}` : ''}
-To: ${recipient || 'The Concerned Authority'}
-Purpose/Request: ${purpose}
-Date: ${today}
-Category: ${CAT_CONFIG[selectedCat].title}
-
-${langInstruction}
-
-Format requirements:
-- Start with date on the right
-- Then "To, [recipient name and address]"
-- Then "Subject: [brief subject line]"
-- Then "Respected Sir/Madam,"
-- Body paragraphs (3-4 paragraphs)
-- "Yours faithfully, [applicant name], [address], Date: ${today}"
-- Keep it formal, clear and professional
-- Include all relevant details from the purpose${persistenceNote}
-
-Output ONLY the letter text, nothing else.`;
+    const prompt = `You are a formal letter writing expert for Indian government and official applications. Write a complete, properly formatted formal application letter with these details:\n\nApplicant: ${name}\nAddress: ${address}\n${ref ? `Reference Number: ${ref}` : ''}\nTo: ${recipient || 'The Concerned Authority'}\nPurpose/Request: ${purpose}\nDate: ${today}\nCategory: ${CAT_CONFIG[selectedCat].title}\n\n${langInstruction}\n\nFormat requirements:\n- Start with date on the right\n- Then "To, [recipient name and address]"\n- Then "Subject: [brief subject line]"\n- Then "Respected Sir/Madam,"\n- Body paragraphs (3-4 paragraphs)\n- "Yours faithfully, [applicant name], [address], Date: ${today}"\n- Keep it formal, clear and professional\n- Include all relevant details from the purpose${persistenceNote}\n\nOutput ONLY the letter text, nothing else.`;
 
     try {
       const response = await fetch('/.netlify/functions/groq', {
         method: 'POST',
-        body: JSON.stringify({
-          model: 'llama-3.1-8b-instant',
-          messages: [{ role: 'user', content: prompt }],
-          max_tokens: 700,
-          temperature: 0.4
-        })
+        body: JSON.stringify({ model: 'llama-3.1-8b-instant', messages: [{ role: 'user', content: prompt }], max_tokens: 700, temperature: 0.4 })
       });
-
       if (response.status === 401) throw new Error('Groq API key invalid. console.groq.com se naya key lo.');
-      if (!response.ok) {
-        const err = await response.json().catch(() => ({}));
-        throw new Error(err.error?.message || 'Kuch gadbad. Retry karo.');
-      }
-
+      if (!response.ok) { const err = await response.json().catch(() => ({})); throw new Error(err.error?.message || 'Kuch gadbad. Retry karo.'); }
       const data = await response.json();
       let result = data.choices?.[0]?.message?.content?.trim();
       if (!result) throw new Error('Empty response. Dobara try karo.');
-
       lastLetter = result;
       loading.classList.remove('show');
       container.innerHTML = `<div class="letter-paper">${result}</div>`;
       actions.style.display = 'flex';
       if (!persistence) persistenceWrap.style.display = 'block';
-
     } catch (err) {
       loading.classList.remove('show');
       showError(err.message || 'Network error. Internet check karo.');
       container.innerHTML = '<div class="letter-placeholder">Aapki application yahan dikhegi...</div>';
-    } finally {
-      btn.disabled = false;
-    }
+    } finally { btn.disabled = false; }
   }
 
   function generatePersistenceLetter() { generateLetter(true); }
-  function regeneratePersistence() { generateLetter(isPersistence); }
 
   function copyLetter() {
     if (!lastLetter) return;
     navigator.clipboard.writeText(lastLetter).then(() => {
       const btn = document.getElementById('copyBtn');
-      btn.classList.add('copied');
-      btn.innerHTML = `<svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> Copied!`;
-      setTimeout(() => {
-        btn.classList.remove('copied');
-        btn.innerHTML = `<svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg> Copy`;
-      }, 2000);
+      btn.textContent = '✓ Copied!';
+      setTimeout(() => { btn.textContent = '📋 Copy'; }, 2000);
     });
   }
 
@@ -732,38 +519,14 @@ Output ONLY the letter text, nothing else.`;
     if (!lastLetter) return;
     const win = window.open('', '_blank');
     win.document.write(`<!DOCTYPE html><html><head><title>Application Letter — MailFix</title><style>body{font-family:'Times New Roman',serif;font-size:14pt;line-height:1.8;margin:2cm;color:#000}pre{white-space:pre-wrap;font-family:inherit;font-size:inherit}@media print{body{margin:1.5cm}}</style></head><body><pre>${lastLetter}</pre></body></html>`);
-    win.document.close();
-    win.print();
+    win.document.close(); win.print();
   }
 
-  // === Nav dropdowns + mobile menu (site-wide) ===
-  function toggleDropdown(id, triggerEl) {
-    const panel = document.getElementById(id);
-    const isOpen = panel.classList.contains('open');
-    document.querySelectorAll('.dropdown-panel').forEach(p => p.classList.remove('open'));
-    document.querySelectorAll('.nav-trigger').forEach(t => t.classList.remove('open'));
-    if (!isOpen) {
-      panel.classList.add('open');
-      triggerEl.classList.add('open');
-    }
-  }
-  document.addEventListener('click', function (e) {
-    if (!e.target.closest('.nav-item')) {
-      document.querySelectorAll('.dropdown-panel').forEach(p => p.classList.remove('open'));
-      document.querySelectorAll('.nav-trigger').forEach(t => t.classList.remove('open'));
-    }
-  });
-  document.addEventListener('keydown', function (e) {
-    if (e.key === 'Escape') {
-      document.querySelectorAll('.dropdown-panel').forEach(p => p.classList.remove('open'));
-      document.querySelectorAll('.nav-trigger').forEach(t => t.classList.remove('open'));
-      toggleMobilePanel(false);
-    }
-  });
-  function toggleMobilePanel(open) {
-    document.getElementById('mobilePanel').classList.toggle('open', open);
-    document.body.style.overflow = open ? 'hidden' : '';
-  }
+  const _mp=document.getElementById('mobilePanel');const _mb=document.getElementById('mobileMenuBtn');const _cb=document.getElementById('closeMobileBtn');
+  if(_mb)_mb.addEventListener('click',()=>{_mp.classList.add('open');document.body.style.overflow='hidden'});
+  if(_cb)_cb.addEventListener('click',()=>{_mp.classList.remove('open');document.body.style.overflow=''});
+  _mp.querySelectorAll('.mobile-link,.mobile-cta').forEach(a=>a.addEventListener('click',()=>{_mp.classList.remove('open');document.body.style.overflow=''}));
+  document.addEventListener('keydown',e=>{if(e.key==='Escape'){_mp.classList.remove('open');document.body.style.overflow=''}});
 </script>
 </body>
 </html>
