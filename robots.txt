@@ -22,5 +22,3 @@ Allow: /
 User-agent: CCBot
 Allow: /
 
-# LLM site index
-LLMs: https://mailflix.netlify.app/llms.txt
