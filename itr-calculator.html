@@ -366,6 +366,15 @@ details.faq-item summary:hover{background:var(--green-xs)}
 details[open] .faq-arrow{transform:rotate(180deg);background:var(--green-xs)}
 .faq-body{padding:14px 20px 18px;font-size:13px;font-weight:500;color:#475569;line-height:1.7;border-top:2px solid var(--black)}
 
+
+<style>
+.related-guides{background:#f8fafc;border-top:3px solid var(--black);padding:36px 24px}
+.related-guides-inner{max-width:900px;margin:0 auto}
+.related-guides h3{font-size:15px;font-weight:800;text-transform:uppercase;letter-spacing:.08em;color:var(--muted);margin-bottom:14px}
+.related-guides-grid{display:flex;flex-wrap:wrap;gap:10px}
+.related-guide-link{display:inline-flex;align-items:center;gap:6px;background:white;border:2px solid var(--black);border-radius:10px;padding:8px 14px;font-size:13px;font-weight:700;color:var(--ink);text-decoration:none;box-shadow:2px 2px 0 #000;transition:background .12s}
+.related-guide-link:hover{background:var(--green-xs);color:var(--green-dk)}
+</style>
 </style>
 </head>
 <body>
@@ -537,8 +546,13 @@ details[open] .faq-arrow{transform:rotate(180deg);background:var(--green-xs)}
   <h2>Frequently Asked Questions</h2>
   <div class="faq-list"><details class="faq-item"><summary>What is the key difference between Old and New tax regime?<div class="faq-arrow"><svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M2 4l4 4 4-4"/></svg></div></summary><div class="faq-body">The Old Regime has higher tax slab rates but allows many deductions (80C, HRA, home loan, etc.) that reduce your taxable income. The New Regime has lower slab rates but almost no deductions. The better option depends on your total deductions.</div></details><details class="faq-item"><summary>Who benefits more from the New Tax Regime?<div class="faq-arrow"><svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M2 4l4 4 4-4"/></svg></div></summary><div class="faq-body">The New Regime benefits people with low deductions — typically younger employees without home loans, large insurance premiums or 80C investments. If your total deductions are less than ₹3.75 lakh, the New Regime usually results in lower tax.</div></details><details class="faq-item"><summary>What is the ₹12 lakh tax-free limit in the New Regime?<div class="faq-arrow"><svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M2 4l4 4 4-4"/></svg></div></summary><div class="faq-body">From FY 2025-26, income up to ₹12 lakh is effectively tax-free under the New Regime due to Section 87A rebate (₹60,000). Salaried individuals with income up to ₹12.75 lakh pay zero tax after the ₹75,000 standard deduction.</div></details><details class="faq-item"><summary>Can I switch between Old and New regime every year?<div class="faq-arrow"><svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M2 4l4 4 4-4"/></svg></div></summary><div class="faq-body">Salaried employees can switch between Old and New regime every financial year at the time of filing their ITR. However, individuals with business income can only switch once from New to Old regime after which they cannot go back.</div></details><details class="faq-item"><summary>Which deductions are allowed in the New Tax Regime?<div class="faq-arrow"><svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M2 4l4 4 4-4"/></svg></div></summary><div class="faq-body">Very few deductions are available in the New Regime: employer's NPS contribution (80CCD(2)), Agniveer Corpus Fund, and the ₹75,000 standard deduction for salaried employees. All other popular deductions like 80C, HRA, and home loan interest are not allowed.</div></details></div>
 </div></div>
+
+<div class="related-guides"><div class="related-guides-inner">
+  <h3>Related Guides</h3>
+  <div class="related-guides-grid"><a href="income-tax-slabs.html" class="related-guide-link">📖 Income Tax Slabs 2025-26</a><a href="new-vs-old-tax-regime.html" class="related-guide-link">📖 New vs Old Tax Regime</a><a href="what-is-form-16.html" class="related-guide-link">📖 What is Form 16</a><a href="salary-glossary.html" class="related-guide-link">📖 Salary Terms Glossary</a></div>
+</div></div>
 </main>
-<footer><div class="footer-inner"><div class="footer-top"><div class="footer-logo">MailFix.in</div><div class="footer-links"><a href="index.html">Email Tool</a><a href="ctc-calculator.html">Salary Calc</a><a href="city-compare.html">City Compare</a><a href="whatsapp-dhanda.html">WA Dhanda</a><a href="sarkari-letter.html">Sarkari Letter</a><a href="privacy.html">Privacy Policy</a></div></div><div class="footer-copy">© 2026 MailFix. Free Tools for Indian Professionals.</div></div></footer>
+<footer><div class="footer-inner"><div class="footer-top"><div class="footer-logo">MailFix.in</div><div class="footer-links"><a href="index.html">Email Tool</a><a href="ctc-calculator.html">Salary Calc</a><a href="income-tax-slabs.html">Tax Slabs</a><a href="how-ctc-is-calculated.html">CTC Guide</a><a href="new-vs-old-tax-regime.html">Tax Regime</a><a href="salary-glossary.html">Glossary</a><a href="city-compare.html">City Compare</a><a href="whatsapp-dhanda.html">WA Dhanda</a><a href="sarkari-letter.html">Sarkari Letter</a><a href="privacy.html">Privacy Policy</a></div></div><div class="footer-copy">© 2026 MailFix. Free Tools for Indian Professionals.</div></div></footer>
 <script>
   function fmt(n) { return '₹' + Math.round(Math.abs(n)).toLocaleString('en-IN'); }
   function pct(tax, income) { return income > 0 ? (tax/income*100).toFixed(1) + '%' : '0%'; }

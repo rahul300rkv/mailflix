@@ -355,6 +355,15 @@ details.faq-item summary:hover{background:var(--green-xs)}
 details[open] .faq-arrow{transform:rotate(180deg);background:var(--green-xs)}
 .faq-body{padding:14px 20px 18px;font-size:13px;font-weight:500;color:#475569;line-height:1.7;border-top:2px solid var(--black)}
 
+
+<style>
+.related-guides{background:#f8fafc;border-top:3px solid var(--black);padding:36px 24px}
+.related-guides-inner{max-width:900px;margin:0 auto}
+.related-guides h3{font-size:15px;font-weight:800;text-transform:uppercase;letter-spacing:.08em;color:var(--muted);margin-bottom:14px}
+.related-guides-grid{display:flex;flex-wrap:wrap;gap:10px}
+.related-guide-link{display:inline-flex;align-items:center;gap:6px;background:white;border:2px solid var(--black);border-radius:10px;padding:8px 14px;font-size:13px;font-weight:700;color:var(--ink);text-decoration:none;box-shadow:2px 2px 0 #000;transition:background .12s}
+.related-guide-link:hover{background:var(--green-xs);color:var(--green-dk)}
+</style>
 </style>
 </head>
 <body>
@@ -524,8 +533,13 @@ details[open] .faq-arrow{transform:rotate(180deg);background:var(--green-xs)}
   <h2>Frequently Asked Questions</h2>
   <div class="faq-list"><details class="faq-item"><summary>Who needs to issue a GST invoice?<div class="faq-arrow"><svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M2 4l4 4 4-4"/></svg></div></summary><div class="faq-body">Any GST-registered business (with GSTIN) that makes a taxable supply of goods or services must issue a tax invoice. Unregistered businesses making supplies under the GST exemption threshold (₹40 lakh for goods, ₹20 lakh for services) can issue a simple bill of supply without GST.</div></details><details class="faq-item"><summary>What details are mandatory on a GST invoice?<div class="faq-arrow"><svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M2 4l4 4 4-4"/></svg></div></summary><div class="faq-body">A valid GST invoice must include: your business name, address and GSTIN, invoice number and date, buyer's name and address (GSTIN if registered), HSN/SAC code for each item, quantity and unit of measure, taxable value, applicable GST rate (CGST+SGST for intrastate or IGST for interstate), and total invoice value.</div></details><details class="faq-item"><summary>What is the difference between CGST, SGST, and IGST?<div class="faq-arrow"><svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M2 4l4 4 4-4"/></svg></div></summary><div class="faq-body">For supplies within the same state (intrastate), GST is split equally between CGST (Central GST) and SGST (State GST) — e.g., 18% GST = 9% CGST + 9% SGST. For supplies between different states or exports (interstate), only IGST (Integrated GST) applies at the full rate — e.g., 18% IGST.</div></details><details class="faq-item"><summary>What is an HSN code and where do I find it?<div class="faq-arrow"><svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M2 4l4 4 4-4"/></svg></div></summary><div class="faq-body">HSN (Harmonized System of Nomenclature) codes classify goods for GST purposes. Businesses with turnover above ₹5 crore must use 8-digit HSN codes; others may use 4 or 6 digits. Search for your product's HSN code on the GST Council website at gstcouncil.gov.in or on the government's GST portal.</div></details><details class="faq-item"><summary>Is an e-invoice mandatory for my business?<div class="faq-arrow"><svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M2 4l4 4 4-4"/></svg></div></summary><div class="faq-body">E-invoicing (electronic invoice on the IRP portal) is mandatory for GST-registered businesses with aggregate turnover above ₹5 crore from 1st August 2023. Smaller businesses can continue with standard invoices. This tool generates standard PDF invoices — for IRP e-invoice integration, use the official GST e-invoice portal or accounting software like Tally/Zoho.</div></details></div>
 </div></div>
+
+<div class="related-guides"><div class="related-guides-inner">
+  <h3>Related Guides</h3>
+  <div class="related-guides-grid"><a href="salary-glossary.html" class="related-guide-link">📖 Salary Terms Glossary</a><a href="professional-tax-india.html" class="related-guide-link">📖 Professional Tax by State</a></div>
+</div></div>
 </main>
-<footer><div class="footer-inner"><div class="footer-top"><div class="footer-logo">MailFix.in</div><div class="footer-links"><a href="index.html">Email Tool</a><a href="ctc-calculator.html">Salary Calc</a><a href="city-compare.html">City Compare</a><a href="whatsapp-dhanda.html">WA Dhanda</a><a href="sarkari-letter.html">Sarkari Letter</a><a href="privacy.html">Privacy Policy</a></div></div><div class="footer-copy">© 2026 MailFix. Free Tools for Indian Professionals.</div></div></footer>
+<footer><div class="footer-inner"><div class="footer-top"><div class="footer-logo">MailFix.in</div><div class="footer-links"><a href="index.html">Email Tool</a><a href="ctc-calculator.html">Salary Calc</a><a href="income-tax-slabs.html">Tax Slabs</a><a href="how-ctc-is-calculated.html">CTC Guide</a><a href="new-vs-old-tax-regime.html">Tax Regime</a><a href="salary-glossary.html">Glossary</a><a href="city-compare.html">City Compare</a><a href="whatsapp-dhanda.html">WA Dhanda</a><a href="sarkari-letter.html">Sarkari Letter</a><a href="privacy.html">Privacy Policy</a></div></div><div class="footer-copy">© 2026 MailFix. Free Tools for Indian Professionals.</div></div></footer>
 <script>
   document.getElementById('invDate').value = new Date().toISOString().split('T')[0];
   let itemCount = 0;

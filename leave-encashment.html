@@ -363,6 +363,15 @@ details.faq-item summary:hover{background:var(--green-xs)}
 details[open] .faq-arrow{transform:rotate(180deg);background:var(--green-xs)}
 .faq-body{padding:14px 20px 18px;font-size:13px;font-weight:500;color:#475569;line-height:1.7;border-top:2px solid var(--black)}
 
+
+<style>
+.related-guides{background:#f8fafc;border-top:3px solid var(--black);padding:36px 24px}
+.related-guides-inner{max-width:900px;margin:0 auto}
+.related-guides h3{font-size:15px;font-weight:800;text-transform:uppercase;letter-spacing:.08em;color:var(--muted);margin-bottom:14px}
+.related-guides-grid{display:flex;flex-wrap:wrap;gap:10px}
+.related-guide-link{display:inline-flex;align-items:center;gap:6px;background:white;border:2px solid var(--black);border-radius:10px;padding:8px 14px;font-size:13px;font-weight:700;color:var(--ink);text-decoration:none;box-shadow:2px 2px 0 #000;transition:background .12s}
+.related-guide-link:hover{background:var(--green-xs);color:var(--green-dk)}
+</style>
 </style>
 </head>
 <body>
@@ -534,8 +543,13 @@ details[open] .faq-arrow{transform:rotate(180deg);background:var(--green-xs)}
   <h2>Frequently Asked Questions</h2>
   <div class="faq-list"><details class="faq-item"><summary>What is leave encashment?<div class="faq-arrow"><svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M2 4l4 4 4-4"/></svg></div></summary><div class="faq-body">Leave encashment is the payment you receive from your employer in exchange for unused earned/privilege leaves. It can happen while you are still employed (if your company allows encashment during service) or at the time of resignation or retirement.</div></details><details class="faq-item"><summary>Is leave encashment taxable in India?<div class="faq-arrow"><svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M2 4l4 4 4-4"/></svg></div></summary><div class="faq-body">For government employees, leave encashment at retirement is fully tax-exempt under Section 10(10AA). For private sector employees, the exemption is limited to the least of: (1) actual leave encashment, (2) 10 months' average salary, (3) ₹25 lakh (revised limit), or (4) leave salary for unutilised leaves.</div></details><details class="faq-item"><summary>How many leaves can be encashed?<div class="faq-arrow"><svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M2 4l4 4 4-4"/></svg></div></summary><div class="faq-body">This depends on your company's leave policy. Most companies allow encashment of 30-60 earned leaves per year, with a cap on carryforward (often 90-120 days total). Government employees can encash up to 300 days of accumulated leaves at retirement.</div></details><details class="faq-item"><summary>What salary is used for leave encashment calculation?<div class="faq-arrow"><svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M2 4l4 4 4-4"/></svg></div></summary><div class="faq-body">Leave encashment is typically calculated on the basis of Basic Salary + Dearness Allowance (DA) only — not your full CTC or gross salary. Per-day rate = (Basic + DA) / 26 working days.</div></details><details class="faq-item"><summary>Can I be taxed on leave encashment received mid-service?<div class="faq-arrow"><svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M2 4l4 4 4-4"/></svg></div></summary><div class="faq-body">Yes. Leave encashment received while still employed (not at retirement/resignation) is fully taxable as salary income with no exemption under Section 10(10AA). Only encashment at the time of leaving or retirement qualifies for the exemption.</div></details></div>
 </div></div>
+
+<div class="related-guides"><div class="related-guides-inner">
+  <h3>Related Guides</h3>
+  <div class="related-guides-grid"><a href="how-ctc-is-calculated.html" class="related-guide-link">📖 How CTC is Calculated</a><a href="income-tax-slabs.html" class="related-guide-link">📖 Income Tax Slabs 2025-26</a><a href="what-is-form-16.html" class="related-guide-link">📖 What is Form 16</a></div>
+</div></div>
 </main>
-<footer><div class="footer-inner"><div class="footer-top"><div class="footer-logo">MailFix.in</div><div class="footer-links"><a href="index.html">Email Tool</a><a href="ctc-calculator.html">Salary Calc</a><a href="city-compare.html">City Compare</a><a href="whatsapp-dhanda.html">WA Dhanda</a><a href="sarkari-letter.html">Sarkari Letter</a><a href="privacy.html">Privacy Policy</a></div></div><div class="footer-copy">© 2026 MailFix. Free Tools for Indian Professionals.</div></div></footer>
+<footer><div class="footer-inner"><div class="footer-top"><div class="footer-logo">MailFix.in</div><div class="footer-links"><a href="index.html">Email Tool</a><a href="ctc-calculator.html">Salary Calc</a><a href="income-tax-slabs.html">Tax Slabs</a><a href="how-ctc-is-calculated.html">CTC Guide</a><a href="new-vs-old-tax-regime.html">Tax Regime</a><a href="salary-glossary.html">Glossary</a><a href="city-compare.html">City Compare</a><a href="whatsapp-dhanda.html">WA Dhanda</a><a href="sarkari-letter.html">Sarkari Letter</a><a href="privacy.html">Privacy Policy</a></div></div><div class="footer-copy">© 2026 MailFix. Free Tools for Indian Professionals.</div></div></footer>
 <script>
   function fmt(n){return '₹'+Math.round(Math.abs(n)).toLocaleString('en-IN')}
   function calculate(){

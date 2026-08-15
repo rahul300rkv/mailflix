@@ -371,6 +371,15 @@ details.faq-item summary:hover{background:var(--green-xs)}
 details[open] .faq-arrow{transform:rotate(180deg);background:var(--green-xs)}
 .faq-body{padding:14px 20px 18px;font-size:13px;font-weight:500;color:#475569;line-height:1.7;border-top:2px solid var(--black)}
 
+
+<style>
+.related-guides{background:#f8fafc;border-top:3px solid var(--black);padding:36px 24px}
+.related-guides-inner{max-width:900px;margin:0 auto}
+.related-guides h3{font-size:15px;font-weight:800;text-transform:uppercase;letter-spacing:.08em;color:var(--muted);margin-bottom:14px}
+.related-guides-grid{display:flex;flex-wrap:wrap;gap:10px}
+.related-guide-link{display:inline-flex;align-items:center;gap:6px;background:white;border:2px solid var(--black);border-radius:10px;padding:8px 14px;font-size:13px;font-weight:700;color:var(--ink);text-decoration:none;box-shadow:2px 2px 0 #000;transition:background .12s}
+.related-guide-link:hover{background:var(--green-xs);color:var(--green-dk)}
+</style>
 </style>
 </head>
 <body>
@@ -562,8 +571,13 @@ details[open] .faq-arrow{transform:rotate(180deg);background:var(--green-xs)}
   <h2>Frequently Asked Questions</h2>
   <div class="faq-list"><details class="faq-item"><summary>What is CTC and how is it different from in-hand salary?<div class="faq-arrow"><svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M2 4l4 4 4-4"/></svg></div></summary><div class="faq-body">CTC (Cost to Company) is the total amount a company spends on you annually, including your salary, PF contributions, gratuity, and other benefits. Your in-hand (take-home) salary is what actually gets credited to your bank after all deductions like employee PF, professional tax, and income tax.</div></details><details class="faq-item"><summary>Which tax regime should I choose — New or Old?<div class="faq-arrow"><svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M2 4l4 4 4-4"/></svg></div></summary><div class="faq-body">The New Regime (default from FY 2023-24) has lower slab rates but no deductions. The Old Regime allows deductions like 80C (₹1.5L), HRA exemption, and 80D. If your total deductions exceed ₹3.75 lakh, the Old Regime usually saves more tax.</div></details><details class="faq-item"><summary>Is PF deduction mandatory for all employees?<div class="faq-arrow"><svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M2 4l4 4 4-4"/></svg></div></summary><div class="faq-body">PF is mandatory if your basic salary is below ₹15,000/month and your employer has 20+ employees. If your basic exceeds ₹15,000, PF contribution is optional but you can voluntarily continue at 12% of basic.</div></details><details class="faq-item"><summary>How is HRA exemption calculated?<div class="faq-arrow"><svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M2 4l4 4 4-4"/></svg></div></summary><div class="faq-body">HRA exemption is the lowest of: (1) actual HRA received, (2) 50% of basic for metro / 40% for non-metro, or (3) rent paid minus 10% of basic salary. This tool uses the standard method — use the dedicated HRA calculator for detailed rent-based exemption.</div></details><details class="faq-item"><summary>Does the calculator account for FY 2025-26 tax slabs?<div class="faq-arrow"><svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M2 4l4 4 4-4"/></svg></div></summary><div class="faq-body">Yes. The calculator uses the latest FY 2025-26 income tax slabs for both New and Old regimes, including the ₹12 lakh tax-free limit under the new regime after Section 87A rebate.</div></details></div>
 </div></div>
+
+<div class="related-guides"><div class="related-guides-inner">
+  <h3>Related Guides</h3>
+  <div class="related-guides-grid"><a href="how-ctc-is-calculated.html" class="related-guide-link">📖 How CTC is Calculated</a><a href="income-tax-slabs.html" class="related-guide-link">📖 Income Tax Slabs 2025-26</a><a href="new-vs-old-tax-regime.html" class="related-guide-link">📖 New vs Old Tax Regime</a><a href="salary-glossary.html" class="related-guide-link">📖 Salary Terms Glossary</a></div>
+</div></div>
 </main>
-<footer><div class="footer-inner"><div class="footer-top"><div class="footer-logo">MailFix.in</div><div class="footer-links"><a href="index.html">Email Tool</a><a href="ctc-calculator.html">Salary Calc</a><a href="city-compare.html">City Compare</a><a href="whatsapp-dhanda.html">WA Dhanda</a><a href="sarkari-letter.html">Sarkari Letter</a><a href="privacy.html">Privacy Policy</a></div></div><div class="footer-copy">© 2026 MailFix. Free Tools for Indian Professionals.</div></div></footer>
+<footer><div class="footer-inner"><div class="footer-top"><div class="footer-logo">MailFix.in</div><div class="footer-links"><a href="index.html">Email Tool</a><a href="ctc-calculator.html">Salary Calc</a><a href="income-tax-slabs.html">Tax Slabs</a><a href="how-ctc-is-calculated.html">CTC Guide</a><a href="new-vs-old-tax-regime.html">Tax Regime</a><a href="salary-glossary.html">Glossary</a><a href="city-compare.html">City Compare</a><a href="whatsapp-dhanda.html">WA Dhanda</a><a href="sarkari-letter.html">Sarkari Letter</a><a href="privacy.html">Privacy Policy</a></div></div><div class="footer-copy">© 2026 MailFix. Free Tools for Indian Professionals.</div></div></footer>
 <script>
   let taxRegime = 'new';
 

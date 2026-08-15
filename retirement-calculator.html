@@ -363,6 +363,15 @@ details.faq-item summary:hover{background:var(--green-xs)}
 details[open] .faq-arrow{transform:rotate(180deg);background:var(--green-xs)}
 .faq-body{padding:14px 20px 18px;font-size:13px;font-weight:500;color:#475569;line-height:1.7;border-top:2px solid var(--black)}
 
+
+<style>
+.related-guides{background:#f8fafc;border-top:3px solid var(--black);padding:36px 24px}
+.related-guides-inner{max-width:900px;margin:0 auto}
+.related-guides h3{font-size:15px;font-weight:800;text-transform:uppercase;letter-spacing:.08em;color:var(--muted);margin-bottom:14px}
+.related-guides-grid{display:flex;flex-wrap:wrap;gap:10px}
+.related-guide-link{display:inline-flex;align-items:center;gap:6px;background:white;border:2px solid var(--black);border-radius:10px;padding:8px 14px;font-size:13px;font-weight:700;color:var(--ink);text-decoration:none;box-shadow:2px 2px 0 #000;transition:background .12s}
+.related-guide-link:hover{background:var(--green-xs);color:var(--green-dk)}
+</style>
 </style>
 </head>
 <body>
@@ -518,8 +527,13 @@ details[open] .faq-arrow{transform:rotate(180deg);background:var(--green-xs)}
   <h2>Frequently Asked Questions</h2>
   <div class="faq-list"><details class="faq-item"><summary>How much do I need to retire comfortably in India?<div class="faq-arrow"><svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M2 4l4 4 4-4"/></svg></div></summary><div class="faq-body">A common rule of thumb is the 25x Rule — you need 25 times your annual expenses at retirement. For example, if you need ₹60,000/month (₹7.2L/year) in today's money, you need approximately ₹1.8 crore in today's terms — but with inflation, the actual corpus required will be much higher.</div></details><details class="faq-item"><summary>What return rate should I use for retirement planning?<div class="faq-arrow"><svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M2 4l4 4 4-4"/></svg></div></summary><div class="faq-body">Use 10-12% for aggressive equity-heavy portfolios (100% equity), 8-9% for balanced portfolios (60% equity / 40% debt), and 6-7% for conservative debt-heavy portfolios. For long retirement horizons (20+ years), equity-heavy portfolios historically outperform inflation.</div></details><details class="faq-item"><summary>What inflation rate should I assume for India?<div class="faq-arrow"><svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M2 4l4 4 4-4"/></svg></div></summary><div class="faq-body">India's average CPI inflation has been 5-7% over the past decade. For conservative planning, use 6-7%. For healthcare expenses specifically, medical inflation in India has been 8-10% annually, so factor that in separately if you're a senior citizen.</div></details><details class="faq-item"><summary>What is the 4% withdrawal rule?<div class="faq-arrow"><svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M2 4l4 4 4-4"/></svg></div></summary><div class="faq-body">The 4% rule says you can safely withdraw 4% of your corpus per year without running out of money for 30 years. For a ₹5 crore corpus, that is ₹20 lakh/year or ₹1.66 lakh/month. In the Indian context with higher inflation, a 3-3.5% withdrawal rate is often recommended.</div></details><details class="faq-item"><summary>Should I include EPF and PPF in my retirement corpus?<div class="faq-arrow"><svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M2 4l4 4 4-4"/></svg></div></summary><div class="faq-body">Yes. EPF and PPF are guaranteed fixed-income instruments that form the debt portion of your retirement portfolio. Check your EPF balance on the EPFO member portal and add it to your total retirement savings — it reduces the additional SIP you need to invest.</div></details></div>
 </div></div>
+
+<div class="related-guides"><div class="related-guides-inner">
+  <h3>Related Guides</h3>
+  <div class="related-guides-grid"><a href="income-tax-slabs.html" class="related-guide-link">📖 Income Tax Slabs 2025-26</a><a href="new-vs-old-tax-regime.html" class="related-guide-link">📖 New vs Old Tax Regime</a><a href="salary-glossary.html" class="related-guide-link">📖 Salary Terms Glossary</a></div>
+</div></div>
 </main>
-<footer><div class="footer-inner"><div class="footer-top"><div class="footer-logo">MailFix.in</div><div class="footer-links"><a href="index.html">Email Tool</a><a href="ctc-calculator.html">Salary Calc</a><a href="city-compare.html">City Compare</a><a href="whatsapp-dhanda.html">WA Dhanda</a><a href="sarkari-letter.html">Sarkari Letter</a><a href="privacy.html">Privacy Policy</a></div></div><div class="footer-copy">© 2026 MailFix. Free Tools for Indian Professionals.</div></div></footer>
+<footer><div class="footer-inner"><div class="footer-top"><div class="footer-logo">MailFix.in</div><div class="footer-links"><a href="index.html">Email Tool</a><a href="ctc-calculator.html">Salary Calc</a><a href="income-tax-slabs.html">Tax Slabs</a><a href="how-ctc-is-calculated.html">CTC Guide</a><a href="new-vs-old-tax-regime.html">Tax Regime</a><a href="salary-glossary.html">Glossary</a><a href="city-compare.html">City Compare</a><a href="whatsapp-dhanda.html">WA Dhanda</a><a href="sarkari-letter.html">Sarkari Letter</a><a href="privacy.html">Privacy Policy</a></div></div><div class="footer-copy">© 2026 MailFix. Free Tools for Indian Professionals.</div></div></footer>
 <script>
   function fmt(n){return '₹'+Math.round(Math.abs(n)).toLocaleString('en-IN')}
   function fmtCr(n){
