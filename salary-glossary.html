@@ -131,11 +131,12 @@ nav{position:sticky;top:0;z-index:100;background:rgba(255,255,255,.95);backdrop-
 .nav-links{display:flex;align-items:center;gap:4px}
 .nav-group{position:relative}
 .nav-group-btn{background:none;border:none;font-family:var(--font);font-size:13px;font-weight:700;cursor:pointer;padding:6px 10px;border-radius:8px;color:var(--ink)}
-.nav-group-btn:hover{background:var(--green-xs)}
-.nav-dropdown{display:none;position:absolute;top:calc(100% + 8px);left:0;background:white;border:2px solid var(--black);border-radius:12px;box-shadow:var(--shadow);min-width:180px;z-index:200;overflow:hidden}
-.nav-group:hover .nav-dropdown{display:block}
+.nav-group-btn:hover,.nav-group-btn.active{background:var(--green-xs)}
+.nav-dropdown{display:none;position:absolute;top:100%;left:0;padding-top:8px;min-width:200px;z-index:500}
+.nav-dropdown-inner{background:white;border:2px solid var(--black);border-radius:12px;box-shadow:var(--shadow);overflow:hidden}
 .nav-dropdown a{display:block;padding:10px 16px;font-size:13px;font-weight:700;color:var(--ink);text-decoration:none}
 .nav-dropdown a:hover{background:var(--green-xs);color:var(--green-dk)}
+.nav-group.open .nav-dropdown{display:block}
 .nav-cta{background:var(--green);color:white;border:2px solid var(--black);border-radius:10px;padding:8px 18px;font-size:13px;font-weight:800;text-decoration:none;box-shadow:var(--shadow-sm)}
 .hamburger{display:none;background:none;border:none;cursor:pointer;padding:4px}
 .mobile-panel{display:none;position:fixed;inset:0;background:white;z-index:300;overflow-y:auto}
@@ -442,6 +443,20 @@ footer{border-top:4px solid var(--black);background:#0f172a;color:white;padding:
   <div class="footer-copy">© 2026 MailFix. Free Tools for Indian Professionals.</div>
 </div></footer>
 <script>
+  
+  // Dropdown nav — click to toggle, close on outside click
+  document.querySelectorAll('.nav-group-btn').forEach(btn=>{
+    btn.addEventListener('click',e=>{
+      e.stopPropagation();
+      const grp=btn.closest('.nav-group');
+      const wasOpen=grp.classList.contains('open');
+      document.querySelectorAll('.nav-group').forEach(g=>g.classList.remove('open'));
+      if(!wasOpen)grp.classList.add('open');
+    });
+  });
+  document.addEventListener('click',()=>document.querySelectorAll('.nav-group').forEach(g=>g.classList.remove('open')));
+  document.addEventListener('keydown',e=>{if(e.key==='Escape')document.querySelectorAll('.nav-group').forEach(g=>g.classList.remove('open'))});
+
   const _mp=document.getElementById('mobilePanel');
   const _mb=document.getElementById('mobileMenuBtn');
   const _cb=document.getElementById('closeMobileBtn');
