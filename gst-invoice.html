@@ -55,7 +55,7 @@
       "@type": "ListItem",
       "position": 2,
       "name": "Utilities",
-      "item": "https://mailflix.netlify.app/gst-invoice.html"
+      "item": "https://mailflix.netlify.app/index.html"
     },
     {
       "@type": "ListItem",
@@ -73,10 +73,18 @@
   "mainEntity": [
     {
       "@type": "Question",
-      "name": "What details are mandatory on a GST tax invoice?",
+      "name": "Who needs to issue a GST invoice?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "A valid GST invoice must include: your GSTIN and business name/address, invoice number and date, buyer's name/address (and GSTIN if registered), description of goods/services with HSN/SAC code, quantity, unit price, taxable value, applicable GST rate and amount (CGST+SGST or IGST), and total invoice value including GST."
+        "text": "Any GST-registered business (with GSTIN) that makes a taxable supply of goods or services must issue a tax invoice. Unregistered businesses making supplies under the GST exemption threshold (₹40 lakh for goods, ₹20 lakh for services) can issue a simple bill of supply without GST."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What details are mandatory on a GST invoice?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A valid GST invoice must include: your business name, address and GSTIN, invoice number and date, buyer's name and address (GSTIN if registered), HSN/SAC code for each item, quantity and unit of measure, taxable value, applicable GST rate (CGST+SGST for intrastate or IGST for interstate), and total invoice value."
       }
     },
     {
@@ -84,15 +92,23 @@
       "name": "What is the difference between CGST, SGST, and IGST?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "For supplies within the same state (intrastate), GST is split between CGST (Central GST) and SGST (State GST) — e.g., 18% = 9% CGST + 9% SGST. For supplies between different states or exports (interstate), only IGST applies at the full rate — e.g., 18% IGST. Choose the correct type based on where your buyer is located."
+        "text": "For supplies within the same state (intrastate), GST is split equally between CGST (Central GST) and SGST (State GST) — e.g., 18% GST = 9% CGST + 9% SGST. For supplies between different states or exports (interstate), only IGST (Integrated GST) applies at the full rate — e.g., 18% IGST."
       }
     },
     {
       "@type": "Question",
-      "name": "Is e-invoicing mandatory for my business?",
+      "name": "What is an HSN code and where do I find it?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "E-invoicing via the IRP (Invoice Registration Portal) is mandatory for GST-registered businesses with annual aggregate turnover exceeding ₹5 crore (from August 2023). Smaller businesses can use standard PDF invoices. This tool generates standard invoices — for IRP e-invoicing, use the government's e-invoice portal or accounting software like Tally or Zoho Books."
+        "text": "HSN (Harmonized System of Nomenclature) codes classify goods for GST purposes. Businesses with turnover above ₹5 crore must use 8-digit HSN codes; others may use 4 or 6 digits. Search for your product's HSN code on the GST Council website at gstcouncil.gov.in or on the government's GST portal."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is an e-invoice mandatory for my business?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "E-invoicing (electronic invoice on the IRP portal) is mandatory for GST-registered businesses with aggregate turnover above ₹5 crore from 1st August 2023. Smaller businesses can continue with standard invoices. This tool generates standard PDF invoices — for IRP e-invoice integration, use the official GST e-invoice portal or accounting software like Tally/Zoho."
       }
     }
   ]

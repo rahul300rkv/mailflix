@@ -55,7 +55,7 @@
       "@type": "ListItem",
       "position": 2,
       "name": "Utilities",
-      "item": "https://mailflix.netlify.app/photo-resizer.html"
+      "item": "https://mailflix.netlify.app/index.html"
     },
     {
       "@type": "ListItem",
@@ -73,26 +73,42 @@
   "mainEntity": [
     {
       "@type": "Question",
-      "name": "What is the correct passport photo size for Indian passport?",
+      "name": "Is my photo uploaded to a server when I resize it?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Indian passport photos must be 35mm wide × 45mm tall at a minimum resolution of 200 DPI. For online applications, upload as JPG between 20KB and 200KB. The background must be plain white. Use the Passport Photo preset in this tool for the correct pixel dimensions."
+        "text": "No. All image processing happens entirely in your browser using the HTML5 Canvas API. Your photo never leaves your device and is not uploaded to any server. This makes the tool fast, private, and functional even without an internet connection after the page loads."
       }
     },
     {
       "@type": "Question",
-      "name": "What size photo should I use for Aadhaar and PAN card applications?",
+      "name": "What is the standard passport photo size in India?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "For Aadhaar/DigiLocker profile updates, use 200×200 pixels. For PAN card applications on the NSDL portal, the photo must be JPG under 50KB. For name/address change on UIDAI, photo must be under 2MB. Use Custom Size and enter the exact dimensions required by the portal."
+        "text": "Indian passport photos must be 35mm × 45mm (width × height) at 200 DPI minimum. For digital upload on government portals, the file size is typically required to be 20KB-200KB in JPG format with a plain white background. Use the 'Passport Photo' preset for correct dimensions."
       }
     },
     {
       "@type": "Question",
-      "name": "Is my photo safe when I use this resizer?",
+      "name": "Can I resize images for government form uploads (Aadhaar, PAN, UPSC)?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Yes. All resizing and compression happens entirely in your browser using the HTML5 Canvas API. Your photo never leaves your device and is never uploaded to any server. There is no login, no storage, and no tracking of the images you process."
+        "text": "Yes. Common government portal requirements: Aadhaar/DigiLocker profile: 200×200 pixels. PAN card application (NSDL): JPG under 50KB. UPSC/SSC forms: typically 10-100KB JPG with specific pixel dimensions. Select 'Custom Size' and enter the exact dimensions required by the form."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the difference between resizing and compressing an image?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Resizing changes the pixel dimensions of the image (e.g., 4000×3000 to 800×600 pixels). Compression reduces the file size by reducing quality or using more efficient encoding without changing dimensions. You can do both simultaneously with this tool using the dimensions input and quality slider."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Will resizing my image reduce its quality?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Reducing dimensions will reduce quality because fewer pixels means less detail. Enlarging (upscaling) beyond original resolution adds artificial pixels and usually looks blurry. For best results, always resize down from a higher-resolution original rather than upscaling."
       }
     }
   ]

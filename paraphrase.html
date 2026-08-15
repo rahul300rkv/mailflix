@@ -55,7 +55,7 @@
       "@type": "ListItem",
       "position": 2,
       "name": "AI Tools",
-      "item": "https://mailflix.netlify.app/paraphrase.html"
+      "item": "https://mailflix.netlify.app/index.html"
     },
     {
       "@type": "ListItem",
@@ -73,18 +73,34 @@
   "mainEntity": [
     {
       "@type": "Question",
-      "name": "Which paraphrase mode should I use?",
+      "name": "What is paraphrasing and why is it useful?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Use Fluency to fix grammar and improve sentence flow. Use Formal for professional emails, job applications, and office reports. Use Casual for WhatsApp messages and informal blog posts. Use Simple to explain technical topics in plain language. Use Creative for marketing copy and social media posts."
+        "text": "Paraphrasing means rewriting content in different words while keeping the original meaning. It is useful for improving the clarity of your writing, adapting formal text to casual communication (or vice versa), avoiding plagiarism in academic work, and making technical content readable for a general audience."
       }
     },
     {
       "@type": "Question",
-      "name": "Does paraphrasing avoid plagiarism?",
+      "name": "Which paraphrase mode should I choose?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Paraphrasing changes wording and structure, which reduces similarity scores on most automated plagiarism tools. However, for academic submissions, always review the output to ensure it reflects your own understanding. Many universities now also use AI-detection tools alongside plagiarism checkers."
+        "text": "Use Fluency to fix grammar and improve the flow of already-good writing. Use Formal for professional emails, reports, or job applications. Use Casual for WhatsApp messages or informal blog posts. Use Simple to explain technical topics to a non-expert. Use Creative for marketing copy, social media posts, or storytelling."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does the tool work for Hindi or regional language text?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The underlying AI model handles English most effectively. For Hindi-English mixed (Hinglish) text, results are usually good. For pure Devanagari Hindi or other Indian scripts, accuracy may vary — best results are in English or Roman-script transliteration."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Will the paraphrased text pass plagiarism checkers?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Paraphrasing changes the wording and structure, which helps with most automated plagiarism tools. However, for academic submissions, always review the output to ensure it truly reflects your understanding rather than just being a mechanical rephrase — many universities now use AI-detection tools in addition to plagiarism checkers."
       }
     },
     {
@@ -92,7 +108,7 @@
       "name": "How many words can I paraphrase at once?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "The tool works best with 50 to 1,500 words per request. For long documents (3,000+ words), split into sections of 500-800 words for consistently better quality output."
+        "text": "The tool works best with 50 to 1,500 words per request. Very short text (under 20 words) may not have enough context for meaningful paraphrasing. Very long documents (3,000+ words) should be split into sections for better quality results."
       }
     }
   ]

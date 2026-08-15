@@ -55,7 +55,7 @@
       "@type": "ListItem",
       "position": 2,
       "name": "Utilities",
-      "item": "https://mailflix.netlify.app/date-calculator.html"
+      "item": "https://mailflix.netlify.app/index.html"
     },
     {
       "@type": "ListItem",
@@ -76,7 +76,15 @@
       "name": "How do I calculate the number of days between two dates?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Enter your start date and end date in the Date Difference section. The calculator shows the exact gap in years, months, and days — as well as the total calendar days. Toggle Business Days Only to exclude weekends from the count."
+        "text": "Select the 'Date Difference' option, then enter your start date and end date. The calculator shows the exact gap in years, months, days, and also the total number of calendar days. Weekends and holidays are included unless you select business days only."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I calculate my exact age in years, months, and days?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Select the 'Age Calculator' tab, enter your date of birth, and the tool shows your age as of today in years, months, and days — along with your next birthday countdown."
       }
     },
     {
@@ -84,15 +92,23 @@
       "name": "How do I find a date 90 days from today?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Use the Add Days to Date option. Enter today as the start date and type 90 in the days field. The tool shows the exact future date — useful for calculating notice period end dates, loan repayment due dates, or visa validity expiry."
+        "text": "Use the 'Add Days to Date' option. Enter today's date (or any start date) and add 90 days — the tool will show the exact future date. This is useful for calculating notice period end dates, contract deadlines, or visa validity."
       }
     },
     {
       "@type": "Question",
-      "name": "Does the calculator handle leap years?",
+      "name": "Does the calculator handle leap years correctly?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Yes. All calculations fully account for leap years. February 29th dates are processed correctly, and year-long ranges crossing leap years are calculated accurately."
+        "text": "Yes. The calculator fully accounts for leap years in all calculations. February 29th dates are handled correctly, and year-long gaps across leap years are calculated accurately."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I calculate business days excluding weekends?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Toggle the 'Business Days Only' option and the calculator will exclude Saturdays and Sundays from the day count. Public holiday exclusion is not currently supported."
       }
     }
   ]

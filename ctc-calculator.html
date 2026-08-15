@@ -55,7 +55,7 @@
       "@type": "ListItem",
       "position": 2,
       "name": "Calculators",
-      "item": "https://mailflix.netlify.app/ctc-calculator.html"
+      "item": "https://mailflix.netlify.app/index.html"
     },
     {
       "@type": "ListItem",
@@ -76,7 +76,7 @@
       "name": "What is CTC and how is it different from in-hand salary?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "CTC (Cost to Company) is the total amount a company spends on an employee annually, including basic salary, employer PF, HRA, gratuity, and other benefits. In-hand salary is what is credited to the bank after deducting employee PF (12% of basic), professional tax (up to ₹2,400/year), and income tax."
+        "text": "CTC (Cost to Company) is the total amount a company spends on you annually, including your salary, PF contributions, gratuity, and other benefits. Your in-hand (take-home) salary is what actually gets credited to your bank after all deductions like employee PF, professional tax, and income tax."
       }
     },
     {
@@ -84,15 +84,31 @@
       "name": "Which tax regime should I choose — New or Old?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "If your total tax deductions (80C, HRA, home loan interest, 80D) exceed ₹3.75 lakh, the Old Regime usually saves more tax. For deductions below ₹3.75 lakh, the New Regime is typically better. The New Regime is the default from FY 2023-24 onwards."
+        "text": "The New Regime (default from FY 2023-24) has lower slab rates but no deductions. The Old Regime allows deductions like 80C (₹1.5L), HRA exemption, and 80D. If your total deductions exceed ₹3.75 lakh, the Old Regime usually saves more tax."
       }
     },
     {
       "@type": "Question",
-      "name": "Is professional tax deducted for all employees?",
+      "name": "Is PF deduction mandatory for all employees?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Professional tax is a state-level deduction applicable in Maharashtra, Karnataka, West Bengal, Tamil Nadu, and a few other states. It ranges from ₹0 to ₹2,400/year depending on salary slab and state. States like Delhi, UP, and Rajasthan do not levy professional tax."
+        "text": "PF is mandatory if your basic salary is below ₹15,000/month and your employer has 20+ employees. If your basic exceeds ₹15,000, PF contribution is optional but you can voluntarily continue at 12% of basic."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How is HRA exemption calculated?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "HRA exemption is the lowest of: (1) actual HRA received, (2) 50% of basic for metro / 40% for non-metro, or (3) rent paid minus 10% of basic salary. This tool uses the standard method — use the dedicated HRA calculator for detailed rent-based exemption."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does the calculator account for FY 2025-26 tax slabs?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. The calculator uses the latest FY 2025-26 income tax slabs for both New and Old regimes, including the ₹12 lakh tax-free limit under the new regime after Section 87A rebate."
       }
     }
   ]
