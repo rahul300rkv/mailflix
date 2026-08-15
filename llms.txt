@@ -1,0 +1,52 @@
+# MailFix
+
+> MailFix (mailflix.netlify.app) is a free, no-signup suite of AI-powered tools and calculators built specifically for Indian professionals. It covers salary and tax calculations (FY 2025-26), HR document generation, utility tools, and AI writing assistants — all running client-side with no data sent to any server.
+
+MailFix is made for salaried employees, small business owners, freelancers, students, and government workers in India. Every tool is free, instant, and works without creating an account. Financial calculators use current FY 2025-26 tax slabs and Indian-specific rules (PF, HRA, professional tax, GST, 7th Pay Commission).
+
+## AI Writing Tools
+
+- [Email Fixer — AI Tone & Grammar Corrector](https://mailflix.netlify.app/): Fix email tone, grammar, and professionalism using AI. Modes: Polite, Firm, Formal, Apology, Follow-up. Ideal for Indian professionals writing workplace emails.
+- [Job Application Email Writer](https://mailflix.netlify.app/job-application.html): AI-generated, personalised job application emails for Indian job seekers. Enter job title, company, and background — get a ready-to-send professional email.
+- [Resignation Letter Generator](https://mailflix.netlify.app/resignation.html): Three tones — Polite (graceful exit), Firm (clear and direct), HR Nudge (request early release from notice period). Covers standard 30/60/90-day notice norms.
+- [Sarkari Letter Generator](https://mailflix.netlify.app/sarkari-letter.html): Official government-style application letters in Hindi and English. Covers bijli-paani complaints, bank applications, police complaints, RTI requests, and general government correspondence.
+- [WhatsApp Business Message Generator](https://mailflix.netlify.app/whatsapp-dhanda.html): Hinglish WhatsApp business messages for Indian SMBs. Supports product introductions, offers, follow-ups, festive messages. Designed for kirana stores, tiffin services, freelancers, and D2C sellers.
+- [Paraphrasing Tool](https://mailflix.netlify.app/paraphrase.html): AI-powered rewriter with five modes — Fluency, Formal, Casual, Creative, Simple. Best for 50–1,500 words. Powered by Groq API via Netlify function.
+
+## Salary & Tax Calculators
+
+- [CTC to In-Hand Salary Calculator](https://mailflix.netlify.app/ctc-calculator.html): Calculates exact monthly take-home salary from annual CTC. Accounts for PF (12% of basic), professional tax, HRA, and income tax under New or Old regime. FY 2025-26 slabs. Shows itemised deduction breakdown.
+- [HRA Exemption Calculator](https://mailflix.netlify.app/hra-calculator.html): Computes tax-free HRA under Section 10(13A). Uses the minimum-of-three formula: actual HRA, 50%/40% of basic (metro/non-metro), rent paid minus 10% of basic. FY 2025-26.
+- [Old vs New Tax Regime Calculator (ITR)](https://mailflix.netlify.app/itr-calculator.html): Side-by-side tax comparison for FY 2025-26. New Regime: ₹12 lakh effectively tax-free after 87A rebate. Old Regime: supports 80C, HRA, 80D, home loan deductions. Recommends better regime.
+- [City Salary Comparison](https://mailflix.netlify.app/city-compare.html): Compares purchasing power of salaries across Indian cities. Normalises for cost of living — rent, food, transport — across Tier-1 metros, Tier-2 cities, and smaller urban centres.
+- [Salary Increment Calculator](https://mailflix.netlify.app/increment-calculator.html): Calculates new CTC and in-hand salary after a percentage hike. Includes Government/Central Govt increment mode (3% of Basic Pay, 7th Pay Commission). Shows exact take-home increase after tax.
+- [Leave Encashment Calculator](https://mailflix.netlify.app/leave-encashment.html): Computes leave encashment payout and Section 10(10AA) tax exemption. Differentiates government employees (fully exempt) vs private sector (exempt up to ₹25 lakh limit). Per-day rate based on Basic + DA.
+- [Retirement Corpus & SIP Calculator](https://mailflix.netlify.app/retirement-calculator.html): Projects retirement corpus needed and monthly SIP required. Accounts for inflation (default 6%), expected return (equity/balanced/debt), and current age vs retirement age. Includes EPF/PPF integration guidance.
+
+## Utility Tools
+
+- [Date & Age Calculator](https://mailflix.netlify.app/date-calculator.html): Calculate exact date difference in years/months/days, add or subtract days from a date, or compute age from date of birth. Supports business-days-only mode and handles leap years.
+- [Health Calculator Suite](https://mailflix.netlify.app/health-calculator.html): BMI (Body Mass Index), BMR (Basal Metabolic Rate), TDEE (Total Daily Energy Expenditure), Ideal Weight (Devine formula), and Body Fat percentage. Metric and imperial units. Includes Asia-specific BMI threshold guidance.
+- [Vehicle Scrappage Calculator](https://mailflix.netlify.app/vehicle-scrappage.html): Estimates scrap value for vehicles eligible under India's Voluntary Vehicle Fleet Modernisation Programme (V-VMP). Covers petrol vehicles 15+ years and diesel vehicles 10+ years. Shows road tax rebate and registration fee waiver on new vehicle.
+- [QR Code Generator](https://mailflix.netlify.app/qr-generator.html): Generates static QR codes for URLs, UPI payments (GPay/PhonePe/Paytm/BHIM compatible), WiFi networks, vCard contacts, plain text, email, and SMS. Downloads as high-resolution PNG. No server upload.
+- [Photo Resizer](https://mailflix.netlify.app/photo-resizer.html): Client-side image resizer using HTML5 Canvas. Presets for Indian passport photo (35×45mm), government portal uploads (Aadhaar, PAN, UPSC/SSC). Supports JPG, PNG, WebP. Adjustable quality slider. Nothing uploaded to servers.
+- [JSON Tools](https://mailflix.netlify.app/json-tools.html): Format (pretty-print), minify, validate with error line numbers, convert JSON to CSV and YAML. Tree viewer for nested objects. All processing in-browser — no data leaves the device.
+
+## Document Generators
+
+- [GST Invoice Generator](https://mailflix.netlify.app/gst-invoice.html): Generates valid GST tax invoices with GSTIN, HSN codes, CGST/SGST (intrastate) and IGST (interstate) breakdown. Print or download as PDF. Covers all GST rates (5%, 12%, 18%, 28%).
+- [Rent Receipt Generator](https://mailflix.netlify.app/rent-receipt.html): Printable rent receipts in the format accepted by Indian employers for HRA claims. Includes revenue stamp guidance for cash payments above ₹5,000. Supports bank transfer, UPI, cheque payment modes.
+
+## Other Pages
+
+- [Privacy Policy](https://mailflix.netlify.app/privacy.html): No personal data collected. No user accounts. Analytics via Google Analytics only. Ad-supported via Google AdSense.
+
+## About MailFix
+
+- **Domain**: mailflix.netlify.app
+- **Audience**: Indian salaried professionals, small business owners, freelancers, government employees, students
+- **Language**: English (India), with Hinglish support in relevant tools
+- **Data privacy**: All tools run client-side. No user data is stored or transmitted except for AI tools (paraphrase, email fixer, letter generators) which call Groq LLM API via a Netlify serverless function. No user login required anywhere.
+- **Monetisation**: Google AdSense display ads. No paid tiers or subscriptions.
+- **Tax data freshness**: All financial calculators use FY 2025-26 (Assessment Year 2026-27) Indian income tax slabs and rules.
+- **Last updated**: August 2026

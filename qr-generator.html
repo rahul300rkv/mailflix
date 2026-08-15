@@ -5,6 +5,7 @@
 <title>Free QR Code Generator India — URL, UPI, WiFi, vCard | MailFix</title>
 <meta name="description" content="Generate QR codes for URL, UPI payment, WiFi, contact card and WhatsApp. Free, instant, download PNG. No signup, no watermark."/>
 <meta name="robots" content="index, follow"/>
+<link rel="alternate" type="text/plain" href="https://mailflix.netlify.app/llms.txt" title="LLMs.txt — MailFix AI index"/>
 <link rel="canonical" href="https://mailflix.netlify.app/qr-generator.html"/>
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3532554351654388" crossorigin="anonymous"></script>
 <link rel="preconnect" href="https://fonts.googleapis.com"/><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/><link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet"/>
@@ -215,6 +216,40 @@ footer{background:var(--black);color:white;padding:40px 24px;border-top:4px soli
 .qr-preview{display:flex;flex-direction:column;align-items:center;justify-content:center;min-height:240px;background:#f8fafc;border:2px solid var(--black);border-radius:12px;padding:20px;box-shadow:var(--shadow-sm)}
 #qrCanvas{border-radius:8px}
 .qr-empty{text-align:center;color:#94a3b8;font-style:italic;font-size:14px}
+
+/* BREADCRUMB */
+.breadcrumb{background:var(--green-xs);border-bottom:2px solid var(--black);padding:10px 24px}
+.breadcrumb-inner{max-width:1100px;margin:0 auto;display:flex;align-items:center;gap:6px;flex-wrap:wrap}
+.breadcrumb-inner a{font-size:12px;font-weight:700;color:var(--green-dk);text-decoration:none}
+.breadcrumb-inner a:hover{text-decoration:underline}
+.breadcrumb-inner span{font-size:12px;font-weight:500;color:var(--muted)}
+.breadcrumb-sep{font-size:12px;color:var(--muted);margin:0 2px}
+
+/* HOW IT WORKS */
+.section-how{padding:56px 24px;background:var(--green-xs);border-top:4px solid var(--black)}
+.section-how-inner{max-width:900px;margin:0 auto}
+.section-how h2{font-size:clamp(20px,4vw,30px);font-weight:800;margin-bottom:8px}
+.section-how .how-sub{font-size:14px;color:var(--muted);font-weight:500;margin-bottom:32px}
+.how-steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:20px}
+.how-step{background:white;border:2px solid var(--black);border-radius:14px;padding:20px 18px;box-shadow:var(--shadow-sm)}
+.how-step-num{width:32px;height:32px;background:var(--green);border:2px solid var(--black);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:800;margin-bottom:12px}
+.how-step h3{font-size:14px;font-weight:800;margin-bottom:6px}
+.how-step p{font-size:13px;color:var(--muted);font-weight:500;line-height:1.6}
+
+/* FAQ */
+.section-faq{border-top:4px solid var(--black);background:white;padding:60px 24px}
+.section-faq-inner{max-width:760px;margin:0 auto}
+.section-faq h2{font-size:clamp(22px,4vw,34px);font-weight:800;color:var(--black);margin-bottom:28px}
+.faq-list{display:flex;flex-direction:column;gap:10px}
+details.faq-item{background:white;border:2px solid var(--black);border-radius:14px;overflow:hidden;box-shadow:var(--shadow-sm)}
+details.faq-item summary{display:flex;align-items:center;justify-content:space-between;padding:16px 20px;cursor:pointer;list-style:none;font-size:14px;font-weight:800;color:var(--black);background:#f8fafc;transition:background .12s}
+details.faq-item summary::-webkit-details-marker{display:none}
+details.faq-item summary:hover{background:var(--green-xs)}
+.faq-arrow{width:26px;height:26px;background:white;border:2px solid var(--black);border-radius:50%;display:flex;align-items:center;justify-content:center;box-shadow:var(--shadow-sm);flex-shrink:0;transition:transform .2s}
+.faq-arrow svg{width:12px;height:12px}
+details[open] .faq-arrow{transform:rotate(180deg);background:var(--green-xs)}
+.faq-body{padding:14px 20px 18px;font-size:13px;font-weight:500;color:#475569;line-height:1.7;border-top:2px solid var(--black)}
+
 </style>
 </head>
 <body>
@@ -310,6 +345,10 @@ footer{background:var(--black);color:white;padding:40px 24px;border-top:4px soli
 </div>
 <!-- ═══════════════ END NAV SNIPPET ═══════════════ -->
 
+<div class="breadcrumb"><div class="breadcrumb-inner">
+  <a href="index.html">🏠 Home</a><span class="breadcrumb-sep">›</span>
+  <span>Utilities › QR Code Generator</span>
+</div></div>
 <main>
 <div class="page-hero" style="padding-bottom:28px">
   <div class="page-badge">📷 Utility Tool</div>
@@ -398,6 +437,15 @@ footer{background:var(--black);color:white;padding:40px 24px;border-top:4px soli
   </div>
 </div>
 </div>
+
+<div class="section-how"><div class="section-how-inner">
+  <h2>How the QR Code Generator Works</h2><p class="how-sub">Create any QR code — URL, UPI, WiFi or contact — in seconds.</p>
+  <div class="how-steps"><div class="how-step"><div class="how-step-num">1</div><h3>Choose QR Type</h3><p>Select the type of QR code you need: Website URL, UPI payment, WiFi network, vCard contact, plain text, email, or SMS.</p></div><div class="how-step"><div class="how-step-num">2</div><h3>Enter Your Details</h3><p>Fill in the relevant fields. For UPI, enter the UPI ID and amount. For WiFi, enter the network name and password.</p></div><div class="how-step"><div class="how-step-num">3</div><h3>Download Your QR</h3><p>Preview the QR code instantly and download it as a high-resolution PNG. Scan with any smartphone camera to verify.</p></div></div>
+</div></div>
+<div class="section-faq"><div class="section-faq-inner">
+  <h2>Frequently Asked Questions</h2>
+  <div class="faq-list"><details class="faq-item"><summary>What types of QR codes can I generate?<div class="faq-arrow"><svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M2 4l4 4 4-4"/></svg></div></summary><div class="faq-body">This tool supports URL/website QR codes, UPI payment QR codes (compatible with PhonePe, GPay, Paytm, BHIM), WiFi network QR codes that auto-connect on scan, vCard contact QR codes, plain text, pre-filled email, and SMS QR codes.</div></details><details class="faq-item"><summary>Is the generated QR code permanent?<div class="faq-arrow"><svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M2 4l4 4 4-4"/></svg></div></summary><div class="faq-body">Yes. QR codes generated here are static — they are simply visual encodings of text or URLs and do not expire. They will continue to work as long as the destination URL or UPI ID remains active. There is no server-side dependency.</div></details><details class="faq-item"><summary>What is the maximum data a QR code can hold?<div class="faq-arrow"><svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M2 4l4 4 4-4"/></svg></div></summary><div class="faq-body">A QR code can hold up to 3KB of text (about 4,296 alphanumeric characters). Very long URLs or large data blocks make QR codes denser and harder to scan. For best scannability, keep encoded data under 200 characters where possible.</div></details><details class="faq-item"><summary>Can I use the QR code commercially?<div class="faq-arrow"><svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M2 4l4 4 4-4"/></svg></div></summary><div class="faq-body">Yes. QR codes generated by this tool are free to use for personal, business, and commercial purposes. You can print them on marketing materials, business cards, product packaging, restaurant menus, and storefronts.</div></details><details class="faq-item"><summary>What size should I print a QR code at?<div class="faq-arrow"><svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M2 4l4 4 4-4"/></svg></div></summary><div class="faq-body">For reliable scanning, print QR codes at a minimum of 2cm × 2cm (about 0.8 × 0.8 inches). For outdoor signage or banners meant to be scanned from a distance, use at least 10cm × 10cm. The quiet zone (white border) around the QR code should be at least 4 modules wide.</div></details></div>
+</div></div>
 </main>
 <footer><div class="footer-inner"><div class="footer-top"><div class="footer-logo">MailFix.in</div><div class="footer-links"><a href="index.html">Email Tool</a><a href="ctc-calculator.html">Salary Calc</a><a href="city-compare.html">City Compare</a><a href="whatsapp-dhanda.html">WA Dhanda</a><a href="sarkari-letter.html">Sarkari Letter</a><a href="privacy.html">Privacy Policy</a></div></div><div class="footer-copy">© 2026 MailFix. Free Tools for Indian Professionals.</div></div></footer>
 <script>

@@ -5,6 +5,7 @@
 <title>Free Paraphrasing Tool India — Fluency, Formal, Creative | MailFix</title>
 <meta name="description" content="Paraphrase and rewrite text online — standard, fluency, formal, simple and creative modes. Free, instant, supports English and Hindi. No signup."/>
 <meta name="robots" content="index, follow"/>
+<link rel="alternate" type="text/plain" href="https://mailflix.netlify.app/llms.txt" title="LLMs.txt — MailFix AI index"/>
 <link rel="canonical" href="https://mailflix.netlify.app/paraphrase.html"/>
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3532554351654388" crossorigin="anonymous"></script>
 <link rel="preconnect" href="https://fonts.googleapis.com"/><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/><link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet"/>
@@ -228,6 +229,40 @@ footer{background:var(--black);color:white;padding:40px 24px;border-top:4px soli
 .message-bar.success{display:block;background:var(--green-xs);color:var(--green-dk)}
 .message-bar.error{display:block;background:var(--red-lt);color:var(--red)}
 .remaining-info{font-size:12px;font-weight:600;color:var(--muted);text-align:center}
+
+/* BREADCRUMB */
+.breadcrumb{background:var(--green-xs);border-bottom:2px solid var(--black);padding:10px 24px}
+.breadcrumb-inner{max-width:1100px;margin:0 auto;display:flex;align-items:center;gap:6px;flex-wrap:wrap}
+.breadcrumb-inner a{font-size:12px;font-weight:700;color:var(--green-dk);text-decoration:none}
+.breadcrumb-inner a:hover{text-decoration:underline}
+.breadcrumb-inner span{font-size:12px;font-weight:500;color:var(--muted)}
+.breadcrumb-sep{font-size:12px;color:var(--muted);margin:0 2px}
+
+/* HOW IT WORKS */
+.section-how{padding:56px 24px;background:var(--green-xs);border-top:4px solid var(--black)}
+.section-how-inner{max-width:900px;margin:0 auto}
+.section-how h2{font-size:clamp(20px,4vw,30px);font-weight:800;margin-bottom:8px}
+.section-how .how-sub{font-size:14px;color:var(--muted);font-weight:500;margin-bottom:32px}
+.how-steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:20px}
+.how-step{background:white;border:2px solid var(--black);border-radius:14px;padding:20px 18px;box-shadow:var(--shadow-sm)}
+.how-step-num{width:32px;height:32px;background:var(--green);border:2px solid var(--black);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:800;margin-bottom:12px}
+.how-step h3{font-size:14px;font-weight:800;margin-bottom:6px}
+.how-step p{font-size:13px;color:var(--muted);font-weight:500;line-height:1.6}
+
+/* FAQ */
+.section-faq{border-top:4px solid var(--black);background:white;padding:60px 24px}
+.section-faq-inner{max-width:760px;margin:0 auto}
+.section-faq h2{font-size:clamp(22px,4vw,34px);font-weight:800;color:var(--black);margin-bottom:28px}
+.faq-list{display:flex;flex-direction:column;gap:10px}
+details.faq-item{background:white;border:2px solid var(--black);border-radius:14px;overflow:hidden;box-shadow:var(--shadow-sm)}
+details.faq-item summary{display:flex;align-items:center;justify-content:space-between;padding:16px 20px;cursor:pointer;list-style:none;font-size:14px;font-weight:800;color:var(--black);background:#f8fafc;transition:background .12s}
+details.faq-item summary::-webkit-details-marker{display:none}
+details.faq-item summary:hover{background:var(--green-xs)}
+.faq-arrow{width:26px;height:26px;background:white;border:2px solid var(--black);border-radius:50%;display:flex;align-items:center;justify-content:center;box-shadow:var(--shadow-sm);flex-shrink:0;transition:transform .2s}
+.faq-arrow svg{width:12px;height:12px}
+details[open] .faq-arrow{transform:rotate(180deg);background:var(--green-xs)}
+.faq-body{padding:14px 20px 18px;font-size:13px;font-weight:500;color:#475569;line-height:1.7;border-top:2px solid var(--black)}
+
 </style>
 </head>
 <body>
@@ -323,6 +358,10 @@ footer{background:var(--black);color:white;padding:40px 24px;border-top:4px soli
 </div>
 <!-- ═══════════════ END NAV SNIPPET ═══════════════ -->
 
+<div class="breadcrumb"><div class="breadcrumb-inner">
+  <a href="index.html">🏠 Home</a><span class="breadcrumb-sep">›</span>
+  <span>AI Tools › Paraphrase Tool</span>
+</div></div>
 <main>
 <div class="page-hero">
   <div class="page-badge">✍️ AI Writing Tool</div>
@@ -386,6 +425,15 @@ footer{background:var(--black);color:white;padding:40px 24px;border-top:4px soli
 </div>
 <p style="text-align:center;font-size:12px;font-weight:700;color:var(--muted);letter-spacing:.06em;text-transform:uppercase;margin-top:14px">20 free uses per hour &nbsp;•&nbsp; Server-side rate limit &nbsp;•&nbsp; No signup</p>
 </div>
+
+<div class="section-how"><div class="section-how-inner">
+  <h2>How the Paraphrasing Tool Works</h2><p class="how-sub">Rewrite any text in seconds — formal, casual, creative or fluent.</p>
+  <div class="how-steps"><div class="how-step"><div class="how-step-num">1</div><h3>Paste Your Text</h3><p>Paste the paragraph or document you want to rewrite. Optimal length is 50-1500 words per request.</p></div><div class="how-step"><div class="how-step-num">2</div><h3>Choose a Rewrite Style</h3><p>Select from Fluency (fix grammar & flow), Formal (professional tone), Casual (conversational), Creative (expressive), or Simple (plain language).</p></div><div class="how-step"><div class="how-step-num">3</div><h3>Copy the Result</h3><p>The AI rewrites your text and shows the output. Click 'Copy' to use it wherever you need.</p></div></div>
+</div></div>
+<div class="section-faq"><div class="section-faq-inner">
+  <h2>Frequently Asked Questions</h2>
+  <div class="faq-list"><details class="faq-item"><summary>What is paraphrasing and why is it useful?<div class="faq-arrow"><svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M2 4l4 4 4-4"/></svg></div></summary><div class="faq-body">Paraphrasing means rewriting content in different words while keeping the original meaning. It is useful for improving the clarity of your writing, adapting formal text to casual communication (or vice versa), avoiding plagiarism in academic work, and making technical content readable for a general audience.</div></details><details class="faq-item"><summary>Which paraphrase mode should I choose?<div class="faq-arrow"><svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M2 4l4 4 4-4"/></svg></div></summary><div class="faq-body">Use Fluency to fix grammar and improve the flow of already-good writing. Use Formal for professional emails, reports, or job applications. Use Casual for WhatsApp messages or informal blog posts. Use Simple to explain technical topics to a non-expert. Use Creative for marketing copy, social media posts, or storytelling.</div></details><details class="faq-item"><summary>Does the tool work for Hindi or regional language text?<div class="faq-arrow"><svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M2 4l4 4 4-4"/></svg></div></summary><div class="faq-body">The underlying AI model handles English most effectively. For Hindi-English mixed (Hinglish) text, results are usually good. For pure Devanagari Hindi or other Indian scripts, accuracy may vary — best results are in English or Roman-script transliteration.</div></details><details class="faq-item"><summary>Will the paraphrased text pass plagiarism checkers?<div class="faq-arrow"><svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M2 4l4 4 4-4"/></svg></div></summary><div class="faq-body">Paraphrasing changes the wording and structure, which helps with most automated plagiarism tools. However, for academic submissions, always review the output to ensure it truly reflects your understanding rather than just being a mechanical rephrase — many universities now use AI-detection tools in addition to plagiarism checkers.</div></details><details class="faq-item"><summary>How many words can I paraphrase at once?<div class="faq-arrow"><svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M2 4l4 4 4-4"/></svg></div></summary><div class="faq-body">The tool works best with 50 to 1,500 words per request. Very short text (under 20 words) may not have enough context for meaningful paraphrasing. Very long documents (3,000+ words) should be split into sections for better quality results.</div></details></div>
+</div></div>
 </main>
 <footer><div class="footer-inner"><div class="footer-top"><div class="footer-logo">MailFix.in</div><div class="footer-links"><a href="index.html">Email Tool</a><a href="ctc-calculator.html">Salary Calc</a><a href="city-compare.html">City Compare</a><a href="whatsapp-dhanda.html">WA Dhanda</a><a href="sarkari-letter.html">Sarkari Letter</a><a href="privacy.html">Privacy Policy</a></div></div><div class="footer-copy">© 2026 MailFix. Free Tools for Indian Professionals.</div></div></footer>
 <script>

@@ -5,6 +5,7 @@
 <title>JSON Tools Online — Format, Minify, Validate, Convert | MailFix</title>
 <meta name="description" content="Format, minify, validate, diff and convert JSON to CSV online. Free, instant, runs in browser. No data sent to server. No signup."/>
 <meta name="robots" content="index, follow"/>
+<link rel="alternate" type="text/plain" href="https://mailflix.netlify.app/llms.txt" title="LLMs.txt — MailFix AI index"/>
 <link rel="canonical" href="https://mailflix.netlify.app/json-tools.html"/>
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3532554351654388" crossorigin="anonymous"></script>
 <link rel="preconnect" href="https://fonts.googleapis.com"/><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/><link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet"/>
@@ -222,6 +223,40 @@ footer{background:var(--black);color:white;padding:40px 24px;border-top:4px soli
 .status-invalid{background:var(--red-lt);color:var(--red)}
 .status-neutral{background:white;color:var(--muted)}
 @media(max-width:680px){.json-split{grid-template-columns:1fr}.json-pane-left{border-right:none;border-bottom:2px solid var(--black)}}
+
+/* BREADCRUMB */
+.breadcrumb{background:var(--green-xs);border-bottom:2px solid var(--black);padding:10px 24px}
+.breadcrumb-inner{max-width:1100px;margin:0 auto;display:flex;align-items:center;gap:6px;flex-wrap:wrap}
+.breadcrumb-inner a{font-size:12px;font-weight:700;color:var(--green-dk);text-decoration:none}
+.breadcrumb-inner a:hover{text-decoration:underline}
+.breadcrumb-inner span{font-size:12px;font-weight:500;color:var(--muted)}
+.breadcrumb-sep{font-size:12px;color:var(--muted);margin:0 2px}
+
+/* HOW IT WORKS */
+.section-how{padding:56px 24px;background:var(--green-xs);border-top:4px solid var(--black)}
+.section-how-inner{max-width:900px;margin:0 auto}
+.section-how h2{font-size:clamp(20px,4vw,30px);font-weight:800;margin-bottom:8px}
+.section-how .how-sub{font-size:14px;color:var(--muted);font-weight:500;margin-bottom:32px}
+.how-steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:20px}
+.how-step{background:white;border:2px solid var(--black);border-radius:14px;padding:20px 18px;box-shadow:var(--shadow-sm)}
+.how-step-num{width:32px;height:32px;background:var(--green);border:2px solid var(--black);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:800;margin-bottom:12px}
+.how-step h3{font-size:14px;font-weight:800;margin-bottom:6px}
+.how-step p{font-size:13px;color:var(--muted);font-weight:500;line-height:1.6}
+
+/* FAQ */
+.section-faq{border-top:4px solid var(--black);background:white;padding:60px 24px}
+.section-faq-inner{max-width:760px;margin:0 auto}
+.section-faq h2{font-size:clamp(22px,4vw,34px);font-weight:800;color:var(--black);margin-bottom:28px}
+.faq-list{display:flex;flex-direction:column;gap:10px}
+details.faq-item{background:white;border:2px solid var(--black);border-radius:14px;overflow:hidden;box-shadow:var(--shadow-sm)}
+details.faq-item summary{display:flex;align-items:center;justify-content:space-between;padding:16px 20px;cursor:pointer;list-style:none;font-size:14px;font-weight:800;color:var(--black);background:#f8fafc;transition:background .12s}
+details.faq-item summary::-webkit-details-marker{display:none}
+details.faq-item summary:hover{background:var(--green-xs)}
+.faq-arrow{width:26px;height:26px;background:white;border:2px solid var(--black);border-radius:50%;display:flex;align-items:center;justify-content:center;box-shadow:var(--shadow-sm);flex-shrink:0;transition:transform .2s}
+.faq-arrow svg{width:12px;height:12px}
+details[open] .faq-arrow{transform:rotate(180deg);background:var(--green-xs)}
+.faq-body{padding:14px 20px 18px;font-size:13px;font-weight:500;color:#475569;line-height:1.7;border-top:2px solid var(--black)}
+
 </style>
 </head>
 <body>
@@ -317,6 +352,10 @@ footer{background:var(--black);color:white;padding:40px 24px;border-top:4px soli
 </div>
 <!-- ═══════════════ END NAV SNIPPET ═══════════════ -->
 
+<div class="breadcrumb"><div class="breadcrumb-inner">
+  <a href="index.html">🏠 Home</a><span class="breadcrumb-sep">›</span>
+  <span>Utilities › JSON Tools</span>
+</div></div>
 <main>
 <div class="page-hero" style="padding-bottom:28px">
   <div class="page-badge">🔧 Developer Tool</div>
@@ -364,6 +403,15 @@ footer{background:var(--black);color:white;padding:40px 24px;border-top:4px soli
   </div>
 </div>
 </div>
+
+<div class="section-how"><div class="section-how-inner">
+  <h2>How JSON Tools Work</h2><p class="how-sub">Format, validate, minify and convert JSON data without leaving your browser.</p>
+  <div class="how-steps"><div class="how-step"><div class="how-step-num">1</div><h3>Paste or Type JSON</h3><p>Paste your raw JSON into the input editor — the tool accepts minified, pretty-printed, or even slightly malformed JSON.</p></div><div class="how-step"><div class="how-step-num">2</div><h3>Choose Your Action</h3><p>Select Format (pretty-print with indentation), Minify (compact for production), Validate (check for errors), or Convert to CSV/YAML.</p></div><div class="how-step"><div class="how-step-num">3</div><h3>Copy or Download Output</h3><p>The result appears instantly. Copy to clipboard or download as a file. Error line numbers are highlighted for easy debugging.</p></div></div>
+</div></div>
+<div class="section-faq"><div class="section-faq-inner">
+  <h2>Frequently Asked Questions</h2>
+  <div class="faq-list"><details class="faq-item"><summary>What can I do with this JSON tool?<div class="faq-arrow"><svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M2 4l4 4 4-4"/></svg></div></summary><div class="faq-body">The tool supports: JSON formatting (pretty-print with 2 or 4-space indentation), minification (remove all whitespace for smaller payload size), validation with exact error line numbers, conversion from JSON to CSV (for tabular data) and YAML, and JSON tree viewer for nested data exploration.</div></details><details class="faq-item"><summary>Why is my JSON showing a validation error?<div class="faq-arrow"><svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M2 4l4 4 4-4"/></svg></div></summary><div class="faq-body">Common JSON errors include: trailing commas after the last item in arrays or objects, using single quotes instead of double quotes for keys and strings, missing quotes around object keys, and unescaped special characters like backslashes. The validator shows the exact line and character position of the error.</div></details><details class="faq-item"><summary>What is the difference between JSON format and minify?<div class="faq-arrow"><svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M2 4l4 4 4-4"/></svg></div></summary><div class="faq-body">Formatting (pretty-print) adds whitespace, line breaks and indentation to make JSON human-readable — ideal for debugging. Minifying removes all unnecessary whitespace to reduce file size — ideal for API responses, config files in production, and when transmitting data over a network.</div></details><details class="faq-item"><summary>Can I convert JSON to CSV?<div class="faq-arrow"><svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M2 4l4 4 4-4"/></svg></div></summary><div class="faq-body">Yes, if your JSON is an array of objects with consistent keys (e.g., from an API response or database export), the tool can convert it to a CSV table. Each object key becomes a column header. Nested objects are flattened or represented as strings.</div></details><details class="faq-item"><summary>Is my JSON data safe — does it get sent to a server?<div class="faq-arrow"><svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M2 4l4 4 4-4"/></svg></div></summary><div class="faq-body">No. All JSON processing happens entirely in your browser using JavaScript. Your data is never sent to any server, logged, or stored. You can safely use this tool with sensitive API responses, configuration data, or private JSON files.</div></details></div>
+</div></div>
 </main>
 <footer><div class="footer-inner"><div class="footer-top"><div class="footer-logo">MailFix.in</div><div class="footer-links"><a href="index.html">Email Tool</a><a href="ctc-calculator.html">Salary Calc</a><a href="city-compare.html">City Compare</a><a href="whatsapp-dhanda.html">WA Dhanda</a><a href="sarkari-letter.html">Sarkari Letter</a><a href="privacy.html">Privacy Policy</a></div></div><div class="footer-copy">© 2026 MailFix. Free Tools for Indian Professionals.</div></div></footer>
 <script>
