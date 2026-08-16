@@ -3,6 +3,55 @@
 <head>
 <meta charset="UTF-8"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 <title>Free Health Calculators India — BMI, BMR, TDEE, Ideal Weight | MailFix</title>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": [
+    "WebApplication",
+    "SoftwareApplication"
+  ],
+  "name": "BMI, BMR, TDEE & Body Fat Calculator India",
+  "description": "Comprehensive health calculator suite: BMI using Asian standards (overweight at 23, obese at 27.5), BMR and TDEE using Mifflin-St Jeor formula, ideal weight using Devine formula, body fat % using U.S. Navy tape-measure method, calorie planner with macro split, and daily water intake.",
+  "url": "https://mailflix.netlify.app/health-calculator.html",
+  "applicationCategory": "HealthApplication",
+  "operatingSystem": "Any — runs in web browser",
+  "browserRequirements": "Requires JavaScript. Works in Chrome, Firefox, Safari, Edge.",
+  "featureList": [
+    "BMI with Asian standards",
+    "BMR and TDEE calculator",
+    "Ideal weight (Devine formula)",
+    "Body fat % (U.S. Navy method)",
+    "Calorie planner with macros",
+    "Water intake calculator"
+  ],
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "INR",
+    "availability": "https://schema.org/InStock"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "MailFix",
+    "url": "https://mailflix.netlify.app"
+  },
+  "inLanguage": [
+    "en-IN",
+    "hi"
+  ],
+  "isAccessibleForFree": true,
+  "isFamilyFriendly": true,
+  "countryOfOrigin": "IN",
+  "audience": {
+    "@type": "Audience",
+    "audienceType": "Indian salaried professionals, small business owners, freelancers",
+    "geographicArea": {
+      "@type": "Country",
+      "name": "India"
+    }
+  }
+}
+</script>
 <meta name="description" content="Calculate BMI, BMR, TDEE calorie needs, ideal weight and daily water intake. Asian BMI standards. Free, instant. No signup."/>
 <meta name="robots" content="index, follow"/>
 <link rel="alternate" type="text/plain" href="https://mailflix.netlify.app/llms.txt" title="LLMs.txt — MailFix AI index"/>
@@ -364,6 +413,10 @@ details.faq-item summary:hover{background:var(--green-xs)}
 details[open] .faq-arrow{transform:rotate(180deg);background:var(--green-xs)}
 .faq-body{padding:14px 20px 18px;font-size:13px;font-weight:500;color:#475569;line-height:1.7;border-top:2px solid var(--black)}
 
+<style>
+.tool-context{background:var(--green-xs);border-left:4px solid var(--green-dk);border-radius:0 10px 10px 0;padding:12px 16px;margin-bottom:28px;font-size:14px;font-weight:500;line-height:1.7;color:#1e293b}
+.tool-context a{color:var(--green-dk);font-weight:700;text-decoration:underline}
+</style>
 </style>
 </head>
 <body>
@@ -567,6 +620,8 @@ details[open] .faq-arrow{transform:rotate(180deg);background:var(--green-xs)}
 </div>
 </div>
 
+
+<div style="padding:0 24px;max-width:900px;margin:28px auto 0"><p class="tool-context">Health insurance premiums you pay are deductible under Section 80D in the <a href="new-vs-old-tax-regime.html">Old Tax Regime</a> — up to ₹25,000 for self and family, ₹50,000 for senior citizen parents. See the full deduction list in our <a href="salary-glossary.html">salary and tax glossary</a>.</p></div>
 <div class="section-how"><div class="section-how-inner">
   <h2>How the Health Calculator Suite Works</h2><p class="how-sub">Get instant, evidence-based health metrics — no account or app needed.</p>
   <div class="how-steps"><div class="how-step"><div class="how-step-num">1</div><h3>Select Your Calculator</h3><p>Choose from BMI, BMR, TDEE, Ideal Weight, or Body Fat calculators from the tab menu.</p></div><div class="how-step"><div class="how-step-num">2</div><h3>Enter Your Measurements</h3><p>Input your height, weight, age and gender. All calculations use metric (cm/kg) and imperial (ft/lbs) units.</p></div><div class="how-step"><div class="how-step-num">3</div><h3>Read Your Results</h3><p>Get your metric with a category classification (e.g. Normal, Overweight) and an explanation of what the number means for your health.</p></div></div>
@@ -576,7 +631,7 @@ details[open] .faq-arrow{transform:rotate(180deg);background:var(--green-xs)}
   <div class="faq-list"><details class="faq-item"><summary>What is BMI and is it accurate?<div class="faq-arrow"><svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M2 4l4 4 4-4"/></svg></div></summary><div class="faq-body">BMI (Body Mass Index) is your weight in kg divided by height in metres squared. It is a quick screening tool — under 18.5 is underweight, 18.5-24.9 is normal, 25-29.9 is overweight, and 30+ is obese. However, BMI does not account for muscle mass, so athletes often have a high BMI despite being healthy.</div></details><details class="faq-item"><summary>What is the difference between BMR and TDEE?<div class="faq-arrow"><svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M2 4l4 4 4-4"/></svg></div></summary><div class="faq-body">BMR (Basal Metabolic Rate) is the number of calories your body burns at complete rest — just to keep organs functioning. TDEE (Total Daily Energy Expenditure) is BMR multiplied by your activity level. TDEE is what you should use to plan your actual calorie intake for weight loss or gain.</div></details><details class="faq-item"><summary>How do I calculate my ideal weight?<div class="faq-arrow"><svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M2 4l4 4 4-4"/></svg></div></summary><div class="faq-body">Our ideal weight calculator uses the Devine formula (most widely used clinically): for men, ideal weight = 50kg + 2.3kg per inch above 5 feet; for women, 45.5kg + 2.3kg per inch above 5 feet. This gives a reference range, not a hard target.</div></details><details class="faq-item"><summary>What activity multiplier should I use for TDEE?<div class="faq-arrow"><svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M2 4l4 4 4-4"/></svg></div></summary><div class="faq-body">Use 1.2 for sedentary (desk job, no exercise), 1.375 for lightly active (1-3 days/week exercise), 1.55 for moderately active (3-5 days/week), 1.725 for very active (hard exercise 6-7 days), and 1.9 for extra active (physical job + daily training).</div></details><details class="faq-item"><summary>Are these calculators accurate for Indians?<div class="faq-arrow"><svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M2 4l4 4 4-4"/></svg></div></summary><div class="faq-body">Standard BMI and weight formulas were developed from Western populations. Some research suggests Asian populations face health risks at lower BMI thresholds (23+ for overweight, 27.5+ for obese). Consult your doctor for personalised health assessments.</div></details></div>
 </div></div>
 </main>
-<footer><div class="footer-inner"><div class="footer-top"><div class="footer-logo">MailFix.in</div><div class="footer-links"><a href="index.html">Email Tool</a><a href="ctc-calculator.html">Salary Calc</a><a href="income-tax-slabs.html">Tax Slabs</a><a href="how-ctc-is-calculated.html">CTC Guide</a><a href="new-vs-old-tax-regime.html">Tax Regime</a><a href="salary-glossary.html">Glossary</a><a href="city-compare.html">City Compare</a><a href="whatsapp-dhanda.html">WA Dhanda</a><a href="sarkari-letter.html">Sarkari Letter</a><a href="privacy.html">Privacy Policy</a></div></div><div class="footer-copy">© 2026 MailFix. Free Tools for Indian Professionals.</div></div></footer>
+<footer><div class="footer-inner"><div class="footer-top"><div class="footer-logo">MailFix</div><div class="footer-links"><a href="index.html">Email Tool</a><a href="ctc-calculator.html">Salary Calc</a><a href="income-tax-slabs.html">Tax Slabs</a><a href="how-ctc-is-calculated.html">CTC Guide</a><a href="new-vs-old-tax-regime.html">Tax Regime</a><a href="salary-glossary.html">Glossary</a><a href="city-compare.html">City Compare</a><a href="whatsapp-dhanda.html">WA Dhanda</a><a href="sarkari-letter.html">Sarkari Letter</a><a href="privacy.html">Privacy Policy</a></div></div><div class="footer-copy">© 2026 MailFix. Free Tools for Indian Professionals.</div></div></footer>
 <script>
   function switchTab(tab) {
     ['bmi','bmr','ideal','water','bodyfat','calorie'].forEach(t=>{
