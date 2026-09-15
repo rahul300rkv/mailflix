@@ -1,35 +1,52 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>https://mailflix.netlify.app/</loc><lastmod>2026-08-15</lastmod><changefreq>weekly</changefreq><priority>1.0</priority></url>
-  <url><loc>https://mailflix.netlify.app/ctc-calculator.html</loc><lastmod>2026-08-15</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
-  <url><loc>https://mailflix.netlify.app/hra-calculator.html</loc><lastmod>2026-08-15</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
-  <url><loc>https://mailflix.netlify.app/itr-calculator.html</loc><lastmod>2026-08-15</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
-  <url><loc>https://mailflix.netlify.app/paraphrase.html</loc><lastmod>2026-08-15</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
-  <url><loc>https://mailflix.netlify.app/photo-resizer.html</loc><lastmod>2026-08-15</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
-  <url><loc>https://mailflix.netlify.app/qr-generator.html</loc><lastmod>2026-08-15</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
-  <url><loc>https://mailflix.netlify.app/job-application.html</loc><lastmod>2026-08-15</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
-  <url><loc>https://mailflix.netlify.app/json-tools.html</loc><lastmod>2026-08-15</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://mailflix.netlify.app/gst-invoice.html</loc><lastmod>2026-08-15</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://mailflix.netlify.app/rent-receipt.html</loc><lastmod>2026-08-15</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://mailflix.netlify.app/increment-calculator.html</loc><lastmod>2026-08-15</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://mailflix.netlify.app/leave-encashment.html</loc><lastmod>2026-08-15</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://mailflix.netlify.app/retirement-calculator.html</loc><lastmod>2026-08-15</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://mailflix.netlify.app/date-calculator.html</loc><lastmod>2026-08-15</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://mailflix.netlify.app/health-calculator.html</loc><lastmod>2026-08-15</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://mailflix.netlify.app/resignation.html</loc><lastmod>2026-08-15</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://mailflix.netlify.app/sarkari-letter.html</loc><lastmod>2026-08-15</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://mailflix.netlify.app/whatsapp-dhanda.html</loc><lastmod>2026-08-15</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://mailflix.netlify.app/city-compare.html</loc><lastmod>2026-08-15</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://mailflix.netlify.app/vehicle-scrappage.html</loc><lastmod>2026-08-15</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <!-- Guide pages — highest indexability priority -->
-  <url><loc>https://mailflix.netlify.app/income-tax-slabs.html</loc><lastmod>2026-08-15</lastmod><changefreq>yearly</changefreq><priority>0.95</priority></url>
-  <url><loc>https://mailflix.netlify.app/how-ctc-is-calculated.html</loc><lastmod>2026-08-15</lastmod><changefreq>yearly</changefreq><priority>0.95</priority></url>
-  <url><loc>https://mailflix.netlify.app/new-vs-old-tax-regime.html</loc><lastmod>2026-08-15</lastmod><changefreq>yearly</changefreq><priority>0.95</priority></url>
-  <url><loc>https://mailflix.netlify.app/what-is-form-16.html</loc><lastmod>2026-08-15</lastmod><changefreq>yearly</changefreq><priority>0.9</priority></url>
-  <url><loc>https://mailflix.netlify.app/professional-tax-india.html</loc><lastmod>2026-08-15</lastmod><changefreq>yearly</changefreq><priority>0.9</priority></url>
-  <url><loc>https://mailflix.netlify.app/salary-glossary.html</loc><lastmod>2026-08-15</lastmod><changefreq>yearly</changefreq><priority>0.85</priority></url>
-  <url><loc>https://mailflix.netlify.app/privacy.html</loc><lastmod>2026-08-15</lastmod><changefreq>yearly</changefreq><priority>0.3</priority></url>
-  <url><loc>https://mailflix.netlify.app/what-is-tds.html</loc><lastmod>2026-08-15</lastmod><changefreq>yearly</changefreq><priority>0.9</priority></url>
-  <url><loc>https://mailflix.netlify.app/epf-withdrawal-guide.html</loc><lastmod>2026-08-15</lastmod><changefreq>yearly</changefreq><priority>0.9</priority></url>
-  <url><loc>https://mailflix.netlify.app/gratuity-rules-india.html</loc><lastmod>2026-08-15</lastmod><changefreq>yearly</changefreq><priority>0.9</priority></url>
+
+  <!-- Homepage -->
+  <url>
+    <loc>https://mailflix.netlify.app/</loc>
+    <lastmod>2026-09-16</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+
+  <!-- AI Tools -->
+  <url><loc>https://mailflix.netlify.app/job-application</loc><lastmod>2026-09-16</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://mailflix.netlify.app/whatsapp-dhanda</loc><lastmod>2026-09-16</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://mailflix.netlify.app/sarkari-letter</loc><lastmod>2026-09-16</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://mailflix.netlify.app/resignation</loc><lastmod>2026-09-16</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://mailflix.netlify.app/paraphrase</loc><lastmod>2026-09-16</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+
+  <!-- Salary Calculators -->
+  <url><loc>https://mailflix.netlify.app/ctc-calculator</loc><lastmod>2026-09-16</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://mailflix.netlify.app/city-compare</loc><lastmod>2026-09-16</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://mailflix.netlify.app/hra-calculator</loc><lastmod>2026-09-16</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://mailflix.netlify.app/itr-calculator</loc><lastmod>2026-09-16</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://mailflix.netlify.app/increment-calculator</loc><lastmod>2026-09-16</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://mailflix.netlify.app/leave-encashment</loc><lastmod>2026-09-16</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://mailflix.netlify.app/retirement-calculator</loc><lastmod>2026-09-16</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+
+  <!-- Utilities -->
+  <url><loc>https://mailflix.netlify.app/rent-receipt</loc><lastmod>2026-09-16</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://mailflix.netlify.app/gst-invoice</loc><lastmod>2026-09-16</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://mailflix.netlify.app/photo-resizer</loc><lastmod>2026-09-16</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://mailflix.netlify.app/qr-generator</loc><lastmod>2026-09-16</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://mailflix.netlify.app/json-tools</loc><lastmod>2026-09-16</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://mailflix.netlify.app/date-calculator</loc><lastmod>2026-09-16</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://mailflix.netlify.app/health-calculator</loc><lastmod>2026-09-16</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://mailflix.netlify.app/vehicle-scrappage</loc><lastmod>2026-09-16</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+
+  <!-- Guides & Articles -->
+  <url><loc>https://mailflix.netlify.app/how-ctc-is-calculated</loc><lastmod>2026-09-16</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://mailflix.netlify.app/income-tax-slabs</loc><lastmod>2026-09-16</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://mailflix.netlify.app/new-vs-old-tax-regime</loc><lastmod>2026-09-16</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://mailflix.netlify.app/professional-tax-india</loc><lastmod>2026-09-16</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://mailflix.netlify.app/what-is-tds</loc><lastmod>2026-09-16</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://mailflix.netlify.app/epf-withdrawal-guide</loc><lastmod>2026-09-16</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://mailflix.netlify.app/gratuity-rules-india</loc><lastmod>2026-09-16</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://mailflix.netlify.app/what-is-form-16</loc><lastmod>2026-09-16</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://mailflix.netlify.app/salary-glossary</loc><lastmod>2026-09-16</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+
+  <!-- Legal -->
+  <url><loc>https://mailflix.netlify.app/privacy</loc><lastmod>2026-09-16</lastmod><changefreq>yearly</changefreq><priority>0.3</priority></url>
+
 </urlset>

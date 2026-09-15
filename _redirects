@@ -1,0 +1,34 @@
+# Groq API proxy
+/api/groq  /.netlify/functions/groq  200
+
+# Clean URL rewrites (no .html shown in browser or GSC)
+/city-compare           /city-compare.html           200
+/ctc-calculator         /ctc-calculator.html         200
+/date-calculator        /date-calculator.html        200
+/epf-withdrawal-guide   /epf-withdrawal-guide.html   200
+/gratuity-rules-india   /gratuity-rules-india.html   200
+/gst-invoice            /gst-invoice.html            200
+/health-calculator      /health-calculator.html      200
+/how-ctc-is-calculated  /how-ctc-is-calculated.html  200
+/hra-calculator         /hra-calculator.html         200
+/income-tax-slabs       /income-tax-slabs.html       200
+/increment-calculator   /increment-calculator.html   200
+/itr-calculator         /itr-calculator.html         200
+/job-application        /job-application.html        200
+/json-tools             /json-tools.html             200
+/leave-encashment       /leave-encashment.html       200
+/new-vs-old-tax-regime  /new-vs-old-tax-regime.html  200
+/paraphrase             /paraphrase.html             200
+/photo-resizer          /photo-resizer.html          200
+/privacy                /privacy.html                200
+/professional-tax-india /professional-tax-india.html 200
+/qr-generator           /qr-generator.html           200
+/rent-receipt           /rent-receipt.html           200
+/resignation            /resignation.html            200
+/retirement-calculator  /retirement-calculator.html  200
+/salary-glossary        /salary-glossary.html        200
+/sarkari-letter         /sarkari-letter.html         200
+/vehicle-scrappage      /vehicle-scrappage.html      200
+/what-is-form-16        /what-is-form-16.html        200
+/what-is-tds            /what-is-tds.html            200
+/whatsapp-dhanda        /whatsapp-dhanda.html        200

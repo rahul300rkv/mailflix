@@ -1,8 +1,160 @@
 [build]
   functions = "netlify/functions"
-  publish = "."
+  publish   = "."
+
+# Groq API proxy
+[[redirects]]
+  from   = "/api/groq"
+  to     = "/.netlify/functions/groq"
+  status = 200
+
+# Clean URL rewrites — serves .html file silently (no .html in browser/GSC)
+[[redirects]]
+  from   = "/city-compare"
+  to     = "/city-compare.html"
+  status = 200
 
 [[redirects]]
-  from = "/api/groq"
-  to = "/.netlify/functions/groq"
+  from   = "/ctc-calculator"
+  to     = "/ctc-calculator.html"
+  status = 200
+
+[[redirects]]
+  from   = "/date-calculator"
+  to     = "/date-calculator.html"
+  status = 200
+
+[[redirects]]
+  from   = "/epf-withdrawal-guide"
+  to     = "/epf-withdrawal-guide.html"
+  status = 200
+
+[[redirects]]
+  from   = "/gratuity-rules-india"
+  to     = "/gratuity-rules-india.html"
+  status = 200
+
+[[redirects]]
+  from   = "/gst-invoice"
+  to     = "/gst-invoice.html"
+  status = 200
+
+[[redirects]]
+  from   = "/health-calculator"
+  to     = "/health-calculator.html"
+  status = 200
+
+[[redirects]]
+  from   = "/how-ctc-is-calculated"
+  to     = "/how-ctc-is-calculated.html"
+  status = 200
+
+[[redirects]]
+  from   = "/hra-calculator"
+  to     = "/hra-calculator.html"
+  status = 200
+
+[[redirects]]
+  from   = "/income-tax-slabs"
+  to     = "/income-tax-slabs.html"
+  status = 200
+
+[[redirects]]
+  from   = "/increment-calculator"
+  to     = "/increment-calculator.html"
+  status = 200
+
+[[redirects]]
+  from   = "/itr-calculator"
+  to     = "/itr-calculator.html"
+  status = 200
+
+[[redirects]]
+  from   = "/job-application"
+  to     = "/job-application.html"
+  status = 200
+
+[[redirects]]
+  from   = "/json-tools"
+  to     = "/json-tools.html"
+  status = 200
+
+[[redirects]]
+  from   = "/leave-encashment"
+  to     = "/leave-encashment.html"
+  status = 200
+
+[[redirects]]
+  from   = "/new-vs-old-tax-regime"
+  to     = "/new-vs-old-tax-regime.html"
+  status = 200
+
+[[redirects]]
+  from   = "/paraphrase"
+  to     = "/paraphrase.html"
+  status = 200
+
+[[redirects]]
+  from   = "/photo-resizer"
+  to     = "/photo-resizer.html"
+  status = 200
+
+[[redirects]]
+  from   = "/privacy"
+  to     = "/privacy.html"
+  status = 200
+
+[[redirects]]
+  from   = "/professional-tax-india"
+  to     = "/professional-tax-india.html"
+  status = 200
+
+[[redirects]]
+  from   = "/qr-generator"
+  to     = "/qr-generator.html"
+  status = 200
+
+[[redirects]]
+  from   = "/rent-receipt"
+  to     = "/rent-receipt.html"
+  status = 200
+
+[[redirects]]
+  from   = "/resignation"
+  to     = "/resignation.html"
+  status = 200
+
+[[redirects]]
+  from   = "/retirement-calculator"
+  to     = "/retirement-calculator.html"
+  status = 200
+
+[[redirects]]
+  from   = "/salary-glossary"
+  to     = "/salary-glossary.html"
+  status = 200
+
+[[redirects]]
+  from   = "/sarkari-letter"
+  to     = "/sarkari-letter.html"
+  status = 200
+
+[[redirects]]
+  from   = "/vehicle-scrappage"
+  to     = "/vehicle-scrappage.html"
+  status = 200
+
+[[redirects]]
+  from   = "/what-is-form-16"
+  to     = "/what-is-form-16.html"
+  status = 200
+
+[[redirects]]
+  from   = "/what-is-tds"
+  to     = "/what-is-tds.html"
+  status = 200
+
+[[redirects]]
+  from   = "/whatsapp-dhanda"
+  to     = "/whatsapp-dhanda.html"
   status = 200
