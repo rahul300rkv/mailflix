@@ -112,16 +112,17 @@ ${text.trim()}`;
 
     const data = await response.json();
 
-    if (!response.ok) {
-  console.error("Groq API error:", response.status, data);
+if (!response.ok) {
+  console.error("GROQ ERROR STATUS:", response.status);
+  console.error("GROQ ERROR BODY:", JSON.stringify(data));
 
   return {
     statusCode: 502,
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify({
       error: "Groq API error",
-      status: response.status,
-      details: data?.error?.message || "Unknown Groq error"
+      groqStatus: response.status,
+      groqError: data
     })
   };
 }
