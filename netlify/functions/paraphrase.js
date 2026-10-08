@@ -113,8 +113,18 @@ ${text.trim()}`;
     const data = await response.json();
 
     if (!response.ok) {
-      return { statusCode: 502, headers: { "Content-Type": "application/json" }, body: JSON.stringify({ error: "AI service temporarily unavailable." }) };
-    }
+  console.error("Groq API error:", response.status, data);
+
+  return {
+    statusCode: 502,
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({
+      error: "Groq API error",
+      status: response.status,
+      details: data?.error?.message || data
+    })
+  };
+}
 
     const paraphrased = data?.choices?.[0]?.message?.content?.trim();
     if (!paraphrased) {
