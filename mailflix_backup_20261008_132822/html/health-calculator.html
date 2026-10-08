@@ -1,0 +1,807 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Free Health Calculators India — BMI, BMR, TDEE, Ideal Weight | MailFix</title>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": [
+    "WebApplication",
+    "SoftwareApplication"
+  ],
+  "name": "BMI, BMR, TDEE & Body Fat Calculator India",
+  "description": "Comprehensive health calculator suite: BMI using Asian standards (overweight at 23, obese at 27.5), BMR and TDEE using Mifflin-St Jeor formula, ideal weight using Devine formula, body fat % using U.S. Navy tape-measure method, calorie planner with macro split, and daily water intake.",
+  "url": "https://mailflix.netlify.app/health-calculator.html",
+  "applicationCategory": "HealthApplication",
+  "operatingSystem": "Any — runs in web browser",
+  "browserRequirements": "Requires JavaScript. Works in Chrome, Firefox, Safari, Edge.",
+  "featureList": [
+    "BMI with Asian standards",
+    "BMR and TDEE calculator",
+    "Ideal weight (Devine formula)",
+    "Body fat % (U.S. Navy method)",
+    "Calorie planner with macros",
+    "Water intake calculator"
+  ],
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "INR",
+    "availability": "https://schema.org/InStock"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "MailFix",
+    "url": "https://mailflix.netlify.app"
+  },
+  "inLanguage": [
+    "en-IN",
+    "hi"
+  ],
+  "isAccessibleForFree": true,
+  "isFamilyFriendly": true,
+  "countryOfOrigin": "IN",
+  "audience": {
+    "@type": "Audience",
+    "audienceType": "Indian salaried professionals, small business owners, freelancers",
+    "geographicArea": {
+      "@type": "Country",
+      "name": "India"
+    }
+  }
+}
+</script>
+<meta name="description" content="Calculate BMI, BMR, TDEE calorie needs, ideal weight and daily water intake. Asian BMI standards. Free, instant. No signup."/>
+<meta name="robots" content="index, follow"/>
+<link rel="alternate" type="text/plain" href="https://mailflix.netlify.app/llms.txt" title="LLMs.txt — MailFix AI index"/>
+<link rel="canonical" href="https://mailflix.netlify.app/health-calculator"/>
+<meta property="og:type" content="website"/>
+<meta property="og:url" content="https://mailflix.netlify.app/health-calculator.html"/>
+<meta property="og:title" content="BMI, BMR, TDEE & Body Fat Calculator India | MailFix"/>
+<meta property="og:description" content="Calculate BMI (Asian standard), BMR, TDEE calorie needs, ideal weight, body fat %, and daily water intake. Free, instant, no signup."/>
+<meta property="og:image" content="https://mailflix.netlify.app/og-image.png"/>
+<meta property="og:site_name" content="MailFix"/>
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:title" content="BMI, BMR, TDEE & Body Fat Calculator India | MailFix"/>
+<meta name="twitter:description" content="Calculate BMI (Asian standard), BMR, TDEE calorie needs, ideal weight, body fat %, and daily water intake. Free, instant, no signup."/>
+<meta name="twitter:image" content="https://mailflix.netlify.app/og-image.png"/>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "Health Calculator Suite — BMI, BMR, TDEE, Body Fat",
+  "description": "Free health calculator suite for Indian users. Calculates BMI using Asian BMI standards (overweight threshold 23, obese 27.5), BMR and TDEE using Mifflin-St Jeor formula, ideal body weight using Devine formula, body fat % using U.S. Navy tape-measure method, and daily water intake recommendations.",
+  "url": "https://mailflix.netlify.app/health-calculator.html",
+  "applicationCategory": "UtilitiesApplication",
+  "operatingSystem": "Web Browser",
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "INR"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "MailFix",
+    "url": "https://mailflix.netlify.app"
+  },
+  "inLanguage": "en-IN",
+  "isAccessibleForFree": true
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://mailflix.netlify.app/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Utilities",
+      "item": "https://mailflix.netlify.app/index.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Health Calculators",
+      "item": "https://mailflix.netlify.app/health-calculator.html"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is BMI and is it accurate?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "BMI (Body Mass Index) is your weight in kg divided by height in metres squared. It is a quick screening tool — under 18.5 is underweight, 18.5-24.9 is normal, 25-29.9 is overweight, and 30+ is obese. However, BMI does not account for muscle mass, so athletes often have a high BMI despite being healthy."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the difference between BMR and TDEE?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "BMR (Basal Metabolic Rate) is the number of calories your body burns at complete rest — just to keep organs functioning. TDEE (Total Daily Energy Expenditure) is BMR multiplied by your activity level. TDEE is what you should use to plan your actual calorie intake for weight loss or gain."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do I calculate my ideal weight?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Our ideal weight calculator uses the Devine formula (most widely used clinically): for men, ideal weight = 50kg + 2.3kg per inch above 5 feet; for women, 45.5kg + 2.3kg per inch above 5 feet. This gives a reference range, not a hard target."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What activity multiplier should I use for TDEE?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Use 1.2 for sedentary (desk job, no exercise), 1.375 for lightly active (1-3 days/week exercise), 1.55 for moderately active (3-5 days/week), 1.725 for very active (hard exercise 6-7 days), and 1.9 for extra active (physical job + daily training)."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Are these calculators accurate for Indians?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Standard BMI and weight formulas were developed from Western populations. Some research suggests Asian populations face health risks at lower BMI thresholds (23+ for overweight, 27.5+ for obese). Consult your doctor for personalised health assessments."
+      }
+    }
+  ]
+}
+</script>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3532554351654388" crossorigin="anonymous"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com"/><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/><link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet"/>
+
+<style>/* ─── SHARED DESIGN SYSTEM ─────────────────────────────── */
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --green:#22c55e;--green-dk:#16a34a;--green-lt:#dcfce7;--green-xs:#f0fdf4;
+  --black:#000;--white:#fff;--ink:#0f172a;--muted:#64748b;
+  --border:#e2e8f0;--paper:#fdfdfc;--card:#fff;
+  --red-lt:#fef2f2;--red:#dc2626;
+  --shadow:4px 4px 0px 0px #000;--shadow-sm:2px 2px 0px 0px #000;--shadow-lg:6px 6px 0px 0px #000;
+  --radius:12px;--font:'Plus Jakarta Sans',sans-serif;
+}
+html{scroll-behavior:smooth}
+body{font-family:var(--font);background:var(--paper);color:var(--ink);font-size:16px;line-height:1.6;min-height:100vh;-webkit-font-smoothing:antialiased}
+::-webkit-scrollbar{width:8px}::-webkit-scrollbar-track{background:transparent}::-webkit-scrollbar-thumb{background:#cbd5e1;border-radius:4px}
+
+/* NAV */
+nav{position:sticky;top:0;z-index:100;background:rgba(255,255,255,.92);backdrop-filter:blur(10px);border-bottom:2px solid var(--black)}
+.nav-inner{max-width:1100px;margin:0 auto;padding:0 24px;display:flex;align-items:center;justify-content:space-between;height:64px}
+.logo{display:flex;align-items:center;gap:10px;font-size:20px;font-weight:800;letter-spacing:-.5px;color:var(--black);text-decoration:none}
+.logo-icon{width:34px;height:34px;background:var(--green);border:2px solid var(--black);border-radius:8px;display:flex;align-items:center;justify-content:center;transform:rotate(-3deg);box-shadow:var(--shadow-sm)}
+.logo-icon svg{width:18px;height:18px}
+.logo span{color:var(--green-dk)}
+.nav-links{display:flex;align-items:center;gap:4px}
+.nav-item{position:relative}
+.nav-trigger{display:flex;align-items:center;gap:4px;padding:6px 12px;border-radius:8px;font-size:14px;font-weight:700;color:var(--muted);background:none;border:none;cursor:pointer;font-family:var(--font);transition:color .15s,background .15s}
+.nav-trigger:hover{color:var(--black);background:#f8fafc}
+.nav-trigger svg{width:14px;height:14px;transition:transform .2s}
+.nav-item:hover .nav-trigger svg{transform:rotate(180deg)}
+.dropdown-panel{display:none;position:absolute;top:100%;left:0;min-width:210px;background:var(--white);border:2px solid var(--black);border-radius:14px;box-shadow:var(--shadow);padding:10px 6px 6px;z-index:200}.nav-item::after{content:'';position:absolute;top:100%;left:0;width:100%;height:12px;display:block}
+.nav-item:hover .dropdown-panel,.dropdown-panel.open{display:flex;flex-direction:column}
+.dropdown-panel a{display:block;padding:9px 14px;border-radius:8px;font-size:13px;font-weight:700;color:var(--muted);text-decoration:none;transition:background .12s,color .12s}
+.dropdown-panel a:hover{background:var(--green-xs);color:var(--black)}
+.nav-cta{padding:9px 20px;background:var(--green);color:white;font-size:13px;font-weight:800;border:2px solid var(--black);border-radius:10px;box-shadow:var(--shadow-sm);cursor:pointer;text-decoration:none;transition:transform .12s,box-shadow .12s}
+.nav-cta:hover{transform:translate(2px,2px);box-shadow:none}
+.mobile-toggle{display:none;background:white;border:2px solid var(--black);border-radius:8px;padding:6px;cursor:pointer;box-shadow:var(--shadow-sm);transition:transform .1s,box-shadow .1s;align-items:center}
+.mobile-toggle:active{transform:translate(2px,2px);box-shadow:none}
+.mobile-toggle svg{width:22px;height:22px;display:block}
+.mobile-panel{display:none;position:fixed;inset:0;z-index:500;background:white;overflow-y:auto;transform:translateX(100%);transition:transform .28s ease;border-left:2px solid var(--black)}
+.mobile-panel.open{transform:translateX(0)}
+.mobile-panel-head{display:flex;align-items:center;justify-content:space-between;padding:16px 20px;border-bottom:2px solid var(--black);background:var(--green-xs)}
+.mobile-panel-body{padding:24px 20px;display:flex;flex-direction:column;gap:10px}
+.mobile-link{display:flex;align-items:center;gap:10px;padding:12px 16px;border-radius:10px;border:2px solid var(--border);font-size:15px;font-weight:700;color:var(--ink);text-decoration:none;transition:border-color .12s,background .12s}
+.mobile-link:hover{border-color:var(--green);background:var(--green-xs)}
+.mobile-cta{display:block;text-align:center;padding:14px;background:var(--green);color:white;font-weight:800;font-size:15px;border:2px solid var(--black);border-radius:12px;box-shadow:var(--shadow);text-decoration:none;transition:transform .12s,box-shadow .12s}
+.mobile-cta:hover{transform:translate(4px,4px);box-shadow:none}
+.mobile-section-label{font-size:10px;font-weight:800;letter-spacing:.12em;text-transform:uppercase;color:#94a3b8;margin-top:6px;padding:0 4px}
+.close-btn{background:white;border:2px solid var(--black);border-radius:8px;padding:6px;cursor:pointer;box-shadow:var(--shadow-sm)}
+.close-btn svg{width:20px;height:20px;display:block}
+
+/* PAGE HERO */
+.page-hero{max-width:900px;margin:0 auto;padding:56px 24px 40px;text-align:center}
+.page-badge{display:inline-flex;align-items:center;gap:8px;padding:5px 18px;border:2px solid var(--black);border-radius:99px;background:white;box-shadow:var(--shadow-sm);font-size:11px;font-weight:800;letter-spacing:.12em;text-transform:uppercase;margin-bottom:20px;color:var(--black)}
+h1{font-size:clamp(28px,5vw,52px);font-weight:800;line-height:1.1;letter-spacing:-1px;color:var(--black);margin-bottom:14px}
+h1 .accent{color:var(--green-dk)}
+.page-sub{font-size:17px;color:var(--muted);font-weight:500;max-width:560px;margin:0 auto;line-height:1.65}
+
+/* FORM CARD */
+.form-wrap{max-width:900px;margin:0 auto;padding:0 24px 80px}
+.form-card{background:white;border:4px solid var(--black);border-radius:20px;box-shadow:var(--shadow-lg);overflow:hidden}
+.form-card-header{padding:18px 24px;border-bottom:2px solid var(--black);background:var(--green-xs);display:flex;align-items:center;justify-content:space-between}
+.form-card-title{font-size:13px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;color:var(--green-dk)}
+.form-body{padding:28px 24px}
+.form-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+.form-group{display:flex;flex-direction:column;gap:6px}
+.form-group.full{grid-column:1/-1}
+label{font-size:13px;font-weight:700;color:var(--ink)}
+label span{font-weight:500;color:var(--muted);font-size:12px;margin-left:4px}
+input,select,textarea{width:100%;padding:11px 14px;border:2px solid var(--border);border-radius:10px;font-family:var(--font);font-size:15px;font-weight:500;color:var(--ink);background:white;outline:none;transition:border-color .15s,box-shadow .15s}
+input:focus,select:focus,textarea:focus{border-color:var(--black);box-shadow:var(--shadow-sm)}
+textarea{resize:vertical;min-height:100px}
+input[type=date]{cursor:pointer}
+input[type=number]{-moz-appearance:textfield}
+input[type=number]::-webkit-outer-spin-button,input[type=number]::-webkit-inner-spin-button{-webkit-appearance:none}
+
+/* OUTPUT SECTION */
+.output-section{border-top:4px solid var(--black);background:#f8fafc;padding:24px}
+.output-label{font-size:11px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin-bottom:14px}
+.output-box{background:white;border:2px solid var(--black);border-radius:12px;padding:20px;min-height:140px;box-shadow:var(--shadow-sm);font-size:15px;font-weight:500;line-height:1.8;white-space:pre-wrap;color:var(--ink)}
+.output-placeholder{color:#94a3b8;font-style:italic}
+.loading-dots{display:none;align-items:center;gap:5px;padding:8px 0}
+.loading-dots.show{display:flex}
+.loading-dots span{width:8px;height:8px;background:var(--black);border-radius:50%;animation:bounce 1s infinite}
+.loading-dots span:nth-child(2){animation-delay:.15s;background:var(--green)}
+.loading-dots span:nth-child(3){animation-delay:.3s}
+@keyframes bounce{0%,60%,100%{transform:translateY(0)}30%{transform:translateY(-9px)}}
+
+/* BUTTONS */
+.btn{display:inline-flex;align-items:center;gap:6px;padding:10px 22px;border-radius:10px;font-family:var(--font);font-size:14px;font-weight:700;cursor:pointer;border:2px solid var(--black);box-shadow:var(--shadow-sm);transition:transform .12s,box-shadow .12s}
+.btn:hover{transform:translate(2px,2px);box-shadow:none}
+.btn:disabled{opacity:.5;cursor:not-allowed;transform:none!important;box-shadow:var(--shadow-sm)!important}
+.btn-primary{background:var(--green);color:white}
+.btn-black{background:var(--black);color:white}
+.btn-white{background:white;color:var(--ink)}
+.btn-lg{padding:13px 32px;font-size:15px;font-weight:800;box-shadow:var(--shadow)}
+.btn-lg:hover{box-shadow:none;transform:translate(4px,4px)}
+.btn-full{width:100%;justify-content:center}
+.btn-group{display:flex;gap:10px;flex-wrap:wrap;margin-top:16px}
+
+/* ERROR */
+.error-msg{display:none;width:100%;background:var(--red-lt);border:2px solid var(--black);color:var(--red);font-size:13px;font-weight:700;padding:10px 16px;border-radius:8px;margin-bottom:12px;text-align:center}
+.error-msg.show{display:block}
+
+/* RESULT CARDS */
+.result-card{background:white;border:2px solid var(--black);border-radius:14px;overflow:hidden;box-shadow:var(--shadow)}
+.result-hero{padding:28px;text-align:center;background:var(--green-xs);border-bottom:2px solid var(--black)}
+.result-hero h2{font-size:clamp(32px,6vw,52px);font-weight:800;color:var(--black)}
+.result-hero p{font-size:14px;color:var(--muted);margin-top:4px;font-weight:600}
+.result-rows{display:flex;flex-direction:column}
+.result-row{display:flex;align-items:center;justify-content:space-between;padding:14px 20px;border-bottom:1px solid var(--border)}
+.result-row:last-child{border-bottom:none}
+.result-row-label{font-size:14px;font-weight:700;color:var(--ink)}
+.result-row-sub{font-size:12px;color:var(--muted);font-weight:500;margin-top:1px}
+.result-row-value{font-size:15px;font-weight:800;color:var(--black)}
+.result-row-value.positive{color:#16a34a}
+.result-row-value.negative{color:var(--red)}
+.section-divider{padding:10px 20px 6px;font-size:10px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);background:#f8fafc;border-bottom:1px solid var(--border)}
+
+/* SELECTOR CARDS (modes, types) */
+.selector-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(160px,1fr));gap:10px;margin-bottom:24px}
+.selector-card{padding:14px 16px;background:white;border:2px solid var(--border);border-radius:12px;cursor:pointer;transition:all .15s;text-align:left}
+.selector-card:hover{border-color:var(--green);background:var(--green-xs)}
+.selector-card.active{border-color:var(--black);background:white;box-shadow:var(--shadow-sm)}
+.selector-card-icon{font-size:20px;margin-bottom:6px}
+.selector-card-title{font-size:13px;font-weight:800;color:var(--black)}
+.selector-card-sub{font-size:11px;color:var(--muted);font-weight:500;margin-top:2px;line-height:1.4}
+
+/* MODE PILLS */
+.pill-row{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:20px}
+.pill{padding:7px 16px;border-radius:99px;border:2px solid var(--border);background:white;font-family:var(--font);font-size:13px;font-weight:700;color:var(--muted);cursor:pointer;transition:all .15s}
+.pill:hover{border-color:var(--green);color:var(--black)}
+.pill.active{border-color:var(--black);color:var(--black);box-shadow:var(--shadow-sm);background:white}
+
+/* TOGGLE */
+.toggle-row{display:flex;align-items:center;justify-content:space-between;padding:12px 0;border-bottom:1px solid var(--border)}
+.toggle-row:last-child{border-bottom:none}
+.toggle-label{font-size:14px;font-weight:700;color:var(--ink)}
+.toggle-sub{font-size:12px;color:var(--muted);font-weight:500}
+.toggle{position:relative;display:inline-block;width:40px;height:22px;flex-shrink:0}
+.toggle input{opacity:0;width:0;height:0}
+.toggle-slider{position:absolute;cursor:pointer;top:0;left:0;right:0;bottom:0;background:#e2e8f0;border:2px solid var(--black);border-radius:99px;transition:.2s}
+.toggle-slider:before{position:absolute;content:'';height:14px;width:14px;left:2px;bottom:2px;background:white;border-radius:50%;border:1.5px solid #94a3b8;transition:.2s}
+input:checked+.toggle-slider{background:var(--green)}
+input:checked+.toggle-slider:before{transform:translateX(18px);border-color:white}
+
+/* LETTER PAPER */
+.letter-paper{background:white;border:2px solid var(--black);border-radius:12px;padding:28px;font-family:'Times New Roman',serif;font-size:15px;line-height:1.8;color:var(--ink);white-space:pre-wrap;box-shadow:var(--shadow-sm)}
+
+/* SECTION EXPLAINER */
+.section-explainer{max-width:900px;margin:0 auto;padding:60px 24px 40px}
+.section-explainer h2{font-size:clamp(22px,4vw,34px);font-weight:800;color:var(--black);margin-bottom:28px}
+.explainer-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:16px;margin-bottom:40px}
+.explainer-card{background:white;border:2px solid var(--black);border-radius:14px;padding:20px;box-shadow:var(--shadow-sm)}
+.explainer-card .tag{display:inline-block;background:var(--green-xs);border:1.5px solid var(--green);border-radius:6px;padding:2px 10px;font-size:11px;font-weight:800;letter-spacing:.06em;text-transform:uppercase;color:var(--green-dk);margin-bottom:10px}
+.explainer-card h4{font-size:14px;font-weight:800;color:var(--black);margin-bottom:6px}
+.explainer-card p{font-size:13px;color:var(--muted);font-weight:500;line-height:1.6}
+
+/* FAQ */
+.section-faq{border-top:4px solid var(--black);background:white;padding:60px 24px}
+.section-faq-inner{max-width:760px;margin:0 auto}
+.section-faq h2{font-size:clamp(22px,4vw,34px);font-weight:800;color:var(--black);margin-bottom:28px}
+.faq-list{display:flex;flex-direction:column;gap:10px}
+details.faq-item{background:white;border:2px solid var(--black);border-radius:14px;overflow:hidden;box-shadow:var(--shadow-sm)}
+details.faq-item summary{display:flex;align-items:center;justify-content:space-between;padding:16px 20px;cursor:pointer;list-style:none;font-size:14px;font-weight:800;color:var(--black);background:#f8fafc;transition:background .12s}
+details.faq-item summary::-webkit-details-marker{display:none}
+details.faq-item summary:hover{background:var(--green-xs)}
+.faq-arrow{width:26px;height:26px;background:white;border:2px solid var(--black);border-radius:50%;display:flex;align-items:center;justify-content:center;box-shadow:var(--shadow-sm);flex-shrink:0;transition:transform .2s}
+.faq-arrow svg{width:12px;height:12px}
+details[open] .faq-arrow{transform:rotate(180deg);background:var(--green-xs)}
+.faq-body{padding:14px 20px 18px;font-size:13px;font-weight:500;color:#475569;line-height:1.7;border-top:2px solid var(--black)}
+
+/* FOOTER */
+footer{background:var(--black);color:white;padding:40px 24px;border-top:4px solid var(--black)}
+.footer-inner{max-width:1100px;margin:0 auto;display:flex;flex-direction:column;gap:24px}
+.footer-top{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:16px}
+.footer-logo{font-size:18px;font-weight:800;color:white}
+.footer-links{display:flex;flex-wrap:wrap;gap:16px}
+.footer-links a{font-size:13px;font-weight:700;color:#94a3b8;text-decoration:none;transition:color .12s}
+.footer-links a:hover{color:var(--green)}
+.footer-copy{font-size:12px;color:#475569;font-weight:500;padding-top:16px;border-top:1px solid #1e293b}
+
+/* RESPONSIVE */
+@media(max-width:768px){
+  .nav-links,.nav-cta{display:none}
+  .mobile-toggle{display:flex}
+  .mobile-panel{display:block}
+  .form-grid{grid-template-columns:1fr}
+  .form-group.full{grid-column:1}
+  .page-hero{padding:40px 20px 28px}
+  .form-wrap{padding:0 16px 60px}
+  .explainer-grid{grid-template-columns:1fr 1fr}
+  .btn-group{flex-direction:column}
+  .btn-full{width:100%}
+}
+@media(max-width:480px){
+  .explainer-grid{grid-template-columns:1fr}
+  .selector-grid{grid-template-columns:1fr 1fr}
+}
+
+.calc-split{display:grid;grid-template-columns:1fr 1.1fr;gap:0}
+.calc-input{border-right:2px solid var(--black)}
+@media(max-width:700px){.calc-split{grid-template-columns:1fr}.calc-input{border-right:none;border-bottom:2px solid var(--black)}}
+.result-panel{padding:24px}
+.result-hero-sm{background:var(--green-xs);border:2px solid var(--black);border-radius:12px;padding:20px;text-align:center;margin-bottom:14px;box-shadow:var(--shadow-sm)}
+.result-hero-sm .big{font-size:clamp(26px,5vw,40px);font-weight:800;color:var(--black);line-height:1.15}
+.result-hero-sm .lbl{font-size:12px;font-weight:700;color:var(--muted);text-transform:uppercase;letter-spacing:.06em;margin-top:6px}
+.breakdown-box{background:white;border:2px solid var(--black);border-radius:12px;overflow:hidden;box-shadow:var(--shadow-sm)}
+.bd-row{display:flex;justify-content:space-between;align-items:center;padding:11px 16px;border-bottom:1px solid var(--border);font-size:13px}
+.bd-row:last-child{border:none}
+.bd-row .k{font-weight:600;color:var(--muted)}
+.bd-row .v{font-weight:800;color:var(--black)}
+.bd-row .v.pos{color:#16a34a}
+.bd-row .v.neg{color:var(--red)}
+.empty-state{text-align:center;padding:40px 20px;color:#94a3b8;font-style:italic;font-size:14px}
+.sec-head{padding:8px 16px;font-size:10px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);background:#f8fafc;border-bottom:1px solid var(--border)}
+
+/* BREADCRUMB */
+.breadcrumb{background:var(--green-xs);border-bottom:2px solid var(--black);padding:10px 24px}
+.breadcrumb-inner{max-width:1100px;margin:0 auto;display:flex;align-items:center;gap:6px;flex-wrap:wrap}
+.breadcrumb-inner a{font-size:12px;font-weight:700;color:var(--green-dk);text-decoration:none}
+.breadcrumb-inner a:hover{text-decoration:underline}
+.breadcrumb-inner span{font-size:12px;font-weight:500;color:var(--muted)}
+.breadcrumb-sep{font-size:12px;color:var(--muted);margin:0 2px}
+
+/* HOW IT WORKS */
+.section-how{padding:56px 24px;background:var(--green-xs);border-top:4px solid var(--black)}
+.section-how-inner{max-width:900px;margin:0 auto}
+.section-how h2{font-size:clamp(20px,4vw,30px);font-weight:800;margin-bottom:8px}
+.section-how .how-sub{font-size:14px;color:var(--muted);font-weight:500;margin-bottom:32px}
+.how-steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:20px}
+.how-step{background:white;border:2px solid var(--black);border-radius:14px;padding:20px 18px;box-shadow:var(--shadow-sm)}
+.how-step-num{width:32px;height:32px;background:var(--green);border:2px solid var(--black);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:800;margin-bottom:12px}
+.how-step h3{font-size:14px;font-weight:800;margin-bottom:6px}
+.how-step p{font-size:13px;color:var(--muted);font-weight:500;line-height:1.6}
+
+/* FAQ */
+.section-faq{border-top:4px solid var(--black);background:white;padding:60px 24px}
+.section-faq-inner{max-width:760px;margin:0 auto}
+.section-faq h2{font-size:clamp(22px,4vw,34px);font-weight:800;color:var(--black);margin-bottom:28px}
+.faq-list{display:flex;flex-direction:column;gap:10px}
+details.faq-item{background:white;border:2px solid var(--black);border-radius:14px;overflow:hidden;box-shadow:var(--shadow-sm)}
+details.faq-item summary{display:flex;align-items:center;justify-content:space-between;padding:16px 20px;cursor:pointer;list-style:none;font-size:14px;font-weight:800;color:var(--black);background:#f8fafc;transition:background .12s}
+details.faq-item summary::-webkit-details-marker{display:none}
+details.faq-item summary:hover{background:var(--green-xs)}
+.faq-arrow{width:26px;height:26px;background:white;border:2px solid var(--black);border-radius:50%;display:flex;align-items:center;justify-content:center;box-shadow:var(--shadow-sm);flex-shrink:0;transition:transform .2s}
+.faq-arrow svg{width:12px;height:12px}
+details[open] .faq-arrow{transform:rotate(180deg);background:var(--green-xs)}
+.faq-body{padding:14px 20px 18px;font-size:13px;font-weight:500;color:#475569;line-height:1.7;border-top:2px solid var(--black)}
+
+<style>
+.tool-context{background:var(--green-xs);border-left:4px solid var(--green-dk);border-radius:0 10px 10px 0;padding:12px 16px;margin-bottom:28px;font-size:14px;font-weight:500;line-height:1.7;color:#1e293b}
+.tool-context a{color:var(--green-dk);font-weight:700;text-decoration:underline}
+</style>
+</style>
+</head>
+<body>
+<!-- ═══════════════ SHARED NAV SNIPPET ═══════════════ -->
+<nav>
+  <div class="nav-inner">
+    <a href="index.html" class="logo">
+      <div class="logo-icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="3"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+      </div>
+      MailFix<span>.in</span>
+    </a>
+    <div class="nav-links">
+      <div class="nav-item">
+        <button class="nav-trigger">Calculators <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/></svg></button>
+        <div class="dropdown-panel">
+          <a href="ctc-calculator.html">CTC to In-Hand</a>
+          <a href="city-compare.html">City Salary Compare</a>
+          <a href="hra-calculator.html">HRA Exemption</a>
+          <a href="itr-calculator.html">ITR / Tax</a>
+          <a href="increment-calculator.html">Govt Increment</a>
+          <a href="leave-encashment.html">Leave Encashment</a>
+          <a href="retirement-calculator.html">Retirement</a>
+        </div>
+      </div>
+      <div class="nav-item">
+        <button class="nav-trigger">Documents <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/></svg></button>
+        <div class="dropdown-panel">
+          <a href="index.html">Email Fixer</a>
+          <a href="job-application.html">Job Application</a>
+          <a href="sarkari-letter.html">Sarkari Letter</a>
+          <a href="resignation.html">Resignation Kit</a>
+          <a href="rent-receipt.html">Rent Receipt</a>
+          <a href="gst-invoice.html">GST Invoice</a>
+        </div>
+      </div>
+      <div class="nav-item">
+        <button class="nav-trigger">Utilities <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/></svg></button>
+        <div class="dropdown-panel">
+          <a href="whatsapp-dhanda.html">WhatsApp Dhanda</a>
+          <a href="paraphrase.html">Paraphrase Tool</a>
+          <a href="photo-resizer.html">Photo Resizer</a>
+          <a href="qr-generator.html">QR Generator</a>
+          <a href="json-tools.html">JSON Tools</a>
+          <a href="date-calculator.html">Date & Age Calc</a>
+          <a href="health-calculator.html">Health Calculators</a>
+          <a href="vehicle-scrappage.html">Vehicle Scrappage</a>
+        </div>
+      </div>
+    </div>
+    <div style="display:flex;align-items:center;gap:12px">
+      <a href="index.html#main-tool" class="nav-cta">Fix Email Free</a>
+      <button class="mobile-toggle" id="mobileMenuBtn">
+        <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"/></svg>
+      </button>
+    </div>
+  </div>
+</nav>
+<div class="mobile-panel" id="mobilePanel">
+  <div class="mobile-panel-head">
+    <a href="index.html" class="logo">MailFix<span style="color:var(--green-dk)">.in</span></a>
+    <button class="close-btn" id="closeMobileBtn">
+      <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/></svg>
+    </button>
+  </div>
+  <div class="mobile-panel-body">
+    <a href="index.html#main-tool" class="mobile-cta">Fix Email Free →</a>
+    <p class="mobile-section-label">AI Tools</p>
+    <a href="index.html" class="mobile-link">📧 Email Fixer</a>
+    <a href="job-application.html" class="mobile-link">🎓 Job Application</a>
+    <a href="sarkari-letter.html" class="mobile-link">🏛️ Sarkari Letter</a>
+    <a href="resignation.html" class="mobile-link">🚪 Resignation Kit</a>
+    <a href="whatsapp-dhanda.html" class="mobile-link">📱 WhatsApp Dhanda</a>
+    <a href="paraphrase.html" class="mobile-link">✍️ Paraphrase Tool</a>
+    <p class="mobile-section-label">Calculators</p>
+    <a href="ctc-calculator.html" class="mobile-link">💰 CTC to In-Hand</a>
+    <a href="city-compare.html" class="mobile-link">🏙️ City Compare</a>
+    <a href="hra-calculator.html" class="mobile-link">🏠 HRA Exemption</a>
+    <a href="itr-calculator.html" class="mobile-link">📊 ITR / Tax</a>
+    <a href="increment-calculator.html" class="mobile-link">📈 Govt Increment</a>
+    <a href="leave-encashment.html" class="mobile-link">🏖️ Leave Encashment</a>
+    <a href="retirement-calculator.html" class="mobile-link">🎯 Retirement</a>
+    <p class="mobile-section-label">Utilities</p>
+    <a href="photo-resizer.html" class="mobile-link">🖼️ Photo Resizer</a>
+    <a href="qr-generator.html" class="mobile-link">📷 QR Generator</a>
+    <a href="json-tools.html" class="mobile-link">🔧 JSON Tools</a>
+    <a href="date-calculator.html" class="mobile-link">📅 Date & Age</a>
+    <a href="health-calculator.html" class="mobile-link">💪 Health Calculators</a>
+    <a href="vehicle-scrappage.html" class="mobile-link">🚗 Vehicle Scrappage</a>
+    <a href="rent-receipt.html" class="mobile-link">📄 Rent Receipt</a>
+    <a href="gst-invoice.html" class="mobile-link">🧾 GST Invoice</a>
+  </div>
+</div>
+<!-- ═══════════════ END NAV SNIPPET ═══════════════ -->
+
+<div class="breadcrumb"><div class="breadcrumb-inner">
+  <a href="index.html">🏠 Home</a><span class="breadcrumb-sep">›</span>
+  <span>Utilities › Health Calculators</span>
+</div></div>
+<main>
+<div class="page-hero" style="padding-bottom:28px">
+  <div class="page-badge">💪 Health Tools</div>
+  <h1>Health <span class="accent">Calculators</span></h1>
+  <p class="page-sub">BMI, BMR, TDEE, ideal weight and water intake — all in one place. Uses Asian BMI standards. Instant results.</p>
+</div>
+<div class="form-wrap">
+
+<div class="form-card">
+  <div class="form-card-header"><span class="form-card-title">💪 Health Calculators</span></div>
+  <div class="form-body">
+    <div style="display:flex;gap:10px;flex-wrap:wrap;margin-bottom:20px">
+      <button class="btn btn-black" id="tab-bmi"  onclick="switchTab('bmi')">⚖️ BMI</button>
+      <button class="btn btn-white" id="tab-bmr"  onclick="switchTab('bmr')">🔥 BMR / TDEE</button>
+      <button class="btn btn-white" id="tab-ideal" onclick="switchTab('ideal')">🎯 Ideal Weight</button>
+      <button class="btn btn-white" id="tab-water"   onclick="switchTab('water')">💧 Water Intake</button>
+      <button class="btn btn-white" id="tab-bodyfat" onclick="switchTab('bodyfat')">📊 Body Fat</button>
+      <button class="btn btn-white" id="tab-calorie" onclick="switchTab('calorie')">🍽️ Calorie Planner</button>
+    </div>
+
+    <div id="panel-bmi">
+      <div class="form-grid">
+        <div class="form-group"><label>Weight (kg)</label><input type="number" id="bmiWeight" placeholder="70" oninput="calcBMI()"/></div>
+        <div class="form-group"><label>Height (cm)</label><input type="number" id="bmiHeight" placeholder="170" oninput="calcBMI()"/></div>
+      </div>
+    </div>
+    <div id="panel-bmr" style="display:none">
+      <div class="form-grid">
+        <div class="form-group"><label>Weight (kg)</label><input type="number" id="bmrWeight" placeholder="70" oninput="calcBMR()"/></div>
+        <div class="form-group"><label>Height (cm)</label><input type="number" id="bmrHeight" placeholder="170" oninput="calcBMR()"/></div>
+        <div class="form-group"><label>Age (years)</label><input type="number" id="bmrAge" placeholder="30" oninput="calcBMR()"/></div>
+        <div class="form-group"><label>Gender</label><select id="bmrGender" onchange="calcBMR()"><option value="male">Male</option><option value="female">Female</option></select></div>
+        <div class="form-group full"><label>Activity Level</label>
+          <select id="actLevel" onchange="calcBMR()">
+            <option value="1.2">Sedentary (desk job, no exercise)</option>
+            <option value="1.375">Lightly Active (1-3 days/week)</option>
+            <option value="1.55" selected>Moderately Active (3-5 days/week)</option>
+            <option value="1.725">Very Active (6-7 days/week)</option>
+            <option value="1.9">Extremely Active (athlete / manual labour)</option>
+          </select>
+        </div>
+      </div>
+    </div>
+    <div id="panel-ideal" style="display:none">
+      <div class="form-grid">
+        <div class="form-group"><label>Height (cm)</label><input type="number" id="idealHeight" placeholder="170" oninput="calcIdeal()"/></div>
+        <div class="form-group"><label>Gender</label><select id="idealGender" onchange="calcIdeal()"><option value="male">Male</option><option value="female">Female</option></select></div>
+        <div class="form-group full"><label>Frame Size</label><select id="frame" onchange="calcIdeal()"><option value="small">Small</option><option value="medium" selected>Medium</option><option value="large">Large</option></select></div>
+      </div>
+    </div>
+    <div id="panel-water" style="display:none">
+      <div class="form-grid">
+        <div class="form-group"><label>Weight (kg)</label><input type="number" id="waterWeight" placeholder="70" oninput="calcWater()"/></div>
+        <div class="form-group"><label>Activity Level</label><select id="waterActivity" onchange="calcWater()"><option value="low">Low</option><option value="moderate" selected>Moderate</option><option value="high">High</option></select></div>
+        <div class="form-group full"><label>Climate</label><select id="climate" onchange="calcWater()"><option value="normal">Normal / AC office</option><option value="hot">Hot / outdoor work</option></select></div>
+      </div>
+    </div>
+    <div id="panel-bodyfat" style="display:none">
+      <div class="form-grid">
+        <div class="form-group"><label>Gender</label><select id="bfGender" onchange="calcBodyFat()"><option value="male">Male</option><option value="female">Female</option></select></div>
+        <div class="form-group"><label>Age (years)</label><input type="number" id="bfAge" placeholder="30" oninput="calcBodyFat()"/></div>
+        <div class="form-group"><label>Waist (cm)</label><input type="number" id="bfWaist" placeholder="80" oninput="calcBodyFat()"/></div>
+        <div class="form-group"><label>Neck (cm)</label><input type="number" id="bfNeck" placeholder="37" oninput="calcBodyFat()"/></div>
+        <div class="form-group"><label>Height (cm)</label><input type="number" id="bfHeight" placeholder="170" oninput="calcBodyFat()"/></div>
+        <div class="form-group" id="bfHipGroup"><label>Hip (cm) <span style="font-size:11px;color:var(--muted)">Women only</span></label><input type="number" id="bfHip" placeholder="95" oninput="calcBodyFat()"/></div>
+      </div>
+      <p style="font-size:12px;color:var(--muted);margin-top:8px">Uses the U.S. Navy Body Fat formula — measure at the widest point for waist/hip, and mid-neck for neck.</p>
+    </div>
+    <div id="panel-calorie" style="display:none">
+      <div class="form-grid">
+        <div class="form-group"><label>Weight (kg)</label><input type="number" id="cpWeight" placeholder="70" oninput="calcCaloriePlanner()"/></div>
+        <div class="form-group"><label>Height (cm)</label><input type="number" id="cpHeight" placeholder="170" oninput="calcCaloriePlanner()"/></div>
+        <div class="form-group"><label>Age (years)</label><input type="number" id="cpAge" placeholder="30" oninput="calcCaloriePlanner()"/></div>
+        <div class="form-group"><label>Gender</label><select id="cpGender" onchange="calcCaloriePlanner()"><option value="male">Male</option><option value="female">Female</option></select></div>
+        <div class="form-group full"><label>Activity Level</label>
+          <select id="cpActivity" onchange="calcCaloriePlanner()">
+            <option value="1.2">Sedentary (desk job, no exercise)</option>
+            <option value="1.375">Lightly Active (1-3 days/week)</option>
+            <option value="1.55" selected>Moderately Active (3-5 days/week)</option>
+            <option value="1.725">Very Active (6-7 days/week)</option>
+            <option value="1.9">Extremely Active (athlete / manual labour)</option>
+          </select>
+        </div>
+        <div class="form-group full"><label>Goal</label>
+          <select id="cpGoal" onchange="calcCaloriePlanner()">
+            <option value="lose_fast">Lose weight fast (−750 kcal/day)</option>
+            <option value="lose">Lose weight (−500 kcal/day)</option>
+            <option value="maintain" selected>Maintain weight</option>
+            <option value="gain">Gain muscle (＋300 kcal/day)</option>
+            <option value="gain_fast">Bulk (＋500 kcal/day)</option>
+          </select>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="output-section">
+    <div id="output" class="breakdown-box">
+      <div style="padding:28px;text-align:center;color:#94a3b8;font-style:italic">Fill in your details above</div>
+    </div>
+  </div>
+</div>
+</div>
+
+
+<div style="padding:0 24px;max-width:900px;margin:28px auto 0"><p class="tool-context">Health insurance premiums you pay are deductible under Section 80D in the <a href="new-vs-old-tax-regime.html">Old Tax Regime</a> — up to ₹25,000 for self and family, ₹50,000 for senior citizen parents. See the full deduction list in our <a href="salary-glossary.html">salary and tax glossary</a>.</p></div>
+<div class="section-how"><div class="section-how-inner">
+  <h2>How the Health Calculator Suite Works</h2><p class="how-sub">Get instant, evidence-based health metrics — no account or app needed.</p>
+  <div class="how-steps"><div class="how-step"><div class="how-step-num">1</div><h3>Select Your Calculator</h3><p>Choose from BMI, BMR, TDEE, Ideal Weight, or Body Fat calculators from the tab menu.</p></div><div class="how-step"><div class="how-step-num">2</div><h3>Enter Your Measurements</h3><p>Input your height, weight, age and gender. All calculations use metric (cm/kg) and imperial (ft/lbs) units.</p></div><div class="how-step"><div class="how-step-num">3</div><h3>Read Your Results</h3><p>Get your metric with a category classification (e.g. Normal, Overweight) and an explanation of what the number means for your health.</p></div></div>
+</div></div>
+<div class="section-faq"><div class="section-faq-inner">
+  <h2>Frequently Asked Questions</h2>
+  <div class="faq-list"><details class="faq-item"><summary>What is BMI and is it accurate?<div class="faq-arrow"><svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M2 4l4 4 4-4"/></svg></div></summary><div class="faq-body">BMI (Body Mass Index) is your weight in kg divided by height in metres squared. It is a quick screening tool — under 18.5 is underweight, 18.5-24.9 is normal, 25-29.9 is overweight, and 30+ is obese. However, BMI does not account for muscle mass, so athletes often have a high BMI despite being healthy.</div></details><details class="faq-item"><summary>What is the difference between BMR and TDEE?<div class="faq-arrow"><svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M2 4l4 4 4-4"/></svg></div></summary><div class="faq-body">BMR (Basal Metabolic Rate) is the number of calories your body burns at complete rest — just to keep organs functioning. TDEE (Total Daily Energy Expenditure) is BMR multiplied by your activity level. TDEE is what you should use to plan your actual calorie intake for weight loss or gain.</div></details><details class="faq-item"><summary>How do I calculate my ideal weight?<div class="faq-arrow"><svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M2 4l4 4 4-4"/></svg></div></summary><div class="faq-body">Our ideal weight calculator uses the Devine formula (most widely used clinically): for men, ideal weight = 50kg + 2.3kg per inch above 5 feet; for women, 45.5kg + 2.3kg per inch above 5 feet. This gives a reference range, not a hard target.</div></details><details class="faq-item"><summary>What activity multiplier should I use for TDEE?<div class="faq-arrow"><svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M2 4l4 4 4-4"/></svg></div></summary><div class="faq-body">Use 1.2 for sedentary (desk job, no exercise), 1.375 for lightly active (1-3 days/week exercise), 1.55 for moderately active (3-5 days/week), 1.725 for very active (hard exercise 6-7 days), and 1.9 for extra active (physical job + daily training).</div></details><details class="faq-item"><summary>Are these calculators accurate for Indians?<div class="faq-arrow"><svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M2 4l4 4 4-4"/></svg></div></summary><div class="faq-body">Standard BMI and weight formulas were developed from Western populations. Some research suggests Asian populations face health risks at lower BMI thresholds (23+ for overweight, 27.5+ for obese). Consult your doctor for personalised health assessments.</div></details></div>
+</div></div>
+</main>
+<footer><div class="footer-inner"><div class="footer-top"><div class="footer-logo">MailFix</div><div class="footer-links"><a href="index.html">Email Tool</a><a href="ctc-calculator.html">Salary Calc</a><a href="income-tax-slabs.html">Tax Slabs</a><a href="how-ctc-is-calculated.html">CTC Guide</a><a href="new-vs-old-tax-regime.html">Tax Regime</a><a href="salary-glossary.html">Glossary</a><a href="city-compare.html">City Compare</a><a href="whatsapp-dhanda.html">WA Dhanda</a><a href="sarkari-letter.html">Sarkari Letter</a><a href="privacy.html">Privacy Policy</a></div></div><div class="footer-copy">© 2026 MailFix. Free Tools for Indian Professionals.</div></div></footer>
+<script>
+  function switchTab(tab) {
+    ['bmi','bmr','ideal','water','bodyfat','calorie'].forEach(t=>{
+      document.getElementById('panel-'+t).style.display=t===tab?'block':'none';
+      document.getElementById('tab-'+t).className=t===tab?'btn btn-black':'btn btn-white';
+    });
+    document.getElementById('output').innerHTML='<div style="padding:28px;text-align:center;color:#94a3b8;font-style:italic">Fill in your details above</div>';
+  }
+  function row(k,v,cls=''){return `<div class="bd-row"><span class="k">${k}</span><span class="v ${cls}">${v}</span></div>`;}
+  function sec(t){return `<div class="sec-head">${t}</div>`;}
+
+  function calcBMI(){
+    const w=parseFloat(document.getElementById('bmiWeight').value)||0;
+    const h=parseFloat(document.getElementById('bmiHeight').value)/100||0;
+    if(!w||!h)return;
+    const bmi=w/(h*h);
+    let cat,cls;
+    if(bmi<18.5){cat='Underweight';cls='neg';}
+    else if(bmi<23){cat='Normal (Asian standard)';cls='pos';}
+    else if(bmi<27.5){cat='Overweight';cls='';}
+    else{cat='Obese';cls='neg';}
+    const hm=h*100;
+    const idealLow=(18.5*h*h).toFixed(1),idealHigh=(22.9*h*h).toFixed(1);
+    document.getElementById('output').innerHTML=
+      sec('BMI Result')+
+      row('Your BMI',bmi.toFixed(1),cls)+
+      row('Category',cat,cls)+
+      row('Ideal weight range (Asian)',idealLow+'–'+idealHigh+' kg','pos')+
+      sec('Reference')+
+      row('Underweight','< 18.5')+row('Normal','18.5–22.9')+row('Overweight','23–27.4')+row('Obese','≥ 27.5');
+  }
+
+  function calcBMR(){
+    const w=parseFloat(document.getElementById('bmrWeight').value)||0;
+    const h=parseFloat(document.getElementById('bmrHeight').value)||0;
+    const a=parseFloat(document.getElementById('bmrAge').value)||0;
+    const g=document.getElementById('bmrGender').value;
+    const act=parseFloat(document.getElementById('actLevel').value);
+    if(!w||!h||!a)return;
+    const bmr=g==='male'?(10*w)+(6.25*h)-(5*a)+5:(10*w)+(6.25*h)-(5*a)-161;
+    const tdee=bmr*act;
+    document.getElementById('output').innerHTML=
+      sec('Calorie Needs')+
+      row('BMR (base metabolic rate)',Math.round(bmr)+' kcal/day')+
+      row('TDEE (maintenance)',Math.round(tdee)+' kcal/day','pos')+
+      sec('Goals')+
+      row('Weight loss (−500 kcal)',Math.round(tdee-500)+' kcal/day')+
+      row('Weight gain (+300 kcal)',Math.round(tdee+300)+' kcal/day')+
+      sec('Macros (at maintenance)')+
+      row('Protein (30%)',Math.round(tdee*0.3/4)+' g/day')+
+      row('Carbs (45%)',Math.round(tdee*0.45/4)+' g/day')+
+      row('Fats (25%)',Math.round(tdee*0.25/9)+' g/day');
+  }
+
+  function calcIdeal(){
+    const h=parseFloat(document.getElementById('idealHeight').value)||0;
+    const g=document.getElementById('idealGender').value;
+    const f=document.getElementById('frame').value;
+    if(!h)return;
+    const hIn=(h-152.4)/2.54;
+    let base=g==='male'?50+2.3*hIn:45.5+2.3*hIn;
+    const adj={small:-2,medium:0,large:2}[f];
+    const low=(base+adj-2).toFixed(1),high=(base+adj+2).toFixed(1);
+    const bmiLow=(18.5*(h/100)**2).toFixed(1),bmiHigh=(22.9*(h/100)**2).toFixed(1);
+    document.getElementById('output').innerHTML=
+      sec('Ideal Weight')+
+      row('Devine formula',low+'–'+high+' kg','pos')+
+      row('BMI method (18.5–23)',bmiLow+'–'+bmiHigh+' kg','pos')+
+      row('Frame size',f.charAt(0).toUpperCase()+f.slice(1))+
+      row('Height',h+' cm / '+(h/30.48).toFixed(2)+' ft');
+  }
+
+  function calcWater(){
+    const w=parseFloat(document.getElementById('waterWeight').value)||0;
+    const act=document.getElementById('waterActivity').value;
+    const cli=document.getElementById('climate').value;
+    if(!w)return;
+    let base=w*0.033;
+    if(act==='moderate')base+=0.35;
+    if(act==='high')base+=0.7;
+    if(cli==='hot')base+=0.5;
+    const glasses=Math.round(base*1000/250);
+    document.getElementById('output').innerHTML=
+      sec('Daily Water Intake')+
+      row('Recommended',base.toFixed(1)+' litres / day','pos')+
+      row('In glasses (250ml)',glasses+' glasses')+
+      row('Spread over 16 hrs',Math.round(base/16*1000)+' ml/hr')+
+      sec('Tips')+
+      row('Morning (wake up)','500 ml (2 glasses)')+
+      row('Before each meal','250 ml')+
+      row('After workout','500–750 ml extra');
+  }
+
+  function calcBodyFat(){
+    const g=document.getElementById('bfGender').value;
+    const waist=parseFloat(document.getElementById('bfWaist').value)||0;
+    const neck=parseFloat(document.getElementById('bfNeck').value)||0;
+    const h=parseFloat(document.getElementById('bfHeight').value)||0;
+    const age=parseFloat(document.getElementById('bfAge').value)||0;
+    const hip=parseFloat(document.getElementById('bfHip').value)||0;
+    // Toggle hip field visibility
+    document.getElementById('bfHipGroup').style.display=g==='female'?'block':'none';
+    if(!waist||!neck||!h||!age)return;
+    if(g==='female'&&!hip)return;
+    let bf;
+    if(g==='male'){
+      bf=495/(1.0324-0.19077*Math.log10(waist-neck)+0.15456*Math.log10(h))-450;
+    } else {
+      bf=495/(1.29579-0.35004*Math.log10(waist+hip-neck)+0.22100*Math.log10(h))-450;
+    }
+    bf=Math.max(0,Math.round(bf*10)/10);
+    const leanMass=((100-bf)/100*(parseFloat(document.getElementById('bfAge').value)||70)).toFixed(1);
+    let cat,cls;
+    if(g==='male'){
+      if(bf<6){cat='Essential fat';cls='neg';}
+      else if(bf<14){cat='Athletic';cls='pos';}
+      else if(bf<18){cat='Fitness';cls='pos';}
+      else if(bf<25){cat='Average';cls='';}
+      else{cat='Obese';cls='neg';}
+    } else {
+      if(bf<14){cat='Essential fat';cls='neg';}
+      else if(bf<21){cat='Athletic';cls='pos';}
+      else if(bf<25){cat='Fitness';cls='pos';}
+      else if(bf<32){cat='Average';cls='';}
+      else{cat='Obese';cls='neg';}
+    }
+    const refMale=`<div class="bd-row"><span class="k">Essential</span><span class="v">2–5%</span></div><div class="bd-row"><span class="k">Athletic</span><span class="v">6–13%</span></div><div class="bd-row"><span class="k">Fitness</span><span class="v">14–17%</span></div><div class="bd-row"><span class="k">Average</span><span class="v">18–24%</span></div><div class="bd-row"><span class="k">Obese</span><span class="v">≥ 25%</span></div>`;
+    const refFemale=`<div class="bd-row"><span class="k">Essential</span><span class="v">10–13%</span></div><div class="bd-row"><span class="k">Athletic</span><span class="v">14–20%</span></div><div class="bd-row"><span class="k">Fitness</span><span class="v">21–24%</span></div><div class="bd-row"><span class="k">Average</span><span class="v">25–31%</span></div><div class="bd-row"><span class="k">Obese</span><span class="v">≥ 32%</span></div>`;
+    document.getElementById('output').innerHTML=
+      sec('Body Fat Result')+
+      row('Body Fat %',bf+'%',cls)+
+      row('Category',cat,cls)+
+      sec('Reference ('+g+')')+
+      (g==='male'?refMale:refFemale);
+  }
+
+  function calcCaloriePlanner(){
+    const w=parseFloat(document.getElementById('cpWeight').value)||0;
+    const h=parseFloat(document.getElementById('cpHeight').value)||0;
+    const a=parseFloat(document.getElementById('cpAge').value)||0;
+    const g=document.getElementById('cpGender').value;
+    const act=parseFloat(document.getElementById('cpActivity').value);
+    const goal=document.getElementById('cpGoal').value;
+    if(!w||!h||!a)return;
+    const bmr=g==='male'?(10*w)+(6.25*h)-(5*a)+5:(10*w)+(6.25*h)-(5*a)-161;
+    const tdee=Math.round(bmr*act);
+    const adj={lose_fast:-750,lose:-500,maintain:0,gain:300,gain_fast:500}[goal];
+    const target=tdee+adj;
+    const protein=Math.round(w*2); // 2g per kg body weight
+    const fat=Math.round(target*0.25/9);
+    const carbs=Math.round((target-protein*4-fat*9)/4);
+    const goalLabel={lose_fast:'Aggressive weight loss',lose:'Weight loss',maintain:'Maintenance',gain:'Lean gain',gain_fast:'Bulking'}[goal];
+    document.getElementById('output').innerHTML=
+      sec('Calorie Target')+
+      row('Maintenance (TDEE)',tdee+' kcal/day')+
+      row('Your goal',goalLabel)+
+      row('Target calories',target+' kcal/day','pos')+
+      sec('Macro Split')+
+      row('Protein ('+protein+'g × 4)',protein*4+' kcal — '+Math.round(protein*4/target*100)+'%')+
+      row('Carbohydrates ('+carbs+'g × 4)',carbs*4+' kcal — '+Math.round(carbs*4/target*100)+'%')+
+      row('Fats ('+fat+'g × 9)',fat*9+' kcal — '+Math.round(fat*9/target*100)+'%')+
+      sec('Weekly Projection')+
+      row('Estimated change',adj===0?'Maintain weight':(adj<0?'−':'+')+Math.abs(Math.round(adj*7/7700*100)/100).toFixed(2)+' kg/week');
+  }
+
+    const _mp=document.getElementById('mobilePanel');const _mb=document.getElementById('mobileMenuBtn');const _cb=document.getElementById('closeMobileBtn');
+  if(_mb)_mb.addEventListener('click',()=>{_mp.classList.add('open');document.body.style.overflow='hidden'});
+  if(_cb)_cb.addEventListener('click',()=>{_mp.classList.remove('open');document.body.style.overflow=''});
+  _mp.querySelectorAll('.mobile-link,.mobile-cta').forEach(a=>a.addEventListener('click',()=>{_mp.classList.remove('open');document.body.style.overflow=''}));
+  document.addEventListener('keydown',e=>{if(e.key==='Escape'){_mp.classList.remove('open');document.body.style.overflow=''}});
+</script>
+</body>
+</html>

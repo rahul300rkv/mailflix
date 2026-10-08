@@ -1,34 +1,73 @@
-# Groq API proxy
-/api/groq  /.netlify/functions/groq  200
+# ============================================================
+# Mailflix canonical URL redirects
+# .html URL -> clean URL = 301
+# clean URL -> physical .html file = 200 rewrite
+# ============================================================
 
-# Clean URL rewrites (no .html shown in browser or GSC)
-/city-compare           /city-compare.html           200
-/ctc-calculator         /ctc-calculator.html         200
-/date-calculator        /date-calculator.html        200
-/epf-withdrawal-guide   /epf-withdrawal-guide.html   200
-/gratuity-rules-india   /gratuity-rules-india.html   200
-/gst-invoice            /gst-invoice.html            200
-/health-calculator      /health-calculator.html      200
-/how-ctc-is-calculated  /how-ctc-is-calculated.html  200
-/hra-calculator         /hra-calculator.html         200
-/income-tax-slabs       /income-tax-slabs.html       200
-/increment-calculator   /increment-calculator.html   200
-/itr-calculator         /itr-calculator.html         200
-/job-application        /job-application.html        200
-/json-tools             /json-tools.html             200
-/leave-encashment       /leave-encashment.html       200
-/new-vs-old-tax-regime  /new-vs-old-tax-regime.html  200
-/paraphrase             /paraphrase.html             200
-/photo-resizer          /photo-resizer.html          200
-/privacy                /privacy.html                200
+/index.html /
+
+/city-compare.html /city-compare 301
+/ctc-calculator.html /ctc-calculator 301
+/date-calculator.html /date-calculator 301
+/epf-withdrawal-guide.html /epf-withdrawal-guide 301
+/gratuity-rules-india.html /gratuity-rules-india 301
+/gst-invoice.html /gst-invoice 301
+/health-calculator.html /health-calculator 301
+/how-ctc-is-calculated.html /how-ctc-is-calculated 301
+/hra-calculator.html /hra-calculator 301
+/income-tax-slabs.html /income-tax-slabs 301
+/increment-calculator.html /increment-calculator 301
+/itr-calculator.html /itr-calculator 301
+/job-application.html /job-application 301
+/json-tools.html /json-tools 301
+/leave-encashment.html /leave-encashment 301
+/new-vs-old-tax-regime.html /new-vs-old-tax-regime 301
+/paraphrase.html /paraphrase 301
+/photo-resizer.html /photo-resizer 301
+/privacy.html /privacy 301
+/professional-tax-india.html /professional-tax-india 301
+/qr-generator.html /qr-generator 301
+/rent-receipt.html /rent-receipt 301
+/resignation.html /resignation 301
+/retirement-calculator.html /retirement-calculator 301
+/salary-glossary.html /salary-glossary 301
+/sarkari-letter.html /sarkari-letter 301
+/vehicle-scrappage.html /vehicle-scrappage 301
+/what-is-form-16.html /what-is-form-16 301
+/what-is-tds.html /what-is-tds 301
+/whatsapp-dhanda.html /whatsapp-dhanda 301
+
+# ============================================================
+# Clean URL rewrites
+# ============================================================
+
+/city-compare /city-compare.html 200
+/ctc-calculator /ctc-calculator.html 200
+/date-calculator /date-calculator.html 200
+/epf-withdrawal-guide /epf-withdrawal-guide.html 200
+/gratuity-rules-india /gratuity-rules-india.html 200
+/gst-invoice /gst-invoice.html 200
+/health-calculator /health-calculator.html 200
+/how-ctc-is-calculated /how-ctc-is-calculated.html 200
+/hra-calculator /hra-calculator.html 200
+/income-tax-slabs /income-tax-slabs.html 200
+/increment-calculator /increment-calculator.html 200
+/itr-calculator /itr-calculator.html 200
+/job-application /job-application.html 200
+/json-tools /json-tools.html 200
+/leave-encashment /leave-encashment.html 200
+/new-vs-old-tax-regime /new-vs-old-tax-regime.html 200
+/paraphrase /paraphrase.html 200
+/photo-resizer /photo-resizer.html 200
+/privacy /privacy.html 200
 /professional-tax-india /professional-tax-india.html 200
-/qr-generator           /qr-generator.html           200
-/rent-receipt           /rent-receipt.html           200
-/resignation            /resignation.html            200
-/retirement-calculator  /retirement-calculator.html  200
-/salary-glossary        /salary-glossary.html        200
-/sarkari-letter         /sarkari-letter.html         200
-/vehicle-scrappage      /vehicle-scrappage.html      200
-/what-is-form-16        /what-is-form-16.html        200
-/what-is-tds            /what-is-tds.html            200
-/whatsapp-dhanda        /whatsapp-dhanda.html        200
+/qr-generator /qr-generator.html 200
+/rent-receipt /rent-receipt.html 200
+/resignation /resignation.html 200
+/retirement-calculator /retirement-calculator.html 200
+/salary-glossary /salary-glossary.html 200
+/sarkari-letter /sarkari-letter.html 200
+/vehicle-scrappage /vehicle-scrappage.html 200
+/what-is-form-16 /what-is-form-16.html 200
+/what-is-tds /what-is-tds.html 200
+/whatsapp-dhanda /whatsapp-dhanda.html 200
