@@ -121,7 +121,7 @@ ${text.trim()}`;
     body: JSON.stringify({
       error: "Groq API error",
       status: response.status,
-      details: data?.error?.message || data
+      details: data?.error?.message || "Unknown Groq error"
     })
   };
 }
