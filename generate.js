@@ -2,7 +2,6 @@ exports.handler = async function(event) {
   if (event.httpMethod !== 'POST') {
     return { statusCode: 405, body: 'Method Not Allowed' };
   }
-
   const GROQ_KEY = process.env.GROQ_API_KEY;
   if (!GROQ_KEY) {
     return { statusCode: 500, body: JSON.stringify({ error: 'API key not configured.' }) };
