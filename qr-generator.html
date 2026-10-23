@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title>Free QR Code Generator India — URL, UPI, WiFi, vCard | MailFix</title>
+<title>Free QR Code Generator — URL, UPI, WiFi | MailFix</title>
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -681,7 +681,7 @@ details[open] .faq-arrow{transform:rotate(180deg);background:var(--green-xs)}
       document.getElementById('copyQRDataBtn').style.display='flex';
     };
     img.onerror = function() {
-      document.getElementById('qrPreview').innerHTML=`<img src="${qrUrl}" style="max-width:${size}px;border-radius:8px" onerror="this.style.display='none'"/>`;
+      document.getElementById('qrPreview').innerHTML=`<img src="${qrUrl}" alt="Generated QR code" style="max-width:${size}px;border-radius:8px" onerror="this.style.display='none'"/>`;
       document.getElementById('downloadQRBtn').style.display='flex';
       document.getElementById('copyQRDataBtn').style.display='flex';
     };
