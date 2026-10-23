@@ -1,6 +1,6 @@
 # MailFix
 
-> MailFix (mailflix.netlify.app) is a free, no-signup suite of AI-powered tools and calculators built specifically for Indian professionals. It covers salary and tax calculations (FY 2025-26), HR document generation, utility tools, and AI writing assistants — all running client-side with no data sent to any server.
+> MailFix (mailflix.netlify.app) is a free, no-signup suite of AI-powered tools and calculators built specifically for Indian professionals. It covers salary and tax calculations (FY 2025-26), HR document generation, utility tools, and AI writing assistants — calculators and utility tools run in the browser, while the six AI writing tools send the text you enter to a third-party LLM API (Groq) through a Netlify serverless function.
 
 MailFix is made for salaried employees, small business owners, freelancers, students, and government workers in India. Every tool is free, instant, and works without creating an account. Financial calculators use current FY 2025-26 tax slabs and Indian-specific rules (PF, HRA, professional tax, GST, 7th Pay Commission).
 
@@ -39,14 +39,14 @@ MailFix is made for salaried employees, small business owners, freelancers, stud
 
 ## Other Pages
 
-- [Privacy Policy](https://mailflix.netlify.app/privacy): No personal data collected. No user accounts. Analytics via Google Analytics only. Ad-supported via Google AdSense.
+- [Privacy Policy](https://mailflix.netlify.app/privacy): No user accounts. Text entered in AI tools is sent to the Groq LLM API for processing and is not stored by MailFix. Analytics via Google Analytics only. Ad-supported via Google AdSense.
 
 ## About MailFix
 
 - **Domain**: mailflix.netlify.app
 - **Audience**: Indian salaried professionals, small business owners, freelancers, government employees, students
 - **Language**: English (India), with Hinglish support in relevant tools
-- **Data privacy**: All tools run client-side. No user data is stored or transmitted except for AI tools (paraphrase, email fixer, letter generators) which call Groq LLM API via a Netlify serverless function. No user login required anywhere.
+- **Data privacy**: The AI tools (email fixer, job application, resignation letter, sarkari letter, WhatsApp Dhanda, paraphrase) send the text you enter to the Groq LLM API via a Netlify serverless function; MailFix does not store it. All other tools (calculators, document generators, utilities) run client-side in the browser. No user login required anywhere.
 - **Monetisation**: Google AdSense display ads. No paid tiers or subscriptions.
 - **Tax data freshness**: All financial calculators use FY 2025-26 (Assessment Year 2026-27) Indian income tax slabs and rules.
 - **Last updated**: August 2026
