@@ -449,6 +449,7 @@ details[open] .faq-arrow{transform:rotate(180deg);background:var(--green-xs)}
 </style>
 </style>
 
+<link rel="sitemap" type="application/xml" title="Sitemap" href="https://mailflix.netlify.app/sitemap.xml"/>
 </head>
 <body>
 <!-- ═══════════════ SHARED NAV SNIPPET ═══════════════ -->
@@ -657,7 +658,7 @@ details[open] .faq-arrow{transform:rotate(180deg);background:var(--green-xs)}
       <div class="footer-links">
         <a href="/">Email Tool</a><a href="/ctc-calculator">Salary Calc</a>
         <a href="/city-compare">City Compare</a><a href="/whatsapp-dhanda">WA Dhanda</a>
-        <a href="/sarkari-letter">Sarkari Letter</a><a href="/privacy">Privacy Policy</a>
+        <a href="/sarkari-letter">Sarkari Letter</a><a href="/sitemap">Sitemap</a> <a href="/sitemap.xml">XML</a> <a href="/privacy">Privacy Policy</a>
       </div>
     </div>
     <div class="footer-copy">© 2026 MailFix. Free Tools for Indian Professionals.</div>
@@ -769,7 +770,8 @@ details[open] .faq-arrow{transform:rotate(180deg);background:var(--green-xs)}
   function printLetter() {
     if (!lastLetter) return;
     const win = window.open('', '_blank');
-    win.document.write(`<!DOCTYPE html><html><head><title>Resignation Letter — MailFix</title><style>body{font-family:'Times New Roman',serif;font-size:14pt;line-height:1.8;margin:2cm;color:#000}pre{white-space:pre-wrap;font-family:inherit}</style></head><body><pre>${lastLetter}</pre></body></html>`);
+    win.document.write(`<!DOCTYPE html><html><head><title>Resignation Letter — MailFix</title><style>body{font-family:'Times New Roman',serif;font-size:14pt;line-height:1.8;margin:2cm;color:#000}pre{white-space:pre-wrap;font-family:inherit}</style><link rel="sitemap" type="application/xml" title="Sitemap" href="https://mailflix.netlify.app/sitemap.xml"/>
+</head><body><pre>${lastLetter}</pre></body></html>`);
     win.document.close(); win.print();
   }
 

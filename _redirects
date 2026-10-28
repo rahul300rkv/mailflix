@@ -41,6 +41,7 @@
 /sip-calculator.html /sip-calculator 301!
 /form-12bb.html /form-12bb 301!
 /nps-calculator.html /nps-calculator 301!
+/sitemap.html /sitemap 301!
 # ============================================================
 # Clean URL rewrites
 # ============================================================
@@ -80,3 +81,4 @@
 /sip-calculator /sip-calculator.html 200
 /form-12bb /form-12bb.html 200
 /nps-calculator /nps-calculator.html 200
+/sitemap /sitemap.html 200
