@@ -1,6 +1,15 @@
 User-agent: *
 Allow: /
 Disallow: /api/
-Disallow: /.netlify/
+
+User-agent: Googlebot
+Allow: /
+
+User-agent: Googlebot-Image
+Allow: /
+
+User-agent: Bingbot
+Allow: /
 
 Sitemap: https://mailflix.netlify.app/sitemap.xml
+Host: https://mailflix.netlify.app

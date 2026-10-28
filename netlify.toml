@@ -8,13 +8,36 @@
   to     = "/.netlify/functions/groq"
   status = 200
 
-# Security + caching headers
+# Security + caching + SEO headers
 [[headers]]
   for = "/*"
   [headers.values]
+    X-Robots-Tag = "all, max-snippet:-1, max-image-preview:large, max-video-preview:-1"
     X-Content-Type-Options = "nosniff"
     Referrer-Policy = "strict-origin-when-cross-origin"
     X-Frame-Options = "SAMEORIGIN"
+
+[[headers]]
+  for = "/sitemap.xml"
+  [headers.values]
+    Content-Type = "application/xml; charset=utf-8"
+    Cache-Control = "public, max-age=86400"
+
+[[headers]]
+  for = "/robots.txt"
+  [headers.values]
+    Content-Type = "text/plain; charset=utf-8"
+    Cache-Control = "public, max-age=86400"
+
+[[headers]]
+  for = "/google3dfa12bb82b9d6b2.html"
+  [headers.values]
+    Content-Type = "text/html; charset=utf-8"
+
+[[headers]]
+  for = "/BingSiteAuth.xml"
+  [headers.values]
+    Content-Type = "application/xml; charset=utf-8"
 
 [[headers]]
   for = "/og-image.png"
