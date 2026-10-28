@@ -37,6 +37,10 @@
 /what-is-tds.html /what-is-tds 301!
 /whatsapp-dhanda.html /whatsapp-dhanda 301!
 
+/notice-period-calculator.html /notice-period-calculator 301!
+/sip-calculator.html /sip-calculator 301!
+/form-12bb.html /form-12bb 301!
+/nps-calculator.html /nps-calculator 301!
 # ============================================================
 # Clean URL rewrites
 # ============================================================
@@ -71,3 +75,8 @@
 /what-is-form-16 /what-is-form-16.html 200
 /what-is-tds /what-is-tds.html 200
 /whatsapp-dhanda /whatsapp-dhanda.html 200
+
+/notice-period-calculator /notice-period-calculator.html 200
+/sip-calculator /sip-calculator.html 200
+/form-12bb /form-12bb.html 200
+/nps-calculator /nps-calculator.html 200

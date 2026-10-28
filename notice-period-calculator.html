@@ -1,0 +1,838 @@
+<!DOCTYPE html>
+<html lang="en-IN">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Notice Period Buyout Calculator India — Shortfall Pay & GST | MailFix</title>
+<link rel="canonical" href="https://mailflix.netlify.app/notice-period-calculator"/>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": [
+    "WebApplication",
+    "SoftwareApplication"
+  ],
+  "name": "Notice Period Buyout Calculator India",
+  "description": "Calculate exact notice period buyout recovery amount for Indian corporate and IT employees. Supports Basic vs Gross salary formulas, 30 vs 26-day per-day rates, leave encashment adjustment, and 18% GST rules under CBIC circulars.",
+  "url": "https://mailflix.netlify.app/notice-period-calculator",
+  "applicationCategory": "FinanceApplication",
+  "operatingSystem": "Any — runs in web browser",
+  "browserRequirements": "Requires JavaScript. Works in Chrome, Firefox, Safari, Edge.",
+  "featureList": [
+    "Shortfall days calculation",
+    "Basic salary vs Gross CTC recovery basis",
+    "30-day vs 26-day working divisor",
+    "Earned leave (EL/PL) notice offset",
+    "18% GST recovery calculator",
+    "New employer reimbursement and tax perquisite impact",
+    "HR early release and buyout request email generator"
+  ],
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "INR",
+    "availability": "https://schema.org/InStock"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "MailFix",
+    "url": "https://mailflix.netlify.app/"
+  },
+  "inLanguage": [
+    "en-IN",
+    "hi"
+  ],
+  "isAccessibleForFree": true,
+  "isFamilyFriendly": true,
+  "countryOfOrigin": "IN",
+  "audience": {
+    "@type": "Audience",
+    "audienceType": "Indian salaried professionals, IT employees, HR managers, job seekers",
+    "geographicArea": {
+      "@type": "Country",
+      "name": "India"
+    }
+  }
+}
+</script>
+<meta name="description" content="Calculate notice period buyout recovery amount in India. Accurate basic vs gross calculation, shortfall days formula, 18% GST rules & employer buyout guide."/>
+<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1"/>
+<meta name="googlebot" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1"/>
+<meta name="bingbot" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1"/>
+<!-- Regional Geo-Targeting (India) -->
+<meta name="geo.region" content="IN"/>
+<meta name="geo.placename" content="India"/>
+<meta name="geo.position" content="20.593684;78.96288"/>
+<meta name="ICBM" content="20.593684, 78.96288"/>
+<!-- Search Engine Verification -->
+<meta name="google-site-verification" content="google3dfa12bb82b9d6b2"/>
+<meta name="msvalidate.01" content="D29A28C9D6AD37573C4F07224CFDA0D2"/>
+<!-- Regional Language Alternates -->
+<link rel="alternate" hreflang="en-IN" href="https://mailflix.netlify.app/notice-period-calculator"/>
+<link rel="alternate" hreflang="hi-IN" href="https://mailflix.netlify.app/notice-period-calculator"/>
+<link rel="alternate" hreflang="x-default" href="https://mailflix.netlify.app/notice-period-calculator"/>
+<link rel="alternate" type="text/plain" href="https://mailflix.netlify.app/llms.txt" title="LLMs.txt — MailFix AI index"/>
+
+<meta property="og:type" content="website"/>
+<meta property="og:url" content="https://mailflix.netlify.app/notice-period-calculator"/>
+<meta property="og:title" content="Notice Period Buyout Calculator India — Shortfall Pay & GST | MailFix"/>
+<meta property="og:description" content="Calculate exact notice period buyout recovery in India. Basic vs Gross salary, shortfall days, 18% GST impact & new company reimbursement."/>
+<meta property="og:image" content="https://mailflix.netlify.app/og-image.png"/>
+<meta property="og:site_name" content="MailFix"/>
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:title" content="Notice Period Buyout Calculator India | MailFix"/>
+<meta name="twitter:description" content="Calculate notice period buyout amount, shortfall days, GST impact, and HR email generator."/>
+<meta name="twitter:image" content="https://mailflix.netlify.app/og-image.png"/>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://mailflix.netlify.app/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Calculators",
+      "item": "https://mailflix.netlify.app/ctc-calculator"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Notice Period Buyout Calculator",
+      "item": "https://mailflix.netlify.app/notice-period-calculator"
+    }
+  ]
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How is notice period buyout calculated in India?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Notice period buyout is calculated as: (Per-day salary rate) × (Shortfall notice days). Most Indian employment contracts calculate per-day rate based on Basic Salary divided by 30 days (or 26 working days), although some companies specify Gross Salary or Fixed CTC. Any accumulated privilege leaves (EL/PL) can often be adjusted to reduce shortfall days."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is notice period buyout calculated on Basic Salary or Gross CTC?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "In majority of Indian companies (TCS, Infosys, Wipro, and standard Indian IT/corporate contracts), notice recovery is calculated on monthly Basic Salary only. However, the exact clause in your appointment letter governs this. If your contract states recovery on gross salary or CTC, the company may attempt to deduct gross salary."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is 18% GST applicable on notice period recovery in India?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "As per CBIC Circular No. 178/10/2022-GST issued by the Ministry of Finance, notice pay forfeiture or recovery by an employer is NOT considered a taxable supply of service, and therefore GST should NOT be levied on notice period recovery. However, if your employer still adds 18% GST to your Full & Final (FNF) settlement, you can cite this official CBIC circular to request its removal."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can an employer reject a notice period buyout request?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Notice period buyout is not an absolute statutory right of the employee. Acceptance of a buyout depends on company discretion and project handover requirements. However, companies cannot withhold your relieving letter indefinitely once full settlement and handover are completed."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "If my new employer reimburses my notice buyout, is it taxable?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Under Section 17(2) of the Indian Income Tax Act, any notice period buyout reimbursed by your new employer is treated as a perquisite or taxable salary income in the hands of the employee, and TDS will be deducted accordingly by the new employer."
+      }
+    }
+  ]
+}
+</script>
+
+<!-- Google AdSense -->
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3532554351654388" crossorigin="anonymous"></script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet"/>
+
+<style>
+/* ─── SHARED DESIGN SYSTEM ─────────────────────────────── */
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --green:#22c55e;--green-dk:#16a34a;--green-lt:#dcfce7;--green-xs:#f0fdf4;
+  --black:#000;--white:#fff;--ink:#0f172a;--muted:#64748b;
+  --border:#e2e8f0;--paper:#fdfdfc;--card:#fff;
+  --red-lt:#fef2f2;--red:#dc2626;--blue-lt:#eff6ff;--blue:#2563eb;
+  --shadow:4px 4px 0px 0px #000;--shadow-sm:2px 2px 0px 0px #000;--shadow-lg:6px 6px 0px 0px #000;
+  --radius:12px;--font:"Plus Jakarta Sans",sans-serif;
+}
+html{scroll-behavior:smooth}
+body{font-family:var(--font);background:var(--paper);color:var(--ink);font-size:16px;line-height:1.6;min-height:100vh;-webkit-font-smoothing:antialiased}
+::-webkit-scrollbar{width:8px}
+::-webkit-scrollbar-track{background:transparent}
+::-webkit-scrollbar-thumb{background:#cbd5e1;border-radius:4px}
+
+/* NAV */
+nav{position:sticky;top:0;z-index:100;background:rgba(255,255,255,.92);backdrop-filter:blur(10px);border-bottom:2px solid var(--black)}
+.nav-inner{max-width:1100px;margin:0 auto;padding:0 24px;display:flex;align-items:center;justify-content:space-between;height:64px}
+.logo{display:flex;align-items:center;gap:10px;font-size:20px;font-weight:800;letter-spacing:-.5px;color:var(--black);text-decoration:none}
+.logo-icon{width:34px;height:34px;background:var(--green);border:2px solid var(--black);border-radius:8px;display:flex;align-items:center;justify-content:center;transform:rotate(-3deg);box-shadow:var(--shadow-sm)}
+.logo-icon svg{width:18px;height:18px}
+.logo span{color:var(--green-dk)}
+.nav-links{display:flex;align-items:center;gap:4px}
+.nav-item{position:relative}
+.nav-trigger{display:flex;align-items:center;gap:4px;padding:6px 12px;border-radius:8px;font-size:14px;font-weight:700;color:var(--muted);background:none;border:none;cursor:pointer;font-family:var(--font);transition:color .15s,background .15s}
+.nav-trigger:hover{color:var(--black);background:#f8fafc}
+.nav-trigger svg{width:14px;height:14px;transition:transform .2s}
+.nav-item:hover .nav-trigger svg{transform:rotate(180deg)}
+.dropdown-panel{display:none;position:absolute;top:100%;left:0;min-width:220px;background:var(--white);border:2px solid var(--black);border-radius:14px;box-shadow:var(--shadow);padding:10px 6px 6px;z-index:200}
+.nav-item::after{content:"";position:absolute;top:100%;left:0;width:100%;height:12px;display:block}
+.nav-item:hover .dropdown-panel,.dropdown-panel.open{display:flex;flex-direction:column}
+.dropdown-panel a{display:block;padding:9px 14px;border-radius:8px;font-size:13px;font-weight:700;color:var(--muted);text-decoration:none;transition:background .12s,color .12s}
+.dropdown-panel a:hover{background:var(--green-xs);color:var(--black)}
+.nav-cta{padding:9px 20px;background:var(--green);color:white;font-size:13px;font-weight:800;border:2px solid var(--black);border-radius:10px;box-shadow:var(--shadow-sm);cursor:pointer;text-decoration:none;transition:transform .12s,box-shadow .12s}
+.nav-cta:hover{transform:translate(2px,2px);box-shadow:none}
+
+.mobile-toggle{display:none;background:white;border:2px solid var(--black);border-radius:8px;padding:6px;cursor:pointer;box-shadow:var(--shadow-sm);align-items:center}
+.mobile-toggle svg{width:22px;height:22px;display:block}
+.mobile-panel{display:none;position:fixed;inset:0;z-index:500;background:white;overflow-y:auto;transform:translateX(100%);transition:transform .28s ease;border-left:2px solid var(--black)}
+.mobile-panel.open{transform:translateX(0)}
+.mobile-panel-head{display:flex;align-items:center;justify-content:space-between;padding:16px 20px;border-bottom:2px solid var(--black);background:var(--green-xs)}
+.mobile-panel-body{padding:24px 20px;display:flex;flex-direction:column;gap:10px}
+.mobile-link{display:flex;align-items:center;gap:10px;padding:12px 16px;border-radius:10px;border:2px solid var(--border);font-size:15px;font-weight:700;color:var(--ink);text-decoration:none}
+.mobile-link:hover{border-color:var(--green);background:var(--green-xs)}
+.mobile-cta{display:block;text-align:center;padding:14px;background:var(--green);color:white;font-weight:800;font-size:15px;border:2px solid var(--black);border-radius:12px;box-shadow:var(--shadow);text-decoration:none}
+.mobile-section-label{font-size:10px;font-weight:800;letter-spacing:.12em;text-transform:uppercase;color:#94a3b8;margin-top:6px;padding:0 4px}
+.close-btn{background:white;border:2px solid var(--black);border-radius:8px;padding:6px;cursor:pointer;box-shadow:var(--shadow-sm)}
+.close-btn svg{width:20px;height:20px;display:block}
+
+/* PAGE HERO */
+.page-hero{max-width:900px;margin:0 auto;padding:50px 24px 36px;text-align:center}
+.page-badge{display:inline-flex;align-items:center;gap:8px;padding:5px 18px;border:2px solid var(--black);border-radius:99px;background:white;box-shadow:var(--shadow-sm);font-size:11px;font-weight:800;letter-spacing:.12em;text-transform:uppercase;margin-bottom:18px;color:var(--black)}
+h1{font-size:clamp(28px,4.5vw,48px);font-weight:800;line-height:1.15;letter-spacing:-1px;color:var(--black);margin-bottom:14px}
+h1 .accent{color:var(--green-dk)}
+.page-sub{font-size:16px;color:var(--muted);font-weight:500;max-width:620px;margin:0 auto;line-height:1.6}
+
+/* FORM WRAP */
+.form-wrap{max-width:960px;margin:0 auto;padding:0 24px 60px}
+.form-card{background:white;border:4px solid var(--black);border-radius:20px;box-shadow:var(--shadow-lg);overflow:hidden}
+.form-card-header{padding:18px 24px;border-bottom:2px solid var(--black);background:var(--green-xs);display:flex;align-items:center;justify-content:space-between}
+.form-card-title{font-size:13px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;color:var(--green-dk)}
+.form-body{padding:28px 24px}
+.form-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+.form-group{display:flex;flex-direction:column;gap:6px}
+.form-group.full{grid-column:1/-1}
+label{font-size:13px;font-weight:700;color:var(--ink)}
+label span{font-weight:500;color:var(--muted);font-size:12px;margin-left:4px}
+input,select,textarea{width:100%;padding:11px 14px;border:2px solid var(--border);border-radius:10px;font-family:var(--font);font-size:15px;font-weight:500;color:var(--ink);background:white;outline:none;transition:border-color .15s,box-shadow .15s}
+input:focus,select:focus,textarea:focus{border-color:var(--black);box-shadow:var(--shadow-sm)}
+.hint-text{font-size:12px;color:var(--muted);margin-top:2px}
+
+.quick-btn-row{display:flex;gap:6px;margin-top:6px;flex-wrap:wrap}
+.quick-btn{padding:4px 10px;border:1.5px solid var(--black);border-radius:6px;background:#f8fafc;font-size:11px;font-weight:700;cursor:pointer;transition:background .15s}
+.quick-btn:hover{background:var(--green-lt)}
+
+.toggle-card{border:2px solid var(--border);border-radius:12px;padding:14px;background:#fafafa;display:flex;align-items:center;justify-content:space-between;gap:12px;margin-top:4px}
+.toggle-card.active{border-color:var(--black);background:var(--green-xs)}
+.toggle-switch{position:relative;width:44px;height:24px;flex-shrink:0}
+.toggle-switch input{opacity:0;width:0;height:0}
+.slider{position:absolute;cursor:pointer;inset:0;background:#cbd5e1;border-radius:24px;transition:.2s;border:2px solid var(--black)}
+.slider:before{position:absolute;content:"";height:14px;width:14px;left:3px;bottom:3px;background:white;border-radius:50%;transition:.2s;border:1px solid #000}
+input:checked + .slider{background:var(--green)}
+input:checked + .slider:before{transform:translateX(20px)}
+
+/* RESULTS BOX */
+.results-box{margin-top:24px;border:3px solid var(--black);border-radius:16px;background:#f8fafc;overflow:hidden;box-shadow:var(--shadow)}
+.results-header{padding:14px 20px;background:var(--black);color:white;display:flex;justify-content:space-between;align-items:center}
+.results-title{font-size:13px;font-weight:800;letter-spacing:.08em;text-transform:uppercase}
+.results-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:14px;padding:20px}
+.res-card{background:white;border:2px solid var(--black);border-radius:12px;padding:16px;box-shadow:2px 2px 0 #000}
+.res-card.highlight{background:var(--green-xs);border-color:var(--green-dk)}
+.res-card.warn{background:var(--red-lt);border-color:var(--red)}
+.res-label{font-size:11px;font-weight:800;text-transform:uppercase;color:var(--muted);letter-spacing:.05em}
+.res-val{font-size:22px;font-weight:800;color:var(--black);margin-top:4px;line-height:1.2}
+.res-sub{font-size:12px;color:var(--muted);margin-top:4px}
+
+.calc-breakdown{padding:16px 20px;border-top:2px dashed var(--border);background:white;font-size:14px}
+.breakdown-row{display:flex;justify-content:space-between;align-items:center;padding:6px 0;border-bottom:1px solid #f1f5f9}
+.breakdown-row.total{border-top:2px solid var(--black);border-bottom:none;margin-top:8px;padding-top:10px;font-size:16px;font-weight:800}
+
+/* EMAIL GENERATOR DRAWER */
+.email-gen-box{margin-top:28px;border:2px solid var(--black);border-radius:14px;background:#ffffff;padding:20px;box-shadow:var(--shadow-sm)}
+.email-gen-title{font-size:15px;font-weight:800;color:var(--black);display:flex;align-items:center;gap:8px;margin-bottom:12px}
+.email-preview-box{background:#f8fafc;border:1.5px solid var(--border);border-radius:8px;padding:16px;font-size:13px;line-height:1.7;white-space:pre-wrap;font-family:monospace;color:#1e293b}
+.copy-btn{margin-top:12px;padding:10px 18px;background:var(--green);border:2px solid var(--black);border-radius:8px;font-weight:800;font-size:13px;cursor:pointer;box-shadow:var(--shadow-sm);transition:transform .1s,box-shadow .1s}
+.copy-btn:hover{transform:translate(2px,2px);box-shadow:none}
+
+/* CONTENT & FAQ */
+.seo-section{max-width:960px;margin:0 auto 80px;padding:0 24px}
+.seo-box{background:white;border:3px solid var(--black);border-radius:20px;box-shadow:var(--shadow-lg);padding:36px 30px}
+.seo-box h2{font-size:24px;font-weight:800;color:var(--black);margin:24px 0 12px}
+.seo-box h2:first-child{margin-top:0}
+.seo-box h3{font-size:18px;font-weight:800;color:var(--black);margin:20px 0 8px}
+.seo-box p{font-size:15px;color:#334155;line-height:1.75;margin-bottom:14px}
+.seo-box ul{margin-left:22px;margin-bottom:16px;color:#334155}
+.seo-box li{margin-bottom:8px;font-size:15px}
+
+.rule-alert{background:#fefce8;border:2px solid #ca8a04;border-radius:10px;padding:16px;margin:18px 0;font-size:14px;color:#713f12;line-height:1.6}
+.rule-alert strong{color:#000}
+
+.faq-item{border:2px solid var(--black);border-radius:12px;margin-bottom:12px;overflow:hidden;box-shadow:2px 2px 0 #000}
+.faq-q{padding:16px 20px;font-weight:800;font-size:15px;background:white;cursor:pointer;display:flex;justify-content:space-between;align-items:center}
+.faq-q svg{width:18px;height:18px;transition:transform .2s}
+.faq-item.open .faq-q svg{transform:rotate(180deg)}
+.faq-a{display:none;padding:16px 20px;background:#f8fafc;border-top:1px solid #e2e8f0;font-size:14px;line-height:1.7;color:#334155}
+.faq-item.open .faq-a{display:block}
+
+/* FOOTER */
+footer{background:white;border-top:3px solid var(--black);padding:48px 24px;font-size:14px;color:var(--muted)}
+.footer-inner{max-width:1100px;margin:0 auto;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:20px}
+.footer-links{display:flex;gap:18px;flex-wrap:wrap}
+.footer-links a{color:var(--ink);text-decoration:none;font-weight:700}
+.footer-links a:hover{color:var(--green-dk)}
+
+@media(max-width:768px){
+  .nav-links{display:none}
+  .mobile-toggle{display:flex}
+  .mobile-panel{display:block}
+  .form-grid{grid-template-columns:1fr}
+  .seo-box{padding:24px 18px}
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <div class="nav-inner">
+    <a href="/" class="logo">
+      <div class="logo-icon">
+        <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+      </div>
+      Mailflix
+    </a>
+
+    <div class="nav-links">
+      <!-- Calculators -->
+      <div class="nav-item">
+        <button class="nav-trigger">
+          Calculators
+          <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/></svg>
+        </button>
+        <div class="dropdown-panel">
+          <a href="/notice-period-calculator" style="color:var(--black);font-weight:800">Notice Period Buyout</a>
+          <a href="/sip-calculator">SIP &amp; Step-Up Calc</a>
+          <a href="/nps-calculator">NPS Pension Calc</a>
+          <a href="/ctc-calculator">CTC to In-Hand</a>
+          <a href="/city-compare">City Salary Compare</a>
+          <a href="/hra-calculator">HRA Exemption</a>
+          <a href="/itr-calculator">ITR / Tax</a>
+          <a href="/increment-calculator">Govt Increment</a>
+          <a href="/leave-encashment">Leave Encashment</a>
+          <a href="/retirement-calculator">Retirement</a>
+        </div>
+      </div>
+      <!-- Documents -->
+      <div class="nav-item">
+        <button class="nav-trigger">
+          Documents
+          <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/></svg>
+        </button>
+        <div class="dropdown-panel">
+          <a href="/form-12bb">Form 12BB Generator</a>
+          <a href="/resignation">Resignation Kit</a>
+          <a href="/job-application">Job Application</a>
+          <a href="/sarkari-letter">Sarkari Letter</a>
+          <a href="/rent-receipt">Rent Receipt</a>
+          <a href="/gst-invoice">GST Invoice</a>
+        </div>
+      </div>
+      <!-- Utilities -->
+      <div class="nav-item">
+        <button class="nav-trigger">
+          Utilities
+          <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/></svg>
+        </button>
+        <div class="dropdown-panel">
+          <a href="/whatsapp-dhanda">WhatsApp Dhanda</a>
+          <a href="/paraphrase">Paraphrase Tool</a>
+          <a href="/photo-resizer">Photo Resizer</a>
+          <a href="/qr-generator">QR Generator</a>
+          <a href="/json-tools">JSON Tools</a>
+          <a href="/date-calculator">Date &amp; Age Calc</a>
+        </div>
+      </div>
+    </div>
+
+    <div style="display:flex;align-items:center;gap:12px">
+      <a href="/ctc-calculator" class="nav-cta">Salary Calc</a>
+      <button class="mobile-toggle" id="mobileMenuBtn" aria-label="Open menu">
+        <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"/></svg>
+      </button>
+    </div>
+  </div>
+</nav>
+
+<!-- Mobile Panel -->
+<div class="mobile-panel" id="mobilePanel">
+  <div class="mobile-panel-head">
+    <a href="/" class="logo">Mailflix</a>
+    <button class="close-btn" id="closeMobileBtn">
+      <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/></svg>
+    </button>
+  </div>
+  <div class="mobile-panel-body">
+    <div class="mobile-section-label">Calculators</div>
+    <a href="/notice-period-calculator" class="mobile-link">Notice Period Buyout</a>
+    <a href="/sip-calculator" class="mobile-link">SIP &amp; Step-Up Calculator</a>
+    <a href="/nps-calculator" class="mobile-link">NPS Pension Calculator</a>
+    <a href="/ctc-calculator" class="mobile-link">CTC to In-Hand</a>
+    <a href="/hra-calculator" class="mobile-link">HRA Exemption</a>
+    <a href="/leave-encashment" class="mobile-link">Leave Encashment</a>
+    <div class="mobile-section-label">Documents</div>
+    <a href="/form-12bb" class="mobile-link">Form 12BB Generator</a>
+    <a href="/resignation" class="mobile-link">Resignation Kit</a>
+    <a href="/rent-receipt" class="mobile-link">Rent Receipt</a>
+    <a href="/gst-invoice" class="mobile-link">GST Invoice</a>
+    <a href="/" class="mobile-cta" style="margin-top:10px">Back to Homepage</a>
+  </div>
+</div>
+
+<!-- PAGE HERO -->
+<section class="page-hero">
+  <div class="page-badge">💼 Indian Labour Law &amp; FNF Settlement</div>
+  <h1>Notice Period <span class="accent">Buyout</span> Calculator</h1>
+  <p class="page-sub">
+    Leaving early? Calculate your shortfall recovery amount, per-day salary deduction rate, 18% GST rules under CBIC circulars, and draft an HR buyout email.
+  </p>
+</section>
+
+<!-- MAIN FORM -->
+<section class="form-wrap">
+  <div class="form-card">
+    <div class="form-card-header">
+      <div class="form-card-title">Salary &amp; Notice Period Inputs</div>
+      <span style="font-size:12px;font-weight:700;color:var(--muted)">FY 2025-26 Rules</span>
+    </div>
+
+    <div class="form-body">
+      <div class="form-grid">
+        <!-- Monthly Basic Salary -->
+        <div class="form-group">
+          <label for="basicSalary">Monthly Basic Salary (₹) <span>*Main base in 90% contracts</span></label>
+          <input type="number" id="basicSalary" placeholder="e.g. 50000" value="50000" min="0"/>
+          <div class="quick-btn-row">
+            <button type="button" class="quick-btn" onclick="setBasic(30000)">₹30,000</button>
+            <button type="button" class="quick-btn" onclick="setBasic(50000)">₹50,000</button>
+            <button type="button" class="quick-btn" onclick="setBasic(80000)">₹80,000</button>
+            <button type="button" class="quick-btn" onclick="setBasic(120000)">₹1.2L</button>
+          </div>
+        </div>
+
+        <!-- Monthly Gross Salary -->
+        <div class="form-group">
+          <label for="grossSalary">Monthly Gross Salary (₹) <span>Optional if contract uses Basic</span></label>
+          <input type="number" id="grossSalary" placeholder="e.g. 100000" value="100000" min="0"/>
+          <div class="quick-btn-row">
+            <button type="button" class="quick-btn" onclick="syncBasicFromGross(0.5)">Set Basic = 50% Gross</button>
+            <button type="button" class="quick-btn" onclick="syncBasicFromGross(0.4)">Set Basic = 40%</button>
+          </div>
+        </div>
+
+        <!-- Total Notice Period -->
+        <div class="form-group">
+          <label for="noticePeriod">Required Notice Period (Days) <span>Check offer letter</span></label>
+          <input type="number" id="noticePeriod" value="90" min="1" max="180"/>
+          <div class="quick-btn-row">
+            <button type="button" class="quick-btn" onclick="setNotice(30)">30 Days (1 Mo)</button>
+            <button type="button" class="quick-btn" onclick="setNotice(60)">60 Days (2 Mo)</button>
+            <button type="button" class="quick-btn" onclick="setNotice(90)">90 Days (3 Mo)</button>
+          </div>
+        </div>
+
+        <!-- Days Served -->
+        <div class="form-group">
+          <label for="daysServed">Days You Plan to Actually Serve <span>(Days)</span></label>
+          <input type="number" id="daysServed" value="30" min="0" max="180"/>
+          <span class="hint-text">Number of days between resignation and your requested last working day.</span>
+        </div>
+
+        <!-- Earned Leave Balance -->
+        <div class="form-group">
+          <label for="leaveBalance">Unavailed Leaves (EL / PL) <span>Can offset shortfall</span></label>
+          <input type="number" id="leaveBalance" value="10" min="0" max="100"/>
+          <span class="hint-text">Earned / Privilege leaves that your employer agrees to adjust against notice shortfall.</span>
+        </div>
+
+        <!-- Working Divisor -->
+        <div class="form-group">
+          <label for="divisorType">Daily Rate Calculation Base</label>
+          <select id="divisorType">
+            <option value="30" selected>30 Days (Calendar Month — Most Common)</option>
+            <option value="26">26 Days (Working Days Divisor — Factories / IT)</option>
+            <option value="31">31 Days (Actual Month Length)</option>
+          </select>
+        </div>
+
+        <!-- Calculation Basis: Basic vs Gross -->
+        <div class="form-group full">
+          <label for="calcBasis">Company Notice Recovery Policy</label>
+          <select id="calcBasis">
+            <option value="basic" selected>Basic Salary Only (Standard for TCS, Infosys, Wipro, Accenture &amp; Indian MNCs)</option>
+            <option value="gross">Gross Salary / Total CTC (Used by selective startups &amp; product firms)</option>
+          </select>
+        </div>
+
+        <!-- GST Toggle -->
+        <div class="form-group full">
+          <div class="toggle-card" id="gstCard">
+            <div>
+              <strong>Apply 18% GST on Notice Pay Recovery</strong>
+              <div class="hint-text">
+                CBIC Circular No. 178/10/2022 clarified that notice recovery is NOT a taxable supply. However, some companies still erroneously levy 18% GST.
+              </div>
+            </div>
+            <label class="toggle-switch">
+              <input type="checkbox" id="includeGst" onchange="calcBuyout()"/>
+              <span class="slider"></span>
+            </label>
+          </div>
+        </div>
+
+        <!-- New Employer Buyout Reimbursement -->
+        <div class="form-group full">
+          <div class="toggle-card" id="reimburseCard">
+            <div>
+              <strong>New Employer Buying Out Your Notice?</strong>
+              <div class="hint-text">
+                If the hiring company reimburses your buyout amount, check tax perquisite rules (TDS under Sec 17(2)).
+              </div>
+            </div>
+            <label class="toggle-switch">
+              <input type="checkbox" id="newEmpReimburse" onchange="calcBuyout()"/>
+              <span class="slider"></span>
+            </label>
+          </div>
+        </div>
+      </div>
+
+      <!-- RESULTS BOX -->
+      <div class="results-box" id="resultsBox">
+        <div class="results-header">
+          <span class="results-title">Notice Buyout Summary</span>
+          <span id="rateSummaryBadge" style="font-size:12px;background:var(--green);color:black;padding:3px 8px;border-radius:6px;font-weight:800">
+            ₹1,667 / day
+          </span>
+        </div>
+
+        <div class="results-grid">
+          <div class="res-card">
+            <div class="res-label">Gross Shortfall</div>
+            <div class="res-val" id="resGrossShortfall">60 Days</div>
+            <div class="res-sub">90 days − 30 served</div>
+          </div>
+
+          <div class="res-card highlight">
+            <div class="res-label">Net Days to Buy Out</div>
+            <div class="res-val" id="resNetShortfall" style="color:var(--green-dk)">50 Days</div>
+            <div class="res-sub">After 10 leave days adjusted</div>
+          </div>
+
+          <div class="res-card warn">
+            <div class="res-label">Base Buyout Amount</div>
+            <div class="res-val" id="resBaseBuyout" style="color:var(--red)">₹83,333</div>
+            <div class="res-sub" id="resBaseDesc">50 days × Basic rate</div>
+          </div>
+
+          <div class="res-card" id="gstResCard" style="display:none">
+            <div class="res-label">18% GST Added</div>
+            <div class="res-val" id="resGstAmount">₹15,000</div>
+            <div class="res-sub">Can be disputed via CBIC circular</div>
+          </div>
+        </div>
+
+        <div class="calc-breakdown">
+          <div class="breakdown-row">
+            <span>Per-Day Salary Recovery Rate (<span id="bdDivisorLbl">Basic / 30</span>):</span>
+            <strong id="bdDailyRate">₹1,666.67</strong>
+          </div>
+          <div class="breakdown-row">
+            <span>Notice Shortfall Days:</span>
+            <span id="bdShortfallDays">60 days</span>
+          </div>
+          <div class="breakdown-row" style="color:var(--green-dk)">
+            <span>Less: Earned Leaves Adjusted (<span id="bdLeaveDays">10</span> days @ daily rate):</span>
+            <span id="bdLeaveCredit">− ₹16,666.67</span>
+          </div>
+          <div class="breakdown-row" id="bdGstRow" style="display:none;color:var(--red)">
+            <span>Add: GST @ 18% (if demanded by employer):</span>
+            <span id="bdGstVal">+ ₹15,000.00</span>
+          </div>
+          <div class="breakdown-row total">
+            <span>Net Payable to Current Employer in F&amp;F:</span>
+            <span id="bdNetTotal" style="color:var(--red)">₹83,333</span>
+          </div>
+          <div id="reimburseAlert" style="display:none;margin-top:12px;padding:12px;background:var(--blue-lt);border-radius:8px;font-size:13px;border:1px solid #bfdbfe">
+            <strong>💡 New Employer Reimbursement Notice:</strong> Your new employer will pay ₹<span id="reimburseVal">83,333</span>. Note that under Section 17(2), notice buyout reimbursement by a new company is considered a taxable perquisite. Expect approx <strong>₹<span id="reimburseTds">25,000</span></strong> TDS deduction in your upcoming payroll if you fall in the 30% tax bracket.
+          </div>
+        </div>
+      </div>
+
+      <!-- HR EMAIL GENERATOR -->
+      <div class="email-gen-box">
+        <div class="email-gen-title">
+          <span>✉️ Auto-Draft: Notice Period Buyout &amp; Early Release Email</span>
+        </div>
+        <p style="font-size:13px;color:var(--muted);margin-bottom:12px">
+          Customized template to send to your Manager and HR requesting early release with leave adjustment and notice buyout:
+        </p>
+        <div class="email-preview-box" id="emailText"></div>
+        <button type="button" class="copy-btn" onclick="copyEmail()">📋 Copy Email Template</button>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- SEO & KNOWLEDGE BASE -->
+<section class="seo-section">
+  <div class="seo-box">
+    <h2>Notice Period Buyout in India: Rules, Calculation &amp; Legal Rights</h2>
+    <p>
+      In the Indian corporate and IT ecosystem, notice periods typically range from <strong>30 days to 90 days (3 months)</strong>. When an employee receives an urgent offer from a new organisation or needs an early release due to personal exigencies, a <strong>Notice Period Buyout</strong> allows the employee (or their new employer) to pay the monetary equivalent of the unserved notice days in exchange for immediate relieving.
+    </p>
+
+    <div class="rule-alert">
+      <strong>⚠️ Crucial Circular on GST (Ministry of Finance, India):</strong>
+      <p style="margin-top:6px">
+        According to <strong>CBIC Circular No. 178/10/2022-GST</strong> dated 3rd August 2022, notice pay recovery collected by an employer from an employee for leaving before the agreed notice period is <em>not taxable under GST</em>. Employers cannot legally demand 18% GST on notice shortfall recovery. If your HR adds GST to your Full &amp; Final (F&amp;F) settlement, quote this circular to get it removed.
+      </p>
+    </div>
+
+    <h3>How is the Per-Day Salary Calculated for Buyout?</h3>
+    <p>
+      The per-day rate depends on two primary factors specified in your employment contract:
+    </p>
+    <ul>
+      <li><strong>Salary Base (Basic vs Gross):</strong> In over 90% of established Indian IT companies (including TCS, Infosys, Wipro, and Cognizant), notice recovery is calculated on <em>Monthly Basic Salary only</em>. However, some startups and mid-size firms define notice recovery on Gross Salary or Fixed CTC.</li>
+      <li><strong>Divisor (30 Days vs 26 Working Days):</strong> Most companies use a standard 30-day calendar divisor <code>(Basic / 30)</code>. Certain manufacturing and industrial companies under the Factories Act or state Shops and Establishment Acts use a 26 working days divisor <code>(Basic / 26)</code>.</li>
+    </ul>
+
+    <h3>Can Earned Leave (EL/PL) be Adjusted Against Notice Period?</h3>
+    <p>
+      Yes, subject to employer discretion and company leave policy. In Indian labor practice, accumulated Privilege Leaves (PL) or Earned Leaves (EL) can either be:
+    </p>
+    <ul>
+      <li><strong>Encashed during F&amp;F:</strong> Paid to you at retirement or resignation under Section 10(10AA).</li>
+      <li><strong>Offset against Notice Shortfall:</strong> Subtracted directly from the number of days you need to serve or buy out, significantly reducing your out-of-pocket settlement amount.</li>
+    </ul>
+
+    <h2 style="margin-top:36px">Frequently Asked Questions (FAQ)</h2>
+
+    <div class="faq-item open">
+      <div class="faq-q" onclick="toggleFaq(this)">
+        <span>How is notice period buyout calculated in India?</span>
+        <svg fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+      </div>
+      <div class="faq-a">
+        The standard formula is: <code>(Basic Salary ÷ 30) × (Shortfall Notice Days − Leave Offset)</code>. For instance, if your basic salary is ₹60,000, your daily rate is ₹2,000. If you serve 30 days out of a 90-day notice period and adjust 10 earned leaves, your net shortfall is 50 days, making the buyout amount ₹1,00,000.
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-q" onclick="toggleFaq(this)">
+        <span>Can my company refuse to allow a notice period buyout?</span>
+        <svg fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+      </div>
+      <div class="faq-a">
+        Yes. Notice period buyout is an option, not an automatic statutory right. If your project deliverables are critical, or if a replacement has not been hired for client handover, the company has the contractual right to require you to serve the full notice period.
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-q" onclick="toggleFaq(this)">
+        <span>Will I get my Relieving Letter and Experience Certificate if I buy out?</span>
+        <svg fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+      </div>
+      <div class="faq-a">
+        Yes! Once the notice buyout is mutually agreed upon, formalised, and settled in the Full &amp; Final (F&amp;F) statement, the employer must release your Relieving Letter, Service Certificate, and Form 16. The relieving letter simply mentions your final working day.
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-q" onclick="toggleFaq(this)">
+        <span>Is notice buyout reimbursed by a new employer taxable?</span>
+        <svg fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+      </div>
+      <div class="faq-a">
+        Yes. Under Section 17(2) of the Income Tax Act, any monetary reimbursement given by a new employer to pay off your previous company is classified as a perquisite or taxable allowance. Your new employer will withhold TDS according to your tax slab.
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-inner">
+    <div>
+      <strong>Mailflix</strong> — Free Workplace &amp; Salary Calculators for Indian Professionals.
+      <div style="margin-top:4px;font-size:12px">© 2026 Mailflix. All tools operate in-browser. Zero signup.</div>
+    </div>
+    <div class="footer-links">
+      <a href="/notice-period-calculator">Notice Buyout</a>
+      <a href="/sip-calculator">SIP Calculator</a>
+      <a href="/form-12bb">Form 12BB</a>
+      <a href="/nps-calculator">NPS Calculator</a>
+      <a href="/ctc-calculator">CTC Calculator</a>
+      <a href="/privacy">Privacy Policy</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+function setBasic(val){
+  document.getElementById("basicSalary").value = val;
+  calcBuyout();
+}
+function syncBasicFromGross(ratio){
+  const g = parseFloat(document.getElementById("grossSalary").value) || 0;
+  document.getElementById("basicSalary").value = Math.round(g * ratio);
+  calcBuyout();
+}
+function setNotice(days){
+  document.getElementById("noticePeriod").value = days;
+  calcBuyout();
+}
+
+function calcBuyout(){
+  const basic = parseFloat(document.getElementById("basicSalary").value) || 0;
+  const gross = parseFloat(document.getElementById("grossSalary").value) || 0;
+  const totalNotice = parseInt(document.getElementById("noticePeriod").value) || 0;
+  const served = parseInt(document.getElementById("daysServed").value) || 0;
+  const leaves = parseInt(document.getElementById("leaveBalance").value) || 0;
+  const divisor = parseInt(document.getElementById("divisorType").value) || 30;
+  const basis = document.getElementById("calcBasis").value;
+  const includeGst = document.getElementById("includeGst").checked;
+  const newEmp = document.getElementById("newEmpReimburse").checked;
+
+  const salaryToUse = basis === "gross" ? gross : basic;
+  const dailyRate = divisor > 0 ? (salaryToUse / divisor) : 0;
+
+  const grossShortfall = Math.max(0, totalNotice - served);
+  const netShortfall = Math.max(0, grossShortfall - leaves);
+
+  const baseBuyout = netShortfall * dailyRate;
+  const leaveCreditVal = leaves * dailyRate;
+  const gstAmount = includeGst ? (baseBuyout * 0.18) : 0;
+  const totalNetPayable = baseBuyout + gstAmount;
+
+  // Update UI Elements
+  document.getElementById("rateSummaryBadge").textContent = "₹" + Math.round(dailyRate).toLocaleString("en-IN") + " / day";
+  document.getElementById("resGrossShortfall").textContent = grossShortfall + " Days";
+  document.getElementById("resNetShortfall").textContent = netShortfall + " Days";
+  document.getElementById("resBaseBuyout").textContent = "₹" + Math.round(baseBuyout).toLocaleString("en-IN");
+  document.getElementById("resBaseDesc").textContent = netShortfall + " days × " + (basis === "gross" ? "Gross" : "Basic") + " rate";
+
+  document.getElementById("bdDailyRate").textContent = "₹" + dailyRate.toFixed(2);
+  document.getElementById("bdDivisorLbl").textContent = (basis === "gross" ? "Gross" : "Basic") + " / " + divisor;
+  document.getElementById("bdShortfallDays").textContent = grossShortfall + " days";
+  document.getElementById("bdLeaveDays").textContent = leaves;
+  document.getElementById("bdLeaveCredit").textContent = "− ₹" + leaveCreditVal.toFixed(2);
+
+  const gstCard = document.getElementById("gstResCard");
+  const bdGstRow = document.getElementById("bdGstRow");
+  if(includeGst){
+    gstCard.style.display = "block";
+    bdGstRow.style.display = "flex";
+    document.getElementById("resGstAmount").textContent = "₹" + Math.round(gstAmount).toLocaleString("en-IN");
+    document.getElementById("bdGstVal").textContent = "+ ₹" + gstAmount.toFixed(2);
+  } else {
+    gstCard.style.display = "none";
+    bdGstRow.style.display = "none";
+  }
+
+  document.getElementById("bdNetTotal").textContent = "₹" + Math.round(totalNetPayable).toLocaleString("en-IN");
+
+  const remAlert = document.getElementById("reimburseAlert");
+  if(newEmp){
+    remAlert.style.display = "block";
+    document.getElementById("reimburseVal").textContent = Math.round(totalNetPayable).toLocaleString("en-IN");
+    document.getElementById("reimburseTds").textContent = Math.round(totalNetPayable * 0.312).toLocaleString("en-IN");
+  } else {
+    remAlert.style.display = "none";
+  }
+
+  updateEmailTemplate(totalNotice, served, leaves, netShortfall, totalNetPayable, basis, dailyRate);
+}
+
+function updateEmailTemplate(totalNotice, served, leaves, netShortfall, amount, basis, rate){
+  const text = `Subject: Request for Early Release and Notice Period Buyout — [Your Employee ID]
+
+Dear [Manager Name] / HR Team,
+
+I am writing to formally request an early release from my role as [Your Designation] at [Company Name]. 
+
+As per my employment agreement, my required notice period is ${totalNotice} days. As of today, I have served ${served} days and completed key project deliverables. To facilitate a smooth and timely transition:
+
+1. Served Notice Duration: ${served} Days
+2. Accumulated Leave Adjustment: ${leaves} Days (Earned/Privilege Leaves)
+3. Balance Notice Shortfall: ${netShortfall} Days
+4. Proposed Notice Buyout Amount: ₹${Math.round(amount).toLocaleString("en-IN")} (calculated at ₹${Math.round(rate)}/day as per standard ${basis} salary policy)
+
+I request your kind approval to relieve me on [Proposed Last Working Date, e.g. 15th of next month]. I am prepared to have the buyout sum adjusted directly in my Full & Final (F&F) settlement statement, or pay the shortfall via demand draft / RTGS as advised by HR.
+
+I assure you of my complete cooperation in handing over all project documentation and knowledge transfer (KT) prior to my exit.
+
+Thank you for your understanding and continuous support.
+
+Warm regards,
+[Your Name]
+[Employee Code]
+[Contact Number]`;
+
+  document.getElementById("emailText").textContent = text;
+}
+
+function copyEmail(){
+  const t = document.getElementById("emailText").textContent;
+  navigator.clipboard.writeText(t).then(()=>{
+    const btn = document.querySelector(".copy-btn");
+    const old = btn.textContent;
+    btn.textContent = "✓ Copied to Clipboard!";
+    setTimeout(()=>{ btn.textContent = old; }, 2000);
+  });
+}
+
+function toggleFaq(btn){
+  btn.parentElement.classList.toggle("open");
+}
+
+// Initial calculation on load
+["basicSalary","grossSalary","noticePeriod","daysServed","leaveBalance","divisorType","calcBasis"].forEach(id=>{
+  document.getElementById(id).addEventListener("input", calcBuyout);
+  document.getElementById(id).addEventListener("change", calcBuyout);
+});
+calcBuyout();
+
+// Mobile Drawer handlers
+const _mp = document.getElementById("mobilePanel");
+const _mb = document.getElementById("mobileMenuBtn");
+const _cb = document.getElementById("closeMobileBtn");
+if(_mb) _mb.addEventListener("click", ()=>{ _mp.classList.add("open"); document.body.style.overflow="hidden"; });
+if(_cb) _cb.addEventListener("click", ()=>{ _mp.classList.remove("open"); document.body.style.overflow=""; });
+_mp.querySelectorAll(".mobile-link,.mobile-cta").forEach(a=>a.addEventListener("click",()=>{ _mp.classList.remove("open"); document.body.style.overflow=""; }));
+</script>
+</body>
+</html>

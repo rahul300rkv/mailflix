@@ -1,0 +1,891 @@
+<!DOCTYPE html>
+<html lang="en-IN">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>SIP Calculator India 2026 — Step-Up SIP, Returns & LTCG Tax | MailFix</title>
+<link rel="canonical" href="https://mailflix.netlify.app/sip-calculator"/>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": [
+    "WebApplication",
+    "SoftwareApplication"
+  ],
+  "name": "SIP Calculator India with Step-Up & LTCG Tax",
+  "description": "Calculate mutual fund SIP maturity amount, annual step-up growth, inflation-adjusted wealth, and Budget 2024-25 LTCG capital gains tax (Section 112A ₹1.25 Lakh exemption).",
+  "url": "https://mailflix.netlify.app/sip-calculator",
+  "applicationCategory": "FinanceApplication",
+  "operatingSystem": "Any — runs in web browser",
+  "browserRequirements": "Requires JavaScript. Works in Chrome, Firefox, Safari, Edge.",
+  "featureList": [
+    "Monthly SIP and Lump Sum calculation",
+    "Annual Step-Up percentage or fixed amount compounding",
+    "Interactive year-by-year wealth growth schedule",
+    "New Section 112A LTCG tax calculator (₹1.25L exemption + 12.5% tax)",
+    "Inflation adjustment (real purchasing power)",
+    "Corpus target reverse calculator"
+  ],
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "INR",
+    "availability": "https://schema.org/InStock"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "MailFix",
+    "url": "https://mailflix.netlify.app/"
+  },
+  "inLanguage": [
+    "en-IN",
+    "hi"
+  ],
+  "isAccessibleForFree": true,
+  "isFamilyFriendly": true,
+  "countryOfOrigin": "IN",
+  "audience": {
+    "@type": "Audience",
+    "audienceType": "Indian salaried professionals, retail investors, mutual fund investors",
+    "geographicArea": {
+      "@type": "Country",
+      "name": "India"
+    }
+  }
+}
+</script>
+<meta name="description" content="Free SIP & Step-Up SIP Calculator for Indian investors. Calculate mutual fund maturity value, annual step-up compounding, inflation impact & LTCG tax."/>
+<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1"/>
+<meta name="googlebot" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1"/>
+<meta name="bingbot" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1"/>
+<!-- Regional Geo-Targeting (India) -->
+<meta name="geo.region" content="IN"/>
+<meta name="geo.placename" content="India"/>
+<meta name="geo.position" content="20.593684;78.96288"/>
+<meta name="ICBM" content="20.593684, 78.96288"/>
+<!-- Search Engine Verification -->
+<meta name="google-site-verification" content="google3dfa12bb82b9d6b2"/>
+<meta name="msvalidate.01" content="D29A28C9D6AD37573C4F07224CFDA0D2"/>
+<!-- Regional Language Alternates -->
+<link rel="alternate" hreflang="en-IN" href="https://mailflix.netlify.app/sip-calculator"/>
+<link rel="alternate" hreflang="hi-IN" href="https://mailflix.netlify.app/sip-calculator"/>
+<link rel="alternate" hreflang="x-default" href="https://mailflix.netlify.app/sip-calculator"/>
+<link rel="alternate" type="text/plain" href="https://mailflix.netlify.app/llms.txt" title="LLMs.txt — MailFix AI index"/>
+
+<meta property="og:type" content="website"/>
+<meta property="og:url" content="https://mailflix.netlify.app/sip-calculator"/>
+<meta property="og:title" content="SIP Calculator India 2026 — Step-Up SIP, Returns & LTCG Tax | MailFix"/>
+<meta property="og:description" content="Calculate mutual fund SIP maturity value, annual step-up compounding, inflation impact & LTCG tax under Budget 2024-25."/>
+<meta property="og:image" content="https://mailflix.netlify.app/og-image.png"/>
+<meta property="og:site_name" content="MailFix"/>
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:title" content="SIP Calculator India — Step-Up & LTCG Tax | MailFix"/>
+<meta name="twitter:description" content="Calculate mutual fund SIP maturity value, annual step-up compounding, inflation impact & LTCG tax."/>
+<meta name="twitter:image" content="https://mailflix.netlify.app/og-image.png"/>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://mailflix.netlify.app/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Calculators",
+      "item": "https://mailflix.netlify.app/ctc-calculator"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "SIP Calculator",
+      "item": "https://mailflix.netlify.app/sip-calculator"
+    }
+  ]
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is a Step-Up SIP and how does it work?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A Step-Up SIP (top-up SIP) automatically increases your monthly mutual fund investment by a specified percentage or fixed rupee amount every year, aligning with your annual salary increments. Stepping up by just 10% each year can nearly double your maturity corpus over a 15-20 year horizon compared to a flat SIP."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How much SIP is needed to create a ₹1 Crore corpus in 10 or 15 years?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "At an expected 12% annual return: in 15 years, you need approximately ₹20,000/month flat SIP (or ₹13,500/month with a 10% annual step-up). In 10 years, you need approximately ₹43,000/month flat SIP to reach ₹1 Crore."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the LTCG tax rate on mutual funds in India?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Under the Union Budget 2024 revisions (effective July 23, 2024), Long-Term Capital Gains (LTCG) on equity mutual funds held for more than 12 months are tax-exempt up to ₹1,25,000 per financial year. Any LTCG above ₹1.25 Lakh is taxed at 12.5% (plus 4% cess, effectively 13%)."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is SIP better than Lump Sum investment in India?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "SIP is generally superior for salaried individuals because it eliminates the risk of market timing via Rupee Cost Averaging — buying more units during market dips and fewer during highs. Lump sum is recommended only during significant market corrections or when investing windfalls (bonus, gratuity)."
+      }
+    }
+  ]
+}
+</script>
+
+<!-- Google AdSense -->
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3532554351654388" crossorigin="anonymous"></script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet"/>
+
+<style>
+/* ─── SHARED DESIGN SYSTEM ─────────────────────────────── */
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --green:#22c55e;--green-dk:#16a34a;--green-lt:#dcfce7;--green-xs:#f0fdf4;
+  --black:#000;--white:#fff;--ink:#0f172a;--muted:#64748b;
+  --border:#e2e8f0;--paper:#fdfdfc;--card:#fff;
+  --red-lt:#fef2f2;--red:#dc2626;--blue-lt:#eff6ff;--blue:#2563eb;
+  --shadow:4px 4px 0px 0px #000;--shadow-sm:2px 2px 0px 0px #000;--shadow-lg:6px 6px 0px 0px #000;
+  --radius:12px;--font:'Plus Jakarta Sans',sans-serif;
+}
+html{scroll-behavior:smooth}
+body{font-family:var(--font);background:var(--paper);color:var(--ink);font-size:16px;line-height:1.6;min-height:100vh;-webkit-font-smoothing:antialiased}
+::-webkit-scrollbar{width:8px}
+::-webkit-scrollbar-track{background:transparent}
+::-webkit-scrollbar-thumb{background:#cbd5e1;border-radius:4px}
+
+/* NAV */
+nav{position:sticky;top:0;z-index:100;background:rgba(255,255,255,.92);backdrop-filter:blur(10px);border-bottom:2px solid var(--black)}
+.nav-inner{max-width:1100px;margin:0 auto;padding:0 24px;display:flex;align-items:center;justify-content:space-between;height:64px}
+.logo{display:flex;align-items:center;gap:10px;font-size:20px;font-weight:800;letter-spacing:-.5px;color:var(--black);text-decoration:none}
+.logo-icon{width:34px;height:34px;background:var(--green);border:2px solid var(--black);border-radius:8px;display:flex;align-items:center;justify-content:center;transform:rotate(-3deg);box-shadow:var(--shadow-sm)}
+.logo-icon svg{width:18px;height:18px}
+.logo span{color:var(--green-dk)}
+.nav-links{display:flex;align-items:center;gap:4px}
+.nav-item{position:relative}
+.nav-trigger{display:flex;align-items:center;gap:4px;padding:6px 12px;border-radius:8px;font-size:14px;font-weight:700;color:var(--muted);background:none;border:none;cursor:pointer;font-family:var(--font);transition:color .15s,background .15s}
+.nav-trigger:hover{color:var(--black);background:#f8fafc}
+.nav-trigger svg{width:14px;height:14px;transition:transform .2s}
+.nav-item:hover .nav-trigger svg{transform:rotate(180deg)}
+.dropdown-panel{display:none;position:absolute;top:100%;left:0;min-width:220px;background:var(--white);border:2px solid var(--black);border-radius:14px;box-shadow:var(--shadow);padding:10px 6px 6px;z-index:200}
+.nav-item::after{content:'';position:absolute;top:100%;left:0;width:100%;height:12px;display:block}
+.nav-item:hover .dropdown-panel,.dropdown-panel.open{display:flex;flex-direction:column}
+.dropdown-panel a{display:block;padding:9px 14px;border-radius:8px;font-size:13px;font-weight:700;color:var(--muted);text-decoration:none;transition:background .12s,color .12s}
+.dropdown-panel a:hover{background:var(--green-xs);color:var(--black)}
+.nav-cta{padding:9px 20px;background:var(--green);color:white;font-size:13px;font-weight:800;border:2px solid var(--black);border-radius:10px;box-shadow:var(--shadow-sm);cursor:pointer;text-decoration:none;transition:transform .12s,box-shadow .12s}
+.nav-cta:hover{transform:translate(2px,2px);box-shadow:none}
+
+.mobile-toggle{display:none;background:white;border:2px solid var(--black);border-radius:8px;padding:6px;cursor:pointer;box-shadow:var(--shadow-sm);align-items:center}
+.mobile-toggle svg{width:22px;height:22px;display:block}
+.mobile-panel{display:none;position:fixed;inset:0;z-index:500;background:white;overflow-y:auto;transform:translateX(100%);transition:transform .28s ease;border-left:2px solid var(--black)}
+.mobile-panel.open{transform:translateX(0)}
+.mobile-panel-head{display:flex;align-items:center;justify-content:space-between;padding:16px 20px;border-bottom:2px solid var(--black);background:var(--green-xs)}
+.mobile-panel-body{padding:24px 20px;display:flex;flex-direction:column;gap:10px}
+.mobile-link{display:flex;align-items:center;gap:10px;padding:12px 16px;border-radius:10px;border:2px solid var(--border);font-size:15px;font-weight:700;color:var(--ink);text-decoration:none}
+.mobile-link:hover{border-color:var(--green);background:var(--green-xs)}
+.mobile-cta{display:block;text-align:center;padding:14px;background:var(--green);color:white;font-weight:800;font-size:15px;border:2px solid var(--black);border-radius:12px;box-shadow:var(--shadow);text-decoration:none}
+.mobile-section-label{font-size:10px;font-weight:800;letter-spacing:.12em;text-transform:uppercase;color:#94a3b8;margin-top:6px;padding:0 4px}
+.close-btn{background:white;border:2px solid var(--black);border-radius:8px;padding:6px;cursor:pointer;box-shadow:var(--shadow-sm)}
+.close-btn svg{width:20px;height:20px;display:block}
+
+/* PAGE HERO */
+.page-hero{max-width:900px;margin:0 auto;padding:50px 24px 36px;text-align:center}
+.page-badge{display:inline-flex;align-items:center;gap:8px;padding:5px 18px;border:2px solid var(--black);border-radius:99px;background:white;box-shadow:var(--shadow-sm);font-size:11px;font-weight:800;letter-spacing:.12em;text-transform:uppercase;margin-bottom:18px;color:var(--black)}
+h1{font-size:clamp(28px,4.5vw,48px);font-weight:800;line-height:1.15;letter-spacing:-1px;color:var(--black);margin-bottom:14px}
+h1 .accent{color:var(--green-dk)}
+.page-sub{font-size:16px;color:var(--muted);font-weight:500;max-width:620px;margin:0 auto;line-height:1.6}
+
+/* FORM WRAP */
+.form-wrap{max-width:1000px;margin:0 auto;padding:0 24px 60px}
+.form-card{background:white;border:4px solid var(--black);border-radius:20px;box-shadow:var(--shadow-lg);overflow:hidden}
+.form-card-header{padding:18px 24px;border-bottom:2px solid var(--black);background:var(--green-xs);display:flex;align-items:center;justify-content:space-between}
+.form-card-title{font-size:13px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;color:var(--green-dk)}
+.form-body{padding:28px 24px}
+.form-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+.form-group{display:flex;flex-direction:column;gap:6px}
+.form-group.full{grid-column:1/-1}
+label{font-size:13px;font-weight:700;color:var(--ink);display:flex;justify-content:space-between}
+label span{font-weight:500;color:var(--muted);font-size:12px}
+input,select{width:100%;padding:11px 14px;border:2px solid var(--border);border-radius:10px;font-family:var(--font);font-size:15px;font-weight:500;color:var(--ink);background:white;outline:none;transition:border-color .15s,box-shadow .15s}
+input:focus,select:focus{border-color:var(--black);box-shadow:var(--shadow-sm)}
+.range-slider{width:100%;margin-top:6px;accent-color:var(--green-dk);cursor:pointer}
+
+.quick-btn-row{display:flex;gap:6px;margin-top:6px;flex-wrap:wrap}
+.quick-btn{padding:4px 10px;border:1.5px solid var(--black);border-radius:6px;background:#f8fafc;font-size:11px;font-weight:700;cursor:pointer;transition:background .15s}
+.quick-btn:hover{background:var(--green-lt)}
+
+.toggle-card{border:2px solid var(--border);border-radius:12px;padding:14px;background:#fafafa;display:flex;align-items:center;justify-content:space-between;gap:12px;margin-top:4px}
+.toggle-switch{position:relative;width:44px;height:24px;flex-shrink:0}
+.toggle-switch input{opacity:0;width:0;height:0}
+.slider{position:absolute;cursor:pointer;inset:0;background:#cbd5e1;border-radius:24px;transition:.2s;border:2px solid var(--black)}
+.slider:before{position:absolute;content:'';height:14px;width:14px;left:3px;bottom:3px;background:white;border-radius:50%;transition:.2s;border:1px solid #000}
+input:checked + .slider{background:var(--green)}
+input:checked + .slider:before{transform:translateX(20px)}
+
+/* RESULTS BOX */
+.results-box{margin-top:24px;border:3px solid var(--black);border-radius:16px;background:#f8fafc;overflow:hidden;box-shadow:var(--shadow)}
+.results-header{padding:14px 20px;background:var(--black);color:white;display:flex;justify-content:space-between;align-items:center}
+.results-title{font-size:13px;font-weight:800;letter-spacing:.08em;text-transform:uppercase}
+.results-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:14px;padding:20px}
+.res-card{background:white;border:2px solid var(--black);border-radius:12px;padding:16px;box-shadow:2px 2px 0 #000}
+.res-card.highlight{background:var(--green-xs);border-color:var(--green-dk)}
+.res-label{font-size:11px;font-weight:800;text-transform:uppercase;color:var(--muted);letter-spacing:.05em}
+.res-val{font-size:24px;font-weight:800;color:var(--black);margin-top:4px;line-height:1.2}
+.res-sub{font-size:12px;color:var(--muted);margin-top:4px}
+
+/* DISTRIBUTION BAR */
+.ratio-wrap{padding:0 20px 20px}
+.ratio-bar{height:16px;background:#cbd5e1;border:2px solid var(--black);border-radius:8px;display:flex;overflow:hidden}
+.ratio-invested{background:#3b82f6;height:100%}
+.ratio-returns{background:var(--green);height:100%}
+.ratio-legend{display:flex;justify-content:space-between;font-size:12px;font-weight:700;margin-top:8px}
+
+.calc-breakdown{padding:16px 20px;border-top:2px dashed var(--border);background:white;font-size:14px}
+.breakdown-row{display:flex;justify-content:space-between;align-items:center;padding:6px 0;border-bottom:1px solid #f1f5f9}
+.breakdown-row.total{border-top:2px solid var(--black);border-bottom:none;margin-top:8px;padding-top:10px;font-size:16px;font-weight:800}
+
+/* YEARLY TABLE */
+.table-wrap{margin-top:20px;border:2px solid var(--border);border-radius:12px;overflow:hidden;max-height:300px;overflow-y:auto}
+table{width:100%;border-collapse:collapse;font-size:13px;text-align:right}
+th{background:#f1f5f9;padding:10px 12px;font-weight:800;border-bottom:2px solid var(--black);color:var(--ink);position:sticky;top:0}
+td{padding:8px 12px;border-bottom:1px solid #f1f5f9}
+tr:hover td{background:var(--green-xs)}
+
+/* CONTENT & FAQ */
+.seo-section{max-width:1000px;margin:0 auto 80px;padding:0 24px}
+.seo-box{background:white;border:3px solid var(--black);border-radius:20px;box-shadow:var(--shadow-lg);padding:36px 30px}
+.seo-box h2{font-size:24px;font-weight:800;color:var(--black);margin:24px 0 12px}
+.seo-box h2:first-child{margin-top:0}
+.seo-box h3{font-size:18px;font-weight:800;color:var(--black);margin:20px 0 8px}
+.seo-box p{font-size:15px;color:#334155;line-height:1.75;margin-bottom:14px}
+.seo-box ul{margin-left:22px;margin-bottom:16px;color:#334155}
+.seo-box li{margin-bottom:8px;font-size:15px}
+
+.rule-alert{background:#f0fdf4;border:2px solid var(--green-dk);border-radius:10px;padding:16px;margin:18px 0;font-size:14px;color:#14532d;line-height:1.6}
+.rule-alert strong{color:#000}
+
+.faq-item{border:2px solid var(--black);border-radius:12px;margin-bottom:12px;overflow:hidden;box-shadow:2px 2px 0 #000}
+.faq-q{padding:16px 20px;font-weight:800;font-size:15px;background:white;cursor:pointer;display:flex;justify-content:space-between;align-items:center}
+.faq-q svg{width:18px;height:18px;transition:transform .2s}
+.faq-item.open .faq-q svg{transform:rotate(180deg)}
+.faq-a{display:none;padding:16px 20px;background:#f8fafc;border-top:1px solid #e2e8f0;font-size:14px;line-height:1.7;color:#334155}
+.faq-item.open .faq-a{display:block}
+
+/* FOOTER */
+footer{background:white;border-top:3px solid var(--black);padding:48px 24px;font-size:14px;color:var(--muted)}
+.footer-inner{max-width:1100px;margin:0 auto;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:20px}
+.footer-links{display:flex;gap:18px;flex-wrap:wrap}
+.footer-links a{color:var(--ink);text-decoration:none;font-weight:700}
+.footer-links a:hover{color:var(--green-dk)}
+
+@media(max-width:768px){
+  .nav-links{display:none}
+  .mobile-toggle{display:flex}
+  .mobile-panel{display:block}
+  .form-grid{grid-template-columns:1fr}
+  .seo-box{padding:24px 18px}
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <div class="nav-inner">
+    <a href="/" class="logo">
+      <div class="logo-icon">
+        <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+      </div>
+      Mailflix
+    </a>
+
+    <div class="nav-links">
+      <!-- Calculators -->
+      <div class="nav-item">
+        <button class="nav-trigger">
+          Calculators
+          <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/></svg>
+        </button>
+        <div class="dropdown-panel">
+          <a href="/sip-calculator" style="color:var(--black);font-weight:800">SIP &amp; Step-Up Calc</a>
+          <a href="/notice-period-calculator">Notice Period Buyout</a>
+          <a href="/nps-calculator">NPS Pension Calc</a>
+          <a href="/ctc-calculator">CTC to In-Hand</a>
+          <a href="/city-compare">City Salary Compare</a>
+          <a href="/hra-calculator">HRA Exemption</a>
+          <a href="/itr-calculator">ITR / Tax</a>
+          <a href="/leave-encashment">Leave Encashment</a>
+          <a href="/retirement-calculator">Retirement</a>
+        </div>
+      </div>
+      <!-- Documents -->
+      <div class="nav-item">
+        <button class="nav-trigger">
+          Documents
+          <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/></svg>
+        </button>
+        <div class="dropdown-panel">
+          <a href="/form-12bb">Form 12BB Generator</a>
+          <a href="/resignation">Resignation Kit</a>
+          <a href="/job-application">Job Application</a>
+          <a href="/sarkari-letter">Sarkari Letter</a>
+          <a href="/rent-receipt">Rent Receipt</a>
+          <a href="/gst-invoice">GST Invoice</a>
+        </div>
+      </div>
+      <!-- Utilities -->
+      <div class="nav-item">
+        <button class="nav-trigger">
+          Utilities
+          <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/></svg>
+        </button>
+        <div class="dropdown-panel">
+          <a href="/whatsapp-dhanda">WhatsApp Dhanda</a>
+          <a href="/paraphrase">Paraphrase Tool</a>
+          <a href="/photo-resizer">Photo Resizer</a>
+          <a href="/qr-generator">QR Generator</a>
+          <a href="/json-tools">JSON Tools</a>
+          <a href="/date-calculator">Date &amp; Age Calc</a>
+        </div>
+      </div>
+    </div>
+
+    <div style="display:flex;align-items:center;gap:12px">
+      <a href="/ctc-calculator" class="nav-cta">Salary Calc</a>
+      <button class="mobile-toggle" id="mobileMenuBtn" aria-label="Open menu">
+        <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"/></svg>
+      </button>
+    </div>
+  </div>
+</nav>
+
+<!-- Mobile Panel -->
+<div class="mobile-panel" id="mobilePanel">
+  <div class="mobile-panel-head">
+    <a href="/" class="logo">Mailflix</a>
+    <button class="close-btn" id="closeMobileBtn">
+      <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/></svg>
+    </button>
+  </div>
+  <div class="mobile-panel-body">
+    <div class="mobile-section-label">Calculators</div>
+    <a href="/sip-calculator" class="mobile-link">SIP &amp; Step-Up Calculator</a>
+    <a href="/notice-period-calculator" class="mobile-link">Notice Period Buyout</a>
+    <a href="/nps-calculator" class="mobile-link">NPS Pension Calculator</a>
+    <a href="/ctc-calculator" class="mobile-link">CTC to In-Hand</a>
+    <a href="/hra-calculator" class="mobile-link">HRA Exemption</a>
+    <div class="mobile-section-label">Documents</div>
+    <a href="/form-12bb" class="mobile-link">Form 12BB Generator</a>
+    <a href="/resignation" class="mobile-link">Resignation Kit</a>
+    <a href="/rent-receipt" class="mobile-link">Rent Receipt</a>
+    <a href="/" class="mobile-cta" style="margin-top:10px">Back to Homepage</a>
+  </div>
+</div>
+
+<!-- PAGE HERO -->
+<section class="page-hero">
+  <div class="page-badge">📈 Wealth Compounding &amp; Budget 2024 LTCG</div>
+  <h1>SIP &amp; <span class="accent">Step-Up SIP</span> Calculator</h1>
+  <p class="page-sub">
+    Calculate mutual fund SIP maturity, compound your wealth with annual salary step-ups, check inflation-adjusted real value, and apply the new Section 112A LTCG tax rules.
+  </p>
+</section>
+
+<!-- MAIN FORM -->
+<section class="form-wrap">
+  <div class="form-card">
+    <div class="form-card-header">
+      <div class="form-card-title">Investment Parameters</div>
+      <span style="font-size:12px;font-weight:700;color:var(--muted)">Budget 2024-25 LTCG Slabs</span>
+    </div>
+
+    <div class="form-body">
+      <div class="form-grid">
+        <!-- Monthly Investment -->
+        <div class="form-group">
+          <label for="monthlySip">Monthly SIP Amount (₹) <span id="lblSip">₹10,000</span></label>
+          <input type="number" id="monthlySip" value="10000" min="500" step="500"/>
+          <input type="range" class="range-slider" id="rngMonthlySip" min="1000" max="100000" step="1000" value="10000"/>
+          <div class="quick-btn-row">
+            <button type="button" class="quick-btn" onclick="setSip(2500)">₹2.5K</button>
+            <button type="button" class="quick-btn" onclick="setSip(5000)">₹5K</button>
+            <button type="button" class="quick-btn" onclick="setSip(10000)">₹10K</button>
+            <button type="button" class="quick-btn" onclick="setSip(25000)">₹25K</button>
+            <button type="button" class="quick-btn" onclick="setSip(50000)">₹50K</button>
+          </div>
+        </div>
+
+        <!-- Expected Return Rate -->
+        <div class="form-group">
+          <label for="returnRate">Expected Annual Return (%) <span id="lblReturn">12% p.a.</span></label>
+          <input type="number" id="returnRate" value="12" min="1" max="30" step="0.5"/>
+          <input type="range" class="range-slider" id="rngReturn" min="6" max="24" step="0.5" value="12"/>
+          <div class="quick-btn-row">
+            <button type="button" class="quick-btn" onclick="setReturn(10)">10% (Hybrid)</button>
+            <button type="button" class="quick-btn" onclick="setReturn(12)">12% (Index/Large)</button>
+            <button type="button" class="quick-btn" onclick="setReturn(15)">15% (Mid/Flexi)</button>
+            <button type="button" class="quick-btn" onclick="setReturn(18)">18% (Small Cap)</button>
+          </div>
+        </div>
+
+        <!-- Time Horizon -->
+        <div class="form-group">
+          <label for="years">Investment Horizon (Years) <span id="lblYears">15 Years</span></label>
+          <input type="number" id="years" value="15" min="1" max="40"/>
+          <input type="range" class="range-slider" id="rngYears" min="1" max="35" value="15"/>
+          <div class="quick-btn-row">
+            <button type="button" class="quick-btn" onclick="setYears(5)">5 Yrs</button>
+            <button type="button" class="quick-btn" onclick="setYears(10)">10 Yrs</button>
+            <button type="button" class="quick-btn" onclick="setYears(15)">15 Yrs</button>
+            <button type="button" class="quick-btn" onclick="setYears(20)">20 Yrs</button>
+          </div>
+        </div>
+
+        <!-- One-Time Lumpsum -->
+        <div class="form-group">
+          <label for="lumpSum">Initial Lumpsum Investment (₹) <span>Optional</span></label>
+          <input type="number" id="lumpSum" value="0" min="0" step="5000" placeholder="e.g. 50000"/>
+          <div class="quick-btn-row">
+            <button type="button" class="quick-btn" onclick="setLump(0)">None</button>
+            <button type="button" class="quick-btn" onclick="setLump(50000)">₹50K</button>
+            <button type="button" class="quick-btn" onclick="setLump(100000)">₹1 Lakh</button>
+          </div>
+        </div>
+
+        <!-- Step-Up SIP Toggle -->
+        <div class="form-group full">
+          <div class="toggle-card">
+            <div>
+              <strong>Annual Step-Up SIP (Top-Up)</strong>
+              <div style="font-size:12px;color:var(--muted)">
+                Increase your SIP every year as your salary increases. Massively multiplies long-term corpus.
+              </div>
+            </div>
+            <label class="toggle-switch">
+              <input type="checkbox" id="stepUpToggle" onchange="toggleStepUp()"/>
+              <span class="slider"></span>
+            </label>
+          </div>
+        </div>
+
+        <!-- Step-Up Options (Conditional) -->
+        <div class="form-group full" id="stepUpSection" style="display:none;background:#f8fafc;padding:16px;border:2px dashed var(--border);border-radius:12px">
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px">
+            <div>
+              <label for="stepUpType">Step-Up Type</label>
+              <select id="stepUpType" onchange="calcSip()">
+                <option value="percent" selected>Percentage Increase (% per year)</option>
+                <option value="fixed">Fixed Rupee Increase (₹ per year)</option>
+              </select>
+            </div>
+            <div>
+              <label for="stepUpValue" id="lblStepUpVal">Annual Increase: 10%</label>
+              <input type="number" id="stepUpValue" value="10" min="1" max="100"/>
+            </div>
+          </div>
+        </div>
+
+        <!-- Inflation Adjustment Toggle -->
+        <div class="form-group full">
+          <div class="toggle-card">
+            <div>
+              <strong>Adjust for Inflation (Show Purchasing Power)</strong>
+              <div style="font-size:12px;color:var(--muted)">
+                Computes what your future corpus will actually buy in today's money at 6% inflation.
+              </div>
+            </div>
+            <label class="toggle-switch">
+              <input type="checkbox" id="inflationToggle" onchange="calcSip()"/>
+              <span class="slider"></span>
+            </label>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- RESULTS BOX -->
+      <div class="results-box" id="resultsBox">
+        <div class="results-header">
+          <span class="results-title">Projected Wealth Summary</span>
+          <span id="multiplierBadge" style="font-size:12px;background:var(--green);color:black;padding:3px 8px;border-radius:6px;font-weight:800">
+            2.8x Growth
+          </span>
+        </div>
+
+        <div class="results-grid">
+          <div class="res-card">
+            <div class="res-label">Total Amount Invested</div>
+            <div class="res-val" id="resInvested">₹18,00,000</div>
+            <div class="res-sub">Principal capital out of pocket</div>
+          </div>
+
+          <div class="res-card highlight">
+            <div class="res-label">Estimated Wealth Gained</div>
+            <div class="res-val" id="resReturns" style="color:var(--green-dk)">₹32,45,760</div>
+            <div class="res-sub">Compound interest &amp; capital gains</div>
+          </div>
+
+          <div class="res-card" style="border-color:var(--black);background:#fff">
+            <div class="res-label">Maturity Corpus (Pre-Tax)</div>
+            <div class="res-val" id="resMaturity">₹50,45,760</div>
+            <div class="res-sub" id="resMaturityWords">Fifty Lakhs+</div>
+          </div>
+
+          <div class="res-card" id="cardPostTax">
+            <div class="res-label">Post-Tax Corpus (Sec 112A)</div>
+            <div class="res-val" id="resPostTax" style="color:var(--blue)">₹46,40,000</div>
+            <div class="res-sub" id="resTaxDesc">After ₹1.25L exemption + 12.5% LTCG</div>
+          </div>
+        </div>
+
+        <!-- Proportional bar -->
+        <div class="ratio-wrap">
+          <div class="ratio-bar">
+            <div class="ratio-invested" id="barInvested" style="width:35%"></div>
+            <div class="ratio-returns" id="barReturns" style="width:65%"></div>
+          </div>
+          <div class="ratio-legend">
+            <span>🟦 Invested Capital: <strong id="pctInvested">35%</strong></span>
+            <span>🟩 Wealth Gained: <strong id="pctReturns">65%</strong></span>
+          </div>
+        </div>
+
+        <div class="calc-breakdown">
+          <div class="breakdown-row" id="rowInflation" style="display:none;color:var(--red)">
+            <span>Inflation-Adjusted Real Value (Purchasing Power in Today's Money):</span>
+            <strong id="valInflation" style="font-size:16px">₹21,05,400</strong>
+          </div>
+          <div class="breakdown-row">
+            <span>Long-Term Capital Gains (LTCG) Total:</span>
+            <strong id="valLtcg">₹32,45,760</strong>
+          </div>
+          <div class="breakdown-row" style="color:var(--green-dk)">
+            <span>Section 112A Exemption (Budget 2024-25 limit):</span>
+            <strong>− ₹1,25,000</strong>
+          </div>
+          <div class="breakdown-row">
+            <span>Estimated LTCG Tax (12.5% + 4% Cess = 13% on taxable gain):</span>
+            <strong id="valTaxDue" style="color:var(--red)">₹4,05,699</strong>
+          </div>
+          <div class="breakdown-row total">
+            <span>Net Take-Home Maturity Amount:</span>
+            <span id="valNetMaturity" style="color:var(--green-dk)">₹46,40,061</span>
+          </div>
+        </div>
+
+        <!-- YEARLY PROGRESSION TABLE -->
+        <div style="padding:16px 20px;background:white">
+          <strong style="font-size:13px;text-transform:uppercase;letter-spacing:.05em">Year-by-Year Growth Schedule</strong>
+          <div class="table-wrap">
+            <table id="growthTable">
+              <thead>
+                <tr>
+                  <th style="text-align:left">Year</th>
+                  <th>Monthly SIP</th>
+                  <th>Total Invested</th>
+                  <th>Gains Made</th>
+                  <th>Year-End Corpus</th>
+                </tr>
+              </thead>
+              <tbody id="tableBody"></tbody>
+            </table>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- SEO & KNOWLEDGE BASE -->
+<section class="seo-section">
+  <div class="seo-box">
+    <h2>Why Step-Up SIP is the Most Powerful Wealth Strategy in India</h2>
+    <p>
+      A Systematic Investment Plan (SIP) allows you to invest a fixed amount regularly into mutual funds. However, while your salary increases by 8% to 15% every appraisal cycle, keeping your SIP flat leaves massive wealth on the table.
+    </p>
+    <p>
+      By implementing an <strong>Annual Step-Up SIP (Top-Up)</strong> of just 10% each year:
+    </p>
+    <ul>
+      <li>A flat ₹10,000/month SIP over 20 years at 12% generates approximately <strong>₹99.9 Lakhs</strong> (on ₹24 Lakhs invested).</li>
+      <li>A 10% Step-Up SIP starting with ₹10,000/month generates <strong>₹2.03 Crores</strong> (on ₹68.7 Lakhs invested) — more than <em>double the final corpus</em>!</li>
+    </ul>
+
+    <div class="rule-alert">
+      <strong>📌 Budget 2024-25 Revisions to Equity Mutual Fund Taxation (Section 112A):</strong>
+      <p style="margin-top:6px">
+        Effective 23 July 2024, the Indian government increased the annual exemption limit for Long Term Capital Gains (LTCG) on equity mutual funds from <strong>₹1 Lakh to ₹1.25 Lakh per financial year</strong>. The LTCG tax rate above this threshold was revised from 10% to <strong>12.5%</strong> (plus 4% health and education cess = 13%).
+      </p>
+    </div>
+
+    <h3>How to Reach ₹1 Crore with SIP in India</h3>
+    <p>
+      Here is the monthly SIP requirement across different time horizons assuming a historic equity return of 12% p.a.:
+    </p>
+    <ul>
+      <li><strong>In 10 Years:</strong> Requires ₹43,000 / month flat SIP (or ₹30,000 with 10% annual step-up).</li>
+      <li><strong>In 15 Years:</strong> Requires ₹20,000 / month flat SIP (or ₹13,500 with 10% annual step-up).</li>
+      <li><strong>In 20 Years:</strong> Requires ₹10,000 / month flat SIP (or ₹6,500 with 10% annual step-up).</li>
+    </ul>
+
+    <h2 style="margin-top:36px">Frequently Asked Questions (FAQ)</h2>
+
+    <div class="faq-item open">
+      <div class="faq-q" onclick="toggleFaq(this)">
+        <span>What is the difference between regular SIP and Step-Up SIP?</span>
+        <svg fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+      </div>
+      <div class="faq-a">
+        In a regular SIP, your monthly installment remains identical throughout the entire investment duration (e.g. ₹5,000 every month for 15 years). In a Step-Up SIP, you instruct the AMC or brokerage app to automatically increase your installment by a set amount (e.g. 10% or ₹1,000) every year, compounding wealth much faster as your income grows.
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-q" onclick="toggleFaq(this)">
+        <span>How does Rupee Cost Averaging benefit SIP investors?</span>
+        <svg fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+      </div>
+      <div class="faq-a">
+        Because you invest a fixed rupee amount every month regardless of market movements, you automatically purchase more mutual fund units when Net Asset Values (NAV) fall during market downturns, and fewer units when prices are elevated. This lowers your average purchase cost per unit over time without requiring you to time the market.
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-q" onclick="toggleFaq(this)">
+        <span>How are mutual fund gains taxed upon redemption in India?</span>
+        <svg fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+      </div>
+      <div class="faq-a">
+        For equity mutual funds:
+        <br/>• <strong>Short-Term Capital Gains (STCG):</strong> Held for 12 months or less — taxed at 20% (raised in Budget 2024 from 15%).
+        <br/>• <strong>Long-Term Capital Gains (LTCG):</strong> Held for more than 12 months — tax-free up to ₹1.25 Lakh per financial year; gains exceeding ₹1.25 Lakh are taxed at 12.5% (plus 4% cess).
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-inner">
+    <div>
+      <strong>Mailflix</strong> — Free Workplace &amp; Salary Calculators for Indian Professionals.
+      <div style="margin-top:4px;font-size:12px">© 2026 Mailflix. All tools operate in-browser. Zero signup.</div>
+    </div>
+    <div class="footer-links">
+      <a href="/sip-calculator">SIP Calculator</a>
+      <a href="/notice-period-calculator">Notice Buyout</a>
+      <a href="/form-12bb">Form 12BB</a>
+      <a href="/nps-calculator">NPS Calculator</a>
+      <a href="/ctc-calculator">CTC Calculator</a>
+      <a href="/privacy">Privacy Policy</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+function setSip(val){
+  document.getElementById("monthlySip").value = val;
+  document.getElementById("rngMonthlySip").value = val;
+  calcSip();
+}
+function setReturn(val){
+  document.getElementById("returnRate").value = val;
+  document.getElementById("rngReturn").value = val;
+  calcSip();
+}
+function setYears(val){
+  document.getElementById("years").value = val;
+  document.getElementById("rngYears").value = val;
+  calcSip();
+}
+function setLump(val){
+  document.getElementById("lumpSum").value = val;
+  calcSip();
+}
+
+function toggleStepUp(){
+  const checked = document.getElementById("stepUpToggle").checked;
+  document.getElementById("stepUpSection").style.display = checked ? "block" : "none";
+  calcSip();
+}
+
+function numToIndianWords(n){
+  if(n >= 10000000) return (n / 10000000).toFixed(2) + " Crores";
+  if(n >= 100000) return (n / 100000).toFixed(2) + " Lakhs";
+  return "₹" + Math.round(n).toLocaleString("en-IN");
+}
+
+function calcSip(){
+  const sip = parseFloat(document.getElementById("monthlySip").value) || 0;
+  const rate = parseFloat(document.getElementById("returnRate").value) || 0;
+  const years = parseInt(document.getElementById("years").value) || 1;
+  const lump = parseFloat(document.getElementById("lumpSum").value) || 0;
+  const isStepUp = document.getElementById("stepUpToggle").checked;
+  const stepType = document.getElementById("stepUpType").value;
+  const stepVal = parseFloat(document.getElementById("stepUpValue").value) || 0;
+  const isInflation = document.getElementById("inflationToggle").checked;
+
+  document.getElementById("lblSip").textContent = "₹" + sip.toLocaleString("en-IN");
+  document.getElementById("lblReturn").textContent = rate + "% p.a.";
+  document.getElementById("lblYears").textContent = years + " Years";
+  if(stepType === "percent"){
+    document.getElementById("lblStepUpVal").textContent = "Annual Increase: " + stepVal + "%";
+  } else {
+    document.getElementById("lblStepUpVal").textContent = "Annual Increase: ₹" + stepVal.toLocaleString("en-IN");
+  }
+
+  const rMonth = rate / (12 * 100);
+  let totalInvested = lump;
+  let corpus = lump;
+  let currentMonthly = sip;
+
+  const tableRows = [];
+
+  for(let y = 1; y <= years; y++){
+    let annualInvestedThisYear = 0;
+    for(let m = 1; m <= 12; m++){
+      corpus = (corpus + currentMonthly) * (1 + rMonth);
+      totalInvested += currentMonthly;
+      annualInvestedThisYear += currentMonthly;
+    }
+    const currentGains = corpus - totalInvested;
+    tableRows.push({
+      year: y,
+      monthly: currentMonthly,
+      invested: totalInvested,
+      gains: currentGains,
+      corpus: corpus
+    });
+
+    if(isStepUp){
+      if(stepType === "percent"){
+        currentMonthly = currentMonthly * (1 + stepVal / 100);
+      } else {
+        currentMonthly = currentMonthly + stepVal;
+      }
+    }
+  }
+
+  const totalGains = Math.max(0, corpus - totalInvested);
+  const multiplier = totalInvested > 0 ? (corpus / totalInvested).toFixed(1) : "1.0";
+
+  // Section 112A LTCG calculation (Budget 2024: 1.25L exemption, 12.5% tax + 4% cess = 13%)
+  const exemption = 125000;
+  const taxableGains = Math.max(0, totalGains - exemption);
+  const ltcgTax = taxableGains * 0.125 * 1.04;
+  const postTaxCorpus = corpus - ltcgTax;
+
+  // Real purchasing power at 6% inflation
+  const inflationRate = 0.06;
+  const realValue = corpus / Math.pow(1 + inflationRate, years);
+
+  // Update UI Cards
+  document.getElementById("multiplierBadge").textContent = multiplier + "x Growth";
+  document.getElementById("resInvested").textContent = "₹" + Math.round(totalInvested).toLocaleString("en-IN");
+  document.getElementById("resReturns").textContent = "₹" + Math.round(totalGains).toLocaleString("en-IN");
+  document.getElementById("resMaturity").textContent = "₹" + Math.round(corpus).toLocaleString("en-IN");
+  document.getElementById("resMaturityWords").textContent = numToIndianWords(corpus);
+  document.getElementById("resPostTax").textContent = "₹" + Math.round(postTaxCorpus).toLocaleString("en-IN");
+
+  const pctInv = Math.round((totalInvested / corpus) * 100) || 0;
+  const pctRet = 100 - pctInv;
+  document.getElementById("barInvested").style.width = pctInv + "%";
+  document.getElementById("barReturns").style.width = pctRet + "%";
+  document.getElementById("pctInvested").textContent = pctInv + "%";
+  document.getElementById("pctReturns").textContent = pctRet + "%";
+
+  document.getElementById("valLtcg").textContent = "₹" + Math.round(totalGains).toLocaleString("en-IN");
+  document.getElementById("valTaxDue").textContent = "₹" + Math.round(ltcgTax).toLocaleString("en-IN");
+  document.getElementById("valNetMaturity").textContent = "₹" + Math.round(postTaxCorpus).toLocaleString("en-IN");
+
+  const rowInf = document.getElementById("rowInflation");
+  if(isInflation){
+    rowInf.style.display = "flex";
+    document.getElementById("valInflation").textContent = "₹" + Math.round(realValue).toLocaleString("en-IN");
+  } else {
+    rowInf.style.display = "none";
+  }
+
+  // Populate Table
+  const tbody = document.getElementById("tableBody");
+  tbody.innerHTML = tableRows.map(r => `
+    <tr>
+      <td style="text-align:left;font-weight:700">Year ${r.year}</td>
+      <td>₹${Math.round(r.monthly).toLocaleString("en-IN")}</td>
+      <td>₹${Math.round(r.invested).toLocaleString("en-IN")}</td>
+      <td style="color:var(--green-dk)">+₹${Math.round(r.gains).toLocaleString("en-IN")}</td>
+      <td style="font-weight:800">₹${Math.round(r.corpus).toLocaleString("en-IN")}</td>
+    </tr>
+  `).join("");
+}
+
+// Sync range sliders with numeric inputs
+document.getElementById("rngMonthlySip").addEventListener("input", function(){
+  document.getElementById("monthlySip").value = this.value;
+  calcSip();
+});
+document.getElementById("monthlySip").addEventListener("input", function(){
+  document.getElementById("rngMonthlySip").value = this.value;
+  calcSip();
+});
+
+document.getElementById("rngReturn").addEventListener("input", function(){
+  document.getElementById("returnRate").value = this.value;
+  calcSip();
+});
+document.getElementById("returnRate").addEventListener("input", function(){
+  document.getElementById("rngReturn").value = this.value;
+  calcSip();
+});
+
+document.getElementById("rngYears").addEventListener("input", function(){
+  document.getElementById("years").value = this.value;
+  calcSip();
+});
+document.getElementById("years").addEventListener("input", function(){
+  document.getElementById("rngYears").value = this.value;
+  calcSip();
+});
+
+document.getElementById("lumpSum").addEventListener("input", calcSip);
+document.getElementById("stepUpValue").addEventListener("input", calcSip);
+
+function toggleFaq(btn){
+  btn.parentElement.classList.toggle("open");
+}
+
+calcSip();
+
+// Mobile Drawer handlers
+const _mp = document.getElementById("mobilePanel");
+const _mb = document.getElementById("mobileMenuBtn");
+const _cb = document.getElementById("closeMobileBtn");
+if(_mb) _mb.addEventListener("click", ()=>{ _mp.classList.add("open"); document.body.style.overflow="hidden"; });
+if(_cb) _cb.addEventListener("click", ()=>{ _mp.classList.remove("open"); document.body.style.overflow=""; });
+_mp.querySelectorAll(".mobile-link,.mobile-cta").forEach(a=>a.addEventListener("click",()=>{ _mp.classList.remove("open"); document.body.style.overflow=""; }));
+</script>
+</body>
+</html>

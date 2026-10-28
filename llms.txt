@@ -15,6 +15,10 @@ MailFix is made for salaried employees, small business owners, freelancers, stud
 
 ## Salary & Tax Calculators
 
+- [Notice Period Buyout Calculator](https://mailflix.netlify.app/notice-period-calculator): Calculates exact notice period buyout recovery amount for Indian corporate and IT employees. Supports Basic vs Gross salary formulas, 30 vs 26-day per-day rates, leave encashment offset, CBIC 18% GST rules, and auto-drafts HR early release emails.
+- [SIP & Step-Up Calculator](https://mailflix.netlify.app/sip-calculator): Mutual fund SIP and annual step-up compounding calculator for India. Computes total invested capital, estimated returns, inflation-adjusted value, and Budget 2024-25 revised Section 112A LTCG tax (₹1.25L exemption + 12.5% tax).
+- [NPS Pension & Corpus Calculator](https://mailflix.netlify.app/nps-calculator): Projects National Pension System Tier 1 retirement corpus, 60% tax-free lump sum withdrawal under Section 10(12A), lifetime monthly annuity pension, and annual Section 80CCD(1B) ₹50,000 extra tax saving.
+
 - [CTC to In-Hand Salary Calculator](https://mailflix.netlify.app/ctc-calculator): Calculates exact monthly take-home salary from annual CTC. Accounts for PF (12% of basic), professional tax, HRA, and income tax under New or Old regime. FY 2025-26 slabs. Shows itemised deduction breakdown.
 - [HRA Exemption Calculator](https://mailflix.netlify.app/hra-calculator): Computes tax-free HRA under Section 10(13A). Uses the minimum-of-three formula: actual HRA, 50%/40% of basic (metro/non-metro), rent paid minus 10% of basic. FY 2025-26.
 - [Old vs New Tax Regime Calculator (ITR)](https://mailflix.netlify.app/itr-calculator): Side-by-side tax comparison for FY 2025-26. New Regime: ₹12 lakh effectively tax-free after 87A rebate. Old Regime: supports 80C, HRA, 80D, home loan deductions. Recommends better regime.
@@ -33,6 +37,8 @@ MailFix is made for salaried employees, small business owners, freelancers, stud
 - [JSON Tools](https://mailflix.netlify.app/json-tools): Format (pretty-print), minify, validate with error line numbers, convert JSON to CSV and YAML. Tree viewer for nested objects. All processing in-browser — no data leaves the device.
 
 ## Document Generators
+
+- [Form 12BB Generator](https://mailflix.netlify.app/form-12bb): Free official Form 12BB investment declaration under Rule 26C for employer payroll TDS. Includes HRA landlord PAN verification, Section 24b home loan interest, and Chapter VI-A deductions (80C, 80D, 80CCD 1B). Instant printable A4 format and copyable text for HRMS portals.
 
 - [GST Invoice Generator](https://mailflix.netlify.app/gst-invoice): Generates valid GST tax invoices with GSTIN, HSN codes, CGST/SGST (intrastate) and IGST (interstate) breakdown. Print or download as PDF. Covers all GST rates (5%, 12%, 18%, 28%).
 - [Rent Receipt Generator](https://mailflix.netlify.app/rent-receipt): Printable rent receipts in the format accepted by Indian employers for HRA claims. Includes revenue stamp guidance for cash payments above ₹5,000. Supports bank transfer, UPI, cheque payment modes.
