@@ -24,6 +24,12 @@
     Cache-Control = "public, max-age=0, must-revalidate, no-cache"
 
 [[headers]]
+  for = "/rss.xml"
+  [headers.values]
+    Content-Type = "application/rss+xml; charset=utf-8"
+    Cache-Control = "public, max-age=0, must-revalidate, no-cache"
+
+[[headers]]
   for = "/robots.txt"
   [headers.values]
     Content-Type = "text/plain; charset=utf-8"

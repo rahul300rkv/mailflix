@@ -12,4 +12,5 @@ User-agent: Bingbot
 Allow: /
 
 Sitemap: https://mailflix.netlify.app/sitemap.xml
+Sitemap: https://mailflix.netlify.app/rss.xml
 Host: https://mailflix.netlify.app
